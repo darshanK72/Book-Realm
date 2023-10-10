@@ -1,0 +1,206 @@
+/* ---------- CSS Variables ------- */
+:root {
+
+    /* Colors */
+    --primary-variant: rgb(242, 74, 74);
+    --secondary-variant: hsl(16, 100%, 73%);
+
+    --foreground-light: hsl(240, 2%, 76%);
+    --foreground-muted: hsl(225, 3%, 49%);
+    --foreground-medium: hsl(225, 7%, 35%);
+    --foreground-dark: hsl(228, 14%, 22%);
+    --foreground-green: hsl(165, 77%, 38%);
+
+
+    --background-light: hsl(210, 29%, 97%);
+    --background-medium: hsl(225, 7%, 35%);
+    --background-dark: hsl(228, 14%, 22%);
+    --background-primary: hsl(0, 80%, 98%);
+
+    --scroll-track-color: hsl(240, 2%, 76%);
+
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    /* Shadows */
+    --normal-shadow: 0px 2px 16px rgba(0, 0, 0, .08);
+    --bottom-shadow: 0px 2px 11px rgba(0, 0, 0, .05);
+    --tw-drop-shadow-1: drop-shadow(-4px 2px 6px rgba(0, 0, 0, .15));
+    --tw-drop-shadow-2: drop-shadow(-4px 2px 8px rgba(0, 0, 0, .25));
+
+    /* Borders */
+    --radius-8: 8px;
+
+    /* Font Family */
+    --ff-libre-baskerville: 'Libre Baskerville', serif;
+    --ff-manrope: 'Manrope', sans-serif;
+
+    /* Font Weight */
+    --fw-extra-bold: 800;
+    --fw-medium-bold: 700;
+    --fw-bold: 600;
+    --fw-normal: 400;
+    --fw-thin: 300;
+
+}
+
+
+/* ---------- CSS Reset ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+iframe,
+button {
+    display: block;
+}
+
+i{
+    line-height: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    text-align: left;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --------- Typography --------- */
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width:840px) and (min-width:540px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:540px){
+    html{
+        font-size: 13px;
+    }
+}
+
+body {
+    line-height: 1.75;
+    height: 400vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.3;
+    margin: 0.2em 0 0.3em 0;
+    font-family: var(--ff-libre-baskerville);
+    color: var(--foreground-dark);
+}
+
+h1 {
+    font-size: 2.488rem;
+}
+
+h2 {
+    font-size: 2.074rem;
+}
+
+h3 {
+    font-size: 1.728rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+p,a{
+    margin: 0.2em 0 0.1em 0;
+    font-family: var(--ff-manrope);
+}
+
+button{
+    font-family: var(--ff-manrope);
+}
+
+input,textarea{
+    font-size:0.8rem;
+    font-family: var(--ff-manrope);
+}
+
+
+
+small,
+.text_small {
+    font-size: 0.833rem;
+}
+
+:focus-visible {
+    outline-color: var(--primary-variant);
+}
+
+/* ------------ Custom Scrollbar ------------- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-track-color);
+    border-radius: var(--radius-8);
+}
+
+/* ---------------Common CSS ----------------- */
+
+.btn{
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.btn-primary{
+    background-color: var(--primary-variant);
+    color: var(--white);
+}

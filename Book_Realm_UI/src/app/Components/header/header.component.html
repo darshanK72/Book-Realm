@@ -77,10 +77,10 @@
                                     <div class="catg-1">
                                         <ul>
                                             <li><a href="#" class="text-bold">Activities & Interests
-                                                Poetry</a></li>
+                                                    Poetry</a></li>
                                             <li> <a href="#">Picture Books for Kids</a></li>
                                             <li><a href="#">For the Young Ones</a></li>
-                                           
+
                                         </ul>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                                             <li> <a href="#">Explore the Galaxy</a></li>
                                             <li><a href="#">For the Curious Minds</a></li>
                                             <li> <a href="#">Space & Planets</a></li>
-                                          
+
                                         </ul>
                                     </div>
                                     <div class="catg-1">
@@ -108,7 +108,7 @@
                                             <li> <a href="#">Comics</a></li>
                                             <li><a href="#">Graphics Novels</a></li>
                                             <li> <a href="#">Magzines</a></li>
-                                           
+
                                         </ul>
                                     </div>
                                     <div class="catg-1">
@@ -117,7 +117,7 @@
                                             <li> <a href="#">Romance</a></li>
                                             <li><a href="#">Love & Hate</a></li>
                                             <li> <a href="#">Misicals</a></li>
-                                           
+
                                         </ul>
                                     </div>
 
@@ -184,20 +184,71 @@
         </div>
         <div class="icon-wrapper">
             <div class="head-icons">
-                <div class="sign-in">
+                <div class="sign-in" *ngIf="!ifLoggedIn">
                     <button class="btn btn-primary">Sign In</button>
                 </div>
-                <div class="icon" (click)="toggleSidebar()">
+                <div class="icon search-icon" (click)="toggleSidebar()">
                     <i class="fi fi-rr-search"></i>
                 </div>
                 <div class="icon">
                     <i class="fa-regular fa-bookmark"></i>
                 </div>
                 <div class="icon">
-                    <i class="fa-regular fa-user"></i>
-                </div>
-                <div class="icon">
                     <i class="fi fi-rr-shopping-cart"></i>
+                </div>
+                <div class="icon" *ngIf="ifLoggedIn">
+                    <button (click)="showProfile()"><i class="fa-regular fa-user"></i></button>
+                    <div class="profile-dropdown" #profile>
+                        <div class="profile" *ngIf="ifLoggedIn">
+                            <div class="profile-photo">
+                                <div class="photo">
+                                    <img src="../../../assets/img/profile.png" alt="">
+                                </div>
+                            </div>
+                            <div class="account">
+                                <div class="section">
+                                    <p class="nav-item">
+                                        Darshan Khairnar
+                                    </p>
+                                    <ul>
+                                        <li class="account-item">
+                                            <div class="account-icon">
+                                                <i class="fa-solid fa-user"></i>
+                                            </div>
+                                            <p>My Profile</p>
+                                        </li>
+                                        <li class="account-item">
+                                          <div class="account-icon">
+                                            <i class="fa-solid fa-box"></i>
+                                          </div>
+                                            <p>My Orders</p>
+                                        </li>
+
+                                        <li class="account-item">
+                                            <div class="account-icon">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </div>
+                                            <p>Address</p>
+                                        </li>
+
+                                        <li class="account-item">
+                                           <div class="account-icon">
+                                            <i class="fa-solid fa-gear"></i>
+                                           </div>
+                                            <p>Settings</p>
+                                        </li>
+
+                                        <li class="account-item">
+                                            <div class="account-icon">
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </div>
+                                            <p>Logout</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

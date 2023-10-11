@@ -36,6 +36,23 @@ export class HeaderComponent {
 
   @ViewChild('hoverExamprepModel')
   hoverExamprepModel!:ElementRef
+
+  @ViewChild('profile')
+  profile!:ElementRef
+
+  ifLoggedIn = true;
+  showprof = false;
+
+  showProfile(){
+    this.showprof = !this.showprof;
+    if(this.showprof){
+
+      this.renderer.addClass(this.profile.nativeElement,"show-profile")
+    }
+    else{
+      this.renderer.removeClass(this.profile.nativeElement,"show-profile")
+    }
+  }
   
   @HostListener('window:scroll',['$event'])
   onScroll(event:any){

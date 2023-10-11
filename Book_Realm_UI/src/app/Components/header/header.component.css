@@ -133,14 +133,29 @@
 
 .icon-wrapper .head-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .head-icons .icon {
     font-size: 1.3rem;
     line-height: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.search-icon{
+    display: none;
+}
+
+.sign-in{
+    margin-right: 1rem;
+}
+
 
 .slider{
     margin-top: 60px;
@@ -271,6 +286,84 @@
     margin-bottom: 0.8rem;
 }
 
+.profile-dropdown{
+    display: none;
+    position: fixed;
+    top: 61px;
+    right: 20px;
+    background-color: var(--white);
+    z-index: 104;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--bottom-shadow);
+    transform: scale(0.0001);
+    transition:transform 300ms ease;
+}
+
+.show-profile{
+    transform: scale(1);
+    display: block;
+}
+
+.profile{
+    font-size: 1rem;
+}
+
+.profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.photo{
+    width:44px;
+    height:44px;
+}
+
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+}
+
+.account{
+    color: var(--foreground-dark);
+}
+
+.account .nav-item{
+    margin: 1.3rem 0;
+    font: 1.1rem;
+    font-weight: 600;
+}
+
+.account .account-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+.account .account-item i{
+    width: 20%;
+    margin-right: 4px;
+}
+
+
+.account .account-item:hover{
+    font-weight: 700;
+}
+
+.account-icon{
+    /* width: 34px; */
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
 @media screen and (max-width:540px) {
 
     .container {
@@ -296,6 +389,10 @@
 
     .hover-model{
         display: none;
+    }
+
+    .search-icon{
+        display: block;
     }
 
     .icon-wrapper {
@@ -346,6 +443,9 @@
 
     .nav-wrapper {
         display: none;
+    }
+    .search-icon{
+        display: block;
     }
 
     .hover-model{
@@ -401,6 +501,10 @@
 
     .nav-wrapper {
         display: none;
+    }
+
+    .search-icon{
+        display: block;
     }
 
     .logo-wrapper .menu{

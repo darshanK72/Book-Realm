@@ -32,6 +32,8 @@ import { ToggleService } from 'src/app/Services/toggle.service';
 })
 export class SidebarComponent implements OnInit {
 
+  ifLoggedIn = true;
+
   constructor(private toggleService:ToggleService){}
 
   @Input()

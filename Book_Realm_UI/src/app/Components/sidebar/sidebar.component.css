@@ -67,7 +67,7 @@ input{
     width: 100%;
     padding: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     border-bottom: 1px solid var(--border-bottom-light);
 }
 
@@ -150,6 +150,10 @@ input{
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--foreground-dark);
+}
+
+.account{
+    margin-bottom: 1rem;
 }
 
 .account .nav-item{

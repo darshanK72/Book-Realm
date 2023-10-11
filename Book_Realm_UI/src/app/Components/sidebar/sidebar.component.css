@@ -140,7 +140,7 @@ input{
 }
 
 .nav{
-    padding: 0 1rem;
+    padding:1rem;
     border-bottom: 2px solid var(--border-bottom-light);
 }
 .content{
@@ -154,13 +154,13 @@ input{
 
 .account .nav-item{
     font-size: 1rem;
-    padding: 4px 1rem;
+    padding: 10px 1rem;
     font-weight: 700;
     color: var(--foreground-dark);
 }
 
 .account-item{
-    padding: 2px 2rem;
+    padding: 10px 2rem;
     border-top: 1px solid var(--border-bottom-light);
 }
 

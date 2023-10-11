@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { SigninComponent } from './Auth/signin/signin.component';
 import { CartComponent } from './Layout/cart/cart.component';
 import { WishlistComponent } from './Layout/wishlist/wishlist.component';
 import { ProfileComponent } from './Layout/profile/profile.component';
+import { SidebarComponent } from './Components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,16 @@ import { ProfileComponent } from './Layout/profile/profile.component';
     CartComponent,
     WishlistComponent,
     ProfileComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,6 +19,8 @@
 
     --scroll-track-color: hsl(240, 2%, 76%);
 
+    --border-bottom-light : hsl(0, 0%, 95%);
+
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 
@@ -27,9 +29,11 @@
     --bottom-shadow: 0px 2px 11px rgba(0, 0, 0, .05);
     --tw-drop-shadow-1: drop-shadow(-4px 2px 6px rgba(0, 0, 0, .15));
     --tw-drop-shadow-2: drop-shadow(-4px 2px 8px rgba(0, 0, 0, .25));
+    
 
     /* Borders */
     --radius-8: 8px;
+
 
     /* Font Family */
     --ff-libre-baskerville: 'Libre Baskerville', serif;
@@ -105,7 +109,7 @@ html {
     font-size: 16px;
 }
 
-@media screen and (max-width:840px) and (min-width:540px){
+@media screen and (max-width:1024px) and (min-width:540px){
     html{
         font-size: 14px;
     }

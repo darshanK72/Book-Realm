@@ -1,37 +1,193 @@
 <header>
     <div class="container">
         <div class="logo-wrapper">
-            <div class="menu">
+            <button class="menu" (click)="toggleSidebar()">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
             <div class="logo">
                 <img src="../../../assets/img/logo.png" alt="Book Realm Logo">
             </div>
         </div>
         <div class="nav-wrapper">
-           <nav>
-                <ul>
-                    <li class="nav-item"> <a href="#">Top Geners</a> </li>
-                    <li class="nav-item"> <a href="#">Discover</a> </li>
-                    <li class="nav-item"> <a href="#">Friction</a> </li>
-                    <li class="nav-item"> <a href="#">Exam Prep</a> </li>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-link" #topgeners (mouseenter)="mouseOver(topgeners)"
+                        (mouseleave)="mouseOut(topgeners)" title="topgeners">
+                        <a href="#" class="nav-item">Top Geners</a>
+                        <div class="hover-model" #hovertopGenerModel>
+                            <div class="content">
+                                <div class="links">
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Literature & Friction</a></li>
+                                            <li> <a href="#">Religus & Spritual Friction</a></li>
+                                            <li><a href="#">Historical</a></li>
+                                            <li> <a href="#">Aciton & Adventure</a></li>
+                                            <li> <a href="#" class="text-primary"> +10 More</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-3">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Education</a></li>
+                                            <li> <a href="#">Exam Preparation</a></li>
+                                            <li><a href="#">Higher Education Textbooks</a></li>
+                                            <li> <a href="#">School Books</a></li>
+                                            <li> <a href="#" class="text-primary"> +10 More</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-2">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Health, Family & Personal Development</a>
+                                            </li>
+                                            <li> <a href="#">Addiction & Recovery</a></li>
+                                            <li><a href="#">Public Speaking</a></li>
+                                            <li> <a href="#" class="text-primary"> +10 More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-link" #discover (mouseover)="mouseOver(discover)" (mouseout)="mouseOut(discover)"
+                        title="discover">
+                        <a href="#" class="nav-item">Discover</a>
+                        <div class="hover-model" #hoverDiscoverModel>
+                            <div class="content">
+                                <div class="links">
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Art, Film & Photography</a></li>
+                                            <li> <a href="#"> Architecture</a></li>
+                                            <li><a href="#">Cinema & Broadcast</a></li>
+                                            <li> <a href="#">Theater & Ballet</a></li>
+                                            <li> <a href="#">Design & Fashion</a></li>
+                                            <li> <a href="#">Photography</a></li>
+                                            <li> <a href="#" class="text-primary"> +2 More</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Reference</a></li>
+                                            <li> <a href="#"> Reference Books</a></li>
+                                            <li><a href="#">Words, Language & Grammar</a></li>
+                                            <li> <a href="#">Dictionaries & Thesauruses</a></li>
+                                            <li> <a href="#" class="text-primary"> +10 More</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Activities & Interests
+                                                Poetry</a></li>
+                                            <li> <a href="#">Picture Books for Kids</a></li>
+                                            <li><a href="#">For the Young Ones</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-link" #friction (mouseover)="mouseOver(friction)" (mouseout)="mouseOut(friction)"
+                        title="friction">
+                        <a href="#" class="nav-item">Friction</a>
+                        <div class="hover-model" #hoverFrictionModel>
+                            <div class="content">
+                                <div class="links">
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Science</a></li>
+                                            <li> <a href="#">Explore the Galaxy</a></li>
+                                            <li><a href="#">For the Curious Minds</a></li>
+                                            <li> <a href="#">Space & Planets</a></li>
+                                          
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Friction Novels</a></li>
+                                            <li> <a href="#">Comics</a></li>
+                                            <li><a href="#">Graphics Novels</a></li>
+                                            <li> <a href="#">Magzines</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Fantasy</a></li>
+                                            <li> <a href="#">Romance</a></li>
+                                            <li><a href="#">Love & Hate</a></li>
+                                            <li> <a href="#">Misicals</a></li>
+                                           
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-link" #examprep (mouseover)="mouseOver(examprep)" (mouseout)="mouseOut(examprep)"
+                        title="examprep">
+                        <a href="#" class="nav-item">Exam Prep</a>
+                        <div class="hover-model" #hoverExamprepModel>
+                            <div class="content">
+                                <div class="links">
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Government & Bank Exams</a></li>
+                                            <li> <a href="#">Class 1-5</a></li>
+                                            <li><a href="#">Class 6-8</a></li>
+                                            <li> <a href="#">Class 9-10</a></li>
+                                            <li><a href="#">Class 11- 12</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Grade Wise</a></li>
+                                            <li> <a href="#">Civil Service</a></li>
+                                            <li><a href="#">Staff Selection Commission</a></li>
+                                            <li> <a href="#">Bank</a></li>
+                                            <li><a href="#">State Public Service</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Indian Defence Forces</a></li>
+                                            <li> <a href="#">Indian Army</a></li>
+                                            <li><a href="#">Indian Air force</a></li>
+                                            <li> <a href="#">Indian Navy</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="catg-1">
+                                        <ul>
+                                            <li><a href="#" class="text-bold">Entrance Exam</a></li>
+                                            <li> <a href="#">IIT- JEE</a></li>
+                                            <li><a href="#">NEET</a></li>
+                                            <li> <a href="#">Teacher Recruitment</a></li>
+                                            <li><a href="#">CA</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-           </nav>
-           <div class="search">
+            </nav>
+            <div class="search">
                 <div class="search-box">
                     <div class="search-icon">
                         <i class="fi fi-rr-search"></i>
                     </div>
-                    <input type="search" name="query" placeholder="Search books, authors, publishers">
+                    <input type="text" name="query" placeholder="Search books, authors, publishers">
                 </div>
-           </div>
+            </div>
         </div>
         <div class="icon-wrapper">
             <div class="head-icons">
                 <div class="sign-in">
                     <button class="btn btn-primary">Sign In</button>
                 </div>
-                <div class="icon">
+                <div class="icon" (click)="toggleSidebar()">
                     <i class="fi fi-rr-search"></i>
                 </div>
                 <div class="icon">
@@ -88,7 +244,7 @@
                 <li>
                     <a href="#">
                         <i class="fi fi-rr-trophy-star"></i>
-                       <p> Bestsellers</p>
+                        <p> Bestsellers</p>
                     </a>
                 </li>
             </ul>

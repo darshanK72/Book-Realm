@@ -1,0 +1,191 @@
+aside{
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    background-color: var(--white);
+}
+
+.search{
+    border-bottom: 1px solid var(--border-bottom-light);
+    line-height: 0;
+    display: flex;
+    padding: 1rem;
+    height: 60px;
+}
+
+.cross{
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross button{
+    width: 34px;
+    height: 34px;
+}
+.cross button i{
+    font-size: 1.4rem;
+}
+
+.search-box{
+    display: flex;
+    width: 93%;
+}
+
+input{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 4px;
+    color: var(--foreground-dark);
+}
+
+.search-icon {
+    color: var(--foreground-light);
+    width: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.search-icon i {
+    height: fit-content;
+    font-weight: 800;
+    color: var(--foreground-dark);
+}
+
+.profile{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-bottom-light);
+}
+
+.profile-photo{
+    width:60px;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+    border: 2px solid var(--foreground-muted);
+}
+
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+}
+.details{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.details .title{
+    font-size: 1.2rem;
+    font-weight: 700;
+  line-height: 1.25;
+}
+
+.details span{
+    display: inline-block;
+}
+.login{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-bottom-light);
+}
+
+.profile-icon i{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+
+.sign-in{
+    width: 90%;
+}
+
+.sign-in button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-icon{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollable{
+    height: calc(100vh - 60px);
+    overflow: scroll;
+}
+
+.nav{
+    padding: 0 1rem;
+    border-bottom: 2px solid var(--border-bottom-light);
+}
+.content{
+    padding-left: 1rem;
+}
+.nav .nav-link .nav-item{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--foreground-dark);
+}
+
+.account .nav-item{
+    font-size: 1rem;
+    padding: 4px 1rem;
+    font-weight: 700;
+    color: var(--foreground-dark);
+}
+
+.account-item{
+    padding: 2px 2rem;
+    border-top: 1px solid var(--border-bottom-light);
+}
+
+.account-item i{
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: var(--foreground-dark);
+}
+
+@media screen and (max-width:540px) {
+    .login{
+        width: 100%;
+    }
+
+    .scrollable::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:1260px) {
+    aside{
+        width: 340px;
+    }
+
+    .main{
+        width:100%;
+    }
+}

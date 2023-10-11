@@ -1,3 +1,4 @@
-<app-header></app-header>
+<app-header (sidebarEmmiter)="sidebarToggle($event)"></app-header>
+<app-sidebar [toShow]="showSidebar"></app-sidebar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

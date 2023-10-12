@@ -1,0 +1,27 @@
+.wrapper{
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width:100%;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.banner{
+    max-width: 400px;
+    min-width: 240px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+@media screen and (max-width:840px) {
+    .wrapper{
+        padding: 1rem 1rem;
+    }
+}

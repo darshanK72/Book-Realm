@@ -1,0 +1,35 @@
+<div class="wrapper">
+    <div class="top">
+        <div class="title">
+            <h5>Monsoon Reads You'll Love</h5>
+        </div>
+        <div class="view">
+            <button>
+                View All
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+        </div>
+    </div>
+    <div class="bottom">
+        <ng-container *ngFor="let i of [1,2,3,4,5,6,7,8];">
+            <div class="book-card">
+                <div class="book-img">
+                    <img src="../../../assets/img/book.webp" alt="">
+                </div>
+                <div class="details">
+                    <div class="book-title">
+                        <p>The Mansoon Murders</p>
+                    </div>
+                    <div class="author">
+                        <p>Karan Parmanandka</p>
+                    </div>
+                    <div class="price">
+                        <span class="amount"> &#8377; 181</span>
+                        <span class="cross"> &#8377; 185</span>
+                        <span class="discount">(-7%)</span>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

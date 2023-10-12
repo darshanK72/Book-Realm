@@ -17,6 +17,9 @@ import { ProfileComponent } from './Layout/profile/profile.component';
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { HeroComponent } from './Components/hero/hero.component';
 import { NgxSplideModule } from 'ngx-splide';
+import { ListComponent } from './Components/list/list.component';
+import { LargeBannersComponent } from './Components/large-banners/large-banners.component';
+import { SmallBannersComponent } from './Components/small-banners/small-banners.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { NgxSplideModule } from 'ngx-splide';
     ProfileComponent,
     SidebarComponent,
     HeroComponent,
+    ListComponent,
+    LargeBannersComponent,
+    SmallBannersComponent,
   ],
   imports: [
     BrowserModule,

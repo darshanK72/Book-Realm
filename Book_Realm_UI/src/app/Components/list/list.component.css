@@ -1,0 +1,122 @@
+.wrapper {
+    width: 100%;
+    padding: 3rem 5rem 0;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.book-card {
+    min-width: 120px;
+    /* padding: 10px; */
+}
+
+.book-img {
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.book-card .book-img img {
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.top .title h5 {
+    font-family: var(--ff-libre-baskerville);
+}
+
+.view button {
+    color: var(--primary-variant);
+    font-weight: 500;
+}
+
+.details{
+    line-height: 1.5;
+}
+.details .book-title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.details .author{
+    font-size: 0.8rem;
+}
+
+.details .price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--ff-manrope);
+}
+
+.price .amount{
+    font-weight: 600;
+}
+
+.price .cross{
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: var(--foreground-muted);
+    text-decoration-color: var(--foreground-muted);
+    text-decoration-thickness: 0.3px;
+    /* text-decoratio; */
+}
+
+.price .discount{
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--foreground-green);
+}
+
+@media screen and (max-width:540px) {
+
+    .bottom {
+        justify-content: flex-start;
+        overflow: scroll;
+    }
+
+    .wrapper ::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .wrapper{
+        padding: 2rem 1rem 0;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1260px){
+    .wrapper{
+        padding: 2rem 2rem 0;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:1260px) {
+
+    .bottom {
+        justify-content: flex-start;
+        overflow: scroll;
+    }
+
+    .wrapper ::-webkit-scrollbar {
+        display: none;
+    }
+
+
+}

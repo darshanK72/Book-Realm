@@ -53,10 +53,15 @@ export class HeaderComponent {
       this.renderer.removeClass(this.profile.nativeElement,"show-profile")
     }
   }
+
+  // @HostListener('document:click',['$event'])
+  // bodyClick(){
+  //   this.renderer.removeClass(this.profile.nativeElement,"show-profile")
+  // }
   
   @HostListener('window:scroll',['$event'])
   onScroll(event:any){
-    if(window.scrollY > 130){
+    if(window.scrollY > 40){
       this.renderer.addClass(this.slider.nativeElement,"slider-hide");
       this.renderer.removeClass(this.slider.nativeElement,"slider-show");
     }

@@ -1,4 +1,29 @@
 app-sidebar{
-    padding: 20px;
-    margin: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    width: 100%;
+}
+
+app-header{
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+
+.main{
+    width: 100%;
+    height: 300vh;
+
+}
+
+@media screen and (min-width:840px) {
+    .main{
+        margin-top: 100px;
+    }
+    
 }

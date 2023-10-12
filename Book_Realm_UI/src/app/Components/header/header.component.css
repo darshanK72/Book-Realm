@@ -166,12 +166,13 @@
     box-shadow: var(--bottom-shadow);
     display: flex;
     align-items: center;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 99; */
     transition: all 600ms ease;
+    background-color: var(--white);
 }
 
 .slider-show{

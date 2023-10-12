@@ -2,13 +2,15 @@
     <div class="main" [@sliderToggle]="toShow ? 'open' : 'close'">
         <div class="search">
             <div class="cross">
-                <button (click)="close()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="search-box">
-                <input type="text" name="query" placeholder="Search books, authors, publishers">
                 <button class="search-icon">
                     <i class="fi fi-rr-search"></i>
                 </button>
+            </div>
+            <div class="search-box">
+                <input type="text" name="query" placeholder="Search books, authors, publishers">
+               <div class="cross">
+                <button (click)="close()"><i class="fa-solid fa-xmark"></i></button>
+               </div>
             </div>
         </div>
         <div class="scrollable">

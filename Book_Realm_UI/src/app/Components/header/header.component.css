@@ -290,7 +290,7 @@
     display: none;
     position: fixed;
     top: 61px;
-    right: 20px;
+    right: 12px;
     background-color: var(--white);
     z-index: 104;
     /* border: 1px solid black; */
@@ -299,6 +299,7 @@
     box-shadow: var(--bottom-shadow);
     transform: scale(0.0001);
     transition:transform 300ms ease;
+    font-size: 0.8rem;
 }
 
 .show-profile{
@@ -317,11 +318,31 @@
     margin-bottom: 10px;
 }
 
+.prof-name{
+    height: 100%;
+    line-height: 1.24;
+    overflow: hidden;
+    word-break: normal;
+    text-overflow: ellipsis;
+    padding: 1rem;
+}
+
 .photo{
     width:44px;
     height:44px;
 }
 
+.profile-btn{
+    line-height: 1.25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.profile-btn .btn{
+    padding: 10px 10px;
+}
 .profile-photo img{
     width: 100%;
     height: 100%;
@@ -331,17 +352,14 @@
     color: var(--foreground-dark);
 }
 
-.account .nav-item{
-    margin: 1.3rem 0;
-    font: 1.1rem;
-    font-weight: 600;
-}
+
 
 .account .account-item{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     transition: all 300ms ease;
+    border-top: 1px solid var(--border-bottom-light);
 }
 
 .account .account-item i{

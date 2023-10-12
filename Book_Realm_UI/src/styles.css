@@ -208,3 +208,8 @@ small,
     background-color: var(--primary-variant);
     color: var(--white);
 }
+
+.btn-outline{
+    border: 1px solid var(--primary-variant);
+    color: var(--primary-variant)
+}

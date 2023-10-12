@@ -15,6 +15,8 @@ import { CartComponent } from './Layout/cart/cart.component';
 import { WishlistComponent } from './Layout/wishlist/wishlist.component';
 import { ProfileComponent } from './Layout/profile/profile.component';
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
+import { HeroComponent } from './Components/hero/hero.component';
+import { NgxSplideModule } from 'ngx-splide';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,13 @@ import { SidebarComponent } from './Components/sidebar/sidebar.component';
     WishlistComponent,
     ProfileComponent,
     SidebarComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxSplideModule
   ],
   providers: [
 

@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="big-screen">
+        <splide [options]="{ type: 'loop', perPage: 1, keyboard: false, autoplay: true,interval:1000}">
+            <splide-slide *ngFor="let image of imagesLarge">
+                <img [src]="image" alt="" />
+            </splide-slide>
+        </splide>
+    </div>
+
+    <div class="small-screen">
+        <splide [options]="{ type: 'loop', perPage: 1, keyboard: false, autoplay: true,interval:1000, arrows:false }">
+            <splide-slide *ngFor="let image of imagesSmall">
+                <img [src]="image" alt="" />
+            </splide-slide>
+        </splide>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+ img{
+    width: 100% !important;
+}
+
+.small-screen{
+    display: none;
+}
+
+.your-class-page{
+    background: red;
+}
+
+
+@media screen and (max-width:768px) {
+    .big-screen{
+        display: none;
+    }
+
+    .small-screen{
+        display: block;
+    }
+
+    .splide__arrow{
+        display: none !important;
+        background: yellow !important;
+    }
+}

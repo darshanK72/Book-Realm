@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@syncfusion/ej2-grids": "^23.1.40",
     "bootstrap": "^5.3.2",
     "ngx-splide": "^2.0.2",
     "rxjs": "~7.8.0",

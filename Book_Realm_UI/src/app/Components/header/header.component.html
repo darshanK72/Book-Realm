@@ -185,7 +185,9 @@
         <div class="icon-wrapper">
             <div class="head-icons">
                 <div class="sign-in" *ngIf="!ifLoggedIn">
-                    <button class="btn btn-primary">Sign In</button>
+                    <button class="btn btn-primary">
+                        <a routerLink="signin">Sign In</a>
+                    </button>
                 </div>
                 <div class="icon search-icon" (click)="toggleSidebar()">
                     <i class="fi fi-rr-search"></i>

@@ -1,1 +1,83 @@
-<p>signup works!</p>
+<div class="wrapper">
+    <div class="left">
+        <div class="image-box">
+            <img src="../../../assets/img/loginmockup.png" alt="">
+        </div>
+        <div class="title">
+            <h4>Continue your love for books
+                on our platform & get curated collection</h4>
+        </div>
+        <div class="features">
+            <div class="box">
+                <img src="../../../assets/img/genuion.svg" alt="">
+                <p>Genuine books</p>
+            </div>
+            <div class="box">
+                <img src="../../../assets/img/greateprice.svg" alt="">
+                <p>Great pricing</p>
+            </div>
+            <div class="box">
+                <img src="../../../assets/img/fastdelivery.svg" alt="">
+                <p>Faster delivery</p>
+            </div>
+        </div>
+    </div>
+    <div class="vr">
+
+    </div>
+    <div class="right">
+        <div class="top">
+            <h5>Hello, welcome back!
+               </h5>
+               <p> Great to have you back, please sign In to continue</p>
+        </div>
+        <div class="form">
+            <form>
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name">
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="text" name="phone" placeholder="Phone No">
+                </div>
+                <div class="input-box">
+                    <input type="date" id="element" name="dateOfBirth" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="input-box" id="date">
+                    <input type="password" name="passowrd" #password placeholder="Password" (input)="showValidations(password)">
+                    <div class="eye" (click)="toggleEye(password)">
+                        <i class="fa-regular fa-eye" id="open" *ngIf="eleOpen"></i>
+                        <i class="fa-regular fa-eye-slash" id="close" *ngIf="!eleOpen"></i>
+                    </div>
+                </div>
+                <div class="validations" #validations>
+                    <p class="name">Password Should be</p>
+                    <p class="validation" #upper>At least 1 uppercase letter.</p>
+                    <p class="validation" #lower>At least 1 lowercase letter.</p>
+                    <p class="validation" #number>At least 1 number.</p>
+                    <p class="validation" #special>At least 1 special character.</p>
+                    <p class="validation" #eight>Minium 8 character.</p>
+                </div>
+                <div class="button">
+                    <button class="btn btn-primary">Sign In</button>
+                </div>
+            </form>
+        </div>
+        <div class="rule">
+            <div class="hr"></div>
+            <p>OR</p>
+            <div class="hr"></div>
+        </div>
+        <div class="other-methods">
+            <div class="google-login">
+                <img src="../../../assets/img/google.svg" alt=""> <p>Sign in with google</p>
+            </div>
+        </div>
+        <div class="message">
+            <p>Do not have an account?
+                <span class="text-primary"><a href="#">Sign up</a></span></p>
+        </div>
+    </div>
+</div>

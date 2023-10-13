@@ -156,6 +156,10 @@
     margin-right: 1rem;
 }
 
+.hide{
+    display: none !important;
+}
+
 
 .slider{
     margin-top: 60px;

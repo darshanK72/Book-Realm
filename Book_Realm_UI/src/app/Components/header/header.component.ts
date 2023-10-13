@@ -1,4 +1,5 @@
-import { Component, ElementRef, EventEmitter, HostListener, Output, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Output, Renderer2, ViewChild } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { ToggleService } from 'src/app/Services/toggle.service';
 
 @Component({
@@ -6,9 +7,25 @@ import { ToggleService } from 'src/app/Services/toggle.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
 
-  constructor(private renderer:Renderer2,private toggleService:ToggleService){}
+  currentRoute!:any;
+
+  constructor(private renderer:Renderer2,private toggleService:ToggleService,private router: Router){}
+
+  ngAfterViewInit(): void {
+    console.log(this.router.url);
+
+    this.router.events.subscribe(data => {
+      if(data instanceof NavigationStart ) {
+        this.currentRoute = data.url;
+        console.log(this.currentRoute)
+        if(this.currentRoute == "/signin" || this.currentRoute == "/signup"){
+          this.renderer.addClass(this.slider.nativeElement,"hide");
+        }
+      }
+    })
+  }
 
   @ViewChild('slider')
   slider!:ElementRef
@@ -40,7 +57,7 @@ export class HeaderComponent {
   @ViewChild('profile')
   profile!:ElementRef
 
-  ifLoggedIn = true;
+  ifLoggedIn = false;
   showprof = false;
 
   showProfile(){

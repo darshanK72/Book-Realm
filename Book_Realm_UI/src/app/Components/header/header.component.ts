@@ -19,7 +19,6 @@ export class HeaderComponent implements AfterViewInit {
     this.router.events.subscribe(data => {
       if(data instanceof NavigationStart ) {
         this.currentRoute = data.url;
-        console.log(this.currentRoute)
         if(this.currentRoute == "/signin" || this.currentRoute == "/signup"){
           this.renderer.addClass(this.slider.nativeElement,"hide");
         }
@@ -86,7 +85,6 @@ export class HeaderComponent implements AfterViewInit {
       this.renderer.removeClass(this.slider.nativeElement,"slider-hide");
       this.renderer.addClass(this.slider.nativeElement,"slider-show");
     }
-    console.log(window.scrollY);
   }
 
   mouseOver(navItem:HTMLLIElement){

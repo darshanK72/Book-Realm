@@ -45,11 +45,10 @@ app-search{
     left: 0;
     right: 0;
     width: 100%;
-    /* width: 800px;
-    height: 600px; */
     z-index: 101;
     display: flex;
     justify-content: center;
+    height: 0px;
 }
 
 
@@ -204,5 +203,11 @@ input{
 
     .main{
         width:100%;
+    }
+}
+
+@media screen and (min-width:1260px) {
+    aside{
+        display: none;
     }
 }

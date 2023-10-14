@@ -34,7 +34,7 @@ export class SidebarComponent implements OnInit {
 
   ifLoggedIn = false;
 
-  searchQuery!:string;
+  searchQuery:string = '';
 
   constructor(private toggleService:ToggleService){}
 

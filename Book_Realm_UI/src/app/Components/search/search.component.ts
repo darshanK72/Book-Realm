@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, Renderer2, SimpleChanges, ViewChild } from '@angular/core';
+import { change } from '@syncfusion/ej2-grids';
 
 @Component({
   selector: 'app-search',
@@ -7,10 +8,20 @@ import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, Rendere
 })
 export class SearchComponent implements OnInit, OnChanges{
 
-  constructor(private renderer:Renderer2){}
+  constructor(private renderer:Renderer2){
+
+    this.renderer.listen('window', 'click',(e:Event)=>{
+
+    if(!this.wrapper.nativeElement.contains(e.target)){
+      this.query = ''
+      this.toShowSearch(this.query);
+    }
+ });
+
+  }
 
   @Input()
-  query!:string;
+  query:string = '';
 
   @ViewChild('wrapper')
   wrapper!:ElementRef
@@ -19,9 +30,13 @@ export class SearchComponent implements OnInit, OnChanges{
    
   }
 
-  ngOnChanges(): void {
-    console.log(this.query);
-    this.toShowSearch(this.query);
+  ngOnChanges(changes:SimpleChanges): void {
+    if(changes['query'].currentValue != ''){
+      this.toShowSearch(this.query);
+    }
+    else if(changes['query'].previousValue != undefined && changes['query'].currentValue == ''){
+      this.toShowSearch(this.query)
+    }
   } 
 
   toShowSearch(query:string){

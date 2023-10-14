@@ -179,7 +179,7 @@
                         <i class="fi fi-rr-search"></i>
                     </div>
                    <form>
-                    <input type="text" name="query" placeholder="Search books, authors, publishers" (input)="getSearchQuery($event)">
+                    <input type="text" name="query" placeholder="Search books, authors, publishers" (focus)="getSearchQuery($event)" (input)="getSearchQuery($event)">
                    </form>
                 </div>
                 <div class="search-result">
@@ -204,7 +204,7 @@
                     <i class="fi fi-rr-shopping-cart"></i>
                 </div>
                 <div class="icon" *ngIf="ifLoggedIn">
-                    <button (click)="showProfile()"><i class="fa-regular fa-user"></i></button>
+                    <button><i class="fa-regular fa-user" #showprofbtn></i></button>
                     <div class="profile-dropdown" #profile>
                         <div class="profile" *ngIf="ifLoggedIn">
                             <div class="profile-photo">

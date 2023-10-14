@@ -308,7 +308,6 @@
 }
 
 .profile-dropdown {
-    display: none;
     position: fixed;
     top: 61px;
     right: 12px;
@@ -321,11 +320,17 @@
     transform: scale(0.0001);
     transition: transform 300ms ease;
     font-size: 0.8rem;
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top right;
 }
 
 .show-profile {
     transform: scale(1);
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    height: fit-content;
 }
 
 .profile {
@@ -414,6 +419,7 @@ app-search{
     z-index: 101;
     display: flex;
     justify-content: center;
+    height: 0px;
 }
 
 

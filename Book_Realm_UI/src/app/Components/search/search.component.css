@@ -11,6 +11,7 @@
     transform-origin: top;
     height: 0px;
     opacity: 0;
+    box-shadow: var(--bottom-shadow);
    
 }
 

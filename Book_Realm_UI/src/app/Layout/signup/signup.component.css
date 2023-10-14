@@ -184,7 +184,7 @@ input[type=date]{
         text-align: center;
     }
 
-    #date{
+    #date-box{
         padding-right: 16px;
     }
 }

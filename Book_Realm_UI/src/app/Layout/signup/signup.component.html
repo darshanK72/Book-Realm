@@ -42,8 +42,9 @@
                 <div class="input-box">
                     <input type="text" name="phone" placeholder="Phone No">
                 </div>
-                <div class="input-box">
-                    <input type="date" id="element" name="dateOfBirth" placeholder="DD/MM/YYYY" id="date">
+                <div class="input-box" id="date-box">
+                    <input type="date" id="element" name="dateOfBirth" placeholder="Date Of Birth" id="date" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
                 </div>
                 <div class="input-box" id="password">
                     <input type="password" name="passowrd" #password placeholder="Password" (input)="showValidations(password)">

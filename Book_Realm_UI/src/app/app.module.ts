@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Layout/home/home.component';
-import { SignupComponent } from './Auth/signup/signup.component';
-import { SigninComponent } from './Auth/signin/signin.component';
+import { SignupComponent } from './Layout/signup/signup.component';
+import { SigninComponent } from './Layout/signin/signin.component';
 import { CartComponent } from './Layout/cart/cart.component';
 import { WishlistComponent } from './Layout/wishlist/wishlist.component';
 import { ProfileComponent } from './Layout/profile/profile.component';
@@ -23,6 +23,8 @@ import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
 import { FilterComponent } from './Layout/filter/filter.component';
 import { DetailComponent } from './Layout/detail/detail.component';
 import { SearchComponent } from './Components/search/search.component';
+import { CheckoutComponent } from './Layout/checkout/checkout.component';
+import { AuthorComponent } from './Layout/author/author.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { SearchComponent } from './Components/search/search.component';
     FilterComponent,
     DetailComponent,
     SearchComponent,
+    CheckoutComponent,
+    AuthorComponent,
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,13 @@
     width: 93%;
 }
 
+.search-box form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 input{
     outline: none;
     border: none;

@@ -109,6 +109,19 @@
     font-size: 1.3rem;
 }
 
+.nav-wrapper .search .search-box form{
+    width: 100%;
+}
+
+.nav-wrapper .search .search-box .search-icon-box{
+    color: var(--foreground-light);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
 .search-icon i {
     height: fit-content;
 }
@@ -226,7 +239,7 @@
 
 .hover-model {
     position: fixed;
-    top: 51px;
+    top: 50px;
     z-index: 11;
     /* height: 200px; */
     left: 0;
@@ -388,6 +401,19 @@
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+}
+
+app-search{
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* width: 800px;
+    height: 600px; */
+    z-index: 101;
+    display: flex;
+    justify-content: center;
 }
 
 

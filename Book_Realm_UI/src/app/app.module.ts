@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Layout/home/home.component';
-import { BookListComponent } from './Layout/book-list/book-list.component';
-import { BookDetailsComponent } from './Layout/book-details/book-details.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { SigninComponent } from './Auth/signin/signin.component';
 import { CartComponent } from './Layout/cart/cart.component';
@@ -20,6 +18,11 @@ import { NgxSplideModule } from 'ngx-splide';
 import { ListComponent } from './Components/list/list.component';
 import { LargeBannersComponent } from './Components/large-banners/large-banners.component';
 import { SmallBannersComponent } from './Components/small-banners/small-banners.component';
+import { GenreComponent } from './Layout/genre/genre.component';
+import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
+import { FilterComponent } from './Layout/filter/filter.component';
+import { DetailComponent } from './Layout/detail/detail.component';
+import { SearchComponent } from './Components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +30,6 @@ import { SmallBannersComponent } from './Components/small-banners/small-banners.
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    BookListComponent,
-    BookDetailsComponent,
     SignupComponent,
     SigninComponent,
     CartComponent,
@@ -39,6 +40,11 @@ import { SmallBannersComponent } from './Components/small-banners/small-banners.
     ListComponent,
     LargeBannersComponent,
     SmallBannersComponent,
+    GenreComponent,
+    SubgenreComponent,
+    FilterComponent,
+    DetailComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

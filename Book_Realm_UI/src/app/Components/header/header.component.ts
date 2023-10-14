@@ -59,6 +59,8 @@ export class HeaderComponent implements AfterViewInit {
   ifLoggedIn = false;
   showprof = false;
 
+  searchQuery!:string;
+
   showProfile(){
     this.showprof = !this.showprof;
     if(this.showprof){
@@ -68,6 +70,10 @@ export class HeaderComponent implements AfterViewInit {
     else{
       this.renderer.removeClass(this.profile.nativeElement,"show-profile")
     }
+  }
+
+  getSearchQuery(event:any){
+    this.searchQuery = event.target.value;
   }
 
   // @HostListener('document:click',['$event'])

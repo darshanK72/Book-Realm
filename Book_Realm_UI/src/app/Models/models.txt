@@ -1,0 +1,39 @@
+1) Book
+
+-- id
+-- title
+-- description
+-- author (id)
+-- price
+-- discount
+-- rating
+-- agerating
+-- gener (id)
+-- units
+-- language
+-- subgener (ids)
+-- publisher (id)
+-- details -- pages,weight,dimensinos
+-- reviews -- list
+
+2) Gener
+-- id
+-- name
+-- description
+-- subgeners (list of subgener ids)
+
+3) subgener
+-- id
+-- name
+-- description
+-- books (list)
+
+4) publisher
+-- id
+-- name
+-- description
+-- books
+
+
+-- Category : 
+

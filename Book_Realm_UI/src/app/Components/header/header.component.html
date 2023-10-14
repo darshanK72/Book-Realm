@@ -175,10 +175,15 @@
             </nav>
             <div class="search">
                 <div class="search-box">
-                    <div class="search-icon">
+                    <div class="search-icon-box">
                         <i class="fi fi-rr-search"></i>
                     </div>
-                    <input type="text" name="query" placeholder="Search books, authors, publishers">
+                   <form>
+                    <input type="text" name="query" placeholder="Search books, authors, publishers" (input)="getSearchQuery($event)">
+                   </form>
+                </div>
+                <div class="search-result">
+                    <app-search [query]="searchQuery"></app-search>
                 </div>
             </div>
         </div>

@@ -34,6 +34,8 @@ export class SidebarComponent implements OnInit {
 
   ifLoggedIn = false;
 
+  searchQuery!:string;
+
   constructor(private toggleService:ToggleService){}
 
   @Input()
@@ -43,6 +45,10 @@ export class SidebarComponent implements OnInit {
     this.toggleService.sidebarEmmiter.subscribe(data => {
       this.toShow = data;
     })
+  }
+
+  getSearchQuery(event:any){
+    this.searchQuery = event.target.value;
   }
 
 

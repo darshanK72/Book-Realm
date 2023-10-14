@@ -8,11 +8,14 @@
             </div>
             <div class="search-box">
                 <form>
-                    <input type="text" name="query" placeholder="Search books, authors, publishers">
+                    <input type="text" name="query" placeholder="Search books, authors, publishers" (input)="getSearchQuery($event)">
                 </form>
                <div class="cross">
                 <button (click)="close()"><i class="fa-solid fa-xmark"></i></button>
                </div>
+            </div>
+            <div class="search-result">
+                <app-search [query]="searchQuery"></app-search>
             </div>
         </div>
         <div class="scrollable">

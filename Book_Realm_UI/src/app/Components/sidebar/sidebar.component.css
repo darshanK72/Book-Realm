@@ -38,6 +38,21 @@
     align-items: center;
 }
 
+
+app-search{
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* width: 800px;
+    height: 600px; */
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+}
+
+
 input{
     outline: none;
     border: none;

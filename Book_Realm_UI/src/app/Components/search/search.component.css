@@ -12,6 +12,8 @@
    
 }
 
+
+
 /* ::-webkit-scrollbar{
     display: none;
 } */
@@ -97,4 +99,22 @@
 .see-all span{
     display: inline-block;
     font-weight: 700;
+}
+
+@media screen and (max-width:1260px)  {
+    .wrapper{
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding: 1rem ;
+        border-radius: 0;
+    }
+
+    .holder{
+        padding: 1rem;
+    }
+
+    .result{
+        width: 100%;
+        line-height: 1.25;
+    }
 }

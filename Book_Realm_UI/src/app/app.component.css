@@ -6,7 +6,7 @@ app-sidebar{
 }
 
 app-header{
-    height: 130px;
+    /* height: 130px; */
     position: fixed;
     top: 0;
     left: 0;

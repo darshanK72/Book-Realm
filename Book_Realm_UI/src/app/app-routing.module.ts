@@ -6,6 +6,7 @@ import { HomeComponent } from './Layout/home/home.component';
 import { CartComponent } from './Layout/cart/cart.component';
 import { WishlistComponent } from './Layout/wishlist/wishlist.component';
 import { DetailComponent } from './Layout/detail/detail.component';
+import { FilterComponent } from './Layout/filter/filter.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,9 @@ const routes: Routes = [
   },
   {
     path: 'detail', component: DetailComponent
+  },
+  {
+    path: 'filter', component: FilterComponent
   }
 ];
 

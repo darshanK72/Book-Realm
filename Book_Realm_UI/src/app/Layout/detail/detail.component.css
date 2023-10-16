@@ -282,6 +282,10 @@ table{
     .right{
         width: 100%;
     }
+
+    .author-publisher{
+        line-height: 1.25;
+    }
 }
 
 @media screen and (min-width:540px) and (max-width:1260px) {

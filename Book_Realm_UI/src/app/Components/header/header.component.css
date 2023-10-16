@@ -198,6 +198,7 @@
 
 .slider-hide {
     transform: translateY(-70px);
+    height: 0px;
 }
 
 

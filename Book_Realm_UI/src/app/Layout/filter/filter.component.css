@@ -1,0 +1,160 @@
+.wrapper {
+    margin-top: 130px;
+    padding: 2rem 5rem;
+    width: 100%;
+}
+
+.holder {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left {
+    width: 30%;
+    padding: 1rem;
+}
+
+.filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.text-primary {
+    font-weight: 700;
+    color: var(--primary-variant);
+    font-size: 0.9rem;
+}
+
+.filter-catg {
+    margin-top: 1rem;
+}
+
+/* -------- */
+
+.check-box {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.check-box input {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* Create a custom checkbox */
+.check-mark {
+    position: absolute;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--foreground-light);
+    border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+/* .filter-item:hover input~.check-mark {
+    background-color: #ccc;
+} */
+
+/* When the checkbox is checked, add a blue background */
+.check-box input:checked~.check-mark {
+    background-color: var(--primary-variant);
+    border: 1px solid var(--primary-variant);
+}
+
+/* Create the check-mark/indicator (hidden when not checked) */
+.check-mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the check-mark when checked */
+.check-box input:checked~.check-mark:after {
+    display: block;
+}
+
+/* Style the check-mark/indicator */
+.check-box .check-mark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* -------- */
+
+.filter-list {
+    padding: 0 1rem;
+    /* height: max-content; */
+    height: 300px;
+    /* max-height: 300px; */
+    overflow: scroll;
+    transition: height 300ms ease;
+
+}
+
+.filter-list::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+.filter-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-variant);
+    border-radius: 4px;
+}
+
+.collapse {
+    height: 0px;
+}
+
+.filter-list .filter-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border-bottom-light);
+}
+
+
+.filter-catg h5 {
+    font-size: 0.9rem;
+}
+
+.filter-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-title .filter-arrow {
+    margin-right: 1rem;
+    transform: rotate(360deg);
+    transition: all 300ms ease;
+}
+
+.rotate{
+    transform: rotate(270deg) !important;
+}
+
+
+.right {
+    width: 70%;
+    padding: 1rem;
+}
+
+.vr {
+    border-left: 1px solid var(--foreground-light);
+}

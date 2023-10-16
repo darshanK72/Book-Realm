@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    border: 1px solid var(--foreground-light);
+    /* border: 1px solid var(--foreground-light); */
     border-radius: 12px;
     padding: 1rem;
     flex-wrap: wrap;
@@ -40,6 +40,8 @@
     /* padding: 1rem; */
     display: flex;
     /* border-bottom: 0.6px solid var(--foreground-light); */
+    border: 1px solid var(--foreground-light);
+    border-radius: 8px;
 }
 
 
@@ -236,6 +238,7 @@
 
     .cart-holder .cart-item{
         width: 100%;
+        padding: 10px;
     }
 
     .cart-holder .cart-item .img{

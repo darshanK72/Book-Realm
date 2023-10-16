@@ -1,1 +1,110 @@
-<p>filter works!</p>
+<div class="wrapper">
+    <div class="title">
+        <h4>Science Friction</h4>
+    </div>
+    <div class="holder">
+        <div class="left">
+            <div class="filter">
+                <h5>Filter</h5>
+                <button class="text-primary">Clear All</button>
+            </div>
+            <div class="filters">
+                <ng-container *ngFor="let i of [1,2,3,4,5]">
+                    <div class="filter-catg">
+                        <div class="filter-title">
+                            <h5>
+                                Publisher
+                            </h5>
+                            <button class="filter-arrow" (click)="collapseFilter(collabsable,angle)" #angle>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </div>
+                        <div class="filter-list" #collabsable>
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+                                <p>Ethan Ellenberg Literary Agency</p>
+                            </label>
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+
+                                <p>Ethan Ellenberg Literary Agency</p>
+
+                            </label>
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+
+                                <p>Ethan Ellenberg Literary Agency</p>
+
+                            </label>
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+
+                                <p>St. Martins Press</p>
+
+                            </label>
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+                                <p>Ethan Ellenberg Literary Agency</p>
+                            </label>
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+                                <p>Ethan Ellenberg Literary Agency</p>
+                            </label>
+
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+                                <p>Ethan Ellenberg Literary Agency</p>
+                            </label>
+
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+                                <p>Ethan Ellenberg Literary Agency</p>
+                            </label>
+
+                            <label class="filter-item">
+                                <div class="check-box">
+                                    <input type="checkbox">
+                                    <div class="check-mark"></div>
+                                </div>
+                                <p>Ethan Ellenberg Literary Agency</p>
+                            </label>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="vr">
+
+        </div>
+        <div class="right">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, corrupti repellat earum rem ducimus
+                reiciendis, impedit quisquam voluptates alias voluptas ea magnam. Quidem architecto sequi molestiae,
+                sint eius illo facere necessitatibus, itaque eum laboriosam ad totam eos. Consequuntur, ad quibusdam.
+            </p>
+        </div>
+    </div>
+</div>

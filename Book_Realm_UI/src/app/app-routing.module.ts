@@ -5,6 +5,7 @@ import { SignupComponent } from './Layout/signup/signup.component';
 import { HomeComponent } from './Layout/home/home.component';
 import { CartComponent } from './Layout/cart/cart.component';
 import { WishlistComponent } from './Layout/wishlist/wishlist.component';
+import { DetailComponent } from './Layout/detail/detail.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'wishlist', component: WishlistComponent
+  },
+  {
+    path: 'detail', component: DetailComponent
   }
 ];
 

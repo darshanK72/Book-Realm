@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-detail',
@@ -7,4 +7,26 @@ import { Component } from '@angular/core';
 })
 export class DetailComponent {
 
+  constructor(private renderer:Renderer2){}
+
+  @ViewChild('desc')
+  desc!:ElementRef;
+
+  @ViewChild('btn')
+  btn!:ElementRef;
+
+  show:boolean = false;
+
+  readMore(){
+    if(!this.show){
+      this.show = true;
+      this.renderer.addClass(this.desc.nativeElement,"show");
+      this.btn.nativeElement.innerText = 'Show Less';
+    }
+    else{
+      this.show = false;
+      this.renderer.removeClass(this.desc.nativeElement,"show");
+      this.btn.nativeElement.innerText = 'Show More';
+    }
+  }
 }

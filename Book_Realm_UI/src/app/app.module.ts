@@ -23,7 +23,6 @@ import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
 import { FilterComponent } from './Layout/filter/filter.component';
 import { DetailComponent } from './Layout/detail/detail.component';
 import { SearchComponent } from './Components/search/search.component';
-import { CheckoutComponent } from './Layout/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,6 @@ import { CheckoutComponent } from './Layout/checkout/checkout.component';
     FilterComponent,
     DetailComponent,
     SearchComponent,
-    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

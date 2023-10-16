@@ -1,0 +1,292 @@
+.wrapper {
+    margin-top: 60px;
+    padding: 2rem 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    bottom: 0;
+    z-index: 2;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.left .image-slider {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-slider .image {
+    padding: 8px;
+    border: 1px solid var(--primary-variant);
+    border-radius: 8px;
+}
+
+.left .image-slider img {
+    width: 100%;
+}
+
+.left .main-image {
+    width: 80%;
+    padding: 0 1rem;
+}
+
+.left .main-image img {
+    width: 100%;
+}
+
+.right {
+    width: 50%;
+    padding: 1rem 0;
+}
+
+.right .rating {
+    display: inline-block;
+}
+
+.rating .btn-primary {
+    padding: 1px 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary i {
+    font-size: 0.8rem;
+    margin-left: 7px;
+}
+
+.author-publisher {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 10px 0;
+
+}
+
+.author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.author i {
+    margin-right: 10px;
+    color: var(--primary-variant);
+}
+
+.publisher {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.publisher i {
+    margin-right: 10px;
+    color: var(--primary-variant);
+}
+
+.vr {
+    border-left: 1px solid var(--foreground-light);
+}
+
+.publish-date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.publish-date i {
+    margin-right: 10px;
+    color: var(--primary-variant);
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 0.9rem;
+}
+
+.desc .description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.show{
+    display: block !important;
+}
+
+.text-primary{
+    font-weight: 700;
+    color: var(--primary-variant);
+    
+}
+
+.price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--ff-manrope);
+    margin: 1rem 0;
+}
+
+.price .amount{
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+.price .cross{
+    text-decoration: line-through;
+    color: var(--foreground-muted);
+    text-decoration-color: var(--foreground-muted);
+    text-decoration-thickness: 0.3px;
+    /* text-decoratio; */
+}
+
+.price .discount{
+    font-weight: 800;
+    color: var(--foreground-green);
+}
+
+.quantity{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+    gap: 10px;
+    margin-top:1rem ;
+}
+
+.quantity .btn{
+    /* padding: 10px !important; */
+    padding: 4px 12px;
+}
+
+.quantity .btn{
+    font-size: 1.3rem;
+}
+
+.quantity .qty p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--foreground-dark);
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0.5rem 0;
+}
+
+.btns .btn{
+    width: 48%;
+    text-align: center;
+}
+
+.list table{
+    width: 100%;
+}
+
+table,tr{
+    border: 2px solid var(--background-light);
+    border-collapse: collapse;
+}
+
+table{
+    font-family: var(--ff-manrope);
+}
+
+.th{
+    width: 30%;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+.td{
+    width: 70%;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.tags{
+    display: flex;
+    justify-content: flex-start;
+    gap:8px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+
+}
+.tag{
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width:540px) {
+    
+    .wrapper{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .left{
+        width: 100%;
+        position: static;
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .left .main-image{
+        width: 100%;
+        padding: 0;
+    }
+
+    .left .image-slider{
+        width: 100%;
+        flex-direction: row;
+        height: 100px;
+    }
+
+    .image-slider .image img{
+        height: 100%;
+        
+    }
+    .right{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:1260px) {
+    
+    .wrapper{
+        padding: 2rem;
+    }
+}

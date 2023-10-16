@@ -24,7 +24,6 @@ import { FilterComponent } from './Layout/filter/filter.component';
 import { DetailComponent } from './Layout/detail/detail.component';
 import { SearchComponent } from './Components/search/search.component';
 import { CheckoutComponent } from './Layout/checkout/checkout.component';
-import { AuthorComponent } from './Layout/author/author.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +47,6 @@ import { AuthorComponent } from './Layout/author/author.component';
     DetailComponent,
     SearchComponent,
     CheckoutComponent,
-    AuthorComponent,
   ],
   imports: [
     BrowserModule,

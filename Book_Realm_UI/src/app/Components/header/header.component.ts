@@ -45,8 +45,11 @@ export class HeaderComponent implements AfterViewInit {
     this.router.events.subscribe((data) => {
       if (data instanceof NavigationStart) {
         this.currentRoute = data.url;
-        if (this.currentRoute == '/signin' || this.currentRoute == '/signup' || this.currentRoute == '/cart') {
+        if (this.currentRoute == '/signin' || this.currentRoute == '/signup' || this.currentRoute == '/cart' || this.currentRoute == '/wishlist') {
           this.renderer.addClass(this.slider.nativeElement, 'hide');
+        }
+        else{
+          this.renderer.removeClass(this.slider.nativeElement,"hide");
         }
       }
     });

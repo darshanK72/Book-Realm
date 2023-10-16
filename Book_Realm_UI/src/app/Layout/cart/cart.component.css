@@ -240,15 +240,13 @@
     }
 
     .cart-holder .cart-item .details{
-        padding: 0 0 10px 5px;
+        padding: 0 0 10px 10px;
     }
 
     .cart-holder .cart-item .details .book-details .title{
         margin-bottom: 3px;
     }
-    .left .details .bottom{
-        font-size: 0.8rem;
-    }
+
 
     .delete{
         width: 30px;

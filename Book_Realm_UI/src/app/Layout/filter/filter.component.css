@@ -145,7 +145,7 @@
     transition: all 300ms ease;
 }
 
-.rotate{
+.rotate {
     transform: rotate(270deg) !important;
 }
 
@@ -157,4 +157,171 @@
 
 .vr {
     border-left: 1px solid var(--foreground-light);
+}
+
+.results {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results .sort {
+    width: 30%;
+    border: 1px solid var(--foreground-light);
+    padding-right: 10px;
+    border-radius: 8px;
+}
+
+.results select {
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--ff-manrope);
+}
+
+select option {
+    padding: 1rem;
+    width: calc(100% + 10px);
+    border-radius: 0;
+}
+
+
+option:checked {
+    background-color: var(--primary-variant);
+    color: var(--white);
+}
+
+option:not(:checked) {
+    background-color: #fff;
+}
+
+.results h4 {
+    color: var(--foreground-muted);
+}
+
+.results span {
+    display: inline-block;
+    color: var(--foreground-dark);
+}
+
+.list-holder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.list-holder .book-item {
+    width: 32%;
+    padding: 1rem;
+    /* border: 1px solid var(--foreground-muted); */
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 10px rgba(159, 159, 159, 0.526);
+    font-size: 0.9rem;
+    transition: all 300ms ease;
+    border-radius: 12px;
+    position: relative;
+}
+
+.book-item:hover {
+    transform: translateY(-20px);
+}
+
+.book-item .heart {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart i {
+    font-size: 2rem;
+    line-height: 0;
+    color: var(--foreground-muted);
+}
+
+
+.book-item .image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.book-item .image img {
+    width: 100%;
+}
+
+.list-holder .book-item .rating {
+    display: inline-block;
+}
+
+.rating .btn-primary {
+    padding: 1px 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.btn-primary i {
+    font-size: 0.8rem;
+    margin-left: 7px;
+}
+
+.book-item .details {
+    margin-top: 10px;
+}
+
+.book-item .title {
+    font-weight: 700;
+    display: -webkit-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    line-height: 1.25;
+}
+
+.book-item .author {
+    color: var(--foreground-muted);
+}
+
+
+.price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--ff-manrope);
+}
+
+.price .amount {
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.price .cross {
+    text-decoration: line-through;
+    color: var(--foreground-muted);
+    text-decoration-color: var(--foreground-muted);
+    text-decoration-thickness: 0.3px;
+    /* text-decoratio; */
+}
+
+.price .discount {
+    font-weight: 800;
+    color: var(--foreground-green);
 }

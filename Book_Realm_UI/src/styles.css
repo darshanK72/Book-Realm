@@ -66,7 +66,7 @@ a,
 img,
 span,
 iframe,
-button {
+button,select{
     display: block;
 }
 
@@ -84,14 +84,14 @@ img {
 }
 
 input,
-button {
+button,select {
     background: none;
     border: none;
     font: inherit;
     color: inherit;
 }
 
-input {
+input ,select{
     width: 100%;
 }
 

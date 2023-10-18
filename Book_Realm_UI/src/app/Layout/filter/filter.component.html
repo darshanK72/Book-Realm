@@ -101,10 +101,48 @@
 
         </div>
         <div class="right">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, corrupti repellat earum rem ducimus
-                reiciendis, impedit quisquam voluptates alias voluptas ea magnam. Quidem architecto sequi molestiae,
-                sint eius illo facere necessitatibus, itaque eum laboriosam ad totam eos. Consequuntur, ad quibusdam.
-            </p>
+            <div class="results">
+                <h4>All Results For <span> : Science Friction</span></h4>
+                <div class="sort">
+                    <select name="sortby">
+                        <option value="ascending"><div class="opt">
+                            Price : High to low
+                        </div></option>
+                        <option value="ascending">Price : Low to hign</option>
+                        <option value="ascending">Alphabetically</option>
+                    </select>
+                </div>
+            </div>
+            <div class="list-holder">
+
+                <ng-container *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+                    <div class="book-item">
+                        <div class="image">
+                            <img src="../../../assets/img/book.webp" alt="">
+                            <div class="heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="rating">
+                                <p class="btn-primary"> 4.3 <i class="fa-solid fa-star"></i></p>
+                            </div>
+                            <div class="title">
+                                <p>Gods Monsters and the Lucky Peach</p>
+                            </div>
+                            <div class="author">
+                                <p>Kelly Robson</p>
+                            </div>
+                            <div class="price">
+                                <span class="amount"> &#8377; 181</span>
+                                <span class="cross"> &#8377; 185</span>
+                                <span class="discount">(-7%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
         </div>
     </div>
 </div>

@@ -1,39 +1,68 @@
 1) Book
-
 -- id
 -- title
+-- rating
 -- description
 -- author (id)
+-- publisher (id)
+-- publish date
+-- images
 -- price
 -- discount
 -- rating
--- agerating
--- gener (id)
--- units
+-- quantity
+-- pages
+-- bookformat
 -- language
+-- gener (id)
 -- subgener (ids)
--- publisher (id)
--- details -- pages,weight,dimensinos
+-- tags
 -- reviews -- list
 
-2) Gener
+2) User
+-- id
+-- name
+-- email
+-- date
+-- password
+-- wishlist (list of books)
+-- cart (list of cart item)
+-- own reviews (list of reviews)
+
+3) Cart Item
+-- id
+-- book id
+-- quantity
+
+4) Wishlist
+-- id
+-- user-id
+-- books (list of books)
+
+5) Author extends User
+-- id
+-- description 
+-- books (list of books)
+
+6) Publisher extends User
+-- id
+-- description
+-- foundation date
+-- website url
+-- books (list of books)
+
+7) Category
+-- id
+-- geners (list of geners)
+
+8) Gener
 -- id
 -- name
 -- description
--- subgeners (list of subgener ids)
+-- subgeners (list of subgener)
 
-3) subgener
+9) Subgener
 -- id
 -- name
 -- description
--- books (list)
-
-4) publisher
--- id
--- name
--- description
--- books
-
-
--- Category : 
-
+-- books (list of books)

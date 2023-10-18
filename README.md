@@ -1,6 +1,6 @@
 # Book Realm: Empowering Authors and Enthusiasts
 
-Book Realm is an online platform designed for both avid readers and aspiring authors. For readers, it offers a handpicked selection of literary gems across various genres, ensuring every book is a journey waiting to be embarked upon.
+Book Realm is an online platform designed for both readers and aspiring authors. For readers, it offers a handpicked selection of literary gems across various genres, ensuring every book is a journey waiting to be embarked upon.
 
 Authors, whether seasoned or budding, can utilize Book Realm to share their narratives with a global audience. Our intuitive interface simplifies the process, allowing creativity to flourish without constraints.
 

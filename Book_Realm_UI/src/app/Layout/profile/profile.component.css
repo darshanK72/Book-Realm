@@ -141,6 +141,8 @@
 
     .right{
         padding: 0;
+        border-top: 1px solid var(--foreground-light);
+        padding-top: 1rem;
     }
 
     .main-profile .image{

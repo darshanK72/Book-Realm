@@ -11,6 +11,8 @@ import { ProfileComponent } from './Layout/profile/profile.component';
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
 import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component';
+import { AddressComponent } from './Components/address/address.component';
+import { ChangePassComponent } from './Components/change-pass/change-pass.component';
 
 const routes: Routes = [
   {
@@ -47,6 +49,12 @@ const routes: Routes = [
       }, 
       {
         path:'my-reviews',component:MyReviewsComponent
+      },
+      {
+        path: 'address',component:AddressComponent
+      },
+      {
+        path: 'change-pass',component:ChangePassComponent
       }
     ]
   }

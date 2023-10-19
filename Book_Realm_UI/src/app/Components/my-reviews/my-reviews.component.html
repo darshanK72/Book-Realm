@@ -3,6 +3,34 @@
         <h5>My Reviews</h5>
     </div>
     <div class="details">
-       
+        <div class="review-list">
+            <div class="review" *ngFor="let i of [1,2,3,4,5,6,7]">
+                <div class="book-details">
+                    <div class="image">
+                        <img src="../../../assets/img/book.webp" alt="">
+                    </div>
+                    <div class="book-detail">
+                        <p class="title">Lorem ipsum dolor sit amet.</p>
+                        <p class="author">Lorem ipsum.</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="delete">
+                        <button><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+               
+                <div class="comment">
+                    <p class="title">Comment</p>
+                        <p class="rev">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis corrupti repudiandae quam obcaecati architecto ex.</p>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,0 +1,111 @@
+.wrapper{
+    padding-bottom: 1rem;
+}
+
+.wrapper .details{
+    margin-top: 1rem;
+}
+
+.review-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.review{
+    border: 1px solid var(--foreground-light);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 49%;
+    position: relative;
+}
+
+.review .book-details{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.book-details .image{
+    height: 120px;
+}
+
+.book-details .image img{
+    height: 100%;
+}
+
+.book-detail{
+    line-height: 1.25;
+    margin-left: 10px;
+}
+
+.book-detail .title{
+    font-weight: 700;
+    width: 80%;
+}
+
+.book-detail .author{
+    font-size: 0.9rem;
+    color: var(--foreground-muted);
+}
+
+.book-details .delete{
+    position: absolute;
+    top: 10px;
+    right: 1rem;
+}
+
+.delete i{
+    font-size: 1.2rem;
+    color: var(--primary-variant);
+}
+
+.rating{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+.rating i{
+    color: var(--gold-variant);
+}
+
+.comment{
+    margin-top: 10px;
+}
+.comment .title{
+    font-weight: 600;
+}
+.comment .rev{
+    font-size: 0.9rem;
+    color: var(--foreground-dark);
+    width: 100%;
+}
+
+@media screen and (max-width:540px) {
+    
+    .review{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width:540px) and (max-width:1260px){
+    
+    .review-list{
+        gap:10px;
+    }
+    .review{
+        width: 49%;
+    }
+}
+
+@media screen and (min-width:1260px) and (max-width:1400px) {
+    .review{
+        width: 48%;
+    }
+}
+

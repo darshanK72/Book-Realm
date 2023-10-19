@@ -4,6 +4,7 @@
     /* Colors */
     --primary-variant: rgb(242, 74, 74);
     --secondary-variant: hsl(16, 100%, 73%);
+    --gold-variant: hsl(48, 100%, 50%);
 
     --foreground-light: hsl(240, 2%, 76%);
     --foreground-muted: hsl(225, 3%, 49%);

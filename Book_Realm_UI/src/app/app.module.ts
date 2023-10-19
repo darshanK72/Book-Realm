@@ -26,6 +26,8 @@ import { SearchComponent } from './Components/search/search.component';
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component';
 import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
+import { AddressComponent } from './Components/address/address.component';
+import { ChangePassComponent } from './Components/change-pass/change-pass.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
     MyProfileComponent,
     MyReviewsComponent,
     MyOrdersComponent,
+    AddressComponent,
+    ChangePassComponent,
   ],
   imports: [
     BrowserModule,

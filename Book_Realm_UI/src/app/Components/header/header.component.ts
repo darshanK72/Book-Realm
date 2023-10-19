@@ -70,6 +70,9 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('slider')
   slider!: ElementRef;
 
+  @ViewChild('showprof')
+  showproff!:ElementRef;
+
   @ViewChild('topgeners')
   topgeners!: ElementRef;
 
@@ -111,6 +114,12 @@ export class HeaderComponent implements AfterViewInit {
     } else {
       this.renderer.removeClass(this.profile.nativeElement, 'show-profile');
     }
+  }
+
+  hideProfile(){
+    this.showprof = false;
+    console.log("Hello");
+    this.renderer.removeClass(this.profile.nativeElement, 'show-profile');
   }
 
   getSearchQuery(event: any) {

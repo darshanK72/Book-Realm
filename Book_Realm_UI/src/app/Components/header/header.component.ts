@@ -20,19 +20,22 @@ export class HeaderComponent implements AfterViewInit {
   currentRoute!: any;
 
   constructor(
-    private renderer: Renderer2,private toggleService: ToggleService,private router: Router) {
-
+    private renderer: Renderer2,
+    private toggleService: ToggleService,
+    private router: Router
+  ) {
     this.renderer.listen('window', 'click', (e: Event) => {
       console.log(e.target);
-      if(e.target == this.showprofbtn.nativeElement && this.showprof == false){
+      if (
+        e.target == this.showprofbtn.nativeElement &&
+        this.showprof == false
+      ) {
         this.showprof = true;
         this.showProfile();
-      }
-      else if(this.profile.nativeElement.contains(e.target)){
+      } else if (this.profile.nativeElement.contains(e.target)) {
         this.showprof = true;
         this.showProfile();
-      }
-      else{
+      } else {
         this.showprof = false;
         this.showProfile();
       }
@@ -45,11 +48,20 @@ export class HeaderComponent implements AfterViewInit {
     this.router.events.subscribe((data) => {
       if (data instanceof NavigationStart) {
         this.currentRoute = data.url;
-        if (this.currentRoute == '/signin' || this.currentRoute == '/signup' || this.currentRoute == '/cart' || this.currentRoute == '/wishlist' || this.currentRoute == '/detail' || this.currentRoute == '/profile') {
+        if (
+          this.currentRoute == '/signin' ||
+          this.currentRoute == '/signup' ||
+          this.currentRoute == '/cart' ||
+          this.currentRoute == '/wishlist' ||
+          this.currentRoute == '/detail' ||
+          this.currentRoute == '/profile' ||
+          this.currentRoute == '/profile/my-profile' ||
+          this.currentRoute == '/profile/my-orders' ||
+          this.currentRoute == '/profile/my-reviews'
+        ) {
           this.renderer.addClass(this.slider.nativeElement, 'hide');
-        }
-        else{
-          this.renderer.removeClass(this.slider.nativeElement,"hide");
+        } else {
+          this.renderer.removeClass(this.slider.nativeElement, 'hide');
         }
       }
     });
@@ -86,7 +98,7 @@ export class HeaderComponent implements AfterViewInit {
   profile!: ElementRef;
 
   @ViewChild('showprofbtn')
-  showprofbtn!:ElementRef;
+  showprofbtn!: ElementRef;
 
   ifLoggedIn = true;
   showprof = false;

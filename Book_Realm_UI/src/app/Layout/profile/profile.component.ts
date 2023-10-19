@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+  scroll(el: HTMLElement) {
+
+    el.scrollIntoView({ behavior: 'smooth' });
+  
+  }
 }

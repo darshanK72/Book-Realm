@@ -23,6 +23,9 @@ import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
 import { FilterComponent } from './Layout/filter/filter.component';
 import { DetailComponent } from './Layout/detail/detail.component';
 import { SearchComponent } from './Components/search/search.component';
+import { MyProfileComponent } from './Components/my-profile/my-profile.component';
+import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component';
+import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { SearchComponent } from './Components/search/search.component';
     FilterComponent,
     DetailComponent,
     SearchComponent,
+    MyProfileComponent,
+    MyReviewsComponent,
+    MyOrdersComponent,
   ],
   imports: [
     BrowserModule,

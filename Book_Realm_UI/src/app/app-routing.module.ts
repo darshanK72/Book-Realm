@@ -8,6 +8,9 @@ import { WishlistComponent } from './Layout/wishlist/wishlist.component';
 import { DetailComponent } from './Layout/detail/detail.component';
 import { FilterComponent } from './Layout/filter/filter.component';
 import { ProfileComponent } from './Layout/profile/profile.component';
+import { MyProfileComponent } from './Components/my-profile/my-profile.component';
+import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
+import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component';
 
 const routes: Routes = [
   {
@@ -35,7 +38,17 @@ const routes: Routes = [
     path: 'filter', component: FilterComponent
   },
   {
-    path: 'profile', component: ProfileComponent
+    path: 'profile', component: ProfileComponent,children:[
+      {
+        path:'my-profile',component:MyProfileComponent
+      },
+      {
+        path:'my-orders',component:MyOrdersComponent
+      }, 
+      {
+        path:'my-reviews',component:MyReviewsComponent
+      }
+    ]
   }
 ];
 

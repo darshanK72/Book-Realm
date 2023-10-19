@@ -1,0 +1,50 @@
+.wrapper{
+    padding-bottom: 1rem;
+}
+
+.wrapper .details{
+    margin-top: 1rem;
+}
+
+.wrapper .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .details.prof{
+    margin-left: 1rem;
+    border:1px solid var(--foreground-light);
+    border-radius: 12px;
+    padding: 10px
+}
+
+.details.prof td{
+    padding: 5px;
+}
+
+tr{
+    display: flex;
+    justify-content: space-between
+}
+
+td{
+    width: 50%;
+}
+td p{
+    width: 100%;
+}
+
+td span{
+    width: 100%;
+    word-break: break-all;
+}
+
+table{
+    width: 100%;
+}
+.details.prof table span{
+    font-family: var(--ff-manrope);
+     display: inline-block;
+     font-weight: 700;
+}

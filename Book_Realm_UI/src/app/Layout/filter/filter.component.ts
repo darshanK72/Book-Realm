@@ -7,6 +7,9 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 })
 export class FilterComponent {
 
+  @ViewChild('filterEle')
+  filterEle!:ElementRef;
+
   constructor(private renderer: Renderer2) {}
 
   name:string = 'lab';
@@ -22,6 +25,14 @@ export class FilterComponent {
       this.renderer.addClass(collabsable, 'collapse');
       this.renderer.addClass(angle,"rotate")
     }
+  }
+
+  showFilter(){
+    this.renderer.removeClass(this.filterEle.nativeElement,"hide");
+  }
+
+  hideFilter(){
+    this.renderer.addClass(this.filterEle.nativeElement,"hide");
   }
 
 }

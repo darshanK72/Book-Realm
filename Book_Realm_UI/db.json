@@ -1,0 +1,205 @@
+{
+    "users":[
+        {
+          "Id": 1,
+          "Name": "John Doe",
+          "Email": "john.doe@example.com",
+          "Date": "1990-01-15",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 2,
+          "Name": "Jane Smith",
+          "Email": "jane.smith@example.com",
+          "Date": "1985-09-22",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 3,
+          "Name": "Bob Johnson",
+          "Email": "bob.johnson@example.com",
+          "Date": "1988-06-18",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 4,
+          "Name": "Sarah Williams",
+          "Email": "sarah.williams@example.com",
+          "Date": "1992-03-04",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 5,
+          "Name": "Michael Davis",
+          "Email": "michael.davis@example.com",
+          "Date": "1983-12-30",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 6,
+          "Name": "Emily Wilson",
+          "Email": "emily.wilson@example.com",
+          "Date": "1989-07-10",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 7,
+          "Name": "David Lee",
+          "Email": "david.lee@example.com",
+          "Date": "1982-04-25",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 8,
+          "Name": "Olivia Miller",
+          "Email": "olivia.miller@example.com",
+          "Date": "1987-11-15",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 9,
+          "Name": "James Brown",
+          "Email": "james.brown@example.com",
+          "Date": "1984-08-08",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 10,
+          "Name": "Sophia Taylor",
+          "Email": "sophia.taylor@example.com",
+          "Date": "1995-05-12",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 11,
+          "Name": "Daniel Evans",
+          "Email": "daniel.evans@example.com",
+          "Date": "1993-10-07",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 12,
+          "Name": "Emma Brown",
+          "Email": "emma.brown@example.com",
+          "Date": "1986-02-19",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 13,
+          "Name": "Matthew Johnson",
+          "Email": "matthew.johnson@example.com",
+          "Date": "1991-09-02",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 14,
+          "Name": "Ava Davis",
+          "Email": "ava.davis@example.com",
+          "Date": "1981-07-14",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 15,
+          "Name": "Noah Wilson",
+          "Email": "noah.wilson@example.com",
+          "Date": "1980-11-26",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 16,
+          "Name": "Sophia Lee",
+          "Email": "sophia.lee@example.com",
+          "Date": "1983-05-18",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 17,
+          "Name": "Liam Miller",
+          "Email": "liam.miller@example.com",
+          "Date": "1984-03-11",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 18,
+          "Name": "Ava Davis",
+          "Email": "ava.davis@example.com",
+          "Date": "1985-08-22",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 19,
+          "Name": "Lucas Taylor",
+          "Email": "lucas.taylor@example.com",
+          "Date": "1989-06-06",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        },
+        {
+          "Id": 20,
+          "Name": "Mia Evans",
+          "Email": "mia.evans@example.com",
+          "Date": "1992-12-30",
+          "Password": "hashed_password",
+          "Cart": [],
+          "OwnReviews": [],
+          "Wishlist": []
+        }
+      ]
+      
+}

@@ -7,6 +7,7 @@ import { CartComponent } from './Layout/cart/cart.component';
 import { WishlistComponent } from './Layout/wishlist/wishlist.component';
 import { DetailComponent } from './Layout/detail/detail.component';
 import { FilterComponent } from './Layout/filter/filter.component';
+import { ProfileComponent } from './Layout/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,9 @@ const routes: Routes = [
   },
   {
     path: 'filter', component: FilterComponent
+  },
+  {
+    path: 'profile', component: ProfileComponent
   }
 ];
 

@@ -325,3 +325,53 @@ option:not(:checked) {
     font-weight: 800;
     color: var(--foreground-green);
 }
+
+@media screen and (max-width:540px) {
+
+    .wrapper {
+        padding: 1rem;
+    }
+
+    .left,
+    .vr {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right .results {
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filt{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filt .fil i{
+        font-size: 1.5rem;
+        color: var(--primary-variant);
+    }
+
+    .results h4 {
+        width: 100%;
+    }
+
+    .right .list-holder {
+        gap: 10px;
+    }
+
+    option{
+        font-size: 0.8rem;
+    }
+
+    .right .list-holder .book-item {
+        width: 48%;
+    }
+}

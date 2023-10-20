@@ -7,7 +7,7 @@
 .holder {
     display: flex;
     justify-content: space-between;
-    position: relativeS;
+    position: relative;
 
 }
 

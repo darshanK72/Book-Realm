@@ -13,6 +13,7 @@ import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
 import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component';
 import { AddressComponent } from './Components/address/address.component';
 import { ChangePassComponent } from './Components/change-pass/change-pass.component';
+import { GenreComponent } from './Layout/genre/genre.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,9 @@ const routes: Routes = [
   },
   {
     path: 'filter', component: FilterComponent
+  },
+  {
+    path: 'genre', component: GenreComponent
   },
   {
     path: 'profile', component: ProfileComponent,children:[

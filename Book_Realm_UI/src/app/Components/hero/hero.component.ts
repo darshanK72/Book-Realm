@@ -9,14 +9,14 @@ import Splide from '@splidejs/splide';
 export class HeroComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    new Splide('.splide', {
-      type: 'loop',
-      perPage: 1,
-      keyboard: false,
-      autoplay: true,
-      interval: 1000,
-      arrows: false,
-    });
+    // new Splide('.splide', {
+    //   type: 'loop',
+    //   perPage: 1,
+    //   keyboard: false,
+    //   autoplay: true,
+    //   interval: 1000,
+    //   arrows: false,
+    // });
   }
 
   imagesLarge: string[] = [

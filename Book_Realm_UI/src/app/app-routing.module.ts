@@ -14,6 +14,7 @@ import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component
 import { AddressComponent } from './Components/address/address.component';
 import { ChangePassComponent } from './Components/change-pass/change-pass.component';
 import { GenreComponent } from './Layout/genre/genre.component';
+import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,9 @@ const routes: Routes = [
   },
   {
     path: 'genre', component: GenreComponent
+  },
+  {
+    path: 'sub-genre', component: SubgenreComponent
   },
   {
     path: 'profile', component: ProfileComponent,children:[

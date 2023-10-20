@@ -1,1 +1,115 @@
-<p>subgenre works!</p>
+<div class="wrapper">
+    <div class="title">
+        <h3> Literature & Friction</h3>
+    </div>
+    <div class="holder">
+        <div class="catg">
+            <div class="top">
+                <div class="sub-title">
+                    <h5>New Arrivals</h5>
+                </div>
+                <div class="view">
+                  <a routerLink="/filter">
+                    <button>
+                        View All
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </a>
+                </div>
+            </div>
+            <splide
+            [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
+                <splide-slide *ngFor="let i of [1,2,3,4,5,6,7]">
+                    <div class="book-item">
+                        <div class="image">
+                            <img src="../../../assets/img/book.webp" alt="">
+                            <div class="heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="rating">
+                                <p class="btn-primary"> 4.3 <i class="fa-solid fa-star"></i></p>
+                            </div>
+                            <div class="title">
+                                <p>Gods Monsters and the Lucky Peach</p>
+                            </div>
+                            <div class="author">
+                                <p>Kelly Robson</p>
+                            </div>
+                            <div class="price">
+                                <span class="amount"> &#8377; 181</span>
+                                <span class="cross"> &#8377; 185</span>
+                                <span class="discount">(-7%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </splide-slide>
+            </splide>
+
+        </div>
+
+        <div class="catg">
+            <div class="top">
+                <div class="sub-title">
+                    <h5>Top Authors</h5>
+                </div>
+            </div>
+            <splide
+            [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true }">
+                <splide-slide *ngFor="let i of [1,2,3,4,5,6,7]">
+                    <div class="item">
+                        <div class="image">
+                            <img src="../../../assets/img/profile.png" alt="">
+                        </div>
+                        <div class="name">
+                            <p>Wipf And Stocks</p>
+                        </div>
+                    </div>
+                </splide-slide>
+            </splide>
+
+        </div>
+
+        <div class="catg">
+            <div class="top">
+                <div class="sub-title">
+                    <h5>Top Publishers</h5>
+                </div>
+            </div>
+            <splide
+                [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true }">
+                <splide-slide *ngFor="let i of [1,2,3,4,5,6,7]">
+                    <div class="item">
+                        <div class="image">
+                            <img src="../../../assets/img/profile.png" alt="">
+                        </div>
+                        <div class="name">
+                            <p>Wipf And Stocks</p>
+                        </div>
+                    </div>
+                </splide-slide>
+            </splide>
+
+        </div>
+
+        <div class="catg">
+            <div class="top">
+                <div class="sub-title">
+                    <h5>Related Sub Genres</h5>
+                </div>
+            </div>
+            <div class="sub-gener-list">
+              <div class="sub-genre" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+                <div class="sub-genre-image">
+                    <img src="../../../assets/img/action.jpg" alt="">
+                    <p>Science & Friction
+                        <small>877 Books</small>
+                    </p>
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

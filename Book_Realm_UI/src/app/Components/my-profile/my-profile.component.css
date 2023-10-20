@@ -48,3 +48,30 @@ table{
      display: inline-block;
      font-weight: 700;
 }
+
+.form{
+    width: 100%;
+}
+
+.form-item{
+    width: 50%;
+    margin: 10px 0;
+}
+
+.form-item label{
+    font-family: var(--ff-manrope);
+    font-weight: 700;
+}
+.form-item input{
+    outline: none;
+    border: 1px solid var(--background-dark);
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+@media screen and (max-width:840px) {
+    
+    .form-item{
+        width: 100%;
+    }
+}

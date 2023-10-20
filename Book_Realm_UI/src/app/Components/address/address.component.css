@@ -18,3 +18,35 @@
     border-radius: 12px;
     padding: 10px
 }
+
+
+.form{
+    width: 100%;
+}
+
+.form-item{
+    width: 80%;
+    margin: 10px 0;
+}
+
+.form-item label{
+    font-family: var(--ff-manrope);
+    font-weight: 700;
+}
+.form-item textarea{
+    outline: none;
+    border: 1px solid var(--background-dark);
+    border-radius: 4px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 4px;
+}
+
+
+@media screen and (max-width:840px) {
+    
+    .form-item{
+        width: 100%;
+    }
+}

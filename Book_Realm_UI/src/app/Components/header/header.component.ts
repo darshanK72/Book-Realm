@@ -57,7 +57,9 @@ export class HeaderComponent implements AfterViewInit {
           this.currentRoute == '/profile' ||
           this.currentRoute == '/profile/my-profile' ||
           this.currentRoute == '/profile/my-orders' ||
-          this.currentRoute == '/profile/my-reviews'
+          this.currentRoute == '/profile/my-reviews' ||
+          this.currentRoute == '/profile/address' ||
+          this.currentRoute == '/profile/change-pass'
         ) {
           this.renderer.addClass(this.slider.nativeElement, 'hide');
         } else {

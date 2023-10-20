@@ -330,8 +330,15 @@
     color: var(--foreground-green);
 }
 
+@media screen and (max-width:372px) {
+    
+    .book-item{
+        width: 100%;
+    }
+}
 
-@media screen and (max-width:540px) {
+
+@media screen and (min-width:372px) and (max-width:540px) {
 
     .wrapper{
         padding: 1rem;

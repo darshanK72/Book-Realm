@@ -66,3 +66,10 @@
 -- name
 -- description
 -- books (list of books)
+
+
+-- complete profile, genre, subgenre pages
+-- setup json server with some demo models
+-- implement redux and http client
+-- complete all functionality working
+-- 

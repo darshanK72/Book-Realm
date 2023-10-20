@@ -188,7 +188,7 @@
     left: 10px;
     color: var(--white);
     font-weight: 700;
-    z-index: 100;
+    z-index: 95;
 }
 
 .sub-genre .sub-genre-image p small {

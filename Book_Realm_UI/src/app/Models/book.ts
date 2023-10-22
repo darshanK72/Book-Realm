@@ -1,14 +1,19 @@
 export interface Book{
     id:number;
     title:string;
-    description:string;
-    price:number;
-    discount:number;
     rating:number;
-    language:string;
-    genre:string;
-    subgenre:string;
-    publisher:string;
+    description:string;
+    publishDate:string;
+    images:string[];
+    price:number;
+    discountPercentage:number;
     pages:number;
-    reviews:string[];
+    bookFormat:string;
+    language:string;
+    tags:string[];
+    reviews:number[];
+    authorId:number;
+    publisherId:number;
+    genreId:number;
+    subgenreId:number;
 }

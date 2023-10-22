@@ -28,6 +28,14 @@ import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component
 import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
 import { AddressComponent } from './Components/address/address.component';
 import { ChangePassComponent } from './Components/change-pass/change-pass.component';
+import { AboutComponent } from './Layout/about/about.component';
+import { HelpComponent } from './Layout/help/help.component';
+import { FaqsComponent } from './Layout/faqs/faqs.component';
+import { PrivacyComponent } from './Layout/privacy/privacy.component';
+import { AuthorComponent } from './Layout/author/author.component';
+import { PublisherComponent } from './Layout/publisher/publisher.component';
+import { AdminComponent } from './Layout/admin/admin.component';
+import { BannerComponent } from './Layout/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +63,14 @@ import { ChangePassComponent } from './Components/change-pass/change-pass.compon
     MyOrdersComponent,
     AddressComponent,
     ChangePassComponent,
+    AboutComponent,
+    HelpComponent,
+    FaqsComponent,
+    PrivacyComponent,
+    AuthorComponent,
+    PublisherComponent,
+    AdminComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

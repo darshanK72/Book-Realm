@@ -1,205 +1,195 @@
 {
-    "users":[
-        {
-          "Id": 1,
-          "Name": "John Doe",
-          "Email": "john.doe@example.com",
-          "Date": "1990-01-15",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 2,
-          "Name": "Jane Smith",
-          "Email": "jane.smith@example.com",
-          "Date": "1985-09-22",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 3,
-          "Name": "Bob Johnson",
-          "Email": "bob.johnson@example.com",
-          "Date": "1988-06-18",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 4,
-          "Name": "Sarah Williams",
-          "Email": "sarah.williams@example.com",
-          "Date": "1992-03-04",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 5,
-          "Name": "Michael Davis",
-          "Email": "michael.davis@example.com",
-          "Date": "1983-12-30",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 6,
-          "Name": "Emily Wilson",
-          "Email": "emily.wilson@example.com",
-          "Date": "1989-07-10",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 7,
-          "Name": "David Lee",
-          "Email": "david.lee@example.com",
-          "Date": "1982-04-25",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 8,
-          "Name": "Olivia Miller",
-          "Email": "olivia.miller@example.com",
-          "Date": "1987-11-15",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 9,
-          "Name": "James Brown",
-          "Email": "james.brown@example.com",
-          "Date": "1984-08-08",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 10,
-          "Name": "Sophia Taylor",
-          "Email": "sophia.taylor@example.com",
-          "Date": "1995-05-12",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 11,
-          "Name": "Daniel Evans",
-          "Email": "daniel.evans@example.com",
-          "Date": "1993-10-07",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 12,
-          "Name": "Emma Brown",
-          "Email": "emma.brown@example.com",
-          "Date": "1986-02-19",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 13,
-          "Name": "Matthew Johnson",
-          "Email": "matthew.johnson@example.com",
-          "Date": "1991-09-02",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 14,
-          "Name": "Ava Davis",
-          "Email": "ava.davis@example.com",
-          "Date": "1981-07-14",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 15,
-          "Name": "Noah Wilson",
-          "Email": "noah.wilson@example.com",
-          "Date": "1980-11-26",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 16,
-          "Name": "Sophia Lee",
-          "Email": "sophia.lee@example.com",
-          "Date": "1983-05-18",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 17,
-          "Name": "Liam Miller",
-          "Email": "liam.miller@example.com",
-          "Date": "1984-03-11",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 18,
-          "Name": "Ava Davis",
-          "Email": "ava.davis@example.com",
-          "Date": "1985-08-22",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 19,
-          "Name": "Lucas Taylor",
-          "Email": "lucas.taylor@example.com",
-          "Date": "1989-06-06",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        },
-        {
-          "Id": 20,
-          "Name": "Mia Evans",
-          "Email": "mia.evans@example.com",
-          "Date": "1992-12-30",
-          "Password": "hashed_password",
-          "Cart": [],
-          "OwnReviews": [],
-          "Wishlist": []
-        }
-      ]
-      
+  "user": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "john@123",
+      "role": "user",
+      "birthDate": "1990-01-15",
+      "addressId": 1,
+      "cartId": 1,
+      "wishlistId": 1,
+      "reviews": [],
+      "orders": []
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "jane@123",
+      "role": "user",
+      "birthDate": "1985-09-22",
+      "addressId": 2,
+      "cartId": 2,
+      "wishlistId": 2,
+      "reviews": [],
+      "orders": []
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "Darshan Khairnar",
+      "email": "darshan@gmail.com",
+      "password": "darshan@123",
+      "role": "admin"
+    }
+  ],
+  "author": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "john@123",
+      "role": "author",
+      "birthDate": "1990-01-15",
+      "addressId": 1,
+      "cartId": 1,
+      "wishlistId": 1,
+      "reviews": [],
+      "orders": [],
+      "description": "lorem",
+      "publishedBooks": []
+    }
+  ],
+  "publisher": [
+    {
+      "id": 1,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "jane@123",
+      "role": "publisher",
+      "addressId": 1,
+      "cartId": 2,
+      "wishlistId": 2,
+      "orders": [],
+      "reviews": [],
+      "description": "lorem",
+      "foundationDate": "1990-08-14",
+      "websiteUrl": "https://gooogle.com",
+      "publishedBooks": []
+    }
+  ],
+  "address": [
+    {
+      "id": 1,
+      "street1": "Yoga Yog Telors",
+      "street2": "Anand Nagar,Soygaon",
+      "city": "Malegaon",
+      "state": "Maharashtra",
+      "country": "India",
+      "pincode": 423203
+    },
+    {
+      "id": 1,
+      "street1": "Ganesh Apartment",
+      "street2": "Joyti Nagar,Sangameshwer",
+      "city": "Malegaon",
+      "state": "Maharashtra",
+      "country": "India",
+      "pincode": 423203
+    }
+  ],
+  "book": [
+    {
+      "id": 1,
+      "title": "It Ends with Us",
+      "rating": 4,
+      "description": "It Ends with Us is a romance novel by Colleen Hoover, published by Atria Books on August 2, 2016. Based on the relationship between her mother and father, Hoover described it as \"the hardest book I've ever written.\" \nAs of 2019, the novel had sold over one million copies worldwide and been translated into over twenty languages. A sequel titled It Starts with Us was published in October 2022.",
+      "publishDate": "2016-08-02",
+      "images": [],
+      "price": 1800,
+      "discountPercentage": 18,
+      "pages": 327,
+      "bookFormat": "Paper Back",
+      "language": "English",
+      "country":"United States",
+      "tags": [],
+      "reviews": [],
+      "authorId": 1,
+      "publisherId": 1,
+      "genreId": 1,
+      "subgenreId": 1
+    }
+  ],
+  "review": [
+    {
+      "id": 1,
+      "comment": "lorem1",
+      "rating": 3,
+      "userId": 1,
+      "bookId": 1
+    }
+  ],
+  "genre": [
+    {
+      "id": 1,
+      "name": "Friction",
+      "description": "",
+      "subgenres": []
+    }
+  ],
+  "subgenre": [
+    {
+      "id": 1,
+      "name": "",
+      "description": "lorem",
+      "genreId": 1
+    }
+  ],
+  "bill": [
+    {
+      "id": 1,
+      "subTotal": 1200,
+      "discount": 320,
+      "tax": 120,
+      "shipping": 80,
+      "total": 1080
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "cartBookList": [],
+      "billId": 1
+    }
+  ],
+  "cartItem": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "quantity": 2,
+      "cartId": 1
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 1,
+      "wishlistBookList": []
+    }
+  ],
+  "wishlistItem": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "wishlistId": 1
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "status": "Delivered",
+      "orders": [],
+      "billId": 1
+    }
+  ],
+  "orderItem": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "quantity": 2,
+      "orderId": 1
+    }
+  ]
 }

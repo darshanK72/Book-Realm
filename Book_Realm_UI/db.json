@@ -459,7 +459,6 @@
         "https://m.media-amazon.com/images/I/51oeu+RZ3QL.jpg",
         "https://m.media-amazon.com/images/I/81Kx93kCHhL._SL1500_.jpg",
         "https://m.media-amazon.com/images/I/81lQSY1NkNL._AC_UF1000,1000_QL80_.jpg"
-
       ],
       "price": 1500,
       "discountPercentage": 15,
@@ -752,8 +751,4166 @@
       "publisherId": 1,
       "genreId": 1,
       "subgenreId": 1
+    },
+    {
+      "id": 16,
+      "title": "Ways of Seeing",
+      "rating": 4.5,
+      "description": "John Berger's 'Ways of Seeing' revolutionizes the way we understand art. This seminal work explores how the act of looking at art is influenced by cultural, social, and historical contexts. Berger challenges conventional interpretations and invites readers to engage with art on a deeper level.",
+      "publishDate": "1972-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/918FaSUn+mL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61rbO4IAa4L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 15,
+      "pages": 176,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art",
+        "Art Theory",
+        "Visual Perception"
+      ],
+      "reviews": [
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44,
+        50
+      ],
+      "authorName": "John Berger",
+      "authorId": 15,
+      "publisherName": "Penguin Books",
+      "publisherId": 1,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 17,
+      "title": "The Story of Art",
+      "rating": 4.8,
+      "description": "E.H. Gombrich's 'The Story of Art' is a definitive introduction to art history. This classic text traces the evolution of art from ancient civilizations to the modern era. Gombrich's accessible and insightful narrative has made this book a beloved resource for art enthusiasts and students alike.",
+      "publishDate": "1950-01-01",
+      "images": [
+        "https://www.iumeni.cz/books/pics-big/story-of-art.jpg",
+        "https://cdn.dc5.ro/img-prod/1844826616-1.jpeg",
+        "https://m.media-amazon.com/images/I/613NEJEhIFL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 688,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Art Appreciation"
+      ],
+      "reviews": [
+        5,
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47
+      ],
+      "authorName": "E.H. Gombrich",
+      "authorId": 16,
+      "publisherName": "Phaidon Press",
+      "publisherId": 13,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 18,
+      "title": "The Shock of the New",
+      "rating": 4.4,
+      "description": "Robert Hughes' 'The Shock of the New' is a riveting exploration of modern art. Hughes guides readers through the revolutionary shifts and innovations that defined the art world from the late 19th century to the present day. This engaging narrative offers fresh perspectives on the icons of modernity.",
+      "publishDate": "1980-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/614M0sO2tTL._AC_UF1000,1000_QL80_.jpg",
+        "https://artgallery.dal.ca/sites/default/files/events/shock-new/shockofthenew01.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 20,
+      "pages": 448,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Modern Art",
+        "Art History"
+      ],
+      "reviews": [
+        6,
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48
+      ],
+      "authorName": "Robert Hughes",
+      "authorId": 17,
+      "publisherName": "Thames & Hudson",
+      "publisherId": 14,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 19,
+      "title": "Art and Visual Perception: A Psychology of the Creative Eye",
+      "rating": 4.6,
+      "description": "Rudolf Arnheim's 'Art and Visual Perception' offers a profound exploration of the psychology behind visual art. Arnheim delves into the cognitive processes that underlie our perception of visual elements. This seminal work is essential reading for artists, psychologists, and anyone interested in the interplay of art and perception.",
+      "publishDate": "1954-01-01",
+      "images": [
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1223628615i/1294306.jpg",
+        "https://covers.openlibrary.org/b/id/7994796-L.jpg",
+        "https://m.media-amazon.com/images/I/41-rvCD-KuL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1600,
+      "discountPercentage": 15,
+      "pages": 512,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art",
+        "Visual Perception",
+        "Psychology"
+      ],
+      "reviews": [
+        1,
+        7,
+        13,
+        19,
+        25,
+        31,
+        37,
+        43
+      ],
+      "authorName": "Rudolf Arnheim",
+      "authorId": 18,
+      "publisherName": "University of California Press",
+      "publisherId": 15,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 20,
+      "title": "The Art Spirit",
+      "rating": 4.7,
+      "description": "Robert Henri's 'The Art Spirit' is a timeless collection of thoughts on art and creativity. Based on Henri's lectures and conversations with his students, this book celebrates the essence of artistic expression. It encourages artists to tap into their inner spirit and find their unique voice in the world of art.",
+      "publishDate": "1923-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71sFN-MwDpL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71HAXxialIL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 20,
+      "pages": 288,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art",
+        "Creativity",
+        "Artistic Expression"
+      ],
+      "reviews": [
+        2,
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44
+      ],
+      "authorName": "Robert Henri",
+      "authorId": 19,
+      "publisherName": "Basic Books",
+      "publisherId": 16,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 21,
+      "title": "The Letters of Vincent van Gogh",
+      "rating": 4.9,
+      "description": "Vincent van Gogh's letters provide a captivating insight into the mind of the legendary artist. This collection showcases Van Gogh's thoughts, struggles, and artistic aspirations. Through his own words, readers gain a deeper understanding of the creative process and the profound emotions that fueled his art.",
+      "publishDate": "1914-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71mm7IPGXAL._AC_UF1000,1000_QL80_.jpg",
+        "https://live.staticflickr.com/2244/2390003643_d23751fdaa_z.jpg"
+      ],
+      "price": 2000,
+      "discountPercentage": 10,
+      "pages": 480,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Netherlands",
+      "tags": [
+        "Art",
+        "Vincent van Gogh",
+        "Letters"
+      ],
+      "reviews": [
+        3,
+        9,
+        15,
+        21,
+        27,
+        33,
+        39,
+        45
+      ],
+      "authorName": "Vincent van Gogh",
+      "authorId": 20,
+      "publisherName": "Penguin Classics",
+      "publisherId": 17,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 22,
+      "title": "Art as Experience",
+      "rating": 4.5,
+      "description": "John Dewey's 'Art as Experience' redefines our understanding of art and aesthetics. Dewey argues that art is not a static object, but an active, transformative experience. This philosophical exploration challenges conventional notions of aesthetics and invites readers to engage with art in a more profound and enriching way.",
+      "publishDate": "1934-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/A14j3fjUvSL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/41HV7ryyxPL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 15,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art",
+        "Aesthetics",
+        "Philosophy"
+      ],
+      "reviews": [
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46
+      ],
+      "authorName": "John Dewey",
+      "authorId": 21,
+      "publisherName": "Perigee Trade",
+      "publisherId": 18,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 23,
+      "title": "The Shape of Time: Remarks on the History of Things",
+      "rating": 4.3,
+      "description": "George Kubler's 'The Shape of Time' offers a unique perspective on the passage of time in art and material culture. Kubler introduces the concept of 'serial time' to understand how forms evolve and persist across cultures and epochs. This thought-provoking book challenges traditional narratives of art history.",
+      "publishDate": "1962-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51EFLdQMGML._AC_UF894,1000_QL80_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1174448290i/402273.jpg"
+      ],
+      "price": 1600,
+      "discountPercentage": 10,
+      "pages": 136,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art History",
+        "Material Culture",
+        "Temporal Forms"
+      ],
+      "reviews": [
+        1,
+        7,
+        13,
+        19,
+        25,
+        31,
+        37,
+        43
+      ],
+      "authorName": "George Kubler",
+      "authorId": 22,
+      "publisherName": "Yale University Press",
+      "publisherId": 19,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 24,
+      "title": "The Birth of Tragedy",
+      "rating": 4.2,
+      "description": "Friedrich Nietzsche's 'The Birth of Tragedy' explores the origins of Greek tragedy and the nature of artistic creation. Nietzsche contends that the tension between the Apollonian and Dionysian forces gives rise to profound artistic expression. This philosophical work has had a significant impact on aesthetics and cultural theory.",
+      "publishDate": "1872-01-01",
+      "images": [
+        "https://cdn.kobo.com/book-images/409b8436-7ee0-4435-afcc-f59b5c84724c/1200/1200/False/the-birth-of-tragedy-12.jpg",
+        "https://m.media-amazon.com/images/I/51h1SNvaNgL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 20,
+      "pages": 160,
+      "bookFormat": "Paperback",
+      "language": "German",
+      "country": "Germany",
+      "tags": [
+        "Philosophy",
+        "Greek Tragedy",
+        "Aesthetics"
+      ],
+      "reviews": [
+        2,
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44
+      ],
+      "authorName": "Friedrich Nietzsche",
+      "authorId": 23,
+      "publisherName": "Cambridge University Press",
+      "publisherId": 20,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 25,
+      "title": "The Painted Word",
+      "rating": 4.1,
+      "description": "Tom Wolfe's 'The Painted Word' offers a satirical critique of the contemporary art world. Wolfe explores the rise of art theory and the influence of critics and curators on the perception of art. This provocative book challenges conventional notions of artistic value and authenticity.",
+      "publishDate": "1975-01-01",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/5/5e/ThePaintedWord.jpg",
+        "https://m.media-amazon.com/images/I/51BBFSBYR0L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 15,
+      "pages": 128,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Contemporary Art",
+        "Art Criticism",
+        "Satire"
+      ],
+      "reviews": [
+        3,
+        9,
+        15,
+        21,
+        27,
+        33,
+        39,
+        45
+      ],
+      "authorName": "Tom Wolfe",
+      "authorId": 24,
+      "publisherName": "Farrar, Straus and Giroux",
+      "publisherId": 21,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 26,
+      "title": "Art and Illusion: A Study in the Psychology of Pictorial Representation",
+      "rating": 4.7,
+      "description": "E.H. Gombrich's 'Art and Illusion' is a groundbreaking examination of the psychology behind pictorial representation. Gombrich explores the cognitive processes that allow us to interpret images and their relationship to the real world. This influential work has had a profound impact on the fields of art history and cognitive psychology.",
+      "publishDate": "1960-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/913aBeQTQyL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81XVsxowGoL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2100,
+      "discountPercentage": 10,
+      "pages": 462,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Visual Perception",
+        "Illusion"
+      ],
+      "reviews": [
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46
+      ],
+      "authorName": "E.H. Gombrich",
+      "authorId": 16,
+      "publisherName": "Princeton University Press",
+      "publisherId": 22,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 27,
+      "title": "Concerning the Spiritual in Art",
+      "rating": 4.6,
+      "description": "Wassily Kandinsky's 'Concerning the Spiritual in Art' is a seminal text in the history of abstract art. Kandinsky explores the spiritual and emotional dimensions of artistic expression, advocating for a more abstract and non-representational approach to art. This influential work laid the groundwork for the development of abstract art.",
+      "publishDate": "1911-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71rbcBnKVzL._AC_UF1000,1000_QL80_.jpg",
+        "https://cdn.kobo.com/book-images/5176e380-6b65-47ae-88b4-d0653af31abf/1200/1200/False/concerning-the-spiritual-in-art-13.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 15,
+      "pages": 80,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Germany",
+      "tags": [
+        "Abstract Art",
+        "Spirituality",
+        "Art Theory"
+      ],
+      "reviews": [
+        5,
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47
+      ],
+      "authorName": "Wassily Kandinsky",
+      "authorId": 25,
+      "publisherName": "Dover Publications",
+      "publisherId": 23,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 28,
+      "title": "The Practice and Science of Drawing",
+      "rating": 4.4,
+      "description": "Harold Speed's 'The Practice and Science of Drawing' is a comprehensive guide to the fundamentals of drawing. Speed covers essential techniques, from line drawing to understanding form and light. This instructive book is an invaluable resource for aspiring artists and anyone looking to improve their drawing skills.",
+      "publishDate": "1917-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61MAYjpAHuL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51frKQq0-3L.jpg"
+      ],
+      "price": 1700,
+      "discountPercentage": 20,
+      "pages": 348,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Drawing",
+        "Art Instruction",
+        "Techniques"
+      ],
+      "reviews": [
+        6,
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48
+      ],
+      "authorName": "Harold Speed",
+      "authorId": 26,
+      "publisherName": "Dover Publications",
+      "publisherId": 23,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 29,
+      "title": "The Art of Looking Sideways",
+      "rating": 4.8,
+      "description": "Alan Fletcher's 'The Art of Looking Sideways' is a visually rich exploration of creativity and perception. This thought-provoking book combines images, anecdotes, and reflections to inspire a fresh perspective on art and design. It encourages readers to embrace curiosity and approach the world with a more creative eye.",
+      "publishDate": "2001-09-17",
+      "images": [
+        "https://m.media-amazon.com/images/I/81RXZjkgRRL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 10,
+      "pages": 534,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Creativity",
+        "Perception",
+        "Design"
+      ],
+      "reviews": [
+        7,
+        13,
+        19,
+        25,
+        31,
+        37,
+        43,
+        49
+      ],
+      "authorName": "Alan Fletcher",
+      "authorId": 27,
+      "publisherName": "Phaidon Press",
+      "publisherId": 13,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 30,
+      "title": "The Art Book",
+      "rating": 4.7,
+      "description": "Phaidon Press's 'The Art Book' is an indispensable reference guide to the world of art. Featuring over 600 artists and their masterpieces, this comprehensive volume provides a concise overview of art history. With stunning visuals and insightful commentary, it is a must-have for art enthusiasts and students.",
+      "publishDate": "1994-09-14",
+      "images": [
+        "https://m.media-amazon.com/images/I/91pJdvmvqIL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/91KVanREgiS._SL1500_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 592,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Reference",
+        "Masterpieces"
+      ],
+      "reviews": [
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44,
+        50
+      ],
+      "authorName": "Phaidon Press",
+      "authorId": 28,
+      "publisherName": "Phaidon Press",
+      "publisherId": 13,
+      "genreId": 1,
+      "subgenreId": 2
+    },
+    {
+      "id": 31,
+      "title": "Color and Light: A Guide for the Realist Painter",
+      "rating": 4.8,
+      "description": "James Gurney's 'Color and Light' is an essential resource for painters seeking to understand the complexities of color and light in visual art. Gurney combines practical advice with in-depth explanations, making this book invaluable for both beginners and experienced artists.",
+      "publishDate": "2010-11-30",
+      "images": [
+        "https://m.media-amazon.com/images/I/51Cv14i-pjL.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art Techniques",
+        "Color Theory",
+        "Realism",
+        "Painting"
+      ],
+      "reviews": [
+        9,
+        18,
+        27,
+        36,
+        45
+      ],
+      "authorName": "James Gurney",
+      "authorId": 29,
+      "publisherName": "Andrews McMeel Publishing",
+      "publisherId": 24,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 32,
+      "title": "The Artist's Guide to Human Anatomy",
+      "rating": 4.7,
+      "description": "Gottfried Bammes' 'The Artist's Guide to Human Anatomy' is a comprehensive reference for artists seeking to master human anatomy. With detailed illustrations and insightful commentary, this book provides a solid foundation for accurate figure drawing.",
+      "publishDate": "2014-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51LRI7PGNnL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81pp2Rgn+NL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 15,
+      "pages": 240,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Germany",
+      "tags": [
+        "Anatomy",
+        "Figure Drawing",
+        "Art Reference",
+        "Drawing"
+      ],
+      "reviews": [
+        1,
+        10,
+        19,
+        28,
+        37
+      ],
+      "authorName": "Gottfried Bammes",
+      "authorId": 30,
+      "publisherName": "Search Press",
+      "publisherId": 25,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 33,
+      "title": "The Elements of Color",
+      "rating": 4.5,
+      "description": "Johannes Itten's 'The Elements of Color' is a fundamental exploration of color theory. Itten's comprehensive approach to understanding color harmonies and contrasts has made this book a classic in the field of art and design.",
+      "publishDate": "1970-09-01",
+      "images": [
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388639623i/967309.jpg"
+      ],
+      "price": 2000,
+      "discountPercentage": 10,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Switzerland",
+      "tags": [
+        "Color Theory",
+        "Art Techniques",
+        "Design",
+        "Color Harmony"
+      ],
+      "reviews": [
+        2,
+        11,
+        20,
+        29,
+        38
+      ],
+      "authorName": "Johannes Itten",
+      "authorId": 31,
+      "publisherName": "Wiley",
+      "publisherId": 26,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 34,
+      "title": "Dynamic Wrinkles and Drapery: Solutions for Drawing the Clothed Figure",
+      "rating": 4.6,
+      "description": "Burne Hogarth's 'Dynamic Wrinkles and Drapery' is an essential guide for artists aiming to master the depiction of clothing and fabric. With Hogarth's detailed illustrations and expert advice, this book offers practical solutions for drawing realistic drapery.",
+      "publishDate": "1995-06-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91JOC25QcCL._AC_UF1000,1000_QL80_.jpg",
+        "https://i.pinimg.com/474x/58/ae/c4/58aec4355257ec785f77cce106b29f0f.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 15,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Figure Drawing",
+        "Clothing",
+        "Art Techniques",
+        "Anatomy"
+      ],
+      "reviews": [
+        3,
+        12,
+        21,
+        30,
+        39
+      ],
+      "authorName": "Burne Hogarth",
+      "authorId": 32,
+      "publisherName": "Watson-Guptill",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 35,
+      "title": "How to Draw What You See",
+      "rating": 4.7,
+      "description": "Rudy De Reyna's 'How to Draw What You See' is a practical guide for artists looking to improve their observational drawing skills. With exercises and techniques designed to enhance perception and accuracy, this book is an invaluable resource for aspiring artists.",
+      "publishDate": "1970-09-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/A1Z-ksohk9L._AC_UF894,1000_QL80_.jpg",
+        "https://www.jacksonsart.com/blog/wp-content/uploads/2014/09/Rudy-De-Reyna2.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 10,
+      "pages": 178,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Drawing Techniques",
+        "Observational Drawing",
+        "Art Instruction",
+        "Perception"
+      ],
+      "reviews": [
+        4,
+        13,
+        22,
+        31,
+        40
+      ],
+      "authorName": "Rudy De Reyna",
+      "authorId": 33,
+      "publisherName": "Watson-Guptill",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 36,
+      "title": "Bridgman's Complete Guide to Drawing from Life",
+      "rating": 4.5,
+      "description": "George B. Bridgman's 'Complete Guide to Drawing from Life' is a classic reference for figure drawing. Bridgman's detailed illustrations and expert guidance provide invaluable insights for artists striving to capture the human form.",
+      "publishDate": "1979-07-01",
+      "images": [
+        "https://rukminim1.flixcart.com/image/850/1000/kk4c13k0/book/0/w/5/bridgman-s-complete-guide-to-drawing-from-life-original-imafzjexrrenuv3n.jpeg?q=90",
+        "https://m.media-amazon.com/images/I/5109Uf2WNpL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2100,
+      "discountPercentage": 15,
+      "pages": 352,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Figure Drawing",
+        "Art Reference",
+        "Anatomy",
+        "Drawing Techniques"
+      ],
+      "reviews": [
+        5,
+        14,
+        23,
+        32,
+        41
+      ],
+      "authorName": "George B. Bridgman",
+      "authorId": 34,
+      "publisherName": "Sterling",
+      "publisherId": 28,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 37,
+      "title": "Anatomy for the Artist",
+      "rating": 4.6,
+      "description": "Sarah Simblet's 'Anatomy for the Artist' offers a comprehensive study of human anatomy through detailed illustrations and accessible commentary. This book provides essential knowledge for artists seeking to depict the human form accurately and expressively.",
+      "publishDate": "2001-10-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/91FPNP2JjmL._AC_UF894,1000_QL80_.jpg",
+        "https://cdn.kobo.com/book-images/1424154d-a211-4b6a-8656-6fd92627f063/1200/1200/False/anatomy-for-artists.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 10,
+      "pages": 256,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Anatomy",
+        "Figure Drawing",
+        "Art Reference",
+        "Anatomy Study"
+      ],
+      "reviews": [
+        6,
+        15,
+        24,
+        33,
+        42
+      ],
+      "authorName": "Sarah Simblet",
+      "authorId": 35,
+      "publisherName": "DK",
+      "publisherId": 29,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 38,
+      "title": "The Natural Way to Draw",
+      "rating": 4.8,
+      "description": "Kimon Nicolaides' 'The Natural Way to Draw' is a classic guide to freehand drawing and artistic expression. With a focus on intuition and spontaneity, this book encourages artists to trust their instincts and develop a natural drawing style.",
+      "publishDate": "1941-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81HIRc5ecQS._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81YkwBwkUfL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 10,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Freehand Drawing",
+        "Artistic Expression",
+        "Drawing Techniques",
+        "Intuition"
+      ],
+      "reviews": [
+        7,
+        16,
+        25,
+        34,
+        43
+      ],
+      "authorName": "Kimon Nicolaides",
+      "authorId": 36,
+      "publisherName": "Mariner Books",
+      "publisherId": 30,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 39,
+      "title": "Light for Visual Artists: Understanding & Using Light in Art & Design",
+      "rating": 4.5,
+      "description": "Richard Yot's 'Light for Visual Artists' provides a comprehensive exploration of the role of light in visual art and design. With practical exercises and insightful explanations, this book empowers artists to use light as a powerful tool in their creative process.",
+      "publishDate": "2011-04-05",
+      "images": [
+        "https://m.media-amazon.com/images/I/71K44tIjQkL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 176,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Lighting Techniques",
+        "Art and Design",
+        "Creative Process",
+        "Visual Arts"
+      ],
+      "reviews": [
+        8,
+        17,
+        26,
+        35,
+        44
+      ],
+      "authorName": "Richard Yot",
+      "authorId": 37,
+      "publisherName": "Laurence King Publishing",
+      "publisherId": 31,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 40,
+      "title": "The Artist's Complete Guide to Facial Expression",
+      "rating": 4.6,
+      "description": "Gary Faigin's 'The Artist's Complete Guide to Facial Expression' is an essential reference for artists aiming to depict the complexities of human emotions. With detailed illustrations and expert analysis, this book provides valuable insights into capturing expressive faces.",
+      "publishDate": "2008-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/7140JMzN0NL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/91As2dFNJmL._SL1500_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 15,
+      "pages": 288,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Facial Expression",
+        "Figure Drawing",
+        "Art Reference",
+        "Emotions"
+      ],
+      "reviews": [
+        9,
+        18,
+        27,
+        36,
+        45
+      ],
+      "authorName": "Gary Faigin",
+      "authorId": 38,
+      "publisherName": "Watson-Guptill",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 41,
+      "title": "Artistic Anatomy",
+      "rating": 4.5,
+      "description": "Dr. Paul Richer's 'Artistic Anatomy' is a classic anatomical reference for artists. With detailed illustrations and clear explanations, this book provides a comprehensive understanding of the human figure, making it a valuable resource for figure artists.",
+      "publishDate": "1971-08-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/515LbfxkX+L.jpg",
+        "https://prodimage.images-bn.com/pimages/9780486136561_p0_v3_s1200x630.jpg"
+      ],
+      "price": 2000,
+      "discountPercentage": 10,
+      "pages": 288,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "France",
+      "tags": [
+        "Anatomy",
+        "Figure Drawing",
+        "Art Reference",
+        "Medical Illustration"
+      ],
+      "reviews": [
+        10,
+        19,
+        28,
+        37,
+        46
+      ],
+      "authorName": "Dr. Paul Richer",
+      "authorId": 39,
+      "publisherName": "Dover Publications",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 42,
+      "title": "Oil Painting Techniques and Materials",
+      "rating": 4.7,
+      "description": "Harold Speed's 'Oil Painting Techniques and Materials' is a comprehensive guide to the materials and techniques used in oil painting. With practical advice and insights, this book is an invaluable resource for artists seeking to master the medium of oil paint.",
+      "publishDate": "1924-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81d1R-fypZL._AC_UF1000,1000_QL80_.jpg",
+        "https://i.ebayimg.com/images/g/EqwAAOSwB09YLejl/s-l1200.webp"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Oil Painting",
+        "Art Techniques",
+        "Painting Materials"
+      ],
+      "reviews": [
+        11,
+        20,
+        29,
+        38,
+        47
+      ],
+      "authorName": "Harold Speed",
+      "authorId": 40,
+      "publisherName": "Dover Publications",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 43,
+      "title": "The Human Figure: A Photographic Reference for Artists",
+      "rating": 4.6,
+      "description": "Eadweard Muybridge's 'The Human Figure' provides a series of photographic references capturing various poses and movements of the human body. This invaluable resource is essential for artists looking to accurately depict the human figure in their artwork.",
+      "publishDate": "1980-06-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51eq1hnSm-L._AC_UF350,350_QL50_.jpg",
+        "https://m.media-amazon.com/images/I/41Xx1DyupOL.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 10,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Figure Drawing",
+        "Photographic Reference",
+        "Anatomy",
+        "Art Reference"
+      ],
+      "reviews": [
+        12,
+        21,
+        30,
+        39,
+        48
+      ],
+      "authorName": "Eadweard Muybridge",
+      "authorId": 41,
+      "publisherName": "Dover Publications",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 44,
+      "title": "The Artist's Guide to Animal Anatomy",
+      "rating": 4.7,
+      "description": "Gottfried Bammes' 'The Artist's Guide to Animal Anatomy' is an essential reference for artists interested in depicting animals with accuracy and precision. With detailed illustrations and insightful commentary, this book provides a solid foundation for animal drawing.",
+      "publishDate": "2018-08-21",
+      "images": [
+        "https://m.media-amazon.com/images/I/91lfgMzrRpL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71coh4K18IL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 15,
+      "pages": 208,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Germany",
+      "tags": [
+        "Animal Anatomy",
+        "Figure Drawing",
+        "Art Reference"
+      ],
+      "reviews": [
+        13,
+        22,
+        31,
+        40,
+        49
+      ],
+      "authorName": "Gottfried Bammes",
+      "authorId": 30,
+      "publisherName": "Search Press",
+      "publisherId": 25,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 45,
+      "title": "The Painter's Handbook: Revised and Expanded",
+      "rating": 4.6,
+      "description": "Mark David Gottsegen's 'The Painter's Handbook' is a comprehensive guide to painting materials and techniques. This revised and expanded edition offers invaluable insights for artists seeking to navigate the world of painting.",
+      "publishDate": "2006-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71xGPiwGgjL._AC_UF1000,1000_QL80_.jpg",
+        "https://images.ctfassets.net/f1fikihmjtrp/44wDhr5bBoLcSyjjZPgwEl/81df37afabdfcc614193a58b0cf6e600/69435-1001-1-4ww.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 352,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Painting Techniques",
+        "Art Materials",
+        "Art Instruction"
+      ],
+      "reviews": [
+        14,
+        23,
+        32,
+        41,
+        50
+      ],
+      "authorName": "Mark David Gottsegen",
+      "authorId": 42,
+      "publisherName": "Watson-Guptill",
+      "publisherId": 27,
+      "genreId": 1,
+      "subgenreId": 3
+    },
+    {
+      "id": 46,
+      "title": "The Power of Movement in Plants",
+      "rating": 4.4,
+      "description": "Charles Darwin's 'The Power of Movement in Plants' is a groundbreaking work that explores the phenomena of movement in plants. Darwin's meticulous observations and scientific insights laid the foundation for our understanding of plant behavior.",
+      "publishDate": "1880-02-06",
+      "images": [
+        "https://m.media-amazon.com/images/I/51zDIravDxL.jpg",
+        "https://assets.cambridge.org/97811080/03605/cover/9781108003605.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 12,
+      "pages": 592,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Botany",
+        "Plant Movement",
+        "Scientific Inquiry"
+      ],
+      "reviews": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "authorName": "Charles Darwin",
+      "authorId": 43,
+      "publisherName": "John Murray",
+      "publisherId": 32,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 47,
+      "title": "Dancing in the Streets: A History of Collective Joy",
+      "rating": 4.2,
+      "description": "Barbara Ehrenreich's 'Dancing in the Streets' delves into the history of collective joy and communal celebrations. Ehrenreich explores the profound impact of shared ecstatic experiences on human culture and society.",
+      "publishDate": "2006-04-25",
+      "images": [
+        "https://m.media-amazon.com/images/I/71wV80lFlmL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81q1c1NigvL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 336,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Cultural History",
+        "Collective Joy",
+        "Societal Impact"
+      ],
+      "reviews": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "authorName": "Barbara Ehrenreich",
+      "authorId": 44,
+      "publisherName": "Metropolitan Books",
+      "publisherId": 33,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 48,
+      "title": "No Fixed Points: Dance in the Twentieth Century",
+      "rating": 4.3,
+      "description": "Nancy Reynolds and Malcolm McCormick's 'No Fixed Points' offers a comprehensive overview of dance in the twentieth century. The book traces the evolution of dance forms and styles, providing valuable insights into the cultural context of the era.",
+      "publishDate": "2003-12-29",
+      "images": [
+        "https://m.media-amazon.com/images/I/91lRXNMVzyL._AC_UF1000,1000_QL80_.jpg",
+        "https://covers.openlibrary.org/b/id/8050499-L.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 432,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Dance History",
+        "Twentieth Century",
+        "Cultural Evolution"
+      ],
+      "reviews": [
+        11,
+        13,
+        15,
+        17,
+        19
+      ],
+      "authorName": "Nancy Reynolds and Malcolm McCormick",
+      "authorId": 45,
+      "publisherName": "Yale University Press",
+      "publisherId": 34,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 49,
+      "title": "The Thinking Body",
+      "rating": 4.5,
+      "description": "Mabel Elsworth Todd's 'The Thinking Body' explores the relationship between body and mind in movement. Todd's innovative approach to somatic education has had a profound impact on the fields of dance, physical therapy, and beyond.",
+      "publishDate": "1937-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61foMIi+S6L._AC_UF1000,1000_QL80_.jpg",
+        "https://www.booksonthemove.fr/media/bom_1517.jpg"
+      ],
+      "price": 2000,
+      "discountPercentage": 10,
+      "pages": 240,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Somatic Education",
+        "Body-Mind Connection",
+        "Movement"
+      ],
+      "reviews": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "authorName": "Mabel Elsworth Todd",
+      "authorId": 46,
+      "publisherName": "Princeton Book Company",
+      "publisherId": 35,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 50,
+      "title": "Dance Anatomy",
+      "rating": 4.4,
+      "description": "Jacqui Greene Haas' 'Dance Anatomy' provides a comprehensive guide to the anatomy of dancers. With detailed illustrations and practical insights, this book is an invaluable resource for dancers and choreographers.",
+      "publishDate": "2007-10-23",
+      "images": [
+        "https://m.media-amazon.com/images/I/71w0D+I+m2L._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/817325dmijL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2100,
+      "discountPercentage": 10,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Dance",
+        "Anatomy",
+        "Dancer's Health"
+      ],
+      "reviews": [
+        21,
+        23,
+        25,
+        27,
+        29
+      ],
+      "authorName": "Jacqui Greene Haas",
+      "authorId": 47,
+      "publisherName": "Human Kinetics",
+      "publisherId": 36,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 51,
+      "title": "The Creative Habit: Learn It and Use It for Life",
+      "rating": 4.6,
+      "description": "Twyla Tharp's 'The Creative Habit' offers insights and practices to cultivate creativity in daily life. Tharp, a renowned choreographer, shares her experiences and techniques to inspire artists of all disciplines.",
+      "publishDate": "2003-12-30",
+      "images": [
+        "https://m.media-amazon.com/images/I/619EWpDPrIL._SL1000_.jpg",
+        "https://images.squarespace-cdn.com/content/v1/585c710603596e2c47dad93e/1616185333714-6XAPNYDQPZKL2LST0JMF/What+I+Learned+From+The+Creative+Habit-25.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 15,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Creativity",
+        "Artistic Practice",
+        "Productivity"
+      ],
+      "reviews": [
+        22,
+        24,
+        26,
+        28,
+        30
+      ],
+      "authorName": "Twyla Tharp",
+      "authorId": 48,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 37,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 52,
+      "title": "Body and Soul: Essays on Medieval Women and Mysticism",
+      "rating": 4.1,
+      "description": "Elizabeth Alvilda Petroff's 'Body and Soul' offers a collection of essays exploring the intersection of women, mysticism, and embodiment in medieval Christianity. The book sheds light on the rich spiritual traditions of medieval women.",
+      "publishDate": "1994-11-03",
+      "images": [
+        "https://m.media-amazon.com/images/I/71LGiLBEt7L._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/61M6k8HulqL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 12,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Medieval Christianity",
+        "Women Mystics",
+        "Spirituality"
+      ],
+      "reviews": [
+        31,
+        33,
+        35,
+        37,
+        39
+      ],
+      "authorName": "Elizabeth Alvilda Petroff",
+      "authorId": 49,
+      "publisherName": "University of California Press",
+      "publisherId": 38,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 53,
+      "title": "The Intimate Act of Choreography",
+      "rating": 4.3,
+      "description": "Lynne Anne Blom and L. Tarin Chaplin's 'The Intimate Act of Choreography' provides a comprehensive guide to the choreographic process. With practical exercises and insightful guidance, this book empowers choreographers to create meaningful and expressive dance works.",
+      "publishDate": "1982-01-19",
+      "images": [
+        "https://m.media-amazon.com/images/I/51xZaBBnx1L.jpg",
+        "https://m.media-amazon.com/images/I/71Flyh5PPTL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 10,
+      "pages": 336,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Choreography",
+        "Dance Creation",
+        "Expressive Movement"
+      ],
+      "reviews": [
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "authorName": "Lynne Anne Blom and L. Tarin Chaplin",
+      "authorId": 50,
+      "publisherName": "University of Pittsburgh Press",
+      "publisherId": 39,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 54,
+      "title": "The Oxford Handbook of Dance and Theater",
+      "rating": 4.4,
+      "description": "Edited by Nadine George-Graves, 'The Oxford Handbook of Dance and Theater' is a comprehensive resource for scholars, practitioners, and enthusiasts of dance and theater. The book offers a diverse range of essays covering key topics in both art forms.",
+      "publishDate": "2015-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41bTbX6vWHL.jpg",
+        "https://m.media-amazon.com/images/I/71NGQgcnezL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 12,
+      "pages": 768,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Dance Studies",
+        "Theater Studies",
+        "Performing Arts"
+      ],
+      "reviews": [
+        41,
+        43,
+        45,
+        47,
+        49
+      ],
+      "authorName": "Nadine George-Graves (Editor)",
+      "authorId": 51,
+      "publisherName": "Oxford University Press",
+      "publisherId": 40,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 55,
+      "title": "Steppenwolf Theatre Company of Chicago: In Their Own Words",
+      "rating": 4.2,
+      "description": "John Mayer's 'Steppenwolf Theatre Company of Chicago' provides an insider's view of the renowned theater company. Through interviews and anecdotes, the book offers a unique perspective on the history and creative process of Steppenwolf Theatre.",
+      "publishDate": "2012-11-05",
+      "images": [
+        "https://m.media-amazon.com/images/I/51KqUmDrzIL.jpg",
+        "https://centralca.cdn-anvilcms.net/media/images/2018/07/28/images/mayer_350.max-640x480.jpg"
+      ],
+      "price": 2100,
+      "discountPercentage": 10,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Theater History",
+        "Steppenwolf Theatre",
+        "Chicago Theater"
+      ],
+      "reviews": [
+        42,
+        44,
+        46,
+        48,
+        50
+      ],
+      "authorName": "John Mayer",
+      "authorId": 52,
+      "publisherName": "University of Chicago Press",
+      "publisherId": 41,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 56,
+      "title": "Dance and the Alexander Technique: Exploring the Missing Link",
+      "rating": 4.5,
+      "description": "Rebecca Nettl-Fiol and Luc Vanier's 'Dance and the Alexander Technique' explores the synergies between dance and the Alexander Technique. The book provides valuable insights into improving movement efficiency and enhancing artistic expression.",
+      "publishDate": "2011-11-17",
+      "images": [
+        "https://m.media-amazon.com/images/I/51UnAFLOs7L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Dance",
+        "Alexander Technique",
+        "Movement Efficiency"
+      ],
+      "reviews": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "authorName": "Rebecca Nettl-Fiol and Luc Vanier",
+      "authorId": 53,
+      "publisherName": "University of Illinois Press",
+      "publisherId": 42,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 57,
+      "title": "The Place of Dance: A Somatic Guide to Dancing and Dance Making",
+      "rating": 4.3,
+      "description": "Andrea Olsen's 'The Place of Dance' offers a somatic approach to dance practice and creation. Through embodied exploration and reflection, this book invites dancers to deepen their connection to the art of movement.",
+      "publishDate": "2014-02-03",
+      "images": [
+        "https://m.media-amazon.com/images/I/31MC0phdSqL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Dance Practice",
+        "Somatics",
+        "Movement Exploration"
+      ],
+      "reviews": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "authorName": "Andrea Olsen",
+      "authorId": 54,
+      "publisherName": "Wesleyan University Press",
+      "publisherId": 43,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 58,
+      "title": "The Routledge Companion to Dance Studies",
+      "rating": 4.4,
+      "description": "Edited by Helen Thomas, 'The Routledge Companion to Dance Studies' offers a comprehensive overview of the field of dance studies. The book features essays from leading scholars, covering a wide range of topics in dance research.",
+      "publishDate": "2010-08-05",
+      "images": [
+        "https://m.media-amazon.com/images/I/71OUMGNvfOL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/61xr9VLgSdL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 12,
+      "pages": 512,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Dance Studies",
+        "Dance Research",
+        "Academic Essays"
+      ],
+      "reviews": [
+        11,
+        13,
+        15,
+        17,
+        19
+      ],
+      "authorName": "Helen Thomas (Editor)",
+      "authorId": 55,
+      "publisherName": "Routledge",
+      "publisherId": 44,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 59,
+      "title": "The Rite of Spring: The Music of Modernity",
+      "rating": 4.2,
+      "description": "Daniel Albright's 'The Rite of Spring' offers an insightful analysis of Igor Stravinsky's groundbreaking composition. Albright explores the cultural and artistic significance of 'The Rite of Spring' within the context of modernity.",
+      "publishDate": "2004-02-26",
+      "images": [
+        "https://m.media-amazon.com/images/I/91ztD7kmN6L._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/414V3E7H7GL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 10,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music Analysis",
+        "Modernism",
+        "Cultural Significance"
+      ],
+      "reviews": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "authorName": "Daniel Albright",
+      "authorId": 56,
+      "publisherName": "Yale University Press",
+      "publisherId": 45,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 60,
+      "title": "Body, Space, Image: Notes Towards Improvisation and Performance",
+      "rating": 4.3,
+      "description": "Miranda Tufnell and Chris Crickmay's 'Body, Space, Image' offers reflections and exercises for those interested in improvisation and performance. The book encourages exploration of the body's relationship to space and imagery in the creative process.",
+      "publishDate": "1993-06-24",
+      "images": [
+        "https://m.media-amazon.com/images/I/61IuT9RKOQL._AC_UF1000,1000_QL80_.jpg",
+        "https://files.ekmcdn.com/422eba/images/body-space-image-notes-towards-improvisation-and-performance-miranda-tufnell-ch-(2)-8419-p.jpg?v=8cfe6ea5-a160-42cf-aefb-62ebb2d33dff"
+      ],
+      "price": 2200,
+      "discountPercentage": 12,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Improvisation",
+        "Performance",
+        "Creative Process"
+      ],
+      "reviews": [
+        21,
+        23,
+        25,
+        27,
+        29
+      ],
+      "authorName": "Miranda Tufnell and Chris Crickmay",
+      "authorId": 57,
+      "publisherName": "Dartington College of Arts",
+      "publisherId": 46,
+      "genreId": 1,
+      "subgenreId": 4
+    },
+    {
+      "id": 61,
+      "title": "In the Blink of an Eye: A Perspective on Film Editing",
+      "rating": 4.3,
+      "description": "Walter Murch's 'In the Blink of an Eye' provides valuable insights into the art and craft of film editing. Drawing on his extensive experience, Murch offers a unique perspective on the crucial role of editing in filmmaking.",
+      "publishDate": "1995-08-02",
+      "images": [
+        "https://m.media-amazon.com/images/I/51Rid-PUgnL.jpg",
+        "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781398511170/in-the-blink-of-an-eye-9781398511170_hr.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 160,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Film Editing",
+        "Filmmaking Techniques",
+        "Creative Process"
+      ],
+      "reviews": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "authorName": "Walter Murch",
+      "authorId": 58,
+      "publisherName": "Silman-James Press",
+      "publisherId": 47,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 62,
+      "title": "Making Movies",
+      "rating": 4.6,
+      "description": "Sidney Lumet's 'Making Movies' offers a masterclass in the art of filmmaking. Lumet, an accomplished director, shares his wisdom on various aspects of the filmmaking process, making this book an essential read for aspiring filmmakers.",
+      "publishDate": "1995-03-20",
+      "images": [
+        "https://m.media-amazon.com/images/I/81LfoZyZqQL._AC_UF350,350_QL50_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 15,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Filmmaking",
+        "Directing",
+        "Cinematic Techniques"
+      ],
+      "reviews": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "authorName": "Sidney Lumet",
+      "authorId": 59,
+      "publisherName": "Vintage",
+      "publisherId": 48,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 63,
+      "title": "On Directing Film",
+      "rating": 4.2,
+      "description": "David Mamet's 'On Directing Film' is a concise guide to the principles of cinematic storytelling. Drawing on his experience as a renowned playwright and filmmaker, Mamet provides valuable insights for directors and screenwriters.",
+      "publishDate": "1992-06-16",
+      "images": [
+        "https://m.media-amazon.com/images/M/MV5BYjY4ZGNlZTktYmIzNC00OGFkLTlkZWEtYzA2Njk0MWYwYjk1XkEyXkFqcGdeQXVyNjc5NjEzNA@@._V1_.jpg"
+
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 128,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Directing",
+        "Screenwriting",
+        "Cinematic Storytelling"
+      ],
+      "reviews": [
+        11,
+        13,
+        15,
+        17,
+        19
+      ],
+      "authorName": "David Mamet",
+      "authorId": 60,
+      "publisherName": "Penguin Books",
+      "publisherId": 49,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 64,
+      "title": "The Filmmaker's Handbook: A Comprehensive Guide for the Digital Age",
+      "rating": 4.5,
+      "description": "Steven Ascher and Edward Pincus's 'The Filmmaker's Handbook' is an essential resource for filmmakers working in the digital age. This comprehensive guide covers every aspect of filmmaking, from pre-production to post-production.",
+      "publishDate": "2013-11-26",
+      "images": [
+        "https://m.media-amazon.com/images/I/41qyHf6XRqL.jpg",
+        "https://insight.randomhouse.com/fullpage.do?pContentType=JPG&pName=fullpage&pISBN=9780452297289&pPageID=20"
+      ],
+      "price": 2800,
+      "discountPercentage": 12,
+      "pages": 832,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Filmmaking",
+        "Digital Age",
+        "Production Process"
+      ],
+      "reviews": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "authorName": "Steven Ascher and Edward Pincus",
+      "authorId": 61,
+      "publisherName": "Plume",
+      "publisherId": 50,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 65,
+      "title": "Rebel Without a Crew: Or How a 23-Year-Old Filmmaker with $7,000 Became a Hollywood Player",
+      "rating": 4.2,
+      "description": "Robert Rodriguez's 'Rebel Without a Crew' is a captivating memoir of his journey in filmmaking. Rodriguez shares his experiences of making 'El Mariachi' on a shoestring budget, providing valuable insights for aspiring filmmakers.",
+      "publishDate": "1996-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/718vRJgthVL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81YIMLM6zcL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Filmmaking Journey",
+        "Low-Budget Filmmaking",
+        "Hollywood Success"
+      ],
+      "reviews": [
+        21,
+        23,
+        25,
+        27,
+        29
+      ],
+      "authorName": "Robert Rodriguez",
+      "authorId": 62,
+      "publisherName": "Plume",
+      "publisherId": 51,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 66,
+      "title": "Sculpting in Time",
+      "rating": 4.4,
+      "description": "Andrei Tarkovsky's 'Sculpting in Time' is a profound reflection on the art of filmmaking. Tarkovsky, a visionary director, explores the philosophical and creative aspects of cinema, offering profound insights for filmmakers and cinephiles alike.",
+      "publishDate": "1989-09-01",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Sculpting_in_Time.jpg/220px-Sculpting_in_Time.jpg"
+
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Filmmaking Philosophy",
+        "Cinematic Artistry",
+        "Director's Vision"
+      ],
+      "reviews": [
+        22,
+        24,
+        26,
+        28,
+        30
+      ],
+      "authorName": "Andrei Tarkovsky",
+      "authorId": 63,
+      "publisherName": "University of Texas Press",
+      "publisherId": 52,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 67,
+      "title": "The Conversations: Walter Murch and the Art of Editing Film",
+      "rating": 4.1,
+      "description": "Michael Ondaatje's 'The Conversations' offers a unique glimpse into the art of film editing through conversations with renowned editor Walter Murch. The book provides valuable insights into Murch's creative process and his contributions to cinema.",
+      "publishDate": "2002-05-14",
+      "images": [
+        "https://m.media-amazon.com/images/I/91K907U0K8L._SL1500_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Canada",
+      "tags": [
+        "Film Editing",
+        "Editor's Perspective",
+        "Cinematic Conversations"
+      ],
+      "reviews": [
+        31,
+        33,
+        35,
+        37,
+        39
+      ],
+      "authorName": "Michael Ondaatje",
+      "authorId": 64,
+      "publisherName": "Knopf",
+      "publisherId": 53,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 68,
+      "title": "The Five C's of Cinematography: Motion Picture Filming Techniques",
+      "rating": 4.5,
+      "description": "Joseph V. Mascelli's 'The Five C's of Cinematography' is a classic guide to the fundamental techniques of motion picture filming. Covering essential aspects like composition, cutting, close-ups, continuity, and cutting, this book is indispensable for aspiring cinematographers.",
+      "publishDate": "1998-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81NxzVK8m1L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81wZdDNdc8L._SL1500_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Cinematography Techniques",
+        "Filmmaking Fundamentals",
+        "Visual Storytelling"
+      ],
+      "reviews": [
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "authorName": "Joseph V. Mascelli",
+      "authorId": 65,
+      "publisherName": "Silman-James Press",
+      "publisherId": 54,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 69,
+      "title": "On Film-making: An Introduction to the Craft of the Director",
+      "rating": 4.2,
+      "description": "Alexander Mackendrick's 'On Film-making' offers a comprehensive introduction to the art of directing. Mackendrick, an accomplished filmmaker and educator, provides practical insights and advice for aspiring directors.",
+      "publishDate": "2004-04-08",
+      "images": [
+        "https://m.media-amazon.com/images/I/810IVwJDZZL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81nurW-RilL._SL1500_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Directing Craft",
+        "Filmmaking Principles",
+        "Director's Perspective"
+      ],
+      "reviews": [
+        41,
+        43,
+        45,
+        47,
+        49
+      ],
+      "authorName": "Alexander Mackendrick",
+      "authorId": 66,
+      "publisherName": "Faber & Faber",
+      "publisherId": 55,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 70,
+      "title": "Adventures in the Screen Trade",
+      "rating": 4.3,
+      "description": "William Goldman's 'Adventures in the Screen Trade' is a witty and insightful exploration of the film industry. Drawing on his experiences as a screenwriter, Goldman provides a candid look at the challenges and triumphs of Hollywood.",
+      "publishDate": "1983-04-12",
+      "images": [
+        "https://m.media-amazon.com/images/I/613tauwpOEL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71wBYtERKvL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 430,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Film Industry",
+        "Screenwriting",
+        "Hollywood Insights"
+      ],
+      "reviews": [
+        42,
+        44,
+        46,
+        48,
+        50
+      ],
+      "authorName": "William Goldman",
+      "authorId": 67,
+      "publisherName": "Grand Central Publishing",
+      "publisherId": 56,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 71,
+      "title": "The Visual Story: Creating the Visual Structure of Film, TV and Digital Media",
+      "rating": 4.4,
+      "description": "Bruce A. Block's 'The Visual Story' is an essential guide to understanding visual storytelling in various forms of media. Block delves into the principles of visual structure, offering valuable tools for filmmakers, TV producers, and digital media creators.",
+      "publishDate": "2007-11-19",
+      "images": [
+        "https://m.media-amazon.com/images/I/61bWmqKHTML._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/91DSjaCs8jL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 12,
+      "pages": 312,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Visual Storytelling",
+        "Film Structure",
+        "Media Production"
+      ],
+      "reviews": [
+        51,
+        53,
+        55,
+        57,
+        59
+      ],
+      "authorName": "Bruce A. Block",
+      "authorId": 68,
+      "publisherName": "Focal Press",
+      "publisherId": 57,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 72,
+      "title": "The Technique of Film Editing",
+      "rating": 4.3,
+      "description": "Karel Reisz and Gavin Millar's 'The Technique of Film Editing' is a comprehensive guide to the art and craft of editing in filmmaking. This book provides practical insights and techniques for aspiring film editors.",
+      "publishDate": "2013-09-03",
+      "images": [
+        "https://m.media-amazon.com/images/I/51gDhYZq2gL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/91hf2xwL8FL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 360,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Film Editing Techniques",
+        "Editing Principles",
+        "Post-Production"
+      ],
+      "reviews": [
+        52,
+        54,
+        56,
+        58,
+        60
+      ],
+      "authorName": "Karel Reisz and Gavin Millar",
+      "authorId": 69,
+      "publisherName": "Focal Press",
+      "publisherId": 58,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 73,
+      "title": "Making a Good Script Great",
+      "rating": 4.2,
+      "description": "Linda Seger's 'Making a Good Script Great' is an indispensable resource for screenwriters. Seger provides valuable insights into the process of crafting a compelling and engaging screenplay.",
+      "publishDate": "1987-06-30",
+      "images": [
+        "https://m.media-amazon.com/images/I/51Xf7-d+kOL.jpg",
+        "https://m.media-amazon.com/images/I/91258Ph28xL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 10,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Screenwriting",
+        "Script Development",
+        "Storytelling Techniques"
+      ],
+      "reviews": [
+        61,
+        63,
+        65,
+        67,
+        69
+      ],
+      "authorName": "Linda Seger",
+      "authorId": 70,
+      "publisherName": "Delta",
+      "publisherId": 59,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 74,
+      "title": "The Film Director Prepares: A Practical Guide to Directing for Film and TV",
+      "rating": 4.1,
+      "description": "Myrl A. Schreibman's 'The Film Director Prepares' offers a practical guide to the art of directing for both film and television. Schreibman provides valuable advice and insights for aspiring directors.",
+      "publishDate": "2005-03-23",
+      "images": [
+        "https://m.media-amazon.com/images/I/71btr5rd-zL._AC_UF1000,1000_QL80_.jpg",
+        "https://filmlifestyle.com/wp-content/uploads/2022/12/How-To-Become-A-Director.png"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 320,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Directing",
+        "Film and TV",
+        "Director's Handbook"
+      ],
+      "reviews": [
+        62,
+        64,
+        66,
+        68,
+        70
+      ],
+      "authorName": "Myrl A. Schreibman",
+      "authorId": 71,
+      "publisherName": "Allworth Press",
+      "publisherId": 60,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 75,
+      "title": "Directing: Film Techniques and Aesthetics",
+      "rating": 4.3,
+      "description": "Michael Rabiger's 'Directing' is a comprehensive guide to the techniques and aesthetics of film direction. This book covers various aspects of directing, making it an invaluable resource for aspiring filmmakers.",
+      "publishDate": "2012-08-13",
+      "images": [
+        "https://m.media-amazon.com/images/I/810XfY5FxkL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 12,
+      "pages": 560,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Film Directing",
+        "Aesthetic Principles",
+        "Director's Craft"
+      ],
+      "reviews": [
+        71,
+        73,
+        75,
+        77,
+        79
+      ],
+      "authorName": "Michael Rabiger",
+      "authorId": 72,
+      "publisherName": "Focal Press",
+      "publisherId": 61,
+      "genreId": 1,
+      "subgenreId": 5
+    },
+    {
+      "id": 76,
+      "title": "The Story of Art",
+      "rating": 4.6,
+      "description": "E.H. Gombrich's 'The Story of Art' is a renowned and accessible introduction to the history of art. Gombrich's engaging narrative takes readers on a journey through various artistic movements and styles.",
+      "publishDate": "1995-09-12",
+      "images": [
+        "https://m.media-amazon.com/images/I/613NEJEhIFL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 15,
+      "pages": 688,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Artistic Movements",
+        "Visual Arts"
+      ],
+      "reviews": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ],
+      "authorName": "E.H. Gombrich",
+      "authorId": 73,
+      "publisherName": "Phaidon Press",
+      "publisherId": 62,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 77,
+      "title": "A World History of Art",
+      "rating": 4.2,
+      "description": "Hugh Honour and John Fleming's 'A World History of Art' offers a comprehensive overview of art across different cultures and time periods. This extensively illustrated book is a valuable resource for art enthusiasts and students.",
+      "publishDate": "2005-01-17",
+      "images": [
+        "https://m.media-amazon.com/images/I/51agXXolKXL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3000,
+      "discountPercentage": 12,
+      "pages": 992,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Global Art History",
+        "Cultural Context",
+        "Artistic Traditions"
+      ],
+      "reviews": [
+        81,
+        83,
+        85,
+        87,
+        89
+      ],
+      "authorName": "Hugh Honour and John Fleming",
+      "authorId": 74,
+      "publisherName": "Laurence King Publishing",
+      "publisherId": 63,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 78,
+      "title": "Gardner's Art through the Ages: A Global History",
+      "rating": 4.4,
+      "description": "Fred S. Kleiner's 'Gardner's Art through the Ages' provides a comprehensive survey of art history from a global perspective. This extensively illustrated book is a valuable resource for students and enthusiasts of art history.",
+      "publishDate": "2019-02-20",
+      "images": [
+        "https://m.media-amazon.com/images/I/51hi4JWdHtL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 1248,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art History",
+        "Global Perspective",
+        "Visual Culture"
+      ],
+      "reviews": [
+        82,
+        44,
+        25,
+        33,
+        41
+      ],
+      "authorName": "Fred S. Kleiner",
+      "authorId": 75,
+      "publisherName": "Cengage Learning",
+      "publisherId": 64,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 79,
+      "title": "Art History",
+      "rating": 4.3,
+      "description": "Marilyn Stokstad and Michael W. Cothren's 'Art History' is a comprehensive and accessible introduction to the study of art. This extensively illustrated book provides a global perspective on artistic traditions.",
+      "publishDate": "2010-02-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61RrN2L1z-L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 12,
+      "pages": 1248,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art History",
+        "Artistic Traditions",
+        "Visual Culture"
+      ],
+      "reviews": [
+        24,
+        15,
+        7,
+        39,
+        16
+      ],
+      "authorName": "Marilyn Stokstad and Michael W. Cothren",
+      "authorId": 76,
+      "publisherName": "Pearson",
+      "publisherId": 65,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 80,
+      "title": "The Shock of the New",
+      "rating": 4.1,
+      "description": "Robert Hughes's 'The Shock of the New' is a seminal work on the history of modern art. Hughes provides a compelling narrative that explores the revolutionary movements and groundbreaking artists of the 20th century.",
+      "publishDate": "1991-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/614M0sO2tTL._AC_UF1000,1000_QL80_.jpg",
+        "https://artgallery.dal.ca/sites/default/files/events/shock-new/shockofthenew01.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 12,
+      "pages": 448,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Modern Art",
+        "Artistic Movements",
+        "Artistic Revolution"
+      ],
+      "reviews": [
+        2,
+        18,
+        29,
+        46,
+        35
+      ],
+      "authorName": "Robert Hughes",
+      "authorId": 77,
+      "publisherName": "Knopf",
+      "publisherId": 66,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 81,
+      "title": "Art Since 1900: Modernism, Antimodernism, Postmodernism",
+      "rating": 4.0,
+      "description": "Hal Foster et al.'s 'Art Since 1900' offers a comprehensive survey of modern and contemporary art. This scholarly work provides critical insights into the major artistic movements of the 20th and 21st centuries.",
+      "publishDate": "2004-10-14",
+      "images": [
+        "https://m.media-amazon.com/images/I/91IG8ME+owL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/61rqcr1ggCL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 10,
+      "pages": 816,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Modern Art",
+        "Contemporary Art",
+        "Artistic Movements"
+      ],
+      "reviews": [
+        8,
+        17,
+        27,
+        47,
+        6
+      ],
+      "authorName": "Hal Foster et al.",
+      "authorId": 78,
+      "publisherName": "Thames & Hudson",
+      "publisherId": 67,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 82,
+      "title": "Art in Theory 1900-2000: An Anthology of Changing Ideas",
+      "rating": 4.3,
+      "description": "Edited by Charles Harrison and Paul Wood, 'Art in Theory' is a comprehensive anthology of writings on art theory. This indispensable resource provides a diverse range of perspectives on art from the 20th century.",
+      "publishDate": "2002-02-28",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Jh2v82+wL._AC_UF894,1000_QL80_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388290665i/48697.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 1232,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art Theory",
+        "Artistic Ideas",
+        "Theoretical Perspectives"
+      ],
+      "reviews": [
+        12,
+        19,
+        23,
+        36,
+        43
+      ],
+      "authorName": "Charles Harrison and Paul Wood",
+      "authorId": 79,
+      "publisherName": "Blackwell",
+      "publisherId": 68,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 83,
+      "title": "Theories of Modern Art: A Source Book by Artists and Critics",
+      "rating": 4.2,
+      "description": "Edited by Herschel B. Chipp, 'Theories of Modern Art' is a comprehensive collection of writings by artists and critics. This anthology provides valuable insights into the thoughts and philosophies of key figures in modern art.",
+      "publishDate": "1984-03-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71i8WsBMTEL._AC_UF350,350_QL50_.jpg",
+        "https://m.media-amazon.com/images/I/71yg3UYsDFL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 10,
+      "pages": 1044,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Modern Art",
+        "Artistic Theories",
+        "Critical Perspectives"
+      ],
+      "reviews": [
+        5,
+        28,
+        37,
+        45,
+        9
+      ],
+      "authorName": "Herschel B. Chipp",
+      "authorId": 80,
+      "publisherName": "University of California Press",
+      "publisherId": 69,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 84,
+      "title": "Art and Visual Perception: A Psychology of the Creative Eye",
+      "rating": 4.2,
+      "description": "Rudolf Arnheim's 'Art and Visual Perception' delves into the psychology of visual perception and its relevance to the creative process. This seminal work offers profound insights into how we perceive and interpret visual art.",
+      "publishDate": "2004-04-30",
+      "images": [
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1223628615i/1294306.jpg",
+        "https://covers.openlibrary.org/b/id/7994796-L.jpg",
+        "https://m.media-amazon.com/images/I/41-rvCD-KuL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 12,
+      "pages": 512,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Visual Perception",
+        "Psychology of Art",
+        "Creative Process"
+      ],
+      "reviews": [
+        11,
+        22,
+        34,
+        49,
+        14
+      ],
+      "authorName": "Rudolf Arnheim",
+      "authorId": 81,
+      "publisherName": "University of California Press",
+      "publisherId": 70,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 85,
+      "title": "The Annotated Mona Lisa: A Crash Course in Art History from Prehistoric to Post-Modern",
+      "rating": 4.4,
+      "description": "Carol Strickland's 'The Annotated Mona Lisa' provides a concise yet comprehensive overview of art history from prehistoric times to the post-modern era. This accessible guide is an excellent resource for both students and art enthusiasts.",
+      "publishDate": "2007-11-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Ofb0WH6yL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/5185rhqGaqL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 216,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art History",
+        "Prehistoric Art",
+        "Post-Modern Art"
+      ],
+      "reviews": [
+        13,
+        21,
+        32,
+        48,
+        20
+      ],
+      "authorName": "Carol Strickland",
+      "authorId": 82,
+      "publisherName": "Andrews McMeel Publishing",
+      "publisherId": 71,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 86,
+      "title": "The Painted Word",
+      "rating": 4.0,
+      "description": "Tom Wolfe's 'The Painted Word' is a satirical exploration of the contemporary art world. Wolfe offers sharp and humorous commentary on the art scene, critiquing trends and the influence of art critics.",
+      "publishDate": "2008-08-12",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/5/5e/ThePaintedWord.jpg",
+        "https://m.media-amazon.com/images/I/51BBFSBYR0L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 10,
+      "pages": 128,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Contemporary Art",
+        "Art Criticism",
+        "Satirical Commentary"
+      ],
+      "reviews": [
+        30,
+        42,
+        31,
+        26,
+        47
+      ],
+      "authorName": "Tom Wolfe",
+      "authorId": 83,
+      "publisherName": "Farrar, Straus and Giroux",
+      "publisherId": 72,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 87,
+      "title": "Art: A World History",
+      "rating": 4.4,
+      "description": "Elke Linda Buchholz's 'Art: A World History' offers a global perspective on the history of art. Lavishly illustrated, this book provides a rich exploration of artistic traditions from around the world.",
+      "publishDate": "2011-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91-YW-MPPEL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/511rF6pnQNL.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 12,
+      "pages": 576,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Global Art History",
+        "Artistic Traditions",
+        "Visual Culture"
+      ],
+      "reviews": [
+        29,
+        40,
+        39,
+        15,
+        8
+      ],
+      "authorName": "Elke Linda Buchholz",
+      "authorId": 84,
+      "publisherName": "DK",
+      "publisherId": 73,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 88,
+      "title": "The Birth of Tragedy",
+      "rating": 3.9,
+      "description": "Friedrich Nietzsche's 'The Birth of Tragedy' explores the origins and nature of Greek tragedy. Nietzsche's work delves into the dual Apollonian and Dionysian forces that shape artistic expression.",
+      "publishDate": "1999-12-01",
+      "images": [
+        "https://cdn.kobo.com/book-images/409b8436-7ee0-4435-afcc-f59b5c84724c/1200/1200/False/the-birth-of-tragedy-12.jpg",
+        "https://m.media-amazon.com/images/I/51h1SNvaNgL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Greek Tragedy",
+        "Aesthetic Theory",
+        "Apollonian and Dionysian"
+      ],
+      "reviews": [
+        38,
+        28,
+        24,
+        11,
+        7
+      ],
+      "authorName": "Friedrich Nietzsche",
+      "authorId": 85,
+      "publisherName": "Penguin Classics",
+      "publisherId": 74,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 89,
+      "title": "The Art Book",
+      "rating": 4.1,
+      "description": "Phaidon Press's 'The Art Book' is a comprehensive and accessible guide to the world of art. This compact volume provides concise information on a wide range of artists, movements, and styles.",
+      "publishDate": "1999-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91pJdvmvqIL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/91KVanREgiS._SL1500_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 10,
+      "pages": 592,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art Reference",
+        "Artist Profiles",
+        "Art Movements"
+      ],
+      "reviews": [
+        6,
+        19,
+        35,
+        45,
+        20
+      ],
+      "authorName": "Phaidon Press",
+      "authorId": 86,
+      "publisherName": "Phaidon Press",
+      "publisherId": 75,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 90,
+      "title": "The Penguin Dictionary of Art and Artists",
+      "rating": 4.3,
+      "description": "Peter Murray and Linda Murray's 'The Penguin Dictionary of Art and Artists' is a comprehensive reference for art enthusiasts. This dictionary provides concise information on artists, styles, and terms related to the world of art.",
+      "publishDate": "1997-02-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81k2hM09INL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 12,
+      "pages": 672,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art Reference",
+        "Artist Profiles",
+        "Artistic Terminology"
+      ],
+      "reviews": [
+        4,
+        16,
+        29,
+        10,
+        31
+      ],
+      "authorName": "Peter Murray and Linda Murray",
+      "authorId": 87,
+      "publisherName": "Penguin",
+      "publisherId": 76,
+      "genreId": 1,
+      "subgenreId": 6
+    },
+    {
+      "id": 91,
+      "title": "The Elements of Graphic Design",
+      "rating": 4.3,
+      "description": "Alex White's 'The Elements of Graphic Design' provides a comprehensive overview of the fundamental principles and elements of graphic design. This essential guide is a valuable resource for both aspiring and experienced designers.",
+      "publishDate": "2011-08-03",
+      "images": [
+        "https://rukminim2.flixcart.com/image/850/1000/kjx6tu80/book/k/d/x/the-elements-of-graphic-design-original-imafzddjjypyzmsz.jpeg?q=90"
+      ],
+      "price": 2800,
+      "discountPercentage": 15,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Graphic Design",
+        "Design Principles",
+        "Visual Communication"
+      ],
+      "reviews": [
+        5,
+        14,
+        27,
+        42,
+        19
+      ],
+      "authorName": "Alex White",
+      "authorId": 89,
+      "publisherName": "Allworth",
+      "publisherId": 79,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 92,
+      "title": "Logo Design Love: A Guide to Creating Iconic Brand Identities",
+      "rating": 4.6,
+      "description": "David Airey's 'Logo Design Love' is an invaluable guide for designers and businesses aiming to create memorable brand identities. This book offers practical insights and case studies in effective logo design.",
+      "publishDate": "2009-12-30",
+      "images": [
+        "https://m.media-amazon.com/images/I/51Fx6UQ34bL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81QYtkl9iiL._SL1500_.jpg"
+      ],
+      "price": 3300,
+      "discountPercentage": 10,
+      "pages": 240,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Logo Design",
+        "Brand Identity",
+        "Graphic Design"
+      ],
+      "reviews": [
+        12,
+        26,
+        39,
+        48,
+        16
+      ],
+      "authorName": "David Airey",
+      "authorId": 90,
+      "publisherName": "New Riders",
+      "publisherId": 80,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 93,
+      "title": "The Non-Designer's Design Book",
+      "rating": 4.1,
+      "description": "Robin Williams's 'The Non-Designer's Design Book' is a user-friendly guide for individuals new to graphic design. With clear explanations and practical tips, this book helps readers create visually appealing designs.",
+      "publishDate": "2014-11-20",
+      "images": [
+        "https://m.media-amazon.com/images/I/61d6XEHjIeL._SL1430_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 20,
+      "pages": 240,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Graphic Design",
+        "Design Fundamentals",
+        "Visual Communication"
+      ],
+      "reviews": [
+        11,
+        25,
+        36,
+        45,
+        22
+      ],
+      "authorName": "Robin Williams",
+      "authorId": 91,
+      "publisherName": "Peachpit Press",
+      "publisherId": 81,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 94,
+      "title": "Interaction of Color",
+      "rating": 4.3,
+      "description": "Josef Albers's 'Interaction of Color' is a seminal work in the study of color theory. Albers explores the complex relationships between colors, offering valuable insights for artists, designers, and anyone interested in color perception.",
+      "publishDate": "2006-06-06",
+      "images": [
+        "https://m.media-amazon.com/images/I/61s4E+5+jUL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/71O2yuD42nL._SL1413_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 15,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Color Theory",
+        "Visual Perception",
+        "Art Theory"
+      ],
+      "reviews": [
+        8,
+        18,
+        32,
+        47,
+        28
+      ],
+      "authorName": "Josef Albers",
+      "authorId": 92,
+      "publisherName": "Yale University Press",
+      "publisherId": 82,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 95,
+      "title": "How to be a Graphic Designer Without Losing Your Soul",
+      "rating": 4.5,
+      "description": "Adrian Shaughnessy's 'How to be a Graphic Designer Without Losing Your Soul' offers valuable insights and advice for aspiring graphic designers. Shaughnessy emphasizes the importance of creativity and integrity in the design profession.",
+      "publishDate": "2010-03-02",
+      "images": [
+        "https://cdn.kobo.com/book-images/98086a05-8f9b-4494-a229-f983b60f706b/1200/1200/False/how-to-be-a-graphic-designer-without-losing-your-soul.jpg",
+        "https://m.media-amazon.com/images/I/81nTCArtjlL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 20,
+      "pages": 184,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Graphic Design",
+        "Professional Ethics",
+        "Design Career"
+      ],
+      "reviews": [
+        9,
+        23,
+        38,
+        46,
+        15
+      ],
+      "authorName": "Adrian Shaughnessy",
+      "authorId": 93,
+      "publisherName": "Princeton Architectural Press",
+      "publisherId": 83,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 96,
+      "title": "A Smile in the Mind: Witty Thinking in Graphic Design",
+      "rating": 4.4,
+      "description": "Beryl McAlhone and David Stuart's 'A Smile in the Mind' explores the role of wit and humor in graphic design. This insightful book showcases clever and inventive design solutions that engage the viewer's imagination.",
+      "publishDate": "1998-03-30",
+      "images": [
+        "https://m.media-amazon.com/images/I/6106TxlBcJL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 10,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Graphic Design",
+        "Witty Design",
+        "Design Thinking"
+      ],
+      "reviews": [
+        8,
+        18,
+        27,
+        43,
+        31
+      ],
+      "authorName": "Beryl McAlhone and David Stuart",
+      "authorId": 107,
+      "publisherName": "Phaidon Press",
+      "publisherId": 100,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 97,
+      "title": "The Vignelli Canon",
+      "rating": 4.6,
+      "description": "Massimo Vignelli's 'The Vignelli Canon' is a comprehensive guide to the principles and philosophy of design. Vignelli shares his insights on design thinking, typography, and visual communication.",
+      "publishDate": "2010-12-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/31+g9W9nF9L._SL1024_.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 49,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Design Principles",
+        "Visual Communication",
+        "Design Philosophy"
+      ],
+      "reviews": [
+        13,
+        21,
+        37,
+        44,
+        29
+      ],
+      "authorName": "Massimo Vignelli",
+      "authorId": 94,
+      "publisherName": "Lars Müller Publishers",
+      "publisherId": 85,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 98,
+      "title": "The Best of Business Card Design",
+      "rating": 4.2,
+      "description": "Rule29's 'The Best of Business Card Design' showcases a collection of innovative and visually striking business card designs. This book is a valuable resource for designers and professionals seeking inspiration for their own business cards.",
+      "publishDate": "2011-06-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81hRIR2mH1L._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81KV9wpkcLL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 15,
+      "pages": 336,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Graphic Design",
+        "Business Branding",
+        "Print Design"
+      ],
+      "reviews": [
+        10,
+        24,
+        33,
+        50,
+        26
+      ],
+      "authorName": "Rule29",
+      "authorId": 95,
+      "publisherName": "Rockport Publishers",
+      "publisherId": 86,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 99,
+      "title": "Designing Brand Identity: An Essential Guide for the Whole Branding Team",
+      "rating": 4.4,
+      "description": "Alina Wheeler's 'Designing Brand Identity' provides comprehensive insights into the process of creating and managing brand identities. This essential guide is a valuable resource for brand strategists, designers, and marketing professionals.",
+      "publishDate": "2017-11-07",
+      "images": [
+        "https://m.media-amazon.com/images/I/91P8rsnfJCL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 10,
+      "pages": 336,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Branding",
+        "Brand Identity",
+        "Marketing Strategy"
+      ],
+      "reviews": [
+        7,
+        22,
+        34,
+        50,
+        18
+      ],
+      "authorName": "Alina Wheeler",
+      "authorId": 96,
+      "publisherName": "Wiley",
+      "publisherId": 87,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 100,
+      "title": "The Shape of Design",
+      "rating": 4.5,
+      "description": "Frank Chimero's 'The Shape of Design' explores the philosophical and practical aspects of design. Chimero emphasizes the importance of intention and meaning in the design process.",
+      "publishDate": "2012-01-09",
+      "images": [
+        "https://shapeofdesignbook.com/img/cover.svg"
+      ],
+      "price": 2800,
+      "discountPercentage": 20,
+      "pages": 104,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Design Philosophy",
+        "Creative Process",
+        "Intentional Design"
+      ],
+      "reviews": [
+        7,
+        15,
+        30,
+        46,
+        20
+      ],
+      "authorName": "Frank Chimero",
+      "authorId": 97,
+      "publisherName": "Shape of Design",
+      "publisherId": 88,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 101,
+      "title": "Designing with Type: The Essential Guide to Typography",
+      "rating": 4.3,
+      "description": "James Craig and Irene Korol Scala's 'Designing with Type' is a comprehensive guide to typography in design. This book provides practical tips and insights for effectively using type in graphic design projects.",
+      "publishDate": "2006-09-07",
+      "images": [
+        "https://m.media-amazon.com/images/I/41soeSTx+YL.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 15,
+      "pages": 176,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Typography",
+        "Graphic Design",
+        "Type Design"
+      ],
+      "reviews": [
+        8,
+        19,
+        31,
+        49,
+        25
+      ],
+      "authorName": "James Craig and Irene Korol Scala",
+      "authorId": 98,
+      "publisherName": "Watson-Guptill",
+      "publisherId": 89,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 102,
+      "title": "Thinking in Systems: A Primer",
+      "rating": 4.0,
+      "description": "Donella H. Meadows' 'Thinking in Systems' introduces readers to the concept of systems thinking. This primer provides valuable insights into understanding and solving complex problems through a systemic approach.",
+      "publishDate": "2008-12-03",
+      "images": [
+        "https://m.media-amazon.com/images/I/51ybHl0bT6L._SL1000_.jpg",
+        "https://m.media-amazon.com/images/I/815cQg8pQqL._SL1500_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 10,
+      "pages": 240,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Systems Thinking",
+        "Complex Problem Solving",
+        "Systems Theory"
+      ],
+      "reviews": [
+        11,
+        21,
+        32,
+        47,
+        29
+      ],
+      "authorName": "Donella H. Meadows",
+      "authorId": 99,
+      "publisherName": "Chelsea Green Publishing",
+      "publisherId": 90,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 103,
+      "title": "Graphic Design Thinking: Beyond Brainstorming",
+      "rating": 4.2,
+      "description": "Ellen Lupton and Jennifer Cole Phillips explore innovative approaches to graphic design in 'Graphic Design Thinking'. This book challenges traditional brainstorming methods and encourages designers to think beyond the ordinary.",
+      "publishDate": "2011-03-01",
+      "images": [
+        "https://freight.cargo.site/t/original/i/eb01aa6fcf0aa6fa5465df824dc1e73ad42b379c8ce3f223b7bfa02a6efa1f7f/Graphic_Design_Thinking_2011.jpg"
+      ],
+      "price": 3100,
+      "discountPercentage": 15,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Graphic Design",
+        "Design Thinking",
+        "Creative Process"
+      ],
+      "reviews": [
+        12,
+        24,
+        34,
+        48,
+        16
+      ],
+      "authorName": "Ellen Lupton and Jennifer Cole Phillips",
+      "authorId": 100,
+      "publisherName": "Princeton Architectural Press",
+      "publisherId": 91,
+      "genreId": 1,
+      "subgenreId": 7
+    },
+    {
+      "id": 104,
+      "title": "How to Listen to Great Music: A Guide to Its History, Culture, and Heart",
+      "rating": 4.5,
+      "description": "Robert Greenberg's 'How to Listen to Great Music' is an engaging guide to understanding and appreciating classical music. Greenberg combines historical context with musical analysis to provide a comprehensive listening experience.",
+      "publishDate": "2011-05-31",
+      "images": [
+        "https://m.media-amazon.com/images/I/81lAWwi7EdL._AC_UF1000,1000_QL80_.jpg"
+
+      ],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 384,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music Appreciation",
+        "Classical Music",
+        "Music History"
+      ],
+      "reviews": [
+        6,
+        17,
+        35,
+        44,
+        27
+      ],
+      "authorName": "Robert Greenberg",
+      "authorId": 101,
+      "publisherName": "Plume",
+      "publisherId": 92,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 105,
+      "title": "This Is Your Brain on Music: The Science of a Human Obsession",
+      "rating": 4.2,
+      "description": "Daniel J. Levitin's 'This Is Your Brain on Music' delves into the neuroscience of musical perception and enjoyment. Levitin explores how the brain processes music, offering fascinating insights for music enthusiasts and scientists alike.",
+      "publishDate": "2007-08-28",
+      "images": [
+        "https://m.media-amazon.com/images/I/71OjvClJQsL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/91lHdFUsNYL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3100,
+      "discountPercentage": 10,
+      "pages": 336,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Canada",
+      "tags": [
+        "Neuroscience of Music",
+        "Music Perception",
+        "Cognitive Science"
+      ],
+      "reviews": [
+        9,
+        20,
+        30,
+        46,
+        19
+      ],
+      "authorName": "Daniel J. Levitin",
+      "authorId": 102,
+      "publisherName": "Plume",
+      "publisherId": 92,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 106,
+      "title": "The Rest Is Noise: Listening to the Twentieth Century",
+      "rating": 4.4,
+      "description": "Alex Ross's 'The Rest Is Noise' is a panoramic exploration of twentieth-century music and its cultural impact. Ross delves into the lives of composers and the historical context that shaped their groundbreaking works.",
+      "publishDate": "2008-10-14",
+      "images": [
+        "https://m.media-amazon.com/images/I/61GtsTN3O4L._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/41DCMvMi54L.jpg"
+      ],
+      "price": 3400,
+      "discountPercentage": 15,
+      "pages": 640,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Twentieth-Century Music",
+        "Music History",
+        "Cultural Impact"
+      ],
+      "reviews": [
+        7,
+        22,
+        33,
+        45,
+        28
+      ],
+      "authorName": "Alex Ross",
+      "authorId": 103,
+      "publisherName": "Picador",
+      "publisherId": 93,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 107,
+      "title": "The Complete Singer-Songwriter: A Troubadour's Guide to Writing, Performing, Recording, and Business",
+      "rating": 4.3,
+      "description": "Jeffrey Pepper Rodgers's 'The Complete Singer-Songwriter' provides invaluable guidance for aspiring singer-songwriters. Rodgers covers every aspect of the singer-songwriter's journey, from songwriting to performance and the business of music.",
+      "publishDate": "2016-03-08",
+      "images": [
+        "https://m.media-amazon.com/images/I/51z+SjgdAzL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71QncqxmHVL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 10,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Singer-Songwriter",
+        "Songwriting",
+        "Music Business"
+      ],
+      "reviews": [
+        8,
+        18,
+        31,
+        50,
+        26
+      ],
+      "authorName": "Jeffrey Pepper Rodgers",
+      "authorId": 104,
+      "publisherName": "Backbeat Books",
+      "publisherId": 94,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 108,
+      "title": "The Jazz Standards: A Guide to the Repertoire",
+      "rating": 4.6,
+      "description": "Ted Gioia's 'The Jazz Standards' is an authoritative guide to the most important jazz compositions. Gioia provides insightful commentary and historical context for each song, making this book an essential reference for jazz enthusiasts.",
+      "publishDate": "2012-02-23",
+      "images": [
+        "https://m.media-amazon.com/images/I/51Y2z7oCpaL.jpg",
+        "https://m.media-amazon.com/images/I/510wvJqKT+L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 10,
+      "pages": 544,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Jazz Standards",
+        "Music Repertoire",
+        "Jazz History"
+      ],
+      "reviews": [
+        6,
+        19,
+        32,
+        47,
+        30
+      ],
+      "authorName": "Ted Gioia",
+      "authorId": 105,
+      "publisherName": "Oxford University Press",
+      "publisherId": 95,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 109,
+      "title": "Harmony and Voice Leading",
+      "rating": 4.4,
+      "description": "Edward Aldwell and Carl Schachter's 'Harmony and Voice Leading' is a comprehensive textbook on the principles of music theory. This book provides a thorough exploration of harmony and its application in music composition.",
+      "publishDate": "2010-03-10",
+      "images": [
+        "https://m.media-amazon.com/images/I/61OBx4JAX3L._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/61TXB0AjIwL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 15,
+      "pages": 736,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music Theory",
+        "Harmony",
+        "Voice Leading"
+      ],
+      "reviews": [
+        7,
+        21,
+        33,
+        46,
+        25
+      ],
+      "authorName": "Edward Aldwell and Carl Schachter",
+      "authorId": 106,
+      "publisherName": "Cengage Learning",
+      "publisherId": 96,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 110,
+      "title": "How Music Works",
+      "rating": 4.3,
+      "description": "David Byrne's 'How Music Works' is a thought-provoking exploration of the art and science of music. Byrne examines various aspects of music, including its cultural context, technology, and the creative process.",
+      "publishDate": "2012-09-12",
+      "images": [
+        "https://m.media-amazon.com/images/I/71fpEFac2mL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/713O7XaEFLL._AC_UF1000,1000_QL80_.jpg"
+        
+      ],
+      "price": 3400,
+      "discountPercentage": 10,
+      "pages": 384,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music",
+        "Music Theory",
+        "Creative Process"
+      ],
+      "reviews": [
+        10,
+        20,
+        35,
+        48,
+        27
+      ],
+      "authorName": "David Byrne",
+      "authorId": 107,
+      "publisherName": "Crown Publishing Group",
+      "publisherId": 97,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 111,
+      "title": "The Music Lesson: A Spiritual Search for Growth Through Music",
+      "rating": 4.6,
+      "description": "Victor L. Wooten's 'The Music Lesson' offers a unique exploration of music as a spiritual and personal growth journey. Wooten's narrative combines music instruction with philosophical insights.",
+      "publishDate": "2008-04-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81Tjd4V36YL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 15,
+      "pages": 288,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music Education",
+        "Spirituality",
+        "Personal Growth"
+      ],
+      "reviews": [
+        9,
+        17,
+        36,
+        49,
+        24
+      ],
+      "authorName": "Victor L. Wooten",
+      "authorId": 108,
+      "publisherName": "Berkley",
+      "publisherId": 98,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 112,
+      "title": "Miles: The Autobiography",
+      "rating": 4.3,
+      "description": "Miles Davis's 'Miles: The Autobiography' provides a candid and insightful account of the life and career of the legendary jazz musician. Davis's narrative offers a firsthand perspective on the evolution of jazz.",
+      "publishDate": "1990-10-03",
+      "images": [
+        "https://m.media-amazon.com/images/I/71SzUd2R7LL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/41pW5C70M+L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 10,
+      "pages": 448,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Autobiography",
+        "Jazz",
+        "Autobiography",
+        "Jazz Music",
+        "Music Memoir"
+      ],
+      "reviews": [
+        11,
+        18,
+        30,
+        45,
+        29
+      ],
+      "authorName": "Miles Davis",
+      "authorId": 109,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 99,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 113,
+      "title": "The Inner Game of Music",
+      "rating": 4.7,
+      "description": "Barry Green and W. Timothy Gallwey's 'The Inner Game of Music' explores the psychological aspects of music performance. This book offers valuable techniques for overcoming performance anxiety and enhancing musical expression.",
+      "publishDate": "1986-10-07",
+      "images": [
+        "https://m.media-amazon.com/images/I/81FhzXXDQ+L._AC_UF1000,1000_QL80_.jpg",
+        "https://rukminim2.flixcart.com/image/850/1000/l0jwbrk0/book/w/f/v/the-inner-game-of-music-original-imagcatt6eshhaw7.jpeg?q=20"
+      ],
+      "price": 2900,
+      "discountPercentage": 20,
+      "pages": 225,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music Performance",
+        "Performance Psychology",
+        "Self-Help"
+      ],
+      "reviews": [
+        6,
+        16,
+        31,
+        50,
+        22
+      ],
+      "authorName": "Barry Green and W. Timothy Gallwey",
+      "authorId": 110,
+      "publisherName": "Doubleday",
+      "publisherId": 100,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 114,
+      "title": "Guitar Fretboard Workbook",
+      "rating": 4.4,
+      "description": "Barrett Tagliarino's 'Guitar Fretboard Workbook' is a practical guide to mastering the guitar fretboard. This workbook provides exercises and drills to help guitarists improve their understanding of scales, chords, and music theory.",
+      "publishDate": "2001-07-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/715zz7AizVL._AC_UF1000,1000_QL80_.jpg",
+        "https://d1iiivw74516uk.cloudfront.net/eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzAwOTg0Mi4zLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NDQxMjAxNzh9"
+      ],
+      "price": 2800,
+      "discountPercentage": 15,
+      "pages": 104,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Guitar",
+        "Music Theory",
+        "Fretboard"
+      ],
+      "reviews": [
+        8,
+        15,
+        34,
+        48,
+        23
+      ],
+      "authorName": "Barrett Tagliarino",
+      "authorId": 111,
+      "publisherName": "Hal Leonard",
+      "publisherId": 101,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 115,
+      "title": "Musicophilia: Tales of Music and the Brain",
+      "rating": 4.2,
+      "description": "Oliver Sacks's 'Musicophilia' offers a fascinating exploration of the relationship between music and the human brain. Sacks shares captivating stories of individuals whose lives have been profoundly affected by music.",
+      "publishDate": "2008-10-21",
+      "images": [
+        "https://m.media-amazon.com/images/I/81ZdAlnm1ZL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/61KBq3-LfDL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3100,
+      "discountPercentage": 10,
+      "pages": 400,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music and the Brain",
+        "Neuroscience",
+        "Case Studies"
+      ],
+      "reviews": [
+        10,
+        19,
+        32,
+        44,
+        28
+      ],
+      "authorName": "Oliver Sacks",
+      "authorId": 112,
+      "publisherName": "Vintage",
+      "publisherId": 102,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 116,
+      "title": "The Beatles: The Biography",
+      "rating": 4.6,
+      "description": "Bob Spitz's 'The Beatles: The Biography' provides an in-depth look at the lives and careers of the iconic band members. Drawing on extensive research and interviews, Spitz offers a comprehensive portrait of the Beatles.",
+      "publishDate": "2005-10-25",
+      "images": [
+        "https://m.media-amazon.com/images/I/51IyF1V7PPL.jpg"
+      ],
+      "price": 4200,
+      "discountPercentage": 10,
+      "pages": 992,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "The Beatles",
+        "Biography",
+        "Music History"
+      ],
+      "reviews": [
+        7,
+        20,
+        36,
+        47,
+        26
+      ],
+      "authorName": "Bob Spitz",
+      "authorId": 113,
+      "publisherName": "Little, Brown and Company",
+      "publisherId": 103,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 117,
+      "title": "The Study of Orchestration",
+      "rating": 4.4,
+      "description": "Samuel Adler's 'The Study of Orchestration' is a comprehensive guide to orchestration techniques and instrumentation. This textbook is a valuable resource for composers, arrangers, and students of music composition.",
+      "publishDate": "2016-06-07",
+      "images": [
+        "https://m.media-amazon.com/images/I/71xj2DWSY2L._AC_UF1000,1000_QL80_.jpg",
+        "https://rukminim2.flixcart.com/image/850/1000/ki96c280-0/book/9/e/o/the-study-of-orchestration-original-imafy2stkn3aq4er.jpeg?q=20"
+      ],
+      "price": 4200,
+      "discountPercentage": 15,
+      "pages": 848,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Orchestration",
+        "Music Composition",
+        "Instrumentation"
+      ],
+      "reviews": [
+        9,
+        16,
+        33,
+        46,
+        25
+      ],
+      "authorName": "Samuel Adler",
+      "authorId": 114,
+      "publisherName": "W. W. Norton & Company",
+      "publisherId": 104,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 118,
+      "title": "What to Listen for in Music",
+      "rating": 4.1,
+      "description": "Aaron Copland's 'What to Listen for in Music' is a classic guide to understanding and appreciating classical music. Copland provides accessible insights into the elements of music, making this book a valuable resource for both beginners and enthusiasts.",
+      "publishDate": "2011-03-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81nPOr0HNPL._AC_UF894,1000_QL80_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1309212078i/99126.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 304,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Music Appreciation",
+        "Classical Music",
+        "Listening Guide"
+      ],
+      "reviews": [
+        8,
+        17,
+        35,
+        49,
+        21
+      ],
+      "authorName": "Aaron Copland",
+      "authorId": 115,
+      "publisherName": "Penguin Books",
+      "publisherId": 105,
+      "genreId": 1,
+      "subgenreId": 8
+    },
+    {
+      "id": 119,
+      "title": "On Photography",
+      "rating": 4.1,
+      "description": "Susan Sontag's 'On Photography' is a seminal work in the field of photography criticism. Sontag offers a series of thought-provoking essays that explore the cultural, ethical, and aesthetic implications of photography.",
+      "publishDate": "2001-04-23",
+      "images": [
+        "https://m.media-amazon.com/images/I/91sWK3vbC5L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81kr7uTC-SL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3300,
+      "discountPercentage": 10,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography Criticism",
+        "Visual Culture",
+        "Cultural Analysis"
+      ],
+      "reviews": [
+        9,
+        22,
+        32,
+        45,
+        28
+      ],
+      "authorName": "Susan Sontag",
+      "authorId": 116,
+      "publisherName": "Picador",
+      "publisherId": 106,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 120,
+      "title": "The Americans",
+      "rating": 4.6,
+      "description": "Robert Frank's 'The Americans' is a groundbreaking photography book that captures the essence of American life in the mid-20th century. Frank's evocative images provide a unique perspective on the cultural landscape of the time.",
+      "publishDate": "2008-05-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/716Q38DQkhL._AC_UF350,350_QL50_.jpg"
+      ],
+      "price": 3400,
+      "discountPercentage": 15,
+      "pages": 192,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography",
+        "American Culture",
+        "Documentary Photography"
+      ],
+      "reviews": [
+        7,
+        18,
+        31,
+        50,
+        27
+      ],
+      "authorName": "Robert Frank",
+      "authorId": 117,
+      "publisherName": "Steidl",
+      "publisherId": 107,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 121,
+      "title": "Camera Lucida: Reflections on Photography",
+      "rating": 4.1,
+      "description": "Roland Barthes's 'Camera Lucida' is a seminal work in the field of photography theory. Barthes explores the emotional and philosophical dimensions of photography, offering profound reflections on the medium.",
+      "publishDate": "2010-10-12",
+      "images": [
+        "https://m.media-amazon.com/images/I/816eSUg15AL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 10,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography Theory",
+        "Philosophy of Photography",
+        "Aesthetic Experience"
+      ],
+      "reviews": [
+        10,
+        19,
+        33,
+        46,
+        29
+      ],
+      "authorName": "Roland Barthes",
+      "authorId": 118,
+      "publisherName": "Hill and Wang",
+      "publisherId": 108,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 122,
+      "title": "Ansel Adams: 400Photographs",
+      "rating": 4.8,
+      "description": " 'Ansel Adams: 400 Photographs' is a comprehensive collection of the iconic photographer's most celebrated works. This book showcases Adams's mastery of landscape photography and his ability to capture the natural beauty of the American West.",
+      "publishDate": "2007-09-26",
+      "images": [
+        "https://m.media-amazon.com/images/I/81b7w+nk6TL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 4500,
+      "discountPercentage": 10,
+      "pages": 440,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography",
+        "Ansel Adams",
+        "Landscape Photography"
+      ],
+      "reviews": [
+        11,
+        21,
+        34,
+        47,
+        26
+      ],
+      "authorName": "Ansel Adams",
+      "authorId": 119,
+      "publisherName": "Little, Brown and Company",
+      "publisherId": 109,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 123,
+      "title": "The Decisive Moment",
+      "rating": 4.7,
+      "description": "Henri Cartier-Bresson's 'The Decisive Moment' is a classic in the field of photography. This book features Cartier-Bresson's iconic images, along with his reflections on the art and craft of photography.",
+      "publishDate": "2015-11-02",
+      "images": [
+        "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/12/23/1419343187152/c772b81a-6863-49c7-936e-a639d2825399-1394x2040.jpeg?width=700&quality=85&auto=format&fit=max&s=1865ac7c4d86b5ed4c59a674ed5547ae"
+      ],
+      "price": 3800,
+      "discountPercentage": 15,
+      "pages": 160,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography",
+        "Henri Cartier-Bresson",
+        "Street Photography"
+      ],
+      "reviews": [
+        8,
+        16,
+        35,
+        49,
+        24
+      ],
+      "authorName": "Henri Cartier-Bresson",
+      "authorId": 120,
+      "publisherName": "Steidl",
+      "publisherId": 110,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 124,
+      "title": "Magnum Contact Sheets",
+      "rating": 4.7,
+      "description": "Kristen Lubben's 'Magnum Contact Sheets' provides a unique insight into the creative process of renowned photographers. The book features contact sheets along with the final images, offering a behind-the-scenes look at the making of iconic photographs.",
+      "publishDate": "2011-11-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/815CI-Cn8LL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 4800,
+      "discountPercentage": 10,
+      "pages": 524,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography",
+        "Contact Sheets",
+        "Creative Process"
+      ],
+      "reviews": [
+        9,
+        20,
+        30,
+        45,
+        22
+      ],
+      "authorName": "Kristen Lubben",
+      "authorId": 121,
+      "publisherName": "Thames & Hudson",
+      "publisherId": 111,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 125,
+      "title": "A World History of Photography",
+      "rating": 4.5,
+      "description": "Naomi Rosenblum's 'A World History of Photography' provides a comprehensive overview of photography's evolution and cultural impact. The book traces the development of photography from its early beginnings to its role in contemporary visual culture.",
+      "publishDate": "2008-10-17",
+      "images": [
+        "https://m.media-amazon.com/images/I/5161SB1+WvL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3900,
+      "discountPercentage": 10,
+      "pages": 712,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography History",
+        "Visual Culture",
+        "Photographic Art"
+      ],
+      "reviews": [
+        7,
+        19,
+        31,
+        48,
+        27
+      ],
+      "authorName": "Naomi Rosenblum",
+      "authorId": 122,
+      "publisherName": "Abbeville Press",
+      "publisherId": 112,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 126,
+      "title": "The Mind's Eye: Writings on Photography and Photographers",
+      "rating": 4.4,
+      "description": "Henri Cartier-Bresson's 'The Mind's Eye' is a collection of insightful essays on photography and the work of notable photographers. Cartier-Bresson's eloquent reflections offer valuable perspectives on the art of visual storytelling.",
+      "publishDate": "2005-09-21",
+      "images": [
+        "https://m.media-amazon.com/images/I/51IeEU5FmNL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 3400,
+      "discountPercentage": 10,
+      "pages": 112,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography Essays",
+        "Visual Storytelling",
+        "Photography Masters"
+      ],
+      "reviews": [
+        11,
+        22,
+        32,
+        46,
+        25
+      ],
+      "authorName": "Henri Cartier-Bresson",
+      "authorId": 120,
+      "publisherName": "Aperture",
+      "publisherId": 113,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 127,
+      "title": "Understanding Exposure: How to Shoot Great Photographs with Any Camera",
+      "rating": 4.6,
+      "description": "Bryan Peterson's 'Understanding Exposure' is a highly regarded guide to mastering the art of photography. The book covers essential techniques for achieving optimal exposure in various lighting conditions, making it suitable for photographers of all levels.",
+      "publishDate": "2016-03-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/91zOamZ54XL._SL1500_.jpg"
+      ],
+      "price": 3300,
+      "discountPercentage": 10,
+      "pages": 176,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography Techniques",
+        "Exposure",
+        "Photography Basics"
+      ],
+      "reviews": [
+        6,
+        17,
+        36,
+        50,
+        23
+      ],
+      "authorName": "Bryan Peterson",
+      "authorId": 123,
+      "publisherName": "Amphoto Books",
+      "publisherId": 114,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 128,
+      "title": "Light Science & Magic: An Introduction to Photographic Lighting",
+      "rating": 4.7,
+      "description": "Fil Hunter, Steven Biver, and Paul Fuqua's 'Light Science & Magic' is an essential resource for photographers seeking to master the art of lighting. The book provides in-depth insights into the principles of lighting and its creative applications.",
+      "publishDate": "2015-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81kXYnmyIPL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71bVWRyFURL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3700,
+      "discountPercentage": 10,
+      "pages": 400,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photographic Lighting",
+        "Lighting Techniques",
+        "Photography Reference"
+      ],
+      "reviews": [
+        8,
+        15,
+        34,
+        49,
+        21
+      ],
+      "authorName": "Fil Hunter, Steven Biver, and Paul Fuqua",
+      "authorId": 124,
+      "publisherName": "Focal Press",
+      "publisherId": 115,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 129,
+      "title": "Photography: A Cultural History",
+      "rating": 4.5,
+      "description": "Mary Warner Marien's 'Photography: A Cultural History' offers a comprehensive exploration of photography's role in shaping culture and society. The book traces the evolution of photography from its invention to its impact on contemporary visual culture.",
+      "publishDate": "2014-07-29",
+      "images": [
+        "https://m.media-amazon.com/images/I/91abkV4wEBL._SL1500_.jpg"
+      ],
+      "price": 4200,
+      "discountPercentage": 15,
+      "pages": 544,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography History",
+        "Visual Culture",
+        "Cultural Analysis"
+      ],
+      "reviews": [
+        9,
+        16,
+        33,
+        47,
+        22
+      ],
+      "authorName": "Mary Warner Marien",
+      "authorId": 125,
+      "publisherName": "Pearson",
+      "publisherId": 116,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 130,
+      "title": "The Photographer's Eye: Composition and Design for Better Digital Photos",
+      "rating": 4.3,
+      "description": "Michael Freeman's 'The Photographer's Eye' is a practical guide to improving photographic composition and design. The book provides valuable insights into creating compelling and visually engaging digital photographs.",
+      "publishDate": "2017-06-29",
+      "images": [
+        "https://m.media-amazon.com/images/I/91abkV4wEBL._SL1500_.jpg"
+      ],
+      "price": 3400,
+      "discountPercentage": 10,
+      "pages": 192,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography Composition",
+        "Digital Photography",
+        "Visual Design"
+      ],
+      "reviews": [
+        10,
+        18,
+        32,
+        46,
+        26
+      ],
+      "authorName": "Michael Freeman",
+      "authorId": 126,
+      "publisherName": "Ilex Press",
+      "publisherId": 117,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 131,
+      "title": "Camera: A History of Photography from Daguerreotype to Digital",
+      "rating": 4.7,
+      "description": "Todd Gustavson's 'Camera: A History of Photography from Daguerreotype to Digital' offers a comprehensive overview of the evolution of photographic technology. The book features a diverse collection of cameras, providing a visual history of the medium.",
+      "publishDate": "2009-09-21",
+      "images": [
+        "https://m.media-amazon.com/images/I/51e4jHPzCtL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/41fZqVL-oZL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 4500,
+      "discountPercentage": 10,
+      "pages": 320,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography History",
+        "Camera Technology",
+        "Photographic Innovation"
+      ],
+      "reviews": [
+        11,
+        19,
+        30,
+        45,
+        28
+      ],
+      "authorName": "Todd Gustavson",
+      "authorId": 127,
+      "publisherName": "Sterling",
+      "publisherId": 118,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 132,
+      "title": "The Art of Photography: An Approach to Personal Expression",
+      "rating": 4.5,
+      "description": "Bruce Barnbaum's 'The Art of Photography' offers a philosophical and practical exploration of personal expression in photography. Barnbaum encourages photographers to develop their unique creative vision and express it through their work.",
+      "publishDate": "2010-10-12",
+      "images": [
+        "https://m.media-amazon.com/images/I/71FoY04Rq0L._SL1030_.jpg",
+        "https://m.media-amazon.com/images/I/51v8G9xEFrL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 4300,
+      "discountPercentage": 15,
+      "pages": 432,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography",
+        "Personal Expression",
+        "Creative Vision"
+      ],
+      "reviews": [
+        6,
+        17,
+        36,
+        48,
+        27
+      ],
+      "authorName": "Bruce Barnbaum",
+      "authorId": 128,
+      "publisherName": "Rocky Nook",
+      "publisherId": 119,
+      "genreId": 1,
+      "subgenreId": 9
+    },
+    {
+      "id": 133,
+      "title": "Looking at Photographs: 100 Pictures from the Collection of The Museum of Modern Art",
+      "rating": 4.6,
+      "description": "John Szarkowski's 'Looking at Photographs' presents a curated selection of 100 iconic photographs from the collection of The Museum of Modern Art. Szarkowski's insightful commentary provides valuable context and analysis of each image.",
+      "publishDate": "2009-08-24",
+      "images": [
+        "https://m.media-amazon.com/images/I/61ibfESejWL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81ugq8d+MJL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3600,
+      "discountPercentage": 10,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Photography Collection",
+        "Art Analysis",
+        "Museum Collection"
+      ],
+      "reviews": [
+        7,
+        20,
+        35,
+        49,
+        25
+      ],
+      "authorName": "John Szarkowski",
+      "authorId": 129,
+      "publisherName": "The Museum of Modern Art, New York",
+      "publisherId": 120,
+      "genreId": 1,
+      "subgenreId": 9
     }
   ],
+
   "review": [
     {
       "id": 1,

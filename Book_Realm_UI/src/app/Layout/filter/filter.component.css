@@ -292,6 +292,10 @@ option:not(:checked) {
     font-size: 0.8rem;
 }
 
+.right .list-holder .book-item {
+    width: 30%;
+}
+
 .btn-primary i {
     font-size: 0.8rem;
     margin-left: 7px;
@@ -412,7 +416,11 @@ option:not(:checked) {
     }
 
     .right .list-holder .book-item {
-        width: 48%;
+        width: 46%;
+    }
+
+    .book-item .image{
+        height: 200px;
     }
 }
 
@@ -497,6 +505,14 @@ option:not(:checked) {
     .right .list-holder .book-item {
         width: 31%;
     }
+
+    .book-item .image{
+        height: 250px;
+    }
+
+    .right .list-holder .book-item {
+        width: 48%;
+    }
 }
 
 @media screen and (min-width:860px) {
@@ -506,7 +522,7 @@ option:not(:checked) {
     }
 
     .right .list-holder .book-item {
-        width: 32%;
+        width: 31%;
     }
 
     .hide{
@@ -520,7 +536,9 @@ option:not(:checked) {
 }
 
 @media screen and (min-width:860px) and (max-width:1260px){
-    .right .list-holder .book-item {
-        width: 30%;
+
+    .book-item .image{
+        height: 200px;
     }
+    
 }

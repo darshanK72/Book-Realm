@@ -268,12 +268,15 @@ option:not(:checked) {
 
 .book-item .image {
     width: 100%;
+    height: 350px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .book-item .image img {
     width: 100%;
+    object-fit: contain;
+
 }
 
 .list-holder .book-item .rating {

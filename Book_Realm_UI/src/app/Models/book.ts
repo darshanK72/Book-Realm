@@ -12,7 +12,9 @@ export interface Book{
     language:string;
     tags:string[];
     reviews:number[];
+    authorName:string;
     authorId:number;
+    publisherName:string;
     publisherId:number;
     genreId:number;
     subgenreId:number;

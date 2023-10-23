@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -76,7 +78,8 @@ import { BannerComponent } from './Layout/banner/banner.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxSplideModule
+    NgxSplideModule,
+    HttpClientModule
   ],
   providers: [
 

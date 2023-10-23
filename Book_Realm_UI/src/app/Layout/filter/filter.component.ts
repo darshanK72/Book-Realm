@@ -1,16 +1,29 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Book } from 'src/app/Models/book';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css'],
 })
-export class FilterComponent {
+export class FilterComponent implements OnInit{
 
   @ViewChild('filterEle')
   filterEle!:ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  books!:Book[];
+
+  constructor(private renderer: Renderer2,private http:HttpClient) {}
+
+  ngOnInit(): void {
+    this.http
+      .get<Book[]>(' http://localhost:3000/book')
+      .subscribe((data) => {
+        this.books = data;
+        console.log(data);
+      });
+  }
 
   name:string = 'lab';
 

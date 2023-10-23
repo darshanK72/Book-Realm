@@ -25,6 +25,32 @@
       "wishlistId": 2,
       "reviews": [],
       "orders": []
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "email": "michael.johnson@example.com",
+      "password": "michael@123",
+      "role": "user",
+      "birthDate": "1988-03-10",
+      "addressId": 2,
+      "cartId": 3,
+      "wishlistId": 3,
+      "reviews": [],
+      "orders": []
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "password": "emily@123",
+      "role": "user",
+      "birthDate": "1992-06-25",
+      "addressId": 3,
+      "cartId": 4,
+      "wishlistId": 4,
+      "reviews": [],
+      "orders": []
     }
   ],
   "admin": [
@@ -33,6 +59,13 @@
       "name": "Darshan Khairnar",
       "email": "darshan@gmail.com",
       "password": "darshan@123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Jessica Martinez",
+      "email": "jessica.martinez@example.com",
+      "password": "jessica@123",
       "role": "admin"
     }
   ],
@@ -51,6 +84,21 @@
       "orders": [],
       "description": "lorem",
       "publishedBooks": []
+    },
+    {
+      "id": 2,
+      "name": "Mark Thompson",
+      "email": "mark.thompson@example.com",
+      "password": "mark@123",
+      "role": "author",
+      "birthDate": "1975-11-18",
+      "addressId": 3,
+      "cartId": 5,
+      "wishlistId": 5,
+      "reviews": [],
+      "orders": [],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "publishedBooks": []
     }
   ],
   "publisher": [
@@ -68,6 +116,22 @@
       "description": "lorem",
       "foundationDate": "1990-08-14",
       "websiteUrl": "https://gooogle.com",
+      "publishedBooks": []
+    },
+    {
+      "id": 2,
+      "name": "Susan Johnson Publishing",
+      "email": "susan.johnson@example.com",
+      "password": "susan@123",
+      "role": "publisher",
+      "addressId": 2,
+      "cartId": 6,
+      "wishlistId": 6,
+      "orders": [],
+      "reviews": [],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "foundationDate": "2000-04-05",
+      "websiteUrl": "https://susanjohnsonpublishing.com",
       "publishedBooks": []
     }
   ],
@@ -89,25 +153,602 @@
       "state": "Maharashtra",
       "country": "India",
       "pincode": 423203
+    },
+    {
+      "id": 2,
+      "street1": "Maple Street",
+      "street2": "Apt. 203",
+      "city": "Springfield",
+      "state": "Illinois",
+      "country": "United States",
+      "pincode": 62701
+    },
+    {
+      "id": 3,
+      "street1": "Willow Lane",
+      "street2": "Suite 101",
+      "city": "New York",
+      "state": "New York",
+      "country": "United States",
+      "pincode": 10001
     }
   ],
   "book": [
     {
       "id": 1,
-      "title": "It Ends with Us",
-      "rating": 4,
-      "description": "It Ends with Us is a romance novel by Colleen Hoover, published by Atria Books on August 2, 2016. Based on the relationship between her mother and father, Hoover described it as \"the hardest book I've ever written.\" \nAs of 2019, the novel had sold over one million copies worldwide and been translated into over twenty languages. A sequel titled It Starts with Us was published in October 2022.",
-      "publishDate": "2016-08-02",
-      "images": [],
-      "price": 1800,
-      "discountPercentage": 18,
-      "pages": 327,
-      "bookFormat": "Paper Back",
+      "title": "The Architecture of Happiness",
+      "rating": 4.3,
+      "description": "In 'The Architecture of Happiness', Alain de Botton explores the connection between our environments and our emotional well-being. He delves into the impact of architectural design on our moods, drawing on examples from around the world. De Botton's insightful observations shed light on how our surroundings influence our sense of contentment and tranquility.",
+      "publishDate": "2006-04-06",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/a/ae/The_Architecture_of_Happiness_cover.jpg"
+      ],
+      "price": 1300,
+      "discountPercentage": 20,
+      "pages": 280,
+      "bookFormat": "Paperback",
       "language": "English",
-      "country":"United States",
-      "tags": [],
-      "reviews": [],
+      "country": "United Kingdom",
+      "tags": [
+        "Architecture",
+        "Design",
+        "Emotions"
+      ],
+      "reviews": [
+        3,
+        45,
+        12,
+        18,
+        22,
+        28,
+        31,
+        35,
+        40,
+        47
+      ],
+      "authorName": "Alain de Botton",
       "authorId": 1,
+      "publisherName": "Penguin Books",
+      "publisherId": 1,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 2,
+      "title": "Towards a New Architecture",
+      "rating": 4.8,
+      "description": "Le Corbusier's 'Towards a New Architecture' is a groundbreaking manifesto that challenges traditional architectural conventions. Published in 1923, it advocates for a modernist approach, emphasizing functionalism and industrial materials. Le Corbusier's vision has had a profound influence on modern architecture.",
+      "publishDate": "1923-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71GqZVYjenL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81eQQZavk2L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1500,
+      "discountPercentage": 15,
+      "pages": 352,
+      "bookFormat": "Paperback",
+      "language": "French",
+      "country": "France",
+      "tags": [
+        "Architecture",
+        "Modernism",
+        "Functionalism"
+      ],
+      "reviews": [
+        45,
+        30,
+        49,
+        5,
+        8,
+        9,
+        15,
+        19,
+        25,
+        35
+      ],
+      "authorName": "Le Corbusier",
+      "authorId": 2,
+      "publisherName": "Dover Publications",
+      "publisherId": 2,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 3,
+      "title": "The Fountainhead",
+      "rating": 4.6,
+      "description": "Ayn Rand's 'The Fountainhead' is a novel that celebrates individualism and the power of creative expression. Through the story of the fiercely independent architect Howard Roark, Rand explores themes of integrity, innovation, and the struggle against societal conformity. This thought-provoking work remains a cornerstone of architectural literature.",
+      "publishDate": "1943-05-07",
+      "images": [
+        "https://www.crossword.in/cdn/shop/products/9780451191151.jpg?v=1680187669",
+        "https://m.media-amazon.com/images/I/51256K48YWL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1700,
+      "discountPercentage": 10,
+      "pages": 752,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Individualism",
+        "Creativity"
+      ],
+      "reviews": [
+        10,
+        22,
+        35,
+        40,
+        48,
+        3,
+        16,
+        9,
+        11,
+        28
+      ],
+      "authorName": "Ayn Rand",
+      "authorId": 3,
+      "publisherName": "Bobbs-Merrill",
+      "publisherId": 3,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 4,
+      "title": "Architecture: Form, Space, and Order",
+      "rating": 4.5,
+      "description": "Francis D.K. Ching's 'Architecture: Form, Space, and Order' is a comprehensive guide that introduces fundamental principles of architectural design. The book explores spatial relationships, proportions, and the interplay of elements in architectural compositions. It serves as an essential resource for both students and professionals in the field.",
+      "publishDate": "1979-10-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61ePewcGeUL.jpg",
+        "https://m.media-amazon.com/images/I/51ZiPU2mZbL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1600,
+      "discountPercentage": 25,
+      "pages": 464,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Design Principles"
+      ],
+      "reviews": [
+        12,
+        27,
+        41,
+        5,
+        8,
+        17,
+        21,
+        29,
+        33,
+        37
+      ],
+      "authorName": "Francis D.K. Ching",
+      "authorId": 4,
+      "publisherName": "John Wiley & Sons",
+      "publisherId": 4,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 5,
+      "title": "The Seven Lamps of Architecture",
+      "rating": 4.0,
+      "description": "John Ruskin's 'The Seven Lamps of Architecture' is a seminal work that examines the moral and aesthetic principles of architectural design. Published in 1849, it outlines seven essential elements that Ruskin believes are crucial for creating meaningful and enduring buildings. This influential text continues to inspire architects and artists worldwide.",
+      "publishDate": "1849-01-01",
+      "images": [
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328867854i/769638.jpg",
+        "https://m.media-amazon.com/images/I/71PCkYkF5DL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1200,
+      "discountPercentage": 15,
+      "pages": 248,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Architecture",
+        "Design Principles",
+        "Aesthetics"
+      ],
+      "reviews": [
+        1,
+        7,
+        14,
+        20,
+        26,
+        32,
+        39,
+        43,
+        46,
+        50
+      ],
+      "authorName": "John Ruskin",
+      "authorId": 5,
+      "publisherName": "John Wiley & Sons",
+      "publisherId": 4,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 6,
+      "title": "Delirious New York: A Retroactive Manifesto for Manhattan",
+      "rating": 4.7,
+      "description": "In 'Delirious New York', Rem Koolhaas presents a captivating narrative of New York's architectural evolution. Koolhaas explores the city's frenetic growth, from the early skyscrapers to imaginative urban fantasies. The book offers a unique perspective on the collision of dreams, reality, and urbanism in the world's most dynamic metropolis.",
+      "publishDate": "1978-10-26",
+      "images": [
+        "https://cdn.sanity.io/images/5azy6oei/production/9a2e4b7d04483af9d4fca574e11d04346cba5cfc-2017x2759.jpg",
+        "https://media.s-bol.com/733q1m1YXwVB/550x723.jpg",
+        "https://cdn.cultura.com/cdn-cgi/image/width=830/media/pim/TITELIVE/35_9782863643952_1_75.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 20,
+      "pages": 320,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Netherlands",
+      "tags": [
+        "Architecture",
+        "Urbanism",
+        "New York"
+      ],
+      "reviews": [
+        6,
+        9,
+        13,
+        19,
+        25,
+        34,
+        42,
+        47
+      ],
+      "authorName": "Rem Koolhaas",
+      "authorId": 6,
+      "publisherName": "The Monacelli Press",
+      "publisherId": 5,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 7,
+      "title": "A Pattern Language: Towns, Buildings, Construction",
+      "rating": 4.9,
+      "description": "Christopher Alexander's 'A Pattern Language' is a seminal work in the field of architecture and urban design. It introduces a comprehensive set of design principles that focus on creating environments that foster human well-being and community. This influential book continues to shape the way architects and planners approach their work.",
+      "publishDate": "1977-10-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61DirDeK3tL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81qLvg24kSL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2000,
+      "discountPercentage": 10,
+      "pages": 1171,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Urban Design",
+        "Community"
+      ],
+      "reviews": [
+        3,
+        10,
+        15,
+        21,
+        27,
+        33,
+        39,
+        45
+      ],
+      "authorName": "Christopher Alexander",
+      "authorId": 7,
+      "publisherName": "Oxford University Press",
+      "publisherId": 6,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 8,
+      "title": "The Death and Life of Great American Cities",
+      "rating": 4.5,
+      "description": "Jane Jacobs' 'The Death and Life of Great American Cities' is a groundbreaking critique of urban planning practices. Published in 1961, it challenges the prevailing notions of city planning and advocates for organic, community-centered development. Jacobs' insights have had a profound influence on urban planning theory and practice.",
+      "publishDate": "1961-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51oeu+RZ3QL.jpg",
+        "https://m.media-amazon.com/images/I/81Kx93kCHhL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81lQSY1NkNL._AC_UF1000,1000_QL80_.jpg"
+
+      ],
+      "price": 1500,
+      "discountPercentage": 15,
+      "pages": 458,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Urban Planning",
+        "Community Development"
+      ],
+      "reviews": [
+        2,
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44
+      ],
+      "authorName": "Jane Jacobs",
+      "authorId": 8,
+      "publisherName": "Random House",
+      "publisherId": 7,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 9,
+      "title": "The Architecture of the City",
+      "rating": 4.2,
+      "description": "Aldo Rossi's 'The Architecture of the City' is a seminal work in urban theory. Published in 1966, it explores the relationship between the built environment, history, and memory. Rossi's perspective on the city as a collective artifact has had a profound influence on architectural discourse and urban studies.",
+      "publishDate": "1966-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41nzAh3VrWL._SX342_SY445_.jpg"
+      ],
+      "price": 1400,
+      "discountPercentage": 20,
+      "pages": 220,
+      "bookFormat": "Paperback",
+      "language": "Italian",
+      "country": "Italy",
+      "tags": [
+        "Urban Theory",
+        "History",
+        "Collective Memory"
+      ],
+      "reviews": [
+        1,
+        7,
+        13,
+        19,
+        25,
+        31,
+        37,
+        43
+      ],
+      "authorName": "Aldo Rossi",
+      "authorId": 9,
+      "publisherName": "The MIT Press",
+      "publisherId": 8,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 10,
+      "title": "The Poetics of Space",
+      "rating": 4.4,
+      "description": "Gaston Bachelard's 'The Poetics of Space' is a philosophical exploration of our experiences within architectural spaces. Bachelard delves into the emotional and poetic dimensions of domestic spaces, uncovering their profound impact on our psyche. This influential work has been cherished by architects, philosophers, and poets alike.",
+      "publishDate": "1958-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91GwI+PsUIL._SL1500_.jpg",
+        "https://scatteredglimpses.files.wordpress.com/2016/02/6a00d8341c562c53ef017c36905430970b.jpg?w=584"
+      ],
+      "price": 1800,
+      "discountPercentage": 15,
+      "pages": 304,
+      "bookFormat": "Paperback",
+      "language": "French",
+      "country": "France",
+      "tags": [
+        "Architecture",
+        "Phenomenology",
+        "Emotions"
+      ],
+      "reviews": [
+        4,
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47
+      ],
+      "authorName": "Gaston Bachelard",
+      "authorId": 10,
+      "publisherName": "Beacon Press",
+      "publisherId": 9,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 11,
+      "title": "Architectural Graphics",
+      "rating": 4.6,
+      "description": "Francis D.K. Ching's 'Architectural Graphics' is an essential guide to visual communication in architecture. The book covers fundamental techniques for representing and communicating design ideas, from hand drawing to digital tools. With clear illustrations and practical examples, it serves as a valuable resource for students and professionals alike.",
+      "publishDate": "1985-04-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/510csBs936L._SX342_SY445_.jpg",
+        "https://m.media-amazon.com/images/I/51VPiU5avdL.jpg"
+      ],
+      "price": 1700,
+      "discountPercentage": 20,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Visualization",
+        "Design Communication"
+      ],
+      "reviews": [
+        5,
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48
+      ],
+      "authorName": "Francis D.K. Ching",
+      "authorId": 4,
+      "publisherName": "Wiley",
+      "publisherId": 10,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 12,
+      "title": "Complexity and Contradiction in Architecture",
+      "rating": 4.2,
+      "description": "Robert Venturi's 'Complexity and Contradiction in Architecture' is a seminal text that challenges orthodoxies in architectural theory. Published in 1966, it advocates for a more inclusive and nuanced approach to design, embracing complexity and contradiction. Venturi's ideas have been influential in shaping postmodern architecture.",
+      "publishDate": "1966-01-01",
+      "images": [
+        "https://image.isu.pub/220106140301-cef43c1ed1c41dcc8660817019f7500c/jpg/page_1.jpg",
+        "https://m.media-amazon.com/images/I/61vTTQVohSL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 1600,
+      "discountPercentage": 15,
+      "pages": 136,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Postmodernism",
+        "Design Theory"
+      ],
+      "reviews": [
+        2,
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44
+      ],
+      "authorName": "Robert Venturi",
+      "authorId": 11,
+      "publisherName": "The Museum of Modern Art",
+      "publisherId": 11,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 13,
+      "title": "The Eyes of the Skin: Architecture and the Senses",
+      "rating": 4.7,
+      "description": "Juhani Pallasmaa's 'The Eyes of the Skin' offers a profound exploration of sensory experience in architecture. Pallasmaa argues for a multisensory approach to design, emphasizing the primacy of embodied experience. This influential book challenges the visual-centric approach to architecture, urging architects to engage all the senses in their work.",
+      "publishDate": "1996-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61Tatz8f5WL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51I062GnHVL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 20,
+      "pages": 88,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Finland",
+      "tags": [
+        "Architecture",
+        "Sensory Experience",
+        "Embodied Perception"
+      ],
+      "reviews": [
+        1,
+        6,
+        12,
+        19,
+        25,
+        31,
+        37,
+        43
+      ],
+      "authorName": "Juhani Pallasmaa",
+      "authorId": 12,
+      "publisherName": "John Wiley & Sons",
+      "publisherId": 4,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 14,
+      "title": "The Language of Architecture",
+      "rating": 4.4,
+      "description": "Andrea Simitch and Val Warke's 'The Language of Architecture' provides a comprehensive introduction to architectural design concepts and vocabulary. The book covers fundamental principles and elements of architectural language, enabling readers to effectively communicate their design ideas. It serves as an invaluable resource for architecture students and professionals.",
+      "publishDate": "2014-03-17",
+      "images": [
+        "https://m.media-amazon.com/images/I/91XM2xcGcaL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71IB-WRleFL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 240,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Design Concepts",
+        "Architectural Language"
+      ],
+      "reviews": [
+        5,
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47
+      ],
+      "authorName": "Andrea Simitch, Val Warke",
+      "authorId": 13,
+      "publisherName": "Rockport Publishers",
+      "publisherId": 12,
+      "genreId": 1,
+      "subgenreId": 1
+    },
+    {
+      "id": 15,
+      "title": "Palladio",
+      "rating": 4.8,
+      "description": "James S. Ackerman's 'Palladio' is a definitive work on the renowned Venetian architect Andrea Palladio. The book delves into Palladio's life, career, and influential architectural legacy during the Italian Renaissance. Ackerman's meticulous scholarship and insightful analysis make this book an essential read for architectural enthusiasts and scholars.",
+      "publishDate": "1966-12-05",
+      "images": [
+        "https://m.media-amazon.com/images/I/914oZTkF4ML._AC_UF1000,1000_QL80_.jpg",
+        "https://www.editionsmacula.com/wp-content/uploads/2011/07/978-2-86589-002-6-882x1323.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 15,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Architecture",
+        "Italian Renaissance",
+        "Andrea Palladio"
+      ],
+      "reviews": [
+        3,
+        9,
+        15,
+        21,
+        27,
+        33,
+        39,
+        45
+      ],
+      "authorName": "James S. Ackerman",
+      "authorId": 14,
+      "publisherName": "Penguin Books",
       "publisherId": 1,
       "genreId": 1,
       "subgenreId": 1
@@ -116,26 +757,1492 @@
   "review": [
     {
       "id": 1,
-      "comment": "lorem1",
-      "rating": 3,
+      "comment": "This book was amazing! I couldn't put it down.",
+      "rating": 5,
+      "date": "2023-09-12",
       "userId": 1,
-      "bookId": 1
+      "bookId": null
+    },
+    {
+      "id": 2,
+      "comment": "I found this book to be quite boring, honestly.",
+      "rating": 2,
+      "date": "2022-05-25",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 3,
+      "comment": "A must-read for any fantasy lover.",
+      "rating": 5,
+      "date": "2021-11-30",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 4,
+      "comment": "The plot was confusing, and the characters were forgettable.",
+      "rating": 2,
+      "date": "2022-07-18",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 5,
+      "comment": "I couldn't connect with the main character, but the writing was good.",
+      "rating": 3,
+      "date": "2023-01-07",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 6,
+      "comment": "This book exceeded my expectations! A true masterpiece.",
+      "rating": 5,
+      "date": "2020-12-20",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 7,
+      "comment": "I couldn't finish this book. It just wasn't for me.",
+      "rating": 1,
+      "date": "2021-10-08",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 8,
+      "comment": "The ending left me wanting more! Can't wait for the sequel.",
+      "rating": 4,
+      "date": "2023-08-04",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 9,
+      "comment": "I was pleasantly surprised by how much I enjoyed this book.",
+      "rating": 4,
+      "date": "2022-09-03",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 10,
+      "comment": "One of the best books I've read in a long time!",
+      "rating": 5,
+      "date": "2020-11-15",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 11,
+      "comment": "The pacing was off, and the plot felt rushed.",
+      "rating": 2,
+      "date": "2021-12-22",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 12,
+      "comment": "A heartwarming story that brought tears to my eyes.",
+      "rating": 4,
+      "date": "2023-02-10",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 13,
+      "comment": "I couldn't connect with any of the characters.",
+      "rating": 2,
+      "date": "2022-08-29",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 14,
+      "comment": "The world-building in this book was phenomenal!",
+      "rating": 5,
+      "date": "2020-10-05",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 15,
+      "comment": "I was on the edge of my seat the whole time!",
+      "rating": 4,
+      "date": "2021-09-18",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 16,
+      "comment": "The dialogue felt forced, and the plot was predictable.",
+      "rating": 2,
+      "date": "2022-06-11",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 17,
+      "comment": "I couldn't stop thinking about this book long after I finished it.",
+      "rating": 5,
+      "date": "2023-04-02",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 18,
+      "comment": "The characters were relatable, and the writing was beautiful.",
+      "rating": 4,
+      "date": "2020-12-28",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 19,
+      "comment": "I was disappointed by the lack of character development.",
+      "rating": 2,
+      "date": "2021-11-10",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 20,
+      "comment": "This book made me rethink life and love.",
+      "rating": 5,
+      "date": "2023-03-15",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 21,
+      "comment": "The pacing was perfect, and the plot twists were unexpected.",
+      "rating": 5,
+      "date": "2022-07-01",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 22,
+      "comment": "I couldn't put this book down! It was addictive.",
+      "rating": 4,
+      "date": "2020-11-30",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 23,
+      "comment": "The world the author created was so vivid and immersive.",
+      "rating": 5,
+      "date": "2021-10-16",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 24,
+      "comment": "I struggled to get through this book. It just wasn't for me.",
+      "rating": 1,
+      "date": "2023-05-22",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 25,
+      "comment": "I laughed, I cried, and I couldn't put it down.",
+      "rating": 5,
+      "date": "2022-09-09",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 26,
+      "comment": "The characters felt so real, like old friends.",
+      "rating": 4,
+      "date": "2020-12-15",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 27,
+      "comment": "This book challenged my perspective on life.",
+      "rating": 5,
+      "date": "2021-09-01",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 28,
+      "comment": "I couldn't stop thinking about the ending. It was haunting.",
+      "rating": 4,
+      "date": "2022-07-15",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 29,
+      "comment": "The writing style was so poetic and lyrical.",
+      "rating": 5,
+      "date": "2023-04-19",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 30,
+      "comment": "I was expecting more from this book, but it fell short.",
+      "rating": 3,
+      "date": "2020-11-10",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 31,
+      "comment": "The plot was intriguing, and the twists kept me guessing.",
+      "rating": 4,
+      "date": "2021-10-25",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 32,
+      "comment": "I felt a deep connection with the main character's struggles.",
+      "rating": 4,
+      "date": "2023-03-07",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 33,
+      "comment": "I couldn't get into the story. It just didn't grab me.",
+      "rating": 2,
+      "date": "2022-08-01",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 34,
+      "comment": "The book was well-researched and incredibly informative.",
+      "rating": 5,
+      "date": "2020-10-20",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 35,
+      "comment": "I was disappointed by the lack of diversity in the characters.",
+      "rating": 3,
+      "date": "2021-12-05",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 36,
+      "comment": "The atmosphere the author created was so vivid.",
+      "rating": 4,
+      "date": "2023-01-25",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 37,
+      "comment": "I was blown away by the author's storytelling skills.",
+      "rating": 5,
+      "date": "2022-09-30",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 38,
+      "comment": "The book left me with more questions than answers.",
+      "rating": 3,
+      "date": "2020-11-27",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 39,
+      "comment": "The character development was exceptional.",
+      "rating": 5,
+      "date": "2021-09-28",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 40,
+      "comment": "I couldn't get enough of the witty dialogue.",
+      "rating": 4,
+      "date": "2022-07-31",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 41,
+      "comment": "The book had a slow start, but it picked up later on.",
+      "rating": 3,
+      "date": "2023-05-12",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 42,
+      "comment": "I was deeply moved by the emotions portrayed in this book.",
+      "rating": 5,
+      "date": "2020-12-01",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 43,
+      "comment": "The book was too predictable for my taste.",
+      "rating": 2,
+      "date": "2021-10-05",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 44,
+      "comment": "I couldn't help but fall in love with the main character.",
+      "rating": 4,
+      "date": "2023-03-27",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 45,
+      "comment": "The plot twists left me in awe. I never saw them coming.",
+      "rating": 5,
+      "date": "2022-08-20",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 46,
+      "comment": "I was disappointed by the anticlimactic ending.",
+      "rating": 3,
+      "date": "2020-10-15",
+      "userId": 2,
+      "bookId": null
+    },
+    {
+      "id": 47,
+      "comment": "The author's writing style was fresh and unique.",
+      "rating": 4,
+      "date": "2021-12-20",
+      "userId": 3,
+      "bookId": null
+    },
+    {
+      "id": 48,
+      "comment": "I found the book to be overly descriptive at times.",
+      "rating": 3,
+      "date": "2023-01-10",
+      "userId": 4,
+      "bookId": null
+    },
+    {
+      "id": 49,
+      "comment": "The book had a strong emotional impact on me.",
+      "rating": 5,
+      "date": "2022-09-15",
+      "userId": 1,
+      "bookId": null
+    },
+    {
+      "id": 50,
+      "comment": "I was pleasantly surprised by the unexpected plot twists.",
+      "rating": 4,
+      "date": "2023-04-10",
+      "userId": 2,
+      "bookId": null
     }
   ],
   "genre": [
     {
       "id": 1,
-      "name": "Friction",
-      "description": "",
-      "subgenres": []
+      "name": "Art & Photography",
+      "description": "Explore the world of visual arts and photography.",
+      "subgenres": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Biographies & Memoirs",
+      "description": "Discover the lives and experiences of individuals.",
+      "subgenres": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dictionaries & Language",
+      "description": "Master languages and linguistic studies.",
+      "subgenres": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Literature & Literary Studies",
+      "description": "Delve into the world of written works and literary analysis.",
+      "subgenres": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "id": 5,
+      "name": "English Language Teaching",
+      "description": "Facilitate the learning and teaching of English.",
+      "subgenres": [
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Fiction",
+      "description": "Immerse yourself in imaginative storytelling.",
+      "subgenres": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "id": 7,
+      "name": "References & Encyclopedias",
+      "description": "Access comprehensive references and encyclopedic knowledge.",
+      "subgenres": [
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "id": 8,
+      "name": "History & Humanities",
+      "description": "Journey through historical events and humanistic studies.",
+      "subgenres": [
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Society & Social Sciences",
+      "description": "Explore societal structures and human behavior.",
+      "subgenres": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Business & Economics",
+      "description": "Navigate the world of commerce and economics.",
+      "subgenres": [
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Law",
+      "description": "Explore the principles and practice of law.",
+      "subgenres": [
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Medicine",
+      "description": "Explore the science and practice of healing.",
+      "subgenres": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Science & Mathematics",
+      "description": "Unravel the mysteries of the natural world.",
+      "subgenres": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Environment & Geography",
+      "description": "Study the earth and its diverse environments.",
+      "subgenres": [
+        79,
+        80,
+        81,
+        82
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Technology & Engineering",
+      "description": "Innovate, build, and shape the future with technology.",
+      "subgenres": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Computer & Internet",
+      "description": "Unravel the world of computing and connectivity.",
+      "subgenres": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Parenting, Family & Health",
+      "description": "Nurture, connect, and thrive within the family unit.",
+      "subgenres": [
+        112,
+        113,
+        114
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Lifestyle",
+      "description": "Enhance the quality and enjoyment of everyday life.",
+      "subgenres": [
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Children & Teens",
+      "description": "Inspire, educate, and entertain the younger generation.",
+      "subgenres": [
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136
+      ]
     }
   ],
   "subgenre": [
     {
       "id": 1,
-      "name": "",
-      "description": "lorem",
+      "name": "Architecture",
+      "description": "Explore the art and science of architectural design.",
       "genreId": 1
+    },
+    {
+      "id": 2,
+      "name": "Art Forms",
+      "description": "Dive into various forms of artistic expression.",
+      "genreId": 1
+    },
+    {
+      "id": 3,
+      "name": "Art Treatments & Subjects",
+      "description": "Discover specialized art techniques and subjects.",
+      "genreId": 1
+    },
+    {
+      "id": 4,
+      "name": "Dance & Other Performing Arts",
+      "description": "Immerse in the world of dance and live performances.",
+      "genreId": 1
+    },
+    {
+      "id": 5,
+      "name": "Film, TV & Radio",
+      "description": "Explore the magic of motion pictures and broadcasting.",
+      "genreId": 1
+    },
+    {
+      "id": 6,
+      "name": "History of Art / Art & Design Styles",
+      "description": "Trace the evolution of artistic styles and design.",
+      "genreId": 1
+    },
+    {
+      "id": 7,
+      "name": "Industrial / Commercial Art & Design",
+      "description": "Delve into art and design for commercial purposes.",
+      "genreId": 1
+    },
+    {
+      "id": 8,
+      "name": "Music",
+      "description": "Harmonize with the melodies and rhythms of music.",
+      "genreId": 1
+    },
+    {
+      "id": 9,
+      "name": "Photography & Photographs",
+      "description": "Capture moments and create visual narratives through photography.",
+      "genreId": 1
+    },
+    {
+      "id": 10,
+      "name": "The Arts: General Issues",
+      "description": "Explore overarching topics in the world of arts.",
+      "genreId": 1
+    },
+    {
+      "id": 11,
+      "name": "Theatre Studies",
+      "description": "Study the art and craft of theatrical performances.",
+      "genreId": 1
+    },
+    {
+      "id": 12,
+      "name": "Biography: General",
+      "description": "Embark on a journey through the lives of notable individuals.",
+      "genreId": 2
+    },
+    {
+      "id": 13,
+      "name": "Collected Biographies",
+      "description": "Gathered accounts of remarkable life stories.",
+      "genreId": 2
+    },
+    {
+      "id": 14,
+      "name": "Diaries, Letters & Journals",
+      "description": "Peer into personal thoughts, experiences, and correspondence.",
+      "genreId": 2
+    },
+    {
+      "id": 15,
+      "name": "Memoirs",
+      "description": "Experience pivotal moments through personal recollections.",
+      "genreId": 2
+    },
+    {
+      "id": 16,
+      "name": "True Stories",
+      "description": "Discover incredible and true accounts of life's adventures.",
+      "genreId": 2
+    },
+    {
+      "id": 17,
+      "name": "Language Teaching & Learning (other than ELT)",
+      "description": "Unlock the art of teaching and learning languages.",
+      "genreId": 5
+    },
+    {
+      "id": 18,
+      "name": "Language: Reference & General",
+      "description": "Explore language in its various forms and applications.",
+      "genreId": 5
+    },
+    {
+      "id": 19,
+      "name": "Linguistics",
+      "description": "Delve into the study of language and its structures.",
+      "genreId": 5
+    },
+    {
+      "id": 20,
+      "name": "Anthologies (non-poetry)",
+      "description": "Discover curated collections of non-poetic works.",
+      "genreId": 4
+    },
+    {
+      "id": 21,
+      "name": "Classical Texts",
+      "description": "Engage with the timeless works of classical literature.",
+      "genreId": 4
+    },
+    {
+      "id": 22,
+      "name": "Literature: History & Criticism",
+      "description": "Examine the historical and critical aspects of literature.",
+      "genreId": 4
+    },
+    {
+      "id": 23,
+      "name": "Plays, Playscripts",
+      "description": "Dive into the world of dramatic works and scripts.",
+      "genreId": 4
+    },
+    {
+      "id": 24,
+      "name": "Poetry",
+      "description": "Experience the power and beauty of poetic expression.",
+      "genreId": 4
+    },
+    {
+      "id": 25,
+      "name": "Prose: Non-fiction",
+      "description": "Engage with factual and informative non-fictional works.",
+      "genreId": 4
+    },
+    {
+      "id": 26,
+      "name": "Elt Background & Reference Material",
+      "description": "Access foundational resources for English Language Teaching.",
+      "genreId": 6
+    },
+    {
+      "id": 27,
+      "name": "Elt: English for Specific Purposes",
+      "description": "Tailor English language education for specific fields.",
+      "genreId": 6
+    },
+    {
+      "id": 28,
+      "name": "Elt: Learning Material & Coursework",
+      "description": "Provide essential learning materials for English language learners.",
+      "genreId": 6
+    },
+    {
+      "id": 29,
+      "name": "Adventure",
+      "description": "Embark on thrilling and exciting journeys.",
+      "genreId": 6
+    },
+    {
+      "id": 30,
+      "name": "Classic Fiction",
+      "description": "Explore timeless and enduring works of fiction.",
+      "genreId": 6
+    },
+    {
+      "id": 31,
+      "name": "Crime & Mystery",
+      "description": "Solve puzzles and uncover mysteries in gripping tales.",
+      "genreId": 6
+    },
+    {
+      "id": 32,
+      "name": "Erotic Fiction",
+      "description": "Indulge in sensuous and passionate narratives.",
+      "genreId": 6
+    },
+    {
+      "id": 33,
+      "name": "Fantasy",
+      "description": "Step into magical worlds and epic adventures.",
+      "genreId": 6
+    },
+    {
+      "id": 34,
+      "name": "Fiction-related Items",
+      "description": "Explore unique and miscellaneous items related to fiction.",
+      "genreId": 6
+    },
+    {
+      "id": 35,
+      "name": "Fiction: Special Features",
+      "description": "Discover specialized features within fictional works.",
+      "genreId": 6
+    },
+    {
+      "id": 36,
+      "name": "Graphic Novels",
+      "description": "Experience storytelling through vivid illustrations and narratives.",
+      "genreId": 6
+    },
+    {
+      "id": 37,
+      "name": "Historical Fiction",
+      "description": "Travel back in time through historical narratives.",
+      "genreId": 6
+    },
+    {
+      "id": 38,
+      "name": "Horror & Ghost Stories",
+      "description": "Thrill and chill with tales of horror and spectral encounters.",
+      "genreId": 6
+    },
+    {
+      "id": 39,
+      "name": "Modern & Contemporary Fiction",
+      "description": "Engage with fiction set in the modern world and contemporary times.",
+      "genreId": 6
+    },
+    {
+      "id": 40,
+      "name": "Myth & Legend Told as Fiction",
+      "description": "Experience ancient myths and legends in fictional form.",
+      "genreId": 6
+    },
+    {
+      "id": 41,
+      "name": "Religious & Spiritual Fiction",
+      "description": "Explore faith, spirituality, and beliefs through fiction.",
+      "genreId": 6
+    },
+    {
+      "id": 42,
+      "name": "Romance",
+      "description": "Celebrate love, passion, and romantic adventures.",
+      "genreId": 6
+    },
+    {
+      "id": 43,
+      "name": "Sagas",
+      "description": "Embark on epic journeys and grand adventures.",
+      "genreId": 6
+    },
+    {
+      "id": 44,
+      "name": "Science Fiction",
+      "description": "Explore futuristic worlds and speculative concepts.",
+      "genreId": 6
+    },
+    {
+      "id": 45,
+      "name": "Thriller / Suspense",
+      "description": "Experience heart-pounding excitement and nail-biting suspense.",
+      "genreId": 6
+    },
+    {
+      "id": 46,
+      "name": "Encyclopaedias & Reference Works",
+      "description": "Access comprehensive sources of knowledge and information.",
+      "genreId": 7
+    },
+    {
+      "id": 47,
+      "name": "Interdisciplinary Studies",
+      "description": "Explore the intersection of diverse fields of study.",
+      "genreId": 7
+    },
+    {
+      "id": 48,
+      "name": "Library & Information Sciences",
+      "description": "Delve into the science and art of library and information management.",
+      "genreId": 7
+    },
+    {
+      "id": 49,
+      "name": "Museums & Museology",
+      "description": "Discover the curation and preservation of cultural heritage.",
+      "genreId": 7
+    },
+    {
+      "id": 50,
+      "name": "Research & Information: General",
+      "description": "Navigate the world of research and information acquisition.",
+      "genreId": 7
+    },
+    {
+      "id": 51,
+      "name": "Archaeology",
+      "description": "Unearth the mysteries of ancient civilizations and cultures.",
+      "genreId": 8
+    },
+    {
+      "id": 52,
+      "name": "History",
+      "description": "Travel through time and explore the past.",
+      "genreId": 8
+    },
+    {
+      "id": 53,
+      "name": "Philosophy",
+      "description": "Contemplate the fundamental nature of existence and reality.",
+      "genreId": 8
+    },
+    {
+      "id": 54,
+      "name": "Religion & Spirituality",
+      "description": "Explore diverse beliefs and spiritual traditions.",
+      "genreId": 8
+    },
+    {
+      "id": 55,
+      "name": "Education",
+      "description": "Empower individuals through the pursuit of knowledge and learning.",
+      "genreId": 9
+    },
+    {
+      "id": 56,
+      "name": "Politics & Current Events",
+      "description": "Engage with political ideologies and current global affairs.",
+      "genreId": 9
+    },
+    {
+      "id": 57,
+      "name": "Psychology",
+      "description": "Delve into the intricacies of the human mind and behavior.",
+      "genreId": 9
+    },
+    {
+      "id": 58,
+      "name": "Social Services & Welfare, Criminology",
+      "description": "Address societal well-being, justice, and social issues.",
+      "genreId": 9
+    },
+    {
+      "id": 59,
+      "name": "Society & Culture: General",
+      "description": "Explore the dynamics, norms, and customs of human societies.",
+      "genreId": 9
+    },
+    {
+      "id": 60,
+      "name": "Sociology & Anthropology",
+      "description": "Study the structure and behavior of human societies.",
+      "genreId": 9
+    },
+    {
+      "id": 61,
+      "name": "Warfare & Defence",
+      "description": "Explore military strategy, history, and defense mechanisms.",
+      "genreId": 9
+    },
+    {
+      "id": 62,
+      "name": "Business & Management",
+      "description": "Navigate the world of commerce, organizations, and management.",
+      "genreId": 10
+    },
+    {
+      "id": 63,
+      "name": "Economics",
+      "description": "Examine the production, consumption, and distribution of wealth.",
+      "genreId": 10
+    },
+    {
+      "id": 64,
+      "name": "Finance & Accounting",
+      "description": "Manage and allocate financial resources effectively.",
+      "genreId": 10
+    },
+    {
+      "id": 65,
+      "name": "Industry & Industrial Studies",
+      "description": "Explore various industries and their economic impact.",
+      "genreId": 10
+    },
+    {
+      "id": 66,
+      "name": "International Law",
+      "description": "Examine legal principles governing relations between nations.",
+      "genreId": 11
+    },
+    {
+      "id": 67,
+      "name": "Jurisprudence & General Issues",
+      "description": "Delve into legal theory and foundational legal concepts.",
+      "genreId": 11
+    },
+    {
+      "id": 68,
+      "name": "Law: Study & Revision Guides",
+      "description": "Facilitate learning and revision in the field of law.",
+      "genreId": 11
+    },
+    {
+      "id": 69,
+      "name": "Laws of Specific Jurisdictions",
+      "description": "Explore the legal systems of specific regions or countries.",
+      "genreId": 11
+    },
+    {
+      "id": 70,
+      "name": "Clinical & Internal Medicine",
+      "description": "Explore the diagnosis and treatment of medical conditions.",
+      "genreId": 12
+    },
+    {
+      "id": 71,
+      "name": "Complementary Medicine",
+      "description": "Integrate alternative approaches to health and wellness.",
+      "genreId": 12
+    },
+    {
+      "id": 72,
+      "name": "Medical Study & Revision Guides & Reference Mater",
+      "description": "Support medical education and learning.",
+      "genreId": 12
+    },
+    {
+      "id": 73,
+      "name": "Medicine: General Issues",
+      "description": "Explore fundamental concepts and issues in the field of medicine.",
+      "genreId": 12
+    },
+    {
+      "id": 74,
+      "name": "Nursing & Ancillary Services",
+      "description": "Enhance nursing practice and related healthcare services.",
+      "genreId": 12
+    },
+    {
+      "id": 75,
+      "name": "Other Branches of Medicine",
+      "description": "Dive into specialized branches and fields of medicine.",
+      "genreId": 12
+    },
+    {
+      "id": 76,
+      "name": "Pre-clinical Medicine: Basic Sciences",
+      "description": "Explore foundational sciences in preparation for clinical practice.",
+      "genreId": 12
+    },
+    {
+      "id": 77,
+      "name": "Surgery",
+      "description": "Study surgical techniques and procedures.",
+      "genreId": 12
+    },
+    {
+      "id": 78,
+      "name": "Veterinary Medicine",
+      "description": "Explore the care and treatment of animals.",
+      "genreId": 12
+    },
+    {
+      "id": 79,
+      "name": "Astronomy, Space & Time",
+      "description": "Embark on a cosmic journey through the universe.",
+      "genreId": 13
+    },
+    {
+      "id": 80,
+      "name": "Biology, Life Sciences",
+      "description": "Explore the wonders of living organisms and their environments.",
+      "genreId": 13
+    },
+    {
+      "id": 81,
+      "name": "Chemistry",
+      "description": "Uncover the secrets of matter, molecules, and chemical reactions.",
+      "genreId": 13
+    },
+    {
+      "id": 82,
+      "name": "Mathematics",
+      "description": "Dive into the world of numbers, logic, and mathematical concepts.",
+      "genreId": 13
+    },
+    {
+      "id": 83,
+      "name": "Physics",
+      "description": "Explore the fundamental forces and laws that govern the universe.",
+      "genreId": 13
+    },
+    {
+      "id": 84,
+      "name": "Science: General Issues",
+      "description": "Engage with overarching topics in the field of science.",
+      "genreId": 13
+    },
+    {
+      "id": 85,
+      "name": "Earth Sciences",
+      "description": "Study the dynamic processes shaping the Earth's surface and interior.",
+      "genreId": 14
+    },
+    {
+      "id": 86,
+      "name": "Geography",
+      "description": "Explore the physical and cultural landscapes of the world.",
+      "genreId": 14
+    },
+    {
+      "id": 87,
+      "name": "Regional & Area Planning",
+      "description": "Plan and shape the spatial organization of human activities.",
+      "genreId": 14
+    },
+    {
+      "id": 88,
+      "name": "The Environment",
+      "description": "Examine the complex relationships between living organisms and their surroundings.",
+      "genreId": 14
+    },
+    {
+      "id": 89,
+      "name": "Agriculture & Farming",
+      "description": "Explore agricultural practices and techniques.",
+      "genreId": 15
+    },
+    {
+      "id": 90,
+      "name": "Biochemical Engineering",
+      "description": "Apply chemical processes to biological systems for various applications.",
+      "genreId": 15
+    },
+    {
+      "id": 91,
+      "name": "Civil Engineering, Surveying & Building",
+      "description": "Design and construct the physical infrastructure of communities.",
+      "genreId": 15
+    },
+    {
+      "id": 92,
+      "name": "Electronics & Communications Engineering",
+      "description": "Explore electronic systems and communication technologies.",
+      "genreId": 15
+    },
+    {
+      "id": 93,
+      "name": "Energy Technology & Engineering",
+      "description": "Harness and manage energy resources for various applications.",
+      "genreId": 15
+    },
+    {
+      "id": 94,
+      "name": "Environmental Science, Engineering & Technology",
+      "description": "Address environmental challenges through science and engineering solutions.",
+      "genreId": 15
+    },
+    {
+      "id": 95,
+      "name": "Industrial Chemistry & Manufacturing Technologies",
+      "description": "Apply chemistry in industrial processes and manufacturing.",
+      "genreId": 15
+    },
+    {
+      "id": 96,
+      "name": "Mechanical Engineering & Materials",
+      "description": "Explore the principles and applications of mechanical engineering.",
+      "genreId": 15
+    },
+    {
+      "id": 97,
+      "name": "Other Technologies & Applied Sciences",
+      "description": "Explore diverse applications of technology in various fields.",
+      "genreId": 15
+    },
+    {
+      "id": 98,
+      "name": "Technology: General Issues",
+      "description": "Engage with overarching topics in the field of technology.",
+      "genreId": 15
+    },
+    {
+      "id": 99,
+      "name": "Transport Technology & Trades",
+      "description": "Explore transportation systems and related trades.",
+      "genreId": 15
+    },
+    {
+      "id": 100,
+      "name": "Business Applications",
+      "description": "Explore software applications for business management and operations.",
+      "genreId": 16
+    },
+    {
+      "id": 101,
+      "name": "Computer Certification",
+      "description": "Pursue certifications in various computer-related disciplines.",
+      "genreId": 16
+    },
+    {
+      "id": 102,
+      "name": "Computer Hardware",
+      "description": "Explore the physical components and peripherals of computer systems.",
+      "genreId": 16
+    },
+    {
+      "id": 103,
+      "name": "Computer Networking & Communications",
+      "description": "Delve into the principles and practices of computer networking.",
+      "genreId": 16
+    },
+    {
+      "id": 104,
+      "name": "Computer Programming / Software Development",
+      "description": "Develop software applications and programs for various platforms.",
+      "genreId": 16
+    },
+    {
+      "id": 105,
+      "name": "Computer Science",
+      "description": "Explore the theoretical foundations and practical applications of computing.",
+      "genreId": 16
+    },
+    {
+      "id": 106,
+      "name": "Computer Security",
+      "description": "Protect and secure computer systems and networks.",
+      "genreId": 16
+    },
+    {
+      "id": 107,
+      "name": "Computing: General",
+      "description": "Engage with overarching topics in the field of computing.",
+      "genreId": 16
+    },
+    {
+      "id": 108,
+      "name": "Databases",
+      "description": "Design, manage, and optimize database systems.",
+      "genreId": 16
+    },
+    {
+      "id": 109,
+      "name": "Digital Lifestyle",
+      "description": "Explore digital technologies in everyday life.",
+      "genreId": 16
+    },
+    {
+      "id": 110,
+      "name": "Graphical & Digital Media Applications",
+      "description": "Create and manipulate visual content using digital tools.",
+      "genreId": 16
+    },
+    {
+      "id": 111,
+      "name": "Operating Systems",
+      "description": "Explore the foundational software that manages computer hardware.",
+      "genreId": 16
+    },
+    {
+      "id": 112,
+      "name": "Body, Mind & Spirit",
+      "description": "Explore the connections between the physical, mental, and spiritual realms.",
+      "genreId": 17
+    },
+    {
+      "id": 113,
+      "name": "Child Care & Upbringing",
+      "description": "Nurture and guide children through their formative years.",
+      "genreId": 17
+    },
+    {
+      "id": 114,
+      "name": "Family & Relationships",
+      "description": "Strengthen bonds and navigate the dynamics of family and relationships.",
+      "genreId": 17
+    },
+    {
+      "id": 115,
+      "name": "Cooking & Food",
+      "description": "Embark on culinary adventures and savor delicious recipes.",
+      "genreId": 18
+    },
+    {
+      "id": 116,
+      "name": "Gardening",
+      "description": "Cultivate gardens and create thriving outdoor spaces.",
+      "genreId": 18
+    },
+    {
+      "id": 117,
+      "name": "Handicrafts",
+      "description": "Create unique and beautiful handmade crafts.",
+      "genreId": 18
+    },
+    {
+      "id": 118,
+      "name": "Home Maintenance & Renovation",
+      "description": "Enhance and maintain your living spaces with DIY projects.",
+      "genreId": 18
+    },
+    {
+      "id": 119,
+      "name": "Pets",
+      "description": "Care for and connect with your furry and feathered companions.",
+      "genreId": 18
+    },
+    {
+      "id": 120,
+      "name": "Interior Design, Decor & Style Guides",
+      "description": "Transform spaces and express your personal style through design.",
+      "genreId": 18
+    },
+    {
+      "id": 121,
+      "name": "Mind, Body, Spirit: Thought & Practice",
+      "description": "Explore practices for holistic well-being and self-improvement.",
+      "genreId": 18
+    },
+    {
+      "id": 122,
+      "name": "Personal Finance",
+      "description": "Manage and optimize your financial resources for a secure future.",
+      "genreId": 18
+    },
+    {
+      "id": 123,
+      "name": "Popular Psychology",
+      "description": "Discover insights into human behavior and psychological well-being.",
+      "genreId": 18
+    },
+    {
+      "id": 124,
+      "name": "Property & Real Estate",
+      "description": "Navigate the world of buying, selling, and owning property.",
+      "genreId": 18
+    },
+    {
+      "id": 125,
+      "name": "Shopping Guides",
+      "description": "Make informed choices and find the best products and deals.",
+      "genreId": 18
+    },
+    {
+      "id": 126,
+      "name": "Style & Personal Appearance",
+      "description": "Express yourself through fashion and personal style.",
+      "genreId": 18
+    },
+    {
+      "id": 127,
+      "name": "Yoga & Meditation",
+      "description": "Cultivate mindfulness, balance, and inner peace through practice.",
+      "genreId": 18
+    },
+    {
+      "id": 128,
+      "name": "Diets & Dieting",
+      "description": "Embark on a journey to better health through balanced nutrition.",
+      "genreId": 18
+    },
+    {
+      "id": 129,
+      "name": "Children's (6-12)",
+      "description": "Inspire, educate, and entertain children aged 6-12.",
+      "genreId": 19
+    },
+    {
+      "id": 130,
+      "name": "Children's (7-9)",
+      "description": "Engage young readers aged 7-9 with captivating stories.",
+      "genreId": 19
+    },
+    {
+      "id": 131,
+      "name": "Children's (9-12)",
+      "description": "Offer exciting adventures for children aged 9-12.",
+      "genreId": 19
+    },
+    {
+      "id": 132,
+      "name": "Children's / Teenage: general non-fiction",
+      "description": "Explore a wide range of non-fiction topics for children and teenagers.",
+      "genreId": 19
+    },
+    {
+      "id": 133,
+      "name": "Children's Fiction",
+      "description": "Delight young readers with imaginative and enchanting stories.",
+      "genreId": 19
+    },
+    {
+      "id": 134,
+      "name": "Children's Interactive & Activity Books",
+      "description": "Engage young minds with interactive and creative activities.",
+      "genreId": 19
+    },
+    {
+      "id": 135,
+      "name": "Children's Music Books",
+      "description": "Introduce children to the joy of music through books.",
+      "genreId": 19
+    },
+    {
+      "id": 136,
+      "name": "Early Learning",
+      "description": "Lay the foundation for learning and development in early years.",
+      "genreId": 19
     }
   ],
   "bill": [
@@ -146,6 +2253,14 @@
       "tax": 120,
       "shipping": 80,
       "total": 1080
+    },
+    {
+      "id": 2,
+      "subTotal": 1340,
+      "discount": 268,
+      "tax": 134,
+      "shipping": 80,
+      "total": 1286
     }
   ],
   "cart": [
@@ -153,6 +2268,11 @@
       "id": 1,
       "cartBookList": [],
       "billId": 1
+    },
+    {
+      "id": 2,
+      "cartBookList": [],
+      "billId": 2
     }
   ],
   "cartItem": [
@@ -161,11 +2281,27 @@
       "bookId": 1,
       "quantity": 2,
       "cartId": 1
+    },
+    {
+      "id": 2,
+      "bookId": 2,
+      "quantity": 1,
+      "cartId": 2
+    },
+    {
+      "id": 3,
+      "bookId": 3,
+      "quantity": 2,
+      "cartId": 2
     }
   ],
   "wishlist": [
     {
       "id": 1,
+      "wishlistBookList": []
+    },
+    {
+      "id": 2,
       "wishlistBookList": []
     }
   ],
@@ -174,6 +2310,11 @@
       "id": 1,
       "bookId": 1,
       "wishlistId": 1
+    },
+    {
+      "id": 2,
+      "bookId": 2,
+      "wishlistId": 2
     }
   ],
   "order": [
@@ -182,6 +2323,12 @@
       "status": "Delivered",
       "orders": [],
       "billId": 1
+    },
+    {
+      "id": 2,
+      "status": "Shipped",
+      "orders": [],
+      "billId": 2
     }
   ],
   "orderItem": [
@@ -190,6 +2337,18 @@
       "bookId": 1,
       "quantity": 2,
       "orderId": 1
+    },
+    {
+      "id": 2,
+      "bookId": 2,
+      "quantity": 1,
+      "orderId": 2
+    },
+    {
+      "id": 3,
+      "bookId": 3,
+      "quantity": 2,
+      "orderId": 2
     }
   ]
 }

@@ -72,4 +72,27 @@
 -- setup json server with some demo models
 -- implement redux and http client
 -- complete all functionality working
--- 
+
+----------------------------------------------------------------
+
+genre : Art & Photography
+
+subgenre : 
+
+-- Architecture
+-- Art forms
+-- Art treatments & subjects
+-- Dance & other performing arts
+-- Film, tv & radio
+-- History of art / art & design styles
+-- Industrial / commercial art & design
+-- Music
+-- Photography & photographs
+-- The arts: general issues
+-- Theatre studies
+
+genre : Biographies & Memoirs
+-- Biography: general
+-- Diaries, letters & journals
+-- Memoirs
+-- True stories

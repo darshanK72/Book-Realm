@@ -2455,7 +2455,6 @@
       "publishDate": "1992-06-16",
       "images": [
         "https://m.media-amazon.com/images/M/MV5BYjY4ZGNlZTktYmIzNC00OGFkLTlkZWEtYzA2Njk0MWYwYjk1XkEyXkFqcGdeQXVyNjc5NjEzNA@@._V1_.jpg"
-
       ],
       "price": 2200,
       "discountPercentage": 10,
@@ -2560,7 +2559,6 @@
       "publishDate": "1989-09-01",
       "images": [
         "https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Sculpting_in_Time.jpg/220px-Sculpting_in_Time.jpg"
-
       ],
       "price": 2300,
       "discountPercentage": 12,
@@ -3876,7 +3874,6 @@
       "publishDate": "2011-05-31",
       "images": [
         "https://m.media-amazon.com/images/I/81lAWwi7EdL._AC_UF1000,1000_QL80_.jpg"
-
       ],
       "price": 3200,
       "discountPercentage": 10,
@@ -4908,6 +4905,2809 @@
       "publisherId": 120,
       "genreId": 1,
       "subgenreId": 9
+    },
+    {
+      "id": 134,
+      "title": "Steve Jobs",
+      "rating": 4.2,
+      "description": "Steve Jobs by Walter Isaacson is a comprehensive biography of the co-founder of Apple Inc. This book offers a deep dive into the life, vision, and impact of one of the most influential figures in the tech industry. From his early days in Silicon Valley to the creation of iconic Apple products, Isaacson provides a detailed account of Jobs' journey and the legacy he left behind.",
+      "publishDate": "2011-10-24",
+      "images": [
+        "https://m.media-amazon.com/images/I/81NSb9Jy0HL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/71knEyb05jL._SL1360_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 15,
+      "pages": 656,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Technology",
+        "Innovation",
+        "Entrepreneurship",
+        "Apple Inc."
+      ],
+      "reviews": [
+        45,
+        32,
+        50,
+        28,
+        36
+      ],
+      "authorName": "Walter Isaacson",
+      "authorId": 121,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 114,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 135,
+      "title": "Leonardo da Vinci",
+      "rating": 4.5,
+      "description": "Leonardo da Vinci by Walter Isaacson is a meticulously researched biography that delves deep into the life and work of the iconic Italian artist, inventor, and polymath. Through meticulous research and engaging narrative, Isaacson provides a compelling portrait of da Vinci's genius and creativity. This book is a captivating journey through the mind of a true Renaissance man.",
+      "publishDate": "2017-10-17",
+      "images": [
+        "https://m.media-amazon.com/images/I/91Ey0+6N-LL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81zsHFC+BML._SL1500_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 12,
+      "pages": 624,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Art",
+        "Innovation",
+        "Renaissance",
+        "Italian History"
+      ],
+      "reviews": [
+        52,
+        48,
+        55,
+        40,
+        36
+      ],
+      "authorName": "Walter Isaacson",
+      "authorId": 121,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 114,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 136,
+      "title": "Alexander Hamilton",
+      "rating": 4.6,
+      "description": "Alexander Hamilton by Ron Chernow is a meticulously researched biography of one of the Founding Fathers of the United States. The book explores Hamilton's life, achievements, and his profound influence on the nation's early development. Chernow's narrative paints a vivid picture of a brilliant and complex figure in American history.",
+      "publishDate": "2004-04-26",
+      "images": [
+        "https://m.media-amazon.com/images/I/9168wNMBk1L._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71ScDSdau2L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 10,
+      "pages": 818,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "History",
+        "Politics",
+        "American Revolution",
+        "Founding Fathers"
+      ],
+      "reviews": [
+        42,
+        38,
+        49,
+        36
+      ],
+      "authorName": "Ron Chernow",
+      "authorId": 122,
+      "publisherName": "Penguin Press",
+      "publisherId": 115,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 137,
+      "title": "The Diary of a Young Girl",
+      "rating": 4.7,
+      "description": "The Diary of a Young Girl by Anne Frank is a poignant and powerful account of a young Jewish girl's experiences during the Holocaust. Anne's diary captures the hopes, fears, and dreams of a teenager living in hiding. Her words serve as a stark reminder of the atrocities of war and the strength of the human spirit.",
+      "publishDate": "1947-06-25",
+      "images": [
+        "https://cdn.kobo.com/book-images/265498db-16c5-421a-b481-e0f4a99e6a74/353/569/90/False/the-diary-of-a-young-girl-27.jpg",
+        "https://rukminim2.flixcart.com/image/416/416/kqidx8w0/book/x/n/y/the-diary-of-a-young-girl-original-imag4gg9afh4zw6f.jpeg?q=70"
+      ],
+      "price": 1800,
+      "discountPercentage": 20,
+      "pages": 283,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Netherlands",
+      "tags": [
+        "Biography",
+        "Holocaust",
+        "World War II",
+        "Jewish History",
+        "Courage"
+      ],
+      "reviews": [
+        55,
+        60,
+        52,
+        48,
+        50
+      ],
+      "authorName": "Anne Frank",
+      "authorId": 123,
+      "publisherName": "Doubleday",
+      "publisherId": 116,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 138,
+      "title": "Becoming",
+      "rating": 4.8,
+      "description": "Becoming by Michelle Obama is an intimate and inspiring memoir that chronicles the life of the former First Lady of the United States. From her childhood to her experiences in the White House, Obama shares her journey with honesty and grace. Her story is a testament to the power of resilience, hope, and the pursuit of one's dreams.",
+      "publishDate": "2018-11-13",
+      "images": [
+        "https://m.media-amazon.com/images/I/81dDwAzxtrL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81oYmNj57LS._SL1500_.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 18,
+      "pages": 426,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Memoir",
+        "Inspiration",
+        "Politics",
+        "Empowerment"
+      ],
+      "reviews": [
+        65,
+        58,
+        70,
+        62,
+        68
+      ],
+      "authorName": "Michelle Obama",
+      "authorId": 124,
+      "publisherName": "Crown Publishing Group",
+      "publisherId": 117,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 139,
+      "title": "Churchill: A Life",
+      "rating": 4.6,
+      "description": "Churchill: A Life by Martin Gilbert is a definitive biography of Winston Churchill, one of the most iconic figures of the 20th century. Gilbert's extensive research provides a detailed account of Churchill's political career, leadership during World War II, and his enduring legacy. This book offers a comprehensive look at the life of a statesman who shaped history.",
+      "publishDate": "1991-11-14",
+      "images": [
+        "https://m.media-amazon.com/images/I/71fHmlf0r9L._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81kDhNIOXPL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 1088,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Biography",
+        "History",
+        "World War II",
+        "Politics",
+        "Leadership"
+      ],
+      "reviews": [
+        72,
+        68,
+        75,
+        70,
+        66
+      ],
+      "authorName": "Martin Gilbert",
+      "authorId": 125,
+      "publisherName": "Henry Holt and Company",
+      "publisherId": 118,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 140,
+      "title": "Einstein: His Life and Universe",
+      "rating": 4.6,
+      "description": "Einstein: His Life and Universe by Walter Isaacson is a masterful biography that provides a comprehensive look into the life and mind of Albert Einstein, the renowned physicist. Isaacson skillfully weaves together Einstein's personal life, scientific achievements, and his impact on the world. This book is a captivating exploration of the man behind the theory of relativity.",
+      "publishDate": "2007-04-10",
+      "images": [
+        "https://m.media-amazon.com/images/I/81aYAGAlP7L._AC_UF894,1000_QL80_.jpg",
+        "https://www.petervis.com/gallery/Book%20Collection/Einstein/Einstein/Einstein%20His%20Life%20and%20Universe.gif"
+      ],
+      "price": 2700,
+      "discountPercentage": 12,
+      "pages": 704,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Science",
+        "Physics",
+        "Genius",
+        "Theory of Relativity"
+      ],
+      "reviews": [
+        58,
+        55,
+        62,
+        50,
+        48
+      ],
+      "authorName": "Walter Isaacson",
+      "authorId": 121,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 114,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 141,
+      "title": "Mao: The Unknown Story",
+      "rating": 4.2,
+      "description": "Mao: The Unknown Story by Jung Chang and Jon Halliday is a groundbreaking biography that sheds new light on the life of Mao Zedong, the founding father of the People's Republic of China. Through meticulous research and interviews, Chang and Halliday present a comprehensive and often controversial portrayal of Mao's life and political career.",
+      "publishDate": "2005-10-10",
+      "images": [
+        "https://m.media-amazon.com/images/I/71jRX+nPh7L._SL1169_.jpg",
+        "https://m.media-amazon.com/images/I/71R8sMaW2NL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 864,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "China",
+      "tags": [
+        "Biography",
+        "History",
+        "Politics",
+        "China",
+        "Revolution"
+      ],
+      "reviews": [
+        42,
+        38,
+        49,
+        36,
+        40
+      ],
+      "authorName": "Jung Chang and Jon Halliday",
+      "authorId": 126,
+      "publisherName": "Vintage Books",
+      "publisherId": 119,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 142,
+      "title": "The Wright Brothers",
+      "rating": 4.2,
+      "description": "The Wright Brothers by David McCullough is a captivating biography of Orville and Wilbur Wright, the pioneers of aviation. McCullough's narrative takes readers on a journey through the brothers' determination, innovation, and their historic achievement of powered flight. This book is a testament to the spirit of exploration and the power of human ingenuity.",
+      "publishDate": "2015-05-05",
+      "images": [
+        "https://m.media-amazon.com/images/I/612rP6rfs8L._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/612rP6rfs8L._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/5161jcFJlnL._AC_UF1000,1000_QL80_.jpg"
+
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 336,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Aviation",
+        "Innovation",
+        "Pioneers",
+        "History"
+      ],
+      "reviews": [
+        48,
+        52,
+        55,
+        42,
+        50
+      ],
+      "authorName": "David McCullough",
+      "authorId": 127,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 120,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 143,
+      "title": "Cleopatra: A Life",
+      "rating": 4.1,
+      "description": "Cleopatra: A Life by Stacy Schiff offers a vivid and meticulously researched account of the life of the last pharaoh of Egypt. Schiff's narrative brings to life the complexities and intrigues of Cleopatra's reign, her relationships with Julius Caesar and Mark Antony, and the dramatic events that shaped her legacy.",
+      "publishDate": "2010-11-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51nQmFioaVL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81ANb1L61gL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 15,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Egypt",
+      "tags": [
+        "Biography",
+        "History",
+        "Ancient Egypt",
+        "Queens",
+        "Politics"
+      ],
+      "reviews": [
+        42,
+        38,
+        49,
+        36,
+        40
+      ],
+      "authorName": "Stacy Schiff",
+      "authorId": 128,
+      "publisherName": "Back Bay Books",
+      "publisherId": 121,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 144,
+      "title": "Frederick Douglass: Prophet of Freedom",
+      "rating": 4.6,
+      "description": "Frederick Douglass: Prophet of Freedom by David W. Blight is a definitive biography of the abolitionist leader and statesman. Blight's meticulously researched book provides a comprehensive look at Douglass's life, his role in the anti-slavery movement, and his contributions to the fight for civil rights. This biography is a tribute to a remarkable figure in American history.",
+      "publishDate": "2018-10-16",
+      "images": [
+        "https://m.media-amazon.com/images/I/81Ujb9U6EQL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81mACl3GvaL._SL1500_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 12,
+      "pages": 912,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Abolitionist",
+        "Civil Rights",
+        "American History",
+        "Social Justice"
+      ],
+      "reviews": [
+        58,
+        55,
+        62,
+        50,
+        48
+      ],
+      "authorName": "David W. Blight",
+      "authorId": 129,
+      "publisherName": "Simon & Schuster",
+      "publisherId": 122,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 145,
+      "title": "The Immortal Life of Henrietta Lacks",
+      "rating": 4.1,
+      "description": "The Immortal Life of Henrietta Lacks by Rebecca Skloot is a remarkable work of nonfiction that tells the story of Henrietta Lacks, whose cells were unknowingly used for scientific research and led to numerous medical breakthroughs. Skloot's book explores the ethical and scientific implications of this discovery while honoring the life of Henrietta Lacks.",
+      "publishDate": "2010-11-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/81gaQzGXepL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71F9Sxx+aPL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 15,
+      "pages": 381,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Science",
+        "Medical Ethics",
+        "Medical Research",
+        "Medical History"
+      ],
+      "reviews": [
+        42,
+        38,
+        49,
+        36,
+        40
+      ],
+      "authorName": "Rebecca Skloot",
+      "authorId": 130,
+      "publisherName": "Broadway Books",
+      "publisherId": 123,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 146,
+      "title": "The Rise of Theodore Roosevelt",
+      "rating": 4.2,
+      "description": "The Rise of Theodore Roosevelt by Edmund Morris is a Pulitzer Prize-winning biography that chronicles the early years of the 26th President of the United States. Morris's detailed narrative explores Roosevelt's youth, political ascent, and his dynamic leadership style. This book provides a vivid portrait of a larger-than-life figure in American history.",
+      "publishDate": "1979-09-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51-tD6sUbPL.jpg",
+        "https://m.media-amazon.com/images/I/8129rc2j+gL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 960,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "History",
+        "Politics",
+        "American Presidents",
+        "Leadership"
+      ],
+      "reviews": [
+        48,
+        52,
+        55,
+        42,
+        50
+      ],
+      "authorName": "Edmund Morris",
+      "authorId": 131,
+      "publisherName": "Random House Trade Paperbacks",
+      "publisherId": 124,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 147,
+      "title": "Marie Antoinette: The Journey",
+      "rating": 4.0,
+      "description": "Marie Antoinette: The Journey by Antonia Fraser is a detailed biography of the ill-fated Queen of France. Fraser's narrative offers a comprehensive look at Marie Antoinette's life, from her upbringing in Austria to her tumultuous reign in France. The book provides a nuanced portrayal of a complex historical figure.",
+      "publishDate": "2001-09-04",
+      "images": [
+        "https://m.media-amazon.com/images/I/71J3497WNBL._AC_UF1000,1000_QL80_.jpg",
+        "https://cdn.kobo.com/book-images/157ef2f7-7960-45ce-9b2e-8a54371451bf/353/569/90/False/marie-antoinette-5.jpg"
+      ],
+      "price": 2100,
+      "discountPercentage": 12,
+      "pages": 512,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "France",
+      "tags": [
+        "Biography",
+        "History",
+        "French Revolution",
+        "Royalty",
+        "Queens"
+      ],
+      "reviews": [
+        38,
+        42,
+        45,
+        36,
+        40
+      ],
+      "authorName": "Antonia Fraser",
+      "authorId": 132,
+      "publisherName": "Anchor",
+      "publisherId": 125,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 148,
+      "title": "Napoleon: A Life",
+      "rating": 4.4,
+      "description": "Napoleon: A Life by Andrew Roberts is a comprehensive biography of the enigmatic French military and political leader. Roberts's meticulously researched book provides a detailed account of Napoleon's rise to power, military conquests, and his complex legacy. This biography offers fresh insights into one of history's most influential figures.",
+      "publishDate": "2014-11-04",
+      "images": [
+        "https://m.media-amazon.com/images/I/91OUN8YQj+L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61e2hOw7XHL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 976,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "France",
+      "tags": [
+        "Biography",
+        "History",
+        "Military",
+        "French Revolution",
+        "Leadership"
+      ],
+      "reviews": [
+        52,
+        48,
+        55,
+        40,
+        36
+      ],
+      "authorName": "Andrew Roberts",
+      "authorId": 133,
+      "publisherName": "Viking",
+      "publisherId": 126,
+      "genreId": 2,
+      "subgenreId": 12
+    },
+    {
+      "id": 149,
+      "title": "Art and Visual Perception: A Psychology of the Creative Eye",
+      "rating": 4.2,
+      "description": "This influential book by Rudolf Arnheim explores the psychology behind visual perception and its relationship to artistic creation. Arnheim delves into the fundamental principles that govern how we interpret visual information, providing valuable insights for artists, designers, and anyone interested in the creative process.",
+      "publishDate": "1954-01-01",
+      "images": [
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1223628615i/1294306.jpg",
+        "https://covers.openlibrary.org/b/id/7994796-L.jpg",
+        "https://m.media-amazon.com/images/I/41-rvCD-KuL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 512,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Psychology of Art",
+        "Visual Perception",
+        "Creative Process"
+      ],
+      "reviews": [
+        56,
+        74,
+        86,
+        94,
+        100
+      ],
+      "authorName": "Rudolf Arnheim",
+      "authorId": 151,
+      "publisherName": "University of California Press",
+      "publisherId": 144,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 150,
+      "title": "The Shape of Time: Remarks on the History of Things",
+      "rating": 4.5,
+      "description": "George Kubler's 'The Shape of Time' is a seminal work in the field of art history and archaeology. Kubler explores the evolution of form in art and the concept of 'historical sequence.' This book challenges traditional narratives of artistic development, offering a fresh perspective on the creative process.",
+      "publishDate": "1962-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51EFLdQMGML._AC_UF894,1000_QL80_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1174448290i/402273.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 12,
+      "pages": 288,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art History",
+        "Historical Sequence",
+        "Archaeology"
+      ],
+      "reviews": [
+        58,
+        76,
+        89,
+        92,
+        97
+      ],
+      "authorName": "George Kubler",
+      "authorId": 152,
+      "publisherName": "Yale University Press",
+      "publisherId": 145,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 151,
+      "title": "The Art of Art History: A Critical Anthology",
+      "rating": 4.3,
+      "description": "Edited by Donald Preziosi, 'The Art of Art History' is a comprehensive anthology that presents critical essays on the practice and interpretation of art history. The collection features contributions from leading scholars, offering diverse perspectives on the methods and theories that shape the discipline.",
+      "publishDate": "1998-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71geNqeIqLL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51DmpSTfwUL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 15,
+      "pages": 560,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Critical Theory",
+        "Interpretation",
+        "Scholarly Essays"
+      ],
+      "reviews": [
+        60,
+        78,
+        85,
+        91,
+        98
+      ],
+      "authorName": "Donald Preziosi (Editor)",
+      "authorId": 153,
+      "publisherName": "Oxford University Press",
+      "publisherId": 146,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 152,
+      "title": "The Practice of Art History: Reflections on Method",
+      "rating": 4.4,
+      "description": "In 'The Practice of Art History,' renowned art historian Dame E.H. Gombrich offers insightful reflections on the methods and approaches employed in the study of art history. Drawing on his extensive experience, Gombrich explores the evolving nature of art historical research and interpretation.",
+      "publishDate": "1996-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51itjpUQyuL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 12,
+      "pages": 320,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Methodology",
+        "Research",
+        "Interpretation"
+      ],
+      "reviews": [
+        61,
+        79,
+        86,
+        93,
+        99
+      ],
+      "authorName": "E.H. Gombrich",
+      "authorId": 137,
+      "publisherName": "Phaidon Press",
+      "publisherId": 130,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 153,
+      "title": "Ways of Seeing",
+      "rating": 4.3,
+      "description": "Ways of Seeing by John Berger is a seminal work in art criticism. Berger challenges conventional perspectives on art, offering insightful analyses of visual culture. This book is a thought-provoking exploration of how we perceive and interpret images in the modern world.",
+      "publishDate": "1972-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/918FaSUn+mL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61rbO4IAa4L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 15,
+      "pages": 176,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art Criticism",
+        "Visual Culture",
+        "Perception",
+        "Modern Art"
+      ],
+      "reviews": [
+        52,
+        58,
+        63,
+        67,
+        71
+      ],
+      "authorName": "John Berger",
+      "authorId": 136,
+      "publisherName": "Penguin Books",
+      "publisherId": 129,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 154,
+      "title": "The Story of Art",
+      "rating": 4.6,
+      "description": "The Story of Art by E.H. Gombrich is a comprehensive and accessible introduction to the history of art. Gombrich's engaging narrative takes readers on a journey through the evolution of artistic styles and movements. This book remains a classic for art enthusiasts and students alike.",
+      "publishDate": "1950-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/613NEJEhIFL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 688,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Austria",
+      "tags": [
+        "Art History",
+        "Artistic Movements",
+        "Visual Culture",
+        "Educational"
+      ],
+      "reviews": [
+        54,
+        61,
+        66,
+        69,
+        72
+      ],
+      "authorName": "E.H. Gombrich",
+      "authorId": 137,
+      "publisherName": "Phaidon Press",
+      "publisherId": 130,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 155,
+      "title": "The Shock of the New",
+      "rating": 4.5,
+      "description": "The Shock of the New by Robert Hughes is a compelling exploration of modern art and its evolution. Hughes provides insightful analyses of key movements and artists, offering readers a deeper understanding of the dynamic and revolutionary nature of modern artistic expression.",
+      "publishDate": "1980-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/614M0sO2tTL._AC_UF1000,1000_QL80_.jpg",
+        "https://artgallery.dal.ca/sites/default/files/events/shock-new/shockofthenew01.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 448,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Australia",
+      "tags": [
+        "Modern Art",
+        "Artistic Movements",
+        "Cultural Shifts",
+        "Avant-Garde"
+      ],
+      "reviews": [
+        56,
+        62,
+        68,
+        73,
+        76
+      ],
+      "authorName": "Robert Hughes",
+      "authorId": 138,
+      "publisherName": "Thames & Hudson",
+      "publisherId": 131,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 156,
+      "title": "Seven Days in the Art World",
+      "rating": 4.2,
+      "description": "Seven Days in the Art World by Sarah Thornton provides a fascinating insider's view of the contemporary art scene. Through a series of in-depth interviews and observations, Thornton offers readers a glimpse into the complexities and dynamics of the art world, from galleries to auctions and beyond.",
+      "publishDate": "2008-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71rismFq1QL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/91tMbKK2iRL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2100,
+      "discountPercentage": 18,
+      "pages": 304,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Contemporary Art",
+        "Art Market",
+        "Art Institutions",
+        "Cultural Commentary"
+      ],
+      "reviews": [
+        55,
+        60,
+        65,
+        70,
+        75
+      ],
+      "authorName": "Sarah Thornton",
+      "authorId": 139,
+      "publisherName": "W. W. Norton & Company",
+      "publisherId": 132,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 157,
+      "title": "Art and Fear",
+      "rating": 4.4,
+      "description": "Art and Fear by David Bayles and Ted Orland is a reassuring guide for artists facing creative challenges. The authors offer practical insights and encouragement to help artists navigate the uncertainties of the artistic process. This book is a valuable companion for anyone on a creative journey.",
+      "publishDate": "1993-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71HFl5QUtuL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51ovxtlLe9L._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 15,
+      "pages": 128,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Creativity",
+        "Artistic Process",
+        "Self-Help",
+        "Inspiration"
+      ],
+      "reviews": [
+        57,
+        64,
+        79,
+        80,
+        98
+      ],
+      "authorName": "David Bayles and Ted Orland",
+      "authorId": 140,
+      "publisherName": "Image Continuum Press",
+      "publisherId": 133,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 158,
+      "title": "The Painted Word",
+      "rating": 4.1,
+      "description": "The Painted Word by Tom Wolfe is a witty and incisive critique of the contemporary art world. Wolfe satirically examines the intellectual trends and theories that have come to dominate the art scene. This book offers a provocative perspective on the relationship between art, theory, and criticism.",
+      "publishDate": "1975-01-01",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/5/5e/ThePaintedWord.jpg",
+        "https://m.media-amazon.com/images/I/51BBFSBYR0L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 10,
+      "pages": 128,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Contemporary Art",
+        "Art Criticism",
+        "Satire",
+        "Intellectual Trends"
+      ],
+      "reviews": [
+        53,
+        59,
+        74,
+        78,
+        91
+      ],
+      "authorName": "Tom Wolfe",
+      "authorId": 141,
+      "publisherName": "Farrar, Straus and Giroux",
+      "publisherId": 134,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 159,
+      "title": "The Rape of Europa: The Fate of Europe's Treasures in the Third Reich and the Second World War",
+      "rating": 4.5,
+      "description": "The Rape of Europa by Lynn H. Nicholas is a powerful account of the fate of Europe's art treasures during the tumultuous years of the Third Reich and World War II. Nicholas meticulously documents the theft, destruction, and preservation efforts surrounding some of the world's most valuable artworks.",
+      "publishDate": "1994-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/819sC1LKGnL._AC_UF1000,1000_QL80_.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Rape-of-Europa.jpg/220px-Rape-of-Europa.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 512,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Art History",
+        "World War II",
+        "Nazi Germany",
+        "Cultural Heritage",
+        "Archival Research"
+      ],
+      "reviews": [
+        50,
+        67,
+        81,
+        85,
+        95
+      ],
+      "authorName": "Lynn H. Nicholas",
+      "authorId": 142,
+      "publisherName": "Vintage",
+      "publisherId": 135,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 160,
+      "title": "The $12 Million Stuffed Shark: The Curious Economics of Contemporary Art",
+      "rating": 4.3,
+      "description": "The $12 Million Stuffed Shark by Don Thompson offers a fascinating exploration of the economics behind the contemporary art market. Thompson delves into the factors that drive the prices of artworks to astonishing heights. This book provides valuable insights into the intersection of art and commerce.",
+      "publishDate": "2008-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Rp0gkezTL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/8192uxJF3UL._SL1500_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Canada",
+      "tags": [
+        "Contemporary Art",
+        "Art Market",
+        "Economics",
+        "Investment",
+        "Collecting"
+      ],
+      "reviews": [
+        51,
+        66,
+        82,
+        86,
+        96
+      ],
+      "authorName": "Don Thompson",
+      "authorId": 143,
+      "publisherName": "Palgrave Macmillan",
+      "publisherId": 136,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 161,
+      "title": "The Art of Looking Sideways",
+      "rating": 4.7,
+      "description": "The Art of Looking Sideways by Alan Fletcher is a visually stimulating and intellectually engaging exploration of creativity. Through a diverse collection of images, quotes, and observations, Fletcher invites readers to see the world from new perspectives. This book is a celebration of curiosity and the art of perception.",
+      "publishDate": "2001-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81RXZjkgRRL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 15,
+      "pages": 534,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Creativity",
+        "Perception",
+        "Visual Exploration",
+        "Inspiration"
+      ],
+      "reviews": [
+        64,
+        68,
+        84,
+        88,
+        99
+      ],
+      "authorName": "Alan Fletcher",
+      "authorId": 144,
+      "publisherName": "Phaidon Press",
+      "publisherId": 137,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 162,
+      "title": "Art as Therapy",
+      "rating": 4.4,
+      "description": "Art as Therapy by Alain de Botton and John Armstrong explores the therapeutic potential of art. The authors argue that art has the power to address emotional and psychological needs, offering solace, insight, and meaning. This book reimagines the role of art in our personal and collective well-being.",
+      "publishDate": "2013-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61120+SJPOL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/61ZmVuiVNaL.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 18,
+      "pages": 240,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Switzerland",
+      "tags": [
+        "Art Therapy",
+        "Emotional Well-being",
+        "Psychology",
+        "Philosophy",
+        "Therapeutic Art"
+      ],
+      "reviews": [
+        62,
+        65,
+        83,
+        87,
+        100
+      ],
+      "authorName": "Alain de Botton and John Armstrong",
+      "authorId": 145,
+      "publisherName": "Phaidon Press",
+      "publisherId": 138,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 163,
+      "title": "The Art Spirit",
+      "rating": 4.6,
+      "description": "The Art Spirit by Robert Henri is a timeless guide for artists seeking inspiration and insight. Henri's philosophical musings and practical advice are a testament to the enduring power of artistic expression. This book serves as a source of encouragement for artists on their creative journey.",
+      "publishDate": "1923-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71sFN-MwDpL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71HAXxialIL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 1900,
+      "discountPercentage": 10,
+      "pages": 288,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Artistic Inspiration",
+        "Creativity",
+        "Philosophy",
+        "Artistic Expression"
+      ],
+      "reviews": [
+        51,
+        69,
+        81,
+        89,
+        97
+      ],
+      "authorName": "Robert Henri",
+      "authorId": 146,
+      "publisherName": "Basic Books",
+      "publisherId": 139,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 164,
+      "title": "The Philosophy of Andy Warhol: From A to B and Back Again",
+      "rating": 4.0,
+      "description": "The Philosophy of Andy Warhol by Andy Warhol is a candid and intriguing exploration of the iconic artist's thoughts and beliefs. Warhol's reflections on fame, art, and popular culture offer a unique perspective on his creative process and the world of contemporary art.",
+      "publishDate": "1975-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/617J8BUu-hL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51RdfIgHSKL.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 12,
+      "pages": 241,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Andy Warhol",
+        "Pop Art",
+        "Philosophy",
+        "Celebrity Culture"
+      ],
+      "reviews": [
+        52,
+        70,
+        82,
+        90,
+        98
+      ],
+      "authorName": "Andy Warhol",
+      "authorId": 147,
+      "publisherName": "Harcourt Brace Jovanovich",
+      "publisherId": 140,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 165,
+      "title": "The Birth of the West: Rome, Germany, France, and the Creation of Europe in the Tenth Century",
+      "rating": 4.2,
+      "description": "The Birth of the West by Paul Collins offers a vivid account of the pivotal tenth century and its impact on the shaping of Europe. Collins explores the political, cultural, and social transformations that laid the foundation for the modern Western world. This book is a compelling journey through a critical period in history.",
+      "publishDate": "2013-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51IxbrChcdL.jpg",
+        "https://m.media-amazon.com/images/I/512gIvxUhUL._AC_SY350_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 15,
+      "pages": 352,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "European History",
+        "Medieval Era",
+        "Cultural Transformation",
+        "Political Evolution"
+      ],
+      "reviews": [
+        53,
+        71,
+        83,
+        91,
+        99
+      ],
+      "authorName": "Paul Collins",
+      "authorId": 148,
+      "publisherName": "PublicAffairs",
+      "publisherId": 141,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 166,
+      "title": "The Art Book",
+      "rating": 4.5,
+      "description": "The Art Book by Phaidon Editors is an indispensable reference for art enthusiasts. Featuring concise entries on a wide range of artists and their masterpieces, this book provides a comprehensive overview of artistic achievements throughout history. It serves as a gateway to the world of visual creativity.",
+      "publishDate": "1994-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91pJdvmvqIL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/91KVanREgiS._SL1500_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 10,
+      "pages": 592,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Art History",
+        "Artist Profiles",
+        "Visual Encyclopedia",
+        "Reference"
+      ],
+      "reviews": [
+        54,
+        72,
+        84,
+        92,
+        100
+      ],
+      "authorName": "Phaidon Editors",
+      "authorId": 149,
+      "publisherName": "Phaidon Press",
+      "publisherId": 142,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 167,
+      "title": "The Art of Innovation: Lessons in Creativity from IDEO, America's Leading Design Firm",
+      "rating": 4.3,
+      "description": "The Art of Innovation by Tom Kelley and Jonathan Littman offers insights into the creative processes of IDEO, a renowned design and innovation company. Through case studies and practical advice, the authors reveal the methods and mindset behind successful innovation. This book is a valuable resource for aspiring innovators and designers.",
+      "publishDate": "2001-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51lAgWzy9wL.jpg",
+        "https://m.media-amazon.com/images/I/91Gtj6ln+4L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/71myXR24yJL._SL1410_.jpg"
+
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 320,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Innovation",
+        "Design Thinking",
+        "Creative Process",
+        "Product Development"
+      ],
+      "reviews": [
+        55,
+        73,
+        85,
+        93,
+        97
+      ],
+      "authorName": "Tom Kelley and Jonathan Littman",
+      "authorId": 150,
+      "publisherName": "Currency",
+      "publisherId": 143,
+      "genreId": 2,
+      "subgenreId": 10
+    },
+    {
+      "id": 168,
+      "title": "The Empty Space",
+      "rating": 4.5,
+      "description": "Peter Brook's 'The Empty Space' is a seminal work in theatre theory. Brook examines the essence of theatrical performance, discussing the different forms and elements that contribute to a powerful stage presence. This book is a must-read for anyone interested in the art of theater.",
+      "publishDate": "1968-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61LnDF5wiCL._AC_UF894,1000_QL80_.jpg",
+        "https://rukminim2.flixcart.com/image/850/1000/kj0bp8w0-0/book/v/t/1/the-empty-space-original-imafynkuzk9kcfz8.jpeg?q=20"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Theatre Theory",
+        "Performance",
+        "Stage Presence",
+        "Theatrical Forms"
+      ],
+      "reviews": [
+        52,
+        61,
+        75,
+        80,
+        96
+      ],
+      "authorName": "Peter Brook",
+      "authorId": 154,
+      "publisherName": "Touchstone",
+      "publisherId": 147,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 169,
+      "title": "The Theater and Its Double",
+      "rating": 4.3,
+      "description": "Antonin Artaud's 'The Theater and Its Double' is a groundbreaking exploration of radical theater concepts. Artaud argues for a visceral, sensorial approach to theater, challenging conventional norms. This manifesto remains a pivotal text in the realm of avant-garde performance.",
+      "publishDate": "1938-01-01",
+      "images": [
+        "https://rukminim2.flixcart.com/image/850/1000/l1xwqkw0/book/b/a/9/the-theatre-and-its-double-original-imagdegkvd8zd9hw.jpeg?q=90"
+      ],
+      "price": 2200,
+      "discountPercentage": 12,
+      "pages": 128,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "France",
+      "tags": [
+        "Avant-Garde Theater",
+        "Performance Art",
+        "Experimental Theatre"
+      ],
+      "reviews": [
+        53,
+        62,
+        76,
+        81,
+        97
+      ],
+      "authorName": "Antonin Artaud",
+      "authorId": 155,
+      "publisherName": "Grove Press",
+      "publisherId": 148,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 170,
+      "title": "Towards a Poor Theatre",
+      "rating": 4.4,
+      "description": "Jerzy Grotowski's 'Towards a Poor Theatre' is a seminal text on experimental theater and actor training. Grotowski advocates for a stripped-down, essential approach to performance, emphasizing the actor's connection with the audience. This book continues to be a touchstone for actors and directors.",
+      "publishDate": "1968-01-01",
+      "images": [
+        "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale/jackets/9780413349101.jpg",
+        "https://pictures.abebooks.com/isbn/9780671204143-us.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 192,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Poland",
+      "tags": [
+        "Experimental Theatre",
+        "Actor Training",
+        "Performance Techniques"
+      ],
+      "reviews": [
+        54,
+        63,
+        77,
+        82,
+        98
+      ],
+      "authorName": "Jerzy Grotowski",
+      "authorId": 156,
+      "publisherName": "Routledge",
+      "publisherId": 149,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 171,
+      "title": "True and False: Heresy and Common Sense for the Actor",
+      "rating": 4.2,
+      "description": "David Mamet's 'True and False' offers a provocative take on acting and the art of performance. Mamet challenges conventional wisdom and advocates for a straightforward, practical approach to acting. This book provides valuable insights for actors and theater practitioners.",
+      "publishDate": "1997-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81red91st3L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Acting Techniques",
+        "Performance Philosophy",
+        "Practical Approach"
+      ],
+      "reviews": [
+        55,
+        64,
+        78,
+        83,
+        99
+      ],
+      "authorName": "David Mamet",
+      "authorId": 157,
+      "publisherName": "Vintage",
+      "publisherId": 150,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 172,
+      "title": "The Importance of Being Earnest",
+      "rating": 4.2,
+      "description": "Oscar Wilde's 'The Importance of Being Earnest' is a comedic masterpiece that satirizes the societal conventions of the Victorian era. Filled with witty dialogue and absurd situations, this play remains a classic of English literature and a delightful theatrical experience.",
+      "publishDate": "1895-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/514ka11ycJL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 1800,
+      "discountPercentage": 15,
+      "pages": 96,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Comedy",
+        "Satire",
+        "Victorian Society"
+      ],
+      "reviews": [
+        56,
+        65,
+        79,
+        84,
+        100
+      ],
+      "authorName": "Oscar Wilde",
+      "authorId": 158,
+      "publisherName": "Dover Publications",
+      "publisherId": 151,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 173,
+      "title": "The Stanislavski System: The Professional Training of an Actor",
+      "rating": 4.5,
+      "description": "Sonia Moore's 'The Stanislavski System' provides a comprehensive guide to the foundational principles of acting developed by Konstantin Stanislavski. Moore offers practical exercises and insights to help actors develop their craft and connect authentically with their roles.",
+      "publishDate": "1960-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41DA0o7wpKL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Acting Techniques",
+        "Stanislavski Method",
+        "Actor Training"
+      ],
+      "reviews": [
+        57,
+        66,
+        80,
+        85,
+        51
+      ],
+      "authorName": "Sonia Moore",
+      "authorId": 159,
+      "publisherName": "Penguin Books",
+      "publisherId": 152,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 174,
+      "title": "Respect for Acting",
+      "rating": 4.4,
+      "description": "Uta Hagen's 'Respect for Acting' is a definitive guide to the art and craft of acting. Hagen draws on her extensive experience as both an actor and a teacher to provide practical exercises and valuable insights for actors at all levels of experience. This book remains a cornerstone of acting literature.",
+      "publishDate": "1973-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81jtc55fnbL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81PXbRVI0qL._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 240,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Acting Techniques",
+        "Actor Training",
+        "Character Development"
+      ],
+      "reviews": [
+        58,
+        67,
+        81,
+        86,
+        52
+      ],
+      "authorName": "Uta Hagen",
+      "authorId": 160,
+      "publisherName": "Wiley",
+      "publisherId": 153,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 175,
+      "title": "The Director's Craft: A Handbook for the Theatre",
+      "rating": 4.3,
+      "description": "Katie Mitchell's 'The Director's Craft' offers a comprehensive guide for aspiring theater directors. Mitchell combines practical advice with theoretical insights, covering every aspect of the director's role from concept to production. This book is an invaluable resource for those looking to helm theatrical productions.",
+      "publishDate": "2008-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71t09I+q0PL._SL1360_.jpg",
+        "https://m.media-amazon.com/images/I/71M89NT7+CL._SL1360_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 10,
+      "pages": 416,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Theater Directing",
+        "Production Process",
+        "Director's Role"
+      ],
+      "reviews": [
+        59,
+        68,
+        82,
+        87,
+        53
+      ],
+      "authorName": "Katie Mitchell",
+      "authorId": 161,
+      "publisherName": "Routledge",
+      "publisherId": 154,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 176,
+      "title": "The Viewpoints Book: A Practical Guide to Viewpoints and Composition",
+      "rating": 4.5,
+      "description": "Anne Bogart and Tina Landau's 'The Viewpoints Book' offers a hands-on approach to theater training and composition. The book introduces the Viewpoints technique, providing exercises and practical insights to help actors and directors explore movement, time, and space in performance.",
+      "publishDate": "2004-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/912H-3GELkL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 12,
+      "pages": 224,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Viewpoints Technique",
+        "Theater Training",
+        "Composition"
+      ],
+      "reviews": [
+        60,
+        69,
+        83,
+        88,
+        54
+      ],
+      "authorName": "Anne Bogart and Tina Landau",
+      "authorId": 162,
+      "publisherName": "Theatre Communications Group",
+      "publisherId": 155,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 177,
+      "title": "Impro: Improvisation and the Theatre",
+      "rating": 4.4,
+      "description": "Keith Johnstone's 'Impro' is a groundbreaking work on the theory and practice of improvisation in theater. Johnstone explores techniques for unleashing creativity and spontaneity on stage. This book is a foundational text for actors, directors, and anyone interested in the art of improvisation.",
+      "publishDate": "1981-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81h3Pz9ebJL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/914YrGYaiPL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Improvisational Theater",
+        "Creativity",
+        "Spontaneity"
+      ],
+      "reviews": [
+        61,
+        70,
+        84,
+        89,
+        55
+      ],
+      "authorName": "Keith Johnstone",
+      "authorId": 163,
+      "publisherName": "Routledge",
+      "publisherId": 156,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 178,
+      "title": "An Actor Prepares",
+      "rating": 4.2,
+      "description": "Constantin Stanislavski's 'An Actor Prepares' is a cornerstone of acting literature. Stanislavski outlines his influential approach to acting, emphasizing the actor's inner emotional life and connection to the character. This book has guided generations of actors in their craft.",
+      "publishDate": "1936-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71mpznP87+L._SL1500_.jpg"
+      ],
+      "price": 2200,
+      "discountPercentage": 15,
+      "pages": 320,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Russia",
+      "tags": [
+        "Acting Techniques",
+        "Stanislavski Method",
+        "Character Work"
+      ],
+      "reviews": [
+        62,
+        71,
+        85,
+        90,
+        56
+      ],
+      "authorName": "Constantin Stanislavski",
+      "authorId": 164,
+      "publisherName": "Routledge",
+      "publisherId": 157,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 179,
+      "title": "The Open Door: Thoughts on Acting and Theatre",
+      "rating": 4.3,
+      "description": "Peter Brook's 'The Open Door' offers reflections on acting and the theatrical experience. Brook draws on his extensive career in theater to provide insights into the actor's journey and the transformative power of performance. This book is a source of inspiration for actors and theater lovers alike.",
+      "publishDate": "1992-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71NYvsiC7NL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81rNDPOE+nL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Acting Philosophy",
+        "Theatrical Experience",
+        "Actor's Journey"
+      ],
+      "reviews": [
+        63,
+        72,
+        86,
+        91,
+        57
+      ],
+      "authorName": "Peter Brook",
+      "authorId": 154,
+      "publisherName": "Nick Hern Books",
+      "publisherId": 158,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 180,
+      "title": "Acting in Film: An Actor's Take on Movie Making",
+      "rating": 4.4,
+      "description": "Michael Caine's 'Acting in Film' provides valuable insights for actors transitioning to film work. Caine shares practical advice on adapting acting techniques to the demands of the cinematic medium. This book is a must-read for actors looking to excel in both stage and screen performances.",
+      "publishDate": "1990-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71cSZGoUsDL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Film Acting",
+        "Actor's Perspective",
+        "Cinematic Techniques"
+      ],
+      "reviews": [
+        64,
+        73,
+        87,
+        92,
+        58
+      ],
+      "authorName": "Michael Caine",
+      "authorId": 165,
+      "publisherName": "Applause Theatre & Cinema Books",
+      "publisherId": 159,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 181,
+      "title": "The Complete Stanislavsky Toolkit",
+      "rating": 4.3,
+      "description": "Bella Merlin's 'The Complete Stanislavsky Toolkit' offers a practical guide to applying Stanislavski's techniques in contemporary acting. Merlin provides a comprehensive toolkit of exercises and approaches for actors seeking to enhance their craft. This book bridges the gap between theory and practice in acting.",
+      "publishDate": "2007-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91z++ugsumL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 12,
+      "pages": 320,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Stanislavski Techniques",
+        "Contemporary Acting",
+        "Actor's Toolkit"
+      ],
+      "reviews": [
+        65,
+        74,
+        88,
+        93,
+        59
+      ],
+      "authorName": "Bella Merlin",
+      "authorId": 166,
+      "publisherName": "Nick Hern Books",
+      "publisherId": 160,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 182,
+      "title": "Sanford Meisner on Acting",
+      "rating": 4.4,
+      "description": "Sanford Meisner and Dennis Longwell's 'Sanford Meisner on Acting' presents the teachings of legendary acting teacher Sanford Meisner. The book offers practical exercises and insights into Meisner's approach to training actors. It's an essential resource for actors looking to develop their craft.",
+      "publishDate": "1987-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81-eFpHtmqL._SL1192_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Acting Techniques",
+        "Meisner Method",
+        "Actor Training"
+      ],
+      "reviews": [
+        66,
+        75,
+        89,
+        94,
+        60
+      ],
+      "authorName": "Sanford Meisner and Dennis Longwell",
+      "authorId": 167,
+      "publisherName": "Vintage",
+      "publisherId": 161,
+      "genreId": 2,
+      "subgenreId": 11
+    },
+    {
+      "id": 183,
+      "title": "Plutarch's Lives",
+      "rating": 4.4,
+      "description": "Plutarch's 'Lives' is a series of biographies exploring the lives of notable figures from antiquity. With a focus on moral character and virtue, Plutarch provides valuable insights into the personalities and actions of historical figures.",
+      "publishDate": "2nd century AD",
+      "images": [
+        "https://m.media-amazon.com/images/I/811wdYPL5RL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 1152,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Ancient Rome",
+      "tags": [
+        "Ancient Biography",
+        "Moral Character",
+        "Historical Figures"
+      ],
+      "reviews": [
+        67,
+        76,
+        90,
+        95,
+        51
+      ],
+      "authorName": "Plutarch",
+      "authorId": 168,
+      "publisherName": "Penguin Classics",
+      "publisherId": 162,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 184,
+      "title": "Lives of the Artists",
+      "rating": 4.2,
+      "description": "Giorgio Vasari's 'Lives of the Artists' is a foundational work in art history. Vasari chronicles the lives and works of Italian Renaissance artists, providing crucial insights into the development of art during this transformative period.",
+      "publishDate": "1550",
+      "images": [
+        "https://m.media-amazon.com/images/I/71NCuM+YzUL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81khuGYHl6L._SL1500_.jpg",
+        "https://cdn.kobo.com/book-images/76aa9085-2e60-43a6-af3e-137ef903b3ae/1200/1200/False/the-lives-of-the-artists.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 640,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Italy",
+      "tags": [
+        "Art History",
+        "Italian Renaissance",
+        "Biographical Sketches"
+      ],
+      "reviews": [
+        68,
+        77,
+        91,
+        96,
+        52
+      ],
+      "authorName": "Giorgio Vasari",
+      "authorId": 169,
+      "publisherName": "Penguin Classics",
+      "publisherId": 163,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 185,
+      "title": "The Biographical Dictionary of Literary Failure",
+      "rating": 4.1,
+      "description": "C.D. Rose's 'The Biographical Dictionary of Literary Failure' offers a unique perspective on the lives of writers who faced critical and commercial disappointment. Through witty and imaginative entries, Rose sheds light on the trials and tribulations of these literary figures.",
+      "publishDate": "2014-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41vJCfUmDDL.jpg",
+        "https://m.media-amazon.com/images/I/41vJCfUmDDL.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Literary Failure",
+        "Writers' Lives",
+        "Satirical Biography"
+      ],
+      "reviews": [
+        69,
+        78,
+        92,
+        97,
+        53
+      ],
+      "authorName": "C.D. Rose",
+      "authorId": 170,
+      "publisherName": "Melville House",
+      "publisherId": 164,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 186,
+      "title": "Dictionary of World Biography",
+      "rating": 4.3,
+      "description": "Edited by Barry O. Jones, the 'Dictionary of World Biography' provides concise biographical entries on influential figures from various fields and regions. This comprehensive reference work offers valuable insights into the lives of historical and contemporary personalities.",
+      "publishDate": "2003-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51nxAj0NDAL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71H6oV318oL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 10,
+      "pages": 896,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Australia",
+      "tags": [
+        "Biographical Dictionary",
+        "Influential Figures",
+        "Reference Work"
+      ],
+      "reviews": [
+        70,
+        79,
+        93,
+        98,
+        54
+      ],
+      "authorName": "Barry O. Jones (Editor)",
+      "authorId": 171,
+      "publisherName": "Australian National University Press",
+      "publisherId": 165,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 187,
+      "title": "The Black Count: Glory, Revolution, Betrayal, and the Real Count of Monte Cristo",
+      "rating": 4.6,
+      "description": "Tom Reiss's 'The Black Count' is a riveting biography of General Thomas-Alexandre Dumas, the father of the famous author Alexandre Dumas. This meticulously researched work uncovers the extraordinary life of a military genius and his impact on history.",
+      "publishDate": "2012-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91GNmEmNFAL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51k13FCW8lL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 432,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "French Revolution",
+        "Military History"
+      ],
+      "reviews": [
+        71,
+        80,
+        94,
+        99,
+        55
+      ],
+      "authorName": "Tom Reiss",
+      "authorId": 172,
+      "publisherName": "Broadway Books",
+      "publisherId": 166,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 188,
+      "title": "Eminent Victorians",
+      "rating": 4.2,
+      "description": "Lytton Strachey's 'Eminent Victorians' presents biographical essays on four prominent figures from the Victorian era. Strachey's witty and provocative writing style challenges conventional views of these historical personalities.",
+      "publishDate": "1918-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41Bb0i9CatL.jpg",
+        "https://m.media-amazon.com/images/I/41IVtsFo+tL.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 320,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Victorian Era",
+        "Biographical Essays",
+        "Historical Figures"
+      ],
+      "reviews": [
+        72,
+        81,
+        95,
+        100,
+        56
+      ],
+      "authorName": "Lytton Strachey",
+      "authorId": 173,
+      "publisherName": "Penguin Classics",
+      "publisherId": 167,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 189,
+      "title": "A Moveable Feast",
+      "rating": 4.3,
+      "description": "Ernest Hemingway's 'A Moveable Feast' is a memoir of his years in Paris as a struggling young writer. Hemingway reflects on the literary scene, his encounters with other famous writers, and the city that shaped his creative journey.",
+      "publishDate": "1964-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81FI9yb3tYL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71BIA1BSQwL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 211,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "France",
+      "tags": [
+        "Memoir",
+        "Paris",
+        "Literary Scene"
+      ],
+      "reviews": [
+        73,
+        82,
+        96,
+        101,
+        57
+      ],
+      "authorName": "Ernest Hemingway",
+      "authorId": 174,
+      "publisherName": "Scribner",
+      "publisherId": 168,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 190,
+      "title": "The Man Who Knew Infinity: A Life of the Genius Ramanujan",
+      "rating": 4.3,
+      "description": "Robert Kanigel's 'The Man Who Knew Infinity' is a biography of the Indian mathematician Srinivasa Ramanujan. The book traces Ramanujan's extraordinary life and contributions to mathematics, offering a glimpse into the mind of a genius.",
+      "publishDate": "1991-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61k4eVw4KQL._SL1000_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 464,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Mathematics",
+        "Indian Mathematician"
+      ],
+      "reviews": [
+        74,
+        83,
+        97,
+        102,
+        58
+      ],
+      "authorName": "Robert Kanigel",
+      "authorId": 175,
+      "publisherName": "Washington Square Press",
+      "publisherId": 169,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 191,
+      "title": "Bossypants",
+      "rating": 4.1,
+      "description": "Tina Fey's 'Bossypants' is a humorous and candid memoir by the acclaimed comedian and writer. Fey shares her experiences in the world of comedy, television, and motherhood, offering witty insights and sharp observations.",
+      "publishDate": "2011-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71u1+WkI+OL._AC_UF894,1000_QL80_.jpg",
+        "https://www.urdubazaar.in/cdn/shop/products/buy-bossypants-0751547832-urdu-bazaar-37264623698157.jpg?v=1666102510&width=713"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 288,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Memoir",
+        "Comedy",
+        "Television"
+      ],
+      "reviews": [
+        75,
+        84,
+        98,
+        103,
+        59
+      ],
+      "authorName": "Tina Fey",
+      "authorId": 176,
+      "publisherName": "Back Bay Books",
+      "publisherId": 170,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 192,
+      "title": "Josephine: The Dazzling Life of Josephine Baker",
+      "rating": 4.3,
+      "description": "Patricia Hruby Powell's 'Josephine: The Dazzling Life of Josephine Baker' is a vibrant biography of the iconic entertainer. Powell celebrates Baker's extraordinary career and her role as a trailblazer in the entertainment industry.",
+      "publishDate": "2014-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51lAgSGg1dL.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 272,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Josephine Baker",
+        "Entertainment Industry"
+      ],
+      "reviews": [
+        76,
+        85,
+        99,
+        104,
+        60
+      ],
+      "authorName": "Patricia Hruby Powell",
+      "authorId": 177,
+      "publisherName": "Chronicle Books",
+      "publisherId": 171,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 193,
+      "title": "The Swerve: How the World Became Modern",
+      "rating": 4.1,
+      "description": "Stephen Greenblatt's 'The Swerve' explores the rediscovery of an ancient Roman poem and its profound impact on the Renaissance and the modern world. Greenblatt delves into the transformative power of ideas and the cultural shifts they can initiate.",
+      "publishDate": "2011-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61f2Sn7f+EL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81tmuPJSoWS._AC_UF350,350_QL80_.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 12,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Cultural History",
+        "Renaissance",
+        "Ideas and Influence"
+      ],
+      "reviews": [
+        77,
+        86,
+        100,
+        105,
+        61
+      ],
+      "authorName": "Stephen Greenblatt",
+      "authorId": 178,
+      "publisherName": "W. W. Norton & Company",
+      "publisherId": 172,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 194,
+      "title": "The Great War and Modern Memory",
+      "rating": 4.2,
+      "description": "Paul Fussell's 'The Great War and Modern Memory' offers a profound exploration of the impact of World War I on literature and culture. Fussell examines how the experience of war shaped the collective consciousness of an entire generation.",
+      "publishDate": "1975-01-01",
+      "images": [
+        "https://coverart.oclc.org/ImageWebSvc/oclc/+-+6106816_400.jpg?allowDefault=false&client=WorldcatOrgUI"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 384,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "World War I",
+        "Literature",
+        "Cultural Impact"
+      ],
+      "reviews": [
+        78,
+        87,
+        101,
+        106,
+        62
+      ],
+      "authorName": "Paul Fussell",
+      "authorId": 179,
+      "publisherName": "Oxford University Press",
+      "publisherId": 173,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 195,
+      "title": "The Indifferent Stars Above: The Harrowing Saga of the Donner Party",
+      "rating": 4.1,
+      "description": "Daniel James Brown's 'The Indifferent Stars Above' recounts the tragic and harrowing journey of the Donner Party. Brown skillfully navigates the events leading up to the ill-fated expedition and the subsequent struggle for survival in the Sierra Nevada mountains.",
+      "publishDate": "2009-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91woMTHGixL._SL1500_.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 10,
+      "pages": 352,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "History",
+        "Donner Party",
+        "Survival"
+      ],
+      "reviews": [
+        79,
+        88,
+        102,
+        107,
+        63
+      ],
+      "authorName": "Daniel James Brown",
+      "authorId": 180,
+      "publisherName": "William Morrow Paperbacks",
+      "publisherId": 174,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 196,
+      "title": "The Age of Jackson",
+      "rating": 4.0,
+      "description": "Arthur M. Schlesinger Jr.'s 'The Age of Jackson' provides a comprehensive examination of the presidency of Andrew Jackson and the era in which he served. Schlesinger offers a nuanced portrayal of Jackson's influence and the complex issues of his time.",
+      "publishDate": "1945-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61YVS2kSwcL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/41KnWlqvu8L._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 640,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "American History",
+        "Presidential Biography",
+        "Jacksonian Era"
+      ],
+      "reviews": [
+        80,
+        89,
+        103,
+        108,
+        64
+      ],
+      "authorName": "Arthur M. Schlesinger Jr.",
+      "authorId": 181,
+      "publisherName": "Back Bay Books",
+      "publisherId": 175,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 197,
+      "title": "Thomas Jefferson: The Art of Power",
+      "rating": 4.3,
+      "description": "Jon Meacham's 'Thomas Jefferson: The Art of Power' offers a compelling portrait of the complex and influential Founding Father. Meacham delves into Jefferson's political acumen, intellectual pursuits, and enduring legacy.",
+      "publishDate": "2012-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81G1ILZqYyL._SL1500_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 800,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Biography",
+        "Thomas Jefferson",
+        "Founding Fathers"
+      ],
+      "reviews": [
+        81,
+        90,
+        104,
+        109,
+        65
+      ],
+      "authorName": "Jon Meacham",
+      "authorId": 182,
+      "publisherName": "Random House Trade Paperbacks",
+      "publisherId": 176,
+      "genreId": 2,
+      "subgenreId": 13
+    },
+    {
+      "id": 198,
+      "title": "The Diary of a Young Girl",
+      "rating": 4.6,
+      "description": "Anne Frank's 'The Diary of a Young Girl' is a poignant and powerful account of a Jewish girl's experiences during the Holocaust. Anne's diary offers a deeply personal perspective on the challenges of hiding from persecution and the resilience of the human spirit.",
+      "publishDate": "1947-01-01",
+      "images": [
+        "https://cdn.kobo.com/book-images/265498db-16c5-421a-b481-e0f4a99e6a74/353/569/90/False/the-diary-of-a-young-girl-27.jpg",
+        "https://rukminim2.flixcart.com/image/416/416/kqidx8w0/book/x/n/y/the-diary-of-a-young-girl-original-imag4gg9afh4zw6f.jpeg?q=70"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 352,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Netherlands",
+      "tags": [
+        "Holocaust",
+        "Jewish Diary",
+        "Human Resilience"
+      ],
+      "reviews": [
+        82,
+        91,
+        105,
+        110,
+        66
+      ],
+      "authorName": "Anne Frank",
+      "authorId": 183,
+      "publisherName": "Bantam",
+      "publisherId": 177,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 199,
+      "title": "84, Charing Cross Road",
+      "rating": 4.2,
+      "description": "Helene Hanff's '84, Charing Cross Road' is a charming collection of letters exchanged between Hanff and the staff of a second-hand bookshop in London. This correspondence blossoms into a heartwarming literary friendship.",
+      "publishDate": "1970-01-01",
+      "images": [
+        "https://www.anagrama-ed.es/uploads/media/portadas/0001/15/0934b3a4bec3c4a4d137bcf69f900a11a120f09f.jpeg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 97,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Epistolary",
+        "Literary Friendship",
+        "Booksellers"
+      ],
+      "reviews": [
+        83,
+        92,
+        106,
+        111,
+        67
+      ],
+      "authorName": "Helene Hanff",
+      "authorId": 184,
+      "publisherName": "Penguin Books",
+      "publisherId": 178,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 200,
+      "title": "The Journals of Sylvia Plath",
+      "rating": 4.3,
+      "description": "Sylvia Plath's journals offer an intimate look into the mind of the renowned poet. Spanning from her adolescence to the final months of her life, these entries reveal Plath's creative process, personal struggles, and literary ambitions.",
+      "publishDate": "1982-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/91Qidx2KcBL._SL1500_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 384,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Journals",
+        "Sylvia Plath",
+        "Creative Process"
+      ],
+      "reviews": [
+        84,
+        93,
+        107,
+        112,
+        68
+      ],
+      "authorName": "Sylvia Plath",
+      "authorId": 185,
+      "publisherName": "Anchor",
+      "publisherId": 179,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 201,
+      "title": "The Letters of Vincent van Gogh",
+      "rating": 4.4,
+      "description": "Edited by Ronald de Leeuw, 'The Letters of Vincent van Gogh' provides a window into the artist's thoughts, struggles, and creative vision. Van Gogh's correspondence offers profound insights into the mind of a tormented genius.",
+      "publishDate": "1996-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71mm7IPGXAL._AC_UF1000,1000_QL80_.jpg",
+        "https://live.staticflickr.com/2244/2390003643_d23751fdaa_z.jpg"
+      ],
+      "price": 2700,
+      "discountPercentage": 10,
+      "pages": 560,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Netherlands",
+      "tags": [
+        "Artists' Letters",
+        "Creative Vision",
+        "Vincent van Gogh"
+      ],
+      "reviews": [
+        85,
+        94,
+        108,
+        113,
+        69
+      ],
+      "authorName": "Vincent van Gogh",
+      "authorId": 186,
+      "publisherName": "Penguin Classics",
+      "publisherId": 180,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 202,
+      "title": "Letters to a Young Poet",
+      "rating": 4.3,
+      "description": "Rainer Maria Rilke's 'Letters to a Young Poet' offers profound advice and insights on the creative process. In a series of letters, Rilke addresses essential questions about art, solitude, and the path of the artist.",
+      "publishDate": "1929-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61bO3n19sgL._AC_UF894,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/81MCa7YqU6L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 80,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Austria",
+      "tags": [
+        "Letters",
+        "Creative Process",
+        "Rainer Maria Rilke"
+      ],
+      "reviews": [
+        86,
+        95,
+        109,
+        114,
+        70
+      ],
+      "authorName": "Rainer Maria Rilke",
+      "authorId": 187,
+      "publisherName": "New World Library",
+      "publisherId": 181,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 203,
+      "title": "The Journal of Henry David Thoreau",
+      "rating": 4.2,
+      "description": "Edited by Damion Searls, 'The Journal of Henry David Thoreau' provides a comprehensive view of Thoreau's observations of nature, philosophy, and his transcendentalist beliefs. These writings offer a profound glimpse into the mind of a renowned American thinker.",
+      "publishDate": "2009-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71XIB7EwvUL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/711btwjFQDL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/9156VGMs5PL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 700,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Nature Writing",
+        "Transcendentalism",
+        "Henry David Thoreau"
+      ],
+      "reviews": [
+        87,
+        96,
+        110,
+        115,
+        71
+      ],
+      "authorName": "Henry David Thoreau",
+      "authorId": 188,
+      "publisherName": "Library of America",
+      "publisherId": 182,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 204,
+      "title": "The Diary of Samuel Pepys",
+      "rating": 4.1,
+      "description": "Samuel Pepys's diary provides a vivid and detailed account of life in 17th-century London. Pepys's candid entries cover a wide range of topics, offering a valuable historical perspective on the period.",
+      "publishDate": "1825-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81UUCoP6ePL._AC_UF1000,1000_QL80_.jpg",
+        "https://rukminim2.flixcart.com/image/850/1000/jmthle80/book/8/9/3/the-diary-of-samuel-pepys-m-a-f-r-s-clerk-of-the-acts-and-original-imaf9mq3vzdjzs4t.jpeg?q=20"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 650,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "17th Century",
+        "London Life",
+        "Historical Diary"
+      ],
+      "reviews": [
+        88,
+        97,
+        111,
+        116,
+        72
+      ],
+      "authorName": "Samuel Pepys",
+      "authorId": 189,
+      "publisherName": "Penguin Classics",
+      "publisherId": 183,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 205,
+      "title": "The Journals of Lewis and Clark",
+      "rating": 4.3,
+      "description": "The journals of Meriwether Lewis and William Clark document their historic expedition across uncharted territories of North America. These firsthand accounts provide invaluable insights into the challenges and discoveries of the Lewis and Clark Expedition.",
+      "publishDate": "1807-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41ysP2-049L.jpg",
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1439914405i/236830.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 720,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Lewis and Clark Expedition",
+        "Exploration",
+        "American Frontier"
+      ],
+      "reviews": [
+        89,
+        98,
+        112,
+        117,
+        73
+      ],
+      "authorName": "Meriwether Lewis and William Clark",
+      "authorId": 190,
+      "publisherName": "National Geographic Society",
+      "publisherId": 184,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 206,
+      "title": "The Collected Poems of W.B. Yeats",
+      "rating": 4.4,
+      "description": "W.B. Yeats's poetry collection encompasses his finest works, reflecting his profound engagement with Irish folklore, mythology, and politics. This comprehensive volume celebrates Yeats's contributions to modernist poetry.",
+      "publishDate": "1933-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/81dvaFD+7wL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/71-cc0sk-JL._SL1500_.jpg",
+        "https://media.springernature.com/full/springer-static/cover-hires/book/978-1-349-12509-8"
+
+      ],
+      "price": 2800,
+      "discountPercentage": 10,
+      "pages": 400,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Ireland",
+      "tags": [
+        "Irish Poetry",
+        "W.B. Yeats",
+        "Modernist Poetry"
+      ],
+      "reviews": [
+        90,
+        99,
+        113,
+        118,
+        74
+      ],
+      "authorName": "W.B. Yeats",
+      "authorId": 191,
+      "publisherName": "Scribner",
+      "publisherId": 185,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 207,
+      "title": "The Letters of Ernest Hemingway: Volume 1, 1907-1922",
+      "rating": 4.3,
+      "description": "Edited by Sandra Spanier et al., 'The Letters of Ernest Hemingway: Volume 1, 1907-1922' provides a comprehensive collection of Hemingway's early letters. Offering insights into his formative years, these letters illuminate the experiences that shaped the legendary writer.",
+      "publishDate": "2011-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Bc8N8HsxL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71O5BExHeZL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 480,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Ernest Hemingway",
+        "Letters",
+        "Early Years"
+      ],
+      "reviews": [
+        91,
+        100,
+        114,
+        119,
+        75
+      ],
+      "authorName": "Ernest Hemingway",
+      "authorId": 192,
+      "publisherName": "Cambridge University Press",
+      "publisherId": 186,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 208,
+      "title": "The Journal of John Woolman",
+      "rating": 4.2,
+      "description": "John Woolman's journal offers a record of his spiritual reflections, social concerns, and efforts to promote justice and equality. Woolman's writings remain influential in the fields of Quakerism and social reform.",
+      "publishDate": "1774-01-01",
+      "images": [
+        "https://pictures.abebooks.com/isbn/9780195014198-us.jpg",
+        "https://m.media-amazon.com/images/I/41+DtMoE2VL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2300,
+      "discountPercentage": 12,
+      "pages": 144,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Quakerism",
+        "Social Justice",
+        "Spiritual Reflections"
+      ],
+      "reviews": [
+        92,
+        101,
+        115,
+        120,
+        76
+      ],
+      "authorName": "John Woolman",
+      "authorId": 193,
+      "publisherName": "Penguin Classics",
+      "publisherId": 187,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 209,
+      "title": "The Diary of Virginia Woolf",
+      "rating": 4.0,
+      "description": "Edited by Anne Olivier Bell, 'The Diary of Virginia Woolf' offers a glimpse into the inner world of the celebrated writer. Woolf's diary entries reveal her thoughts on literature, art, and her personal struggles.",
+      "publishDate": "1979-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/61UbqQGxa4L._SL1500_.jpg"
+      ],
+      "price": 2400,
+      "discountPercentage": 10,
+      "pages": 368,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Virginia Woolf",
+        "Literary Diary",
+        "Modernist Writer"
+      ],
+      "reviews": [
+        93,
+        102,
+        116,
+        121,
+        77
+      ],
+      "authorName": "Virginia Woolf",
+      "authorId": 194,
+      "publisherName": "Mariner Books",
+      "publisherId": 188,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 210,
+      "title": "Letters of a Woman Homesteader",
+      "rating": 4.3,
+      "description": "Elinore Pruitt Stewart's letters chronicle her experiences as a homesteader in Wyoming in the early 20th century. Stewart's engaging and insightful correspondence offers a unique perspective on frontier life.",
+      "publishDate": "1914-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/51KKek4I3DL.jpg",
+        "https://m.media-amazon.com/images/I/41llXHkBPoL.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 208,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Frontier Life",
+        "Homesteading",
+        "Pioneer Woman"
+      ],
+      "reviews": [
+        94,
+        103,
+        117,
+        122,
+        78
+      ],
+      "authorName": "Elinore Pruitt Stewart",
+      "authorId": 195,
+      "publisherName": "University of Oklahoma Press",
+      "publisherId": 189,
+      "genreId": 2,
+      "group": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 211,
+      "title": "The Letters of Emily Dickinson",
+      "rating": 4.2,
+      "description": "Edited by Thomas H. Johnson, 'The Letters of Emily Dickinson' provides insight into the life and mind of the enigmatic poet. These letters reveal Dickinson's poetic process, her relationships, and her reflections on art and existence.",
+      "publishDate": "1958-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/41jO1pVMDPL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 352,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": [
+        "Emily Dickinson",
+        "Poet's Letters",
+        "Creativity and Existence"
+      ],
+      "reviews": [
+        95,
+        104,
+        118,
+        123,
+        79
+      ],
+      "authorName": "Emily Dickinson",
+      "authorId": 196,
+      "publisherName": "Belknap Press",
+      "publisherId": 190,
+      "genreId": 2,
+      "subgenreId": 14
+    },
+    {
+      "id": 212,
+      "title": "The Journals of Captain Cook",
+      "rating": 4.1,
+      "description": "Edited by Philip Edwards, 'The Journals of Captain Cook' provide a detailed account of Captain James Cook's voyages of exploration. Cook's journals offer a firsthand view of his encounters with diverse cultures and uncharted territories.",
+      "publishDate": "1955-01-01",
+      "images": [
+        "https://m.media-amazon.com/images/I/71iPdEuIQqL._SL1198_.jpg",
+        "https://www.booktopia.com.au/covers/big/9780140436471/0000/the-journals-of-captain-cook.jpg"
+      ],
+      "price": 2600,
+      "discountPercentage": 10,
+      "pages": 704,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": [
+        "Exploration",
+        "Captain James Cook",
+        "Voyages"
+      ],
+      "reviews": [
+        96,
+        105,
+        119,
+        124,
+        80
+      ],
+      "authorName": "Meriwether Lewis and William Clark",
+      "authorId": 190,
+      "publisherName": "Penguin Classics",
+      "publisherId": 192,
+      "genreId": 2,
+      "subgenreId": 14
     }
   ],
 

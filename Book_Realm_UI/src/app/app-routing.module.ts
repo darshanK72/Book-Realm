@@ -36,7 +36,7 @@ const routes: Routes = [
     path: 'wishlist', component: WishlistComponent
   },
   {
-    path: 'detail', component: DetailComponent
+    path: 'detail/:bookId', component: DetailComponent
   },
   {
     path: 'filter', component: FilterComponent

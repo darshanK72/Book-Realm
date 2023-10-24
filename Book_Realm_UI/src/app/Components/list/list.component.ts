@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Book } from 'src/app/Models/book';
 
 @Component({
   selector: 'app-list',
@@ -8,11 +9,14 @@ import { Router } from '@angular/router';
 })
 export class ListComponent {
 
+  @Input()
+  books!:Book[];
+
   constructor(private router:Router){}
 
   getBookDetail(i:number){
 
-    this.router.navigate(["/detail"])
+    this.router.navigate(["/detail",i])
 
   }
 }

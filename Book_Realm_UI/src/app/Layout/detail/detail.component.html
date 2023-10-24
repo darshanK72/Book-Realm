@@ -1,52 +1,45 @@
-<div class="wrapper">
-    <div class="left">
+<div class="wrapper" *ngIf="!!book">
+    <div class="left" >
         <div class="image-slider">
-            <div class="image">
-                <img src="../../../assets/img/book.webp" alt="">
-            </div>
-            <div class="image">
-                <img src="../../../assets/img/book.webp" alt="">
+            <div class="image" *ngFor="let src of book.images" (click)="changeImage(src,mainImage)">
+                <img [src]="src" alt="">
             </div>
         </div>
-        <div class="main-image">
-            <img src="../../../assets/img/book.webp" alt="">
+        <div class="main-image"  #mainImage>
+            <img [src]="book.images[0]" alt="">
         </div>
     </div>
     <div class="right">
-        <h3>Gods Monsters and the Lucky Peach</h3>
+        <h3>{{book.title}}</h3>
         <div class="rating">
-            <p class="btn-primary"> 4.3 <i class="fa-solid fa-star"></i></p>
+            <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
         </div>
         <div class="author-publisher">
             <div class="author">
                 <i class="fa-solid fa-pen-nib"></i>
-                <p>Kelly Robson</p>
+                <p>{{book.authorName}}</p>
             </div>
             <div class="vr">
 
             </div>
             <div class="publisher">
                 <i class="fa-solid fa-book"></i>
-                <p>St. Martins Press</p>
+                <p>{{book.publisherName}}</p>
             </div>
             <div class="vr">
 
             </div>
             <div class="publish-date">
                 <i class="fa-solid fa-calendar-days"></i>
-                <p>July 2021</p>
+                <p>{{book.publishDate}}</p>
             </div>
         </div>
         <div class="desc">
             <h5 class="title">Description</h5>
             <div class="description" #desc>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus non quasi doloremque asperiores
-                    alias quo, distinctio cum minima quae officiis exercitationem veniam consectetur, ab quod error
-                    expedita nemo a eaque!
-                </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tenetur repellendus illum quidem
-                    sapiente aliquid modi culpa vel minima beatae!</p>
+                    {{book.description}}
+                </p>
             </div>
 
             <button class="text-primary" (click)="readMore()" #btn>Read More</button>
@@ -56,7 +49,7 @@
                 <button class="btn btn-outline">-</button>
             </div>
             <div class="qty">
-                <p>23</p>
+                <p>1</p>
             </div>
             <div class="btn-plus">
                 <button class="btn btn-primary">+</button>
@@ -64,9 +57,9 @@
         </div>
 
         <div class="price">
-            <span class="amount"> &#8377; 181</span>
-            <span class="cross"> &#8377; 185</span>
-            <span class="discount">(-7%)</span>
+            <span class="amount"> &#8377; {{book.price}}</span>
+            <span class="cross"> &#8377; {{book.price + 100}}</span>
+            <span class="discount">(-{{book.discountPercentage}}%)</span>
         </div>
 
         <div class="btns">
@@ -83,43 +76,40 @@
                 <table>
                     <tr>
                         <td class="th">Title</td>
-                        <td class="td">Gods Monsters and the Lucky Peach</td>
+                        <td class="td">{{book.title}}</td>
                     </tr>
                     <tr>
                         <td class="th">Author</td>
-                        <td class="td">Kelly Robson</td>
+                        <td class="td">{{book.authorName}}</td>
                     </tr>
                     <tr>
                         <td class="th">Publisher</td>
-                        <td class="td">St. Martins Press</td>
+                        <td class="td">{{book.publisherName}}</td>
                     </tr>
                     <tr>
                         <td class="th">Pages</td>
-                        <td class="td">432</td>
+                        <td class="td">{{book.pages}}</td>
                     </tr>
                     <tr>
                         <td class="th">Book Format</td>
-                        <td class="td">Paperback</td>
+                        <td class="td">{{book.bookFormat}}</td>
                     </tr>
 
                     <tr>
                         <td class="th">Language</td>
-                        <td class="td">English</td>
+                        <td class="td">{{book.language}}</td>
                     </tr>
 
                     <tr>
                         <td class="th">Publish Date</td>
-                        <td class="td">July 2021</td>
+                        <td class="td">{{book.publishDate}}</td>
                     </tr>
 
                     <tr>
                         <td class="th">Tags</td>
-                        <td class="td tags" >
-                            <span class="tag btn btn-primary">Drama</span>
-                            <span class="tag btn btn-primary">Adventure</span>
-                            <span class="tag btn btn-primary">Survial</span>
-                            <span class="tag btn btn-primary">Biography</span>
-                            <span class="tag btn btn-primary">Bestseller</span>
+                        <td class="td tags">
+                            <span class="tag btn btn-primary" *ngFor="let tag of book.tags">{{tag}}</span>
+
                         </td>
                     </tr>
 

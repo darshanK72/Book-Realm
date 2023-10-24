@@ -25,7 +25,7 @@ export class HeaderComponent implements AfterViewInit {
     private router: Router
   ) {
     this.renderer.listen('window', 'click', (e: Event) => {
-      console.log(e.target);
+     
       if (
         e.target == this.showprofbtn.nativeElement &&
         this.showprof == false
@@ -43,27 +43,21 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.router.url);
-
+    
     this.router.events.subscribe((data) => {
       if (data instanceof NavigationStart) {
         this.currentRoute = data.url;
         if (
-          this.currentRoute == '/signin' ||
-          this.currentRoute == '/signup' ||
-          this.currentRoute == '/cart' ||
-          this.currentRoute == '/wishlist' ||
-          this.currentRoute == '/detail' ||
-          this.currentRoute == '/profile' ||
-          this.currentRoute == '/profile/my-profile' ||
-          this.currentRoute == '/profile/my-orders' ||
-          this.currentRoute == '/profile/my-reviews' ||
-          this.currentRoute == '/profile/address' ||
-          this.currentRoute == '/profile/change-pass'
+          this.currentRoute == '/home' ||
+          this.currentRoute == '/sub-genre' ||
+          this.currentRoute == '/genre' ||
+          this.currentRoute == '/filter'
+
         ) {
-          this.renderer.addClass(this.slider.nativeElement, 'hide');
-        } else {
           this.renderer.removeClass(this.slider.nativeElement, 'hide');
+         
+        } else {
+          this.renderer.addClass(this.slider.nativeElement, 'hide');
         }
       }
     });
@@ -120,7 +114,7 @@ export class HeaderComponent implements AfterViewInit {
 
   hideProfile(){
     this.showprof = false;
-    console.log("Hello");
+
     this.renderer.removeClass(this.profile.nativeElement, 'show-profile');
   }
 

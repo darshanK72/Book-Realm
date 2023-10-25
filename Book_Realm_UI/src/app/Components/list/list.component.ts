@@ -12,6 +12,8 @@ export class ListComponent {
   @Input()
   books!:Book[];
 
+  @Input()
+  genreTitle!:string;
   constructor(private router:Router){}
 
   getBookDetail(i:number){

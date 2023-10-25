@@ -21,9 +21,20 @@
 }
 
 .top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+}
+
+.top .title{
+    width: 70%;
+}
+
+.top .view{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .top .title h5 {

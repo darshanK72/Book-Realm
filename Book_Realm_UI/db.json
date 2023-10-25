@@ -1063,8 +1063,8 @@
       "description": "Friedrich Nietzsche's 'The Birth of Tragedy' explores the origins of Greek tragedy and the nature of artistic creation. Nietzsche contends that the tension between the Apollonian and Dionysian forces gives rise to profound artistic expression. This philosophical work has had a significant impact on aesthetics and cultural theory.",
       "publishDate": "1872-01-01",
       "images": [
-        "https://cdn.kobo.com/book-images/409b8436-7ee0-4435-afcc-f59b5c84724c/1200/1200/False/the-birth-of-tragedy-12.jpg",
-        "https://m.media-amazon.com/images/I/51h1SNvaNgL._AC_UF1000,1000_QL80_.jpg"
+        "https://m.media-amazon.com/images/I/415COxMshCL.jpg",
+       "https://m.media-amazon.com/images/I/51h1SNvaNgL._AC_UF1000,1000_QL80_.jpg"
       ],
       "price": 1800,
       "discountPercentage": 20,
@@ -3322,8 +3322,8 @@
       "description": "Friedrich Nietzsche's 'The Birth of Tragedy' explores the origins and nature of Greek tragedy. Nietzsche's work delves into the dual Apollonian and Dionysian forces that shape artistic expression.",
       "publishDate": "1999-12-01",
       "images": [
-        "https://cdn.kobo.com/book-images/409b8436-7ee0-4435-afcc-f59b5c84724c/1200/1200/False/the-birth-of-tragedy-12.jpg",
-        "https://m.media-amazon.com/images/I/51h1SNvaNgL._AC_UF1000,1000_QL80_.jpg"
+        "https://m.media-amazon.com/images/I/415COxMshCL.jpg",
+       "https://m.media-amazon.com/images/I/51h1SNvaNgL._AC_UF1000,1000_QL80_.jpg"
       ],
       "price": 2500,
       "discountPercentage": 10,
@@ -4084,7 +4084,6 @@
       "images": [
         "https://m.media-amazon.com/images/I/71fpEFac2mL._AC_UF894,1000_QL80_.jpg",
         "https://m.media-amazon.com/images/I/713O7XaEFLL._AC_UF1000,1000_QL80_.jpg"
-        
       ],
       "price": 3400,
       "discountPercentage": 10,
@@ -5211,7 +5210,6 @@
         "https://m.media-amazon.com/images/I/612rP6rfs8L._AC_UF894,1000_QL80_.jpg",
         "https://m.media-amazon.com/images/I/612rP6rfs8L._AC_UF894,1000_QL80_.jpg",
         "https://m.media-amazon.com/images/I/5161jcFJlnL._AC_UF1000,1000_QL80_.jpg"
-
       ],
       "price": 2600,
       "discountPercentage": 10,
@@ -6119,7 +6117,6 @@
         "https://m.media-amazon.com/images/I/51lAgWzy9wL.jpg",
         "https://m.media-amazon.com/images/I/91Gtj6ln+4L._SL1500_.jpg",
         "https://m.media-amazon.com/images/I/71myXR24yJL._SL1410_.jpg"
-
       ],
       "price": 2300,
       "discountPercentage": 12,
@@ -7473,7 +7470,6 @@
         "https://m.media-amazon.com/images/I/81dvaFD+7wL._SL1500_.jpg",
         "https://m.media-amazon.com/images/I/71-cc0sk-JL._SL1500_.jpg",
         "https://media.springernature.com/full/springer-static/cover-hires/book/978-1-349-12509-8"
-
       ],
       "price": 2800,
       "discountPercentage": 10,
@@ -7708,9 +7704,458 @@
       "publisherId": 192,
       "genreId": 2,
       "subgenreId": 14
+    },
+    {
+      "id": 213,
+      "title": "Wings of Fire",
+      "rating": 4.8,
+      "description": "This memoir narrates the life and experiences of Dr. A.P.J Abdul Kalam, India's renowned scientist and former President. It provides valuable insights into his journey from a small town in Tamil Nadu to becoming a visionary leader in the field of space technology.",
+      "publishDate": "1999-01-01",
+      "images": [],
+      "price": 2500,
+      "discountPercentage": 10,
+      "pages": 180,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Memoir", "Science", "Leadership", "Space Technology"],
+      "reviews": [45, 52, 48, 50, 42],
+      "authorName": "A.P.J Abdul Kalam",
+      "authorId": 194,
+      "publisherName": "Universities Press",
+      "publisherId": 190,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 214,
+      "title": "The Glass Palace",
+      "rating": 4.2,
+      "description": "While not a traditional memoir, this historical novel by Amitav Ghosh provides a vivid portrayal of Burma (now Myanmar) and India during the British colonial era. It weaves together the lives of various characters against the backdrop of sweeping historical changes.",
+      "publishDate": "2000-01-01",
+      "images": [],
+      "price": 3200,
+      "discountPercentage": 12,
+      "pages": 560,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Historical Fiction", "Colonial Era", "India", "Myanmar"],
+      "reviews": [37, 41, 29, 33, 28],
+      "authorName": "Amitav Ghosh",
+      "authorId": 195,
+      "publisherName": "Penguin Books",
+      "publisherId": 191,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 215,
+      "title": "My Name Is Red",
+      "rating": 4.0,
+      "description": "This novel, though not strictly a memoir, incorporates elements of personal narrative within its story, exploring art, love, and philosophy. Set in the world of Ottoman Empire miniature painters, Orhan Pamuk weaves a complex tale of love, creativity, and identity.",
+      "publishDate": "2001-09-11",
+      "images": [],
+      "price": 2800,
+      "discountPercentage": 15,
+      "pages": 432,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Turkey",
+      "tags": ["Novel", "Art", "Love", "Philosophy", "Identity"],
+      "reviews": [34, 39, 27, 22, 26],
+      "authorName": "Orhan Pamuk",
+      "authorId": 196,
+      "publisherName": "Vintage International",
+      "publisherId": 192,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 216,
+      "title": "An Era of Darkness: The British Empire in India",
+      "rating": 4.4,
+      "description": "Tharoor provides a thought-provoking analysis of India's colonial history in this book. He meticulously examines the impact of British rule on India, from economic exploitation to cultural imperialism. This work challenges prevailing narratives and calls for a deeper understanding of colonial legacies.",
+      "publishDate": "2016-10-26",
+      "images": [],
+      "price": 3500,
+      "discountPercentage": 10,
+      "pages": 360,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["History", "Colonialism", "British Empire", "India"],
+      "reviews": [42, 47, 35, 39, 45],
+      "authorName": "Shashi Tharoor",
+      "authorId": 197,
+      "publisherName": "Aleph Book Company",
+      "publisherId": 193,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 217,
+      "title": "Playing It My Way",
+      "rating": 4.1,
+      "description": "The autobiography of the legendary Indian cricketer provides insights into his personal life and illustrious career. Sachin Tendulkar takes readers on a journey from his early days in Mumbai to becoming one of the greatest cricketing icons in the world.",
+      "publishDate": "2014-11-06",
+      "images": [],
+      "price": 3800,
+      "discountPercentage": 12,
+      "pages": 496,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Autobiography", "Cricket", "Sports", "Inspiration", "Achievement"],
+      "reviews": [29, 35, 21, 26, 31],
+      "authorName": "Sachin Tendulkar",
+      "authorId": 198,
+      "publisherName": "Hachette India",
+      "publisherId": 194,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 218,
+      "title": "The Elephant, the Tiger, and the Cell Phone: India in the 21st Century",
+      "rating": 4.0,
+      "description": "This book combines elements of personal reflection with broader socio-political commentary on India's development. Shashi Tharoor offers a compelling analysis of India's journey into the 21st century, examining the country's role on the global stage.",
+      "publishDate": "2007-10-15",
+      "images": [],
+      "price": 3000,
+      "discountPercentage": 10,
+      "pages": 336,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Socio-political Commentary", "India", "21st Century", "Globalization"],
+      "reviews": [31, 38, 24, 29, 33],
+      "authorName": "Shashi Tharoor",
+      "authorId": 197,
+      "publisherName": "Penguin Books",
+      "publisherId": 191,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 219,
+      "title": "In the Line of Fire: A Memoir",
+      "rating": 4.2,
+      "description": "While not Indian, this memoir by the former President of Pakistan offers a unique perspective on the region's geopolitics. Pervez Musharraf provides a firsthand account of critical events, including conflicts with India and the global fight against terrorism.",
+      "publishDate": "2006-09-25",
+      "images": [],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 368,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "Pakistan",
+      "tags": ["Memoir", "Geopolitics", "Pakistan", "Global Terrorism"],
+      "reviews": [27, 32, 45, 21, 36],
+      "authorName": "Pervez Musharraf",
+      "authorId": 199,
+      "publisherName": "Free Press",
+      "publisherId": 195,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 220,
+      "title": "The Book of Esther",
+      "rating": 3.9,
+      "description": "A memoir about the author's childhood in a Jewish family in Ahmedabad, India. Esther David paints a vivid picture of her formative years, capturing the cultural tapestry of a close-knit community.",
+      "publishDate": "2002-03-01",
+      "images": [],
+      "price": 2700,
+      "discountPercentage": 8,
+      "pages": 256,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Memoir", "Jewish Culture", "Childhood", "Family", "Ahmedabad"],
+      "reviews": [40, 47, 30, 25, 33],
+      "authorName": "Esther David",
+      "authorId": 200,
+      "publisherName": "Penguin Books",
+      "publisherId": 191,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 221,
+      "title": "A Princess Remembers: The Memoirs of the Maharani of Jaipur",
+      "rating": 4.1,
+      "description": "This memoir provides a fascinating glimpse into the life of a royal figure in India. Maharani Gayatri Devi of Jaipur shares her experiences, offering a window into the opulent world of Indian royalty and her efforts to bring positive change to her state.",
+      "publishDate": "1976-05-19",
+      "images": [],
+      "price": 3400,
+      "discountPercentage": 10,
+      "pages": 224,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Memoir", "Royalty", "Jaipur", "Indian Princess"],
+      "reviews": [32, 37, 23, 29, 40],
+      "authorName": "Gayatri Devi",
+      "authorId": 201,
+      "publisherName": "Rupa Publications",
+      "publisherId": 193,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 222,
+      "title": "The Man Who Knew Infinity: A Life of the Genius Ramanujan",
+      "rating": 4.4,
+      "description": "While this is a biography, it reads like a memoir, providing a detailed account of the life of the Indian mathematician, Srinivasa Ramanujan. Robert Kanigel captures the essence of Ramanujan's genius and the challenges he faced in a rapidly changing world.",
+      "publishDate": "1991-10-01",
+      "images": [],
+      "price": 2900,
+      "discountPercentage": 12,
+      "pages": 464,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Biography", "Mathematics", "Ramanujan", "Genius", "Indian Mathematician"],
+      "reviews": [28, 34, 21, 32, 27],
+      "authorName": "Robert Kanigel",
+      "authorId": 202,
+      "publisherName": "Washington Square Press",
+      "publisherId": 196,
+      "genreId": 2,
+      "subgenreId": 15
+    },
+    {
+      "id": 223,
+      "title": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+      "rating": 4.2,
+      "description": "This non-fiction work provides a detailed account of life in a Mumbai slum. Katherine Boo's immersive narrative brings to light the complexities, struggles, and aspirations of the residents of Annawadi, a makeshift settlement near the Mumbai airport.",
+      "publishDate": "2012-02-07",
+      "images": [],
+      "price": 3100,
+      "discountPercentage": 10,
+      "pages": 288,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Non-fiction", "Mumbai Slum", "Poverty", "Social Issues"],
+      "reviews": [35, 39, 27, 31, 24],
+      "authorName": "Katherine Boo",
+      "authorId": 208,
+      "publisherName": "Random House",
+      "publisherId": 204,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 224,
+      "title": "The Argumentative Indian: Writings on Indian History, Culture and Identity",
+      "rating": 4.3,
+      "description": "A collection of essays that offer insights into various aspects of Indian history and culture. Amartya Sen's thoughtful reflections cover a wide range of topics, from identity and diversity to the challenges facing contemporary India.",
+      "publishDate": "2005-10-04",
+      "images": [],
+      "price": 2800,
+      "discountPercentage": 10,
+      "pages": 432,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Essays", "Indian History", "Culture", "Identity", "Diversity"],
+      "reviews": [31, 38, 29, 35, 26],
+      "authorName": "Amartya Sen",
+      "authorId": 209,
+      "publisherName": "Penguin Books",
+      "publisherId": 191,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 225,
+      "title": "Maximum City: Bombay Lost and Found",
+      "rating": 4.1,
+      "description": "A blend of reportage, memoir, and historical research, this book delves into the complex and vibrant life of Mumbai. Suketu Mehta navigates the city's sprawling landscape, uncovering stories of love, crime, and survival in this compelling narrative.",
+      "publishDate": "2004-04-27",
+      "images": [],
+      "price": 3300,
+      "discountPercentage": 10,
+      "pages": 592,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Reportage", "Memoir", "Mumbai", "Urban Life", "Non-fiction"],
+      "reviews": [40, 45, 31, 37, 29],
+      "authorName": "Suketu Mehta",
+      "authorId": 210,
+      "publisherName": "Vintage",
+      "publisherId": 205,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 226,
+      "title": "Behind Bars: Prison Tales of India's Most Famous",
+      "rating": 4.0,
+      "description": "This book offers a collection of true stories about some of India's most notorious criminals. Sunetra Choudhury delves into the lives of individuals who made headlines for their criminal activities, providing a gripping account of their experiences behind bars.",
+      "publishDate": "2015-03-20",
+      "images": [],
+      "price": 2900,
+      "discountPercentage": 10,
+      "pages": 288,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Non-fiction", "True Crime", "Prison Stories", "Indian Criminals"],
+      "reviews": [27, 32, 45, 23, 36],
+      "authorName": "Sunetra Choudhury",
+      "authorId": 211,
+      "publisherName": "Roli Books",
+      "publisherId": 206,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 227,
+      "title": "The Last Mughal: The Fall of a Dynasty, Delhi, 1857",
+      "rating": 4.4,
+      "description": "This book provides a detailed account of the events surrounding the Indian Rebellion of 1857. William Dalrymple paints a vivid picture of the historical and cultural context, narrating the decline of the Mughal Empire and the emergence of British dominance.",
+      "publishDate": "2006-10-10",
+      "images": [],
+      "price": 3200,
+      "discountPercentage": 10,
+      "pages": 608,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["History", "Indian Rebellion of 1857", "Mughal Empire", "British Empire"],
+      "reviews": [37, 41, 29, 35, 28],
+      "authorName": "William Dalrymple",
+      "authorId": 212,
+      "publisherName": "Vintage",
+      "publisherId": 205,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 228,
+      "title": "The Red Sari: A Dramatized Biography of Sonia Gandhi",
+      "rating": 4.0,
+      "description": "This book provides an account of the life of Sonia Gandhi, an influential political figure in India. Javier Moro's narrative skillfully blends fact and fiction, offering readers a compelling portrayal of one of India's prominent political leaders.",
+      "publishDate": "2008-01-08",
+      "images": [],
+      "price": 3000,
+      "discountPercentage": 10,
+      "pages": 432,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Biography", "Political Figure", "Sonia Gandhi", "Indian Politics"],
+      "reviews": [34, 39, 27, 22, 26],
+      "authorName": "Javier Moro",
+      "authorId": 213,
+      "publisherName": "Roli Books",
+      "publisherId": 206,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 229,
+      "title": "Karachi, You're Killing Me!",
+      "rating": 3.9,
+      "description": "A humorous yet insightful look into the life of a young journalist in Karachi, Pakistan. Saba Imtiaz blends wit and social commentary, offering a unique perspective on the challenges and absurdities of urban life in Karachi.",
+      "publishDate": "2014-08-15",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/7/72/Karachi%2C_You%27re_Killing_Me%21.jpg"
+      ],
+      "price": 2800,
+      "discountPercentage": 12,
+      "pages": 272,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "Pakistan",
+      "tags": ["Humor", "Journalism", "Karachi", "Pakistan", "Urban Life"],
+      "reviews": [29, 35, 21, 26, 31],
+      "authorName": "Saba Imtiaz",
+      "authorId": 214,
+      "publisherName": "Random House India",
+      "publisherId": 207,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 230,
+      "title": "Curfewed Night",
+      "rating": 4.1,
+      "description": "This is a personal account of life in conflict-ridden Kashmir. Basharat Peer offers a poignant and intimate portrayal of the Kashmiri struggle for freedom, capturing the experiences of a generation growing up amidst violence and political turmoil.",
+      "publishDate": "2008-02-15",
+      "images": [
+        "https://m.media-amazon.com/images/I/81ChbNu3rPL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "price": 2900,
+      "discountPercentage": 10,
+      "pages": 256,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Memoir", "Kashmir Conflict", "Personal Account", "Political Turmoil"],
+      "reviews": [32, 37, 23, 29, 40],
+      "authorName": "Basharat Peer",
+      "authorId": 215,
+      "publisherName": "Scribner",
+      "publisherId": 208,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 231,
+      "title": "Nine Lives: In Search of the Sacred in Modern India",
+      "rating": 4.2,
+      "description": "This book explores the lives of nine individuals, each of whom represents a different facet of modern India. William Dalrymple's vivid narratives take readers on a journey through various religious and spiritual practices in contemporary India.",
+      "publishDate": "2009-06-09",
+      "images": [
+        "https://m.media-amazon.com/images/I/81W4I4j4RRL._AC_UF1000,1000_QL80_.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/a/ae/Nine_Lives_In_Search_of_the_Sacred_in_Modern_India.png"
+      ],
+      "price": 3100,
+      "discountPercentage": 10,
+      "pages": 304,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "India",
+      "tags": ["Religion", "Spirituality", "Modern India", "Sacred Practices"],
+      "reviews": [27, 32, 45, 23, 36],
+      "authorName": "William Dalrymple",
+      "authorId": 212,
+      "publisherName": "Vintage",
+      "publisherId": 205,
+      "genreId": 2,
+      "subgenreId": 16
+    },
+    {
+      "id": 232,
+      "title": "The Unquiet Land: Stories from India's Fault Lines",
+      "rating": 4.3,
+      "description": "This book provides a collection of true stories that reflect various social and political issues in India. Barkha Dutt's compelling narratives shed light on the fault lines that shape India's contemporary socio-political landscape.",
+      "publishDate": "2015-09-30",
+      "images": [
+        "https://m.media-amazon.com/images/I/514svWgbsXL.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGKqvZQfRJmRJRHMIj1rVEA0KpYWYDJx8RNXQmrzc-LRHkLPp1"
+      ],
+      "price": 3000,
+      "discountPercentage": 10,
+      "pages": 352,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "India",
+      "tags": ["Non-fiction", "Social Issues", "Political Issues", "Contemporary India"],
+      "reviews": [31, 38, 29, 35, 26],
+      "authorName": "Barkha Dutt",
+      "authorId": 216,
+      "publisherName": "Aleph Book Company",
+      "publisherId": 193,
+      "genreId": 2,
+      "subgenreId": 16
     }
   ],
-
   "review": [
     {
       "id": 1,
@@ -8127,7 +8572,9 @@
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11
       ]
     },
     {
@@ -8135,11 +8582,11 @@
       "name": "Biographies & Memoirs",
       "description": "Discover the lives and experiences of individuals.",
       "subgenres": [
-        10,
-        11,
         12,
         13,
-        14
+        14,
+        15,
+        16
       ]
     },
     {
@@ -8147,9 +8594,15 @@
       "name": "Dictionaries & Language",
       "description": "Master languages and linguistic studies.",
       "subgenres": [
-        15,
-        16,
-        17
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
       ]
     },
     {
@@ -8169,9 +8622,9 @@
       "name": "English Language Teaching",
       "description": "Facilitate the learning and teaching of English.",
       "subgenres": [
-        23,
-        24,
-        25
+        26,
+        27,
+        28
       ]
     },
     {
@@ -8179,9 +8632,6 @@
       "name": "Fiction",
       "description": "Immerse yourself in imaginative storytelling.",
       "subgenres": [
-        26,
-        27,
-        28,
         29,
         30,
         31,
@@ -8194,14 +8644,7 @@
         38,
         39,
         40,
-        41
-      ]
-    },
-    {
-      "id": 7,
-      "name": "References & Encyclopedias",
-      "description": "Access comprehensive references and encyclopedic knowledge.",
-      "subgenres": [
+        41,
         42,
         43,
         44,
@@ -8209,14 +8652,26 @@
       ]
     },
     {
-      "id": 8,
-      "name": "History & Humanities",
-      "description": "Journey through historical events and humanistic studies.",
+      "id": 7,
+      "name": "References & Encyclopedias",
+      "description": "Access comprehensive references and encyclopedic knowledge.",
       "subgenres": [
         46,
         47,
         48,
-        49
+        49,
+        50
+      ]
+    },
+    {
+      "id": 8,
+      "name": "History & Humanities",
+      "description": "Journey through historical events and humanistic studies.",
+      "subgenres": [
+        51,
+        52,
+        53,
+        54
       ]
     },
     {
@@ -8224,13 +8679,13 @@
       "name": "Society & Social Sciences",
       "description": "Explore societal structures and human behavior.",
       "subgenres": [
-        50,
-        51,
-        52,
-        53,
-        54,
         55,
-        56
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
       ]
     },
     {
@@ -8238,10 +8693,10 @@
       "name": "Business & Economics",
       "description": "Navigate the world of commerce and economics.",
       "subgenres": [
-        57,
-        58,
-        59,
-        60
+        62,
+        63,
+        64,
+        65
       ]
     },
     {
@@ -8249,10 +8704,9 @@
       "name": "Law",
       "description": "Explore the principles and practice of law.",
       "subgenres": [
-        61,
-        62,
-        63,
-        64
+        66,
+        68,
+        69
       ]
     },
     {
@@ -8260,21 +8714,9 @@
       "name": "Medicine",
       "description": "Explore the science and practice of healing.",
       "subgenres": [
-        65,
-        66,
-        67,
-        68,
-        69,
         70,
         71,
-        72
-      ]
-    },
-    {
-      "id": 13,
-      "name": "Science & Mathematics",
-      "description": "Unravel the mysteries of the natural world.",
-      "subgenres": [
+        72,
         73,
         74,
         75,
@@ -8284,14 +8726,26 @@
       ]
     },
     {
+      "id": 13,
+      "name": "Science & Mathematics",
+      "description": "Unravel the mysteries of the natural world.",
+      "subgenres": [
+        79,
+        80,
+        82,
+        83,
+        84,
+        85
+      ]
+    },
+    {
       "id": 14,
       "name": "Environment & Geography",
       "description": "Study the earth and its diverse environments.",
       "subgenres": [
-        79,
-        80,
-        81,
-        82
+        86,
+        87,
+        88
       ]
     },
     {
@@ -8299,12 +8753,6 @@
       "name": "Technology & Engineering",
       "description": "Innovate, build, and shape the future with technology.",
       "subgenres": [
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
         89,
         90,
         91,
@@ -8483,75 +8931,75 @@
     },
     {
       "id": 17,
-      "name": "Language Teaching & Learning (other than ELT)",
+      "name": "Language Teaching & Learning",
       "description": "Unlock the art of teaching and learning languages.",
-      "genreId": 5
+      "genreId": 3
     },
     {
       "id": 18,
       "name": "Language: Reference & General",
       "description": "Explore language in its various forms and applications.",
-      "genreId": 5
+      "genreId": 3
     },
     {
       "id": 19,
       "name": "Linguistics",
       "description": "Delve into the study of language and its structures.",
-      "genreId": 5
+      "genreId": 3
     },
     {
       "id": 20,
       "name": "Anthologies (non-poetry)",
       "description": "Discover curated collections of non-poetic works.",
-      "genreId": 4
+      "genreId": 3
     },
     {
       "id": 21,
       "name": "Classical Texts",
       "description": "Engage with the timeless works of classical literature.",
-      "genreId": 4
+      "genreId": 3
     },
     {
       "id": 22,
       "name": "Literature: History & Criticism",
       "description": "Examine the historical and critical aspects of literature.",
-      "genreId": 4
+      "genreId": 3
     },
     {
       "id": 23,
       "name": "Plays, Playscripts",
       "description": "Dive into the world of dramatic works and scripts.",
-      "genreId": 4
+      "genreId": 3
     },
     {
       "id": 24,
       "name": "Poetry",
       "description": "Experience the power and beauty of poetic expression.",
-      "genreId": 4
+      "genreId": 3
     },
     {
       "id": 25,
       "name": "Prose: Non-fiction",
       "description": "Engage with factual and informative non-fictional works.",
-      "genreId": 4
+      "genreId": 3
     },
     {
       "id": 26,
       "name": "Elt Background & Reference Material",
       "description": "Access foundational resources for English Language Teaching.",
-      "genreId": 6
+      "genreId": 5
     },
     {
       "id": 27,
       "name": "Elt: English for Specific Purposes",
       "description": "Tailor English language education for specific fields.",
-      "genreId": 6
+      "genreId": 5
     },
     {
       "id": 28,
       "name": "Elt: Learning Material & Coursework",
       "description": "Provide essential learning materials for English language learners.",
-      "genreId": 6
+      "genreId": 5
     },
     {
       "id": 29,
@@ -8711,7 +9159,7 @@
     },
     {
       "id": 55,
-      "name": "Education",
+      "name": "Social Education",
       "description": "Empower individuals through the pursuit of knowledge and learning.",
       "genreId": 9
     },

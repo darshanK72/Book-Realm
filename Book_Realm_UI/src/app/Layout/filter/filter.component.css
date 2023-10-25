@@ -170,7 +170,7 @@
 }
 
 .vr {
-    border-left: 1px solid var(--foreground-light);
+    border-left: 1px solid var(--border-bottom-light);
 }
 
 .results {
@@ -518,7 +518,7 @@ option:not(:checked) {
 @media screen and (min-width:860px) {
 
     .wrapper {
-        padding: 2rem;
+        padding: 2rem 5rem;
     }
 
     .right .list-holder .book-item {

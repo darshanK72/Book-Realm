@@ -48,6 +48,7 @@ export class HeaderComponent implements AfterViewInit {
       if (data instanceof NavigationStart) {
         this.currentRoute = data.url;
         if (
+          this.currentRoute == '/' ||
           this.currentRoute == '/home' ||
           this.currentRoute == '/sub-genre' ||
           this.currentRoute == '/genre' ||

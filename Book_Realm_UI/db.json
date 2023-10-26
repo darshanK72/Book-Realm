@@ -3564,8 +3564,8 @@
       "description": "Adrian Shaughnessy's 'How to be a Graphic Designer Without Losing Your Soul' offers valuable insights and advice for aspiring graphic designers. Shaughnessy emphasizes the importance of creativity and integrity in the design profession.",
       "publishDate": "2010-03-02",
       "images": [
-        "https://cdn.kobo.com/book-images/98086a05-8f9b-4494-a229-f983b60f706b/1200/1200/False/how-to-be-a-graphic-designer-without-losing-your-soul.jpg",
-        "https://m.media-amazon.com/images/I/81nTCArtjlL._AC_UF894,1000_QL80_.jpg"
+        "https://m.media-amazon.com/images/I/81nTCArtjlL._AC_UF894,1000_QL80_.jpg",
+        "https://cdn.kobo.com/book-images/98086a05-8f9b-4494-a229-f983b60f706b/1200/1200/False/how-to-be-a-graphic-designer-without-losing-your-soul.jpg"
       ],
       "price": 2800,
       "discountPercentage": 20,
@@ -5022,8 +5022,8 @@
       "description": "The Diary of a Young Girl by Anne Frank is a poignant and powerful account of a young Jewish girl's experiences during the Holocaust. Anne's diary captures the hopes, fears, and dreams of a teenager living in hiding. Her words serve as a stark reminder of the atrocities of war and the strength of the human spirit.",
       "publishDate": "1947-06-25",
       "images": [
-        "https://cdn.kobo.com/book-images/265498db-16c5-421a-b481-e0f4a99e6a74/353/569/90/False/the-diary-of-a-young-girl-27.jpg",
-        "https://rukminim2.flixcart.com/image/416/416/kqidx8w0/book/x/n/y/the-diary-of-a-young-girl-original-imag4gg9afh4zw6f.jpeg?q=70"
+        "https://rukminim2.flixcart.com/image/416/416/kqidx8w0/book/x/n/y/the-diary-of-a-young-girl-original-imag4gg9afh4zw6f.jpeg?q=70",
+        "https://cdn.kobo.com/book-images/265498db-16c5-421a-b481-e0f4a99e6a74/353/569/90/False/the-diary-of-a-young-girl-27.jpg"
       ],
       "price": 1800,
       "discountPercentage": 20,
@@ -7188,8 +7188,8 @@
       "description": "Anne Frank's 'The Diary of a Young Girl' is a poignant and powerful account of a Jewish girl's experiences during the Holocaust. Anne's diary offers a deeply personal perspective on the challenges of hiding from persecution and the resilience of the human spirit.",
       "publishDate": "1947-01-01",
       "images": [
-        "https://cdn.kobo.com/book-images/265498db-16c5-421a-b481-e0f4a99e6a74/353/569/90/False/the-diary-of-a-young-girl-27.jpg",
-        "https://rukminim2.flixcart.com/image/416/416/kqidx8w0/book/x/n/y/the-diary-of-a-young-girl-original-imag4gg9afh4zw6f.jpeg?q=70"
+        "https://rukminim2.flixcart.com/image/416/416/kqidx8w0/book/x/n/y/the-diary-of-a-young-girl-original-imag4gg9afh4zw6f.jpeg?q=70",
+        "https://cdn.kobo.com/book-images/265498db-16c5-421a-b481-e0f4a99e6a74/353/569/90/False/the-diary-of-a-young-girl-27.jpg"
       ],
       "price": 2600,
       "discountPercentage": 10,
@@ -7711,7 +7711,10 @@
       "rating": 4.8,
       "description": "This memoir narrates the life and experiences of Dr. A.P.J Abdul Kalam, India's renowned scientist and former President. It provides valuable insights into his journey from a small town in Tamil Nadu to becoming a visionary leader in the field of space technology.",
       "publishDate": "1999-01-01",
-      "images": [],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/3/3a/Wings_of_Fire_by_A_P_J_Abdul_Kalam_Book_Cover.jpg",
+        "https://m.media-amazon.com/images/I/61mJ4YV7xhL._AC_UF1000,1000_QL80_.jpg"
+      ],
       "price": 2500,
       "discountPercentage": 10,
       "pages": 180,
@@ -7733,7 +7736,10 @@
       "rating": 4.2,
       "description": "While not a traditional memoir, this historical novel by Amitav Ghosh provides a vivid portrayal of Burma (now Myanmar) and India during the British colonial era. It weaves together the lives of various characters against the backdrop of sweeping historical changes.",
       "publishDate": "2000-01-01",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/71r0ssb2NKL._AC_UF1000,1000_QL80_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1520866736i/77103.jpg"
+      ],
       "price": 3200,
       "discountPercentage": 12,
       "pages": 560,
@@ -7755,7 +7761,9 @@
       "rating": 4.0,
       "description": "This novel, though not strictly a memoir, incorporates elements of personal narrative within its story, exploring art, love, and philosophy. Set in the world of Ottoman Empire miniature painters, Orhan Pamuk weaves a complex tale of love, creativity, and identity.",
       "publishDate": "2001-09-11",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/81my+a5UfBL._AC_UF894,1000_QL80_.jpg"
+      ],
       "price": 2800,
       "discountPercentage": 15,
       "pages": 432,
@@ -7777,7 +7785,9 @@
       "rating": 4.4,
       "description": "Tharoor provides a thought-provoking analysis of India's colonial history in this book. He meticulously examines the impact of British rule on India, from economic exploitation to cultural imperialism. This work challenges prevailing narratives and calls for a deeper understanding of colonial legacies.",
       "publishDate": "2016-10-26",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/81flaySX1xL._AC_UF1000,1000_QL80_.jpg"
+      ],
       "price": 3500,
       "discountPercentage": 10,
       "pages": 360,
@@ -7799,7 +7809,9 @@
       "rating": 4.1,
       "description": "The autobiography of the legendary Indian cricketer provides insights into his personal life and illustrious career. Sachin Tendulkar takes readers on a journey from his early days in Mumbai to becoming one of the greatest cricketing icons in the world.",
       "publishDate": "2014-11-06",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/71fI+NoJACL._AC_UF1000,1000_QL80_.jpg"
+      ],
       "price": 3800,
       "discountPercentage": 12,
       "pages": 496,
@@ -7821,7 +7833,9 @@
       "rating": 4.0,
       "description": "This book combines elements of personal reflection with broader socio-political commentary on India's development. Shashi Tharoor offers a compelling analysis of India's journey into the 21st century, examining the country's role on the global stage.",
       "publishDate": "2007-10-15",
-      "images": [],
+      "images": [
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348894898i/663816.jpg"
+      ],
       "price": 3000,
       "discountPercentage": 10,
       "pages": 336,
@@ -7843,7 +7857,9 @@
       "rating": 4.2,
       "description": "While not Indian, this memoir by the former President of Pakistan offers a unique perspective on the region's geopolitics. Pervez Musharraf provides a firsthand account of critical events, including conflicts with India and the global fight against terrorism.",
       "publishDate": "2006-09-25",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/613K-N45WcS._AC_UF894,1000_QL80_.jpg"
+      ],
       "price": 3200,
       "discountPercentage": 10,
       "pages": 368,
@@ -7865,7 +7881,9 @@
       "rating": 3.9,
       "description": "A memoir about the author's childhood in a Jewish family in Ahmedabad, India. Esther David paints a vivid picture of her formative years, capturing the cultural tapestry of a close-knit community.",
       "publishDate": "2002-03-01",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/M/MV5BMTgwNDgxNzgyMV5BMl5BanBnXkFtZTcwMzIzMTMxOQ@@._V1_.jpg"
+      ],
       "price": 2700,
       "discountPercentage": 8,
       "pages": 256,
@@ -7887,7 +7905,9 @@
       "rating": 4.1,
       "description": "This memoir provides a fascinating glimpse into the life of a royal figure in India. Maharani Gayatri Devi of Jaipur shares her experiences, offering a window into the opulent world of Indian royalty and her efforts to bring positive change to her state.",
       "publishDate": "1976-05-19",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/61EhLEJClzL._AC_UF1000,1000_QL80_.jpg"
+      ],
       "price": 3400,
       "discountPercentage": 10,
       "pages": 224,
@@ -7909,7 +7929,9 @@
       "rating": 4.4,
       "description": "While this is a biography, it reads like a memoir, providing a detailed account of the life of the Indian mathematician, Srinivasa Ramanujan. Robert Kanigel captures the essence of Ramanujan's genius and the challenges he faced in a rapidly changing world.",
       "publishDate": "1991-10-01",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/61k4eVw4KQL._SL1000_.jpg"
+      ],
       "price": 2900,
       "discountPercentage": 12,
       "pages": 464,
@@ -7931,7 +7953,10 @@
       "rating": 4.2,
       "description": "This non-fiction work provides a detailed account of life in a Mumbai slum. Katherine Boo's immersive narrative brings to light the complexities, struggles, and aspirations of the residents of Annawadi, a makeshift settlement near the Mumbai airport.",
       "publishDate": "2012-02-07",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/91TxXqAPSiL._AC_UF1000,1000_QL80_.jpg",
+        "https://1.bp.blogspot.com/-4PMzC-fAdcw/TzIusIbTm-I/AAAAAAAADL0/rtc2yFG8MfA/s1600/beautifulforevers.jpg"
+      ],
       "price": 3100,
       "discountPercentage": 10,
       "pages": 288,
@@ -7953,7 +7978,10 @@
       "rating": 4.3,
       "description": "A collection of essays that offer insights into various aspects of Indian history and culture. Amartya Sen's thoughtful reflections cover a wide range of topics, from identity and diversity to the challenges facing contemporary India.",
       "publishDate": "2005-10-04",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/81jz1oGFymL._AC_UF1000,1000_QL80_.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY1rMU98tzbxT1wDJ6pI1uz23ZhBsM2cORSg&usqp=CAU"
+      ],
       "price": 2800,
       "discountPercentage": 10,
       "pages": 432,
@@ -7975,7 +8003,10 @@
       "rating": 4.1,
       "description": "A blend of reportage, memoir, and historical research, this book delves into the complex and vibrant life of Mumbai. Suketu Mehta navigates the city's sprawling landscape, uncovering stories of love, crime, and survival in this compelling narrative.",
       "publishDate": "2004-04-27",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/71QtS2QbiHL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71cUZdmsROL._AC_UF1000,1000_QL80_.jpg"
+      ],
       "price": 3300,
       "discountPercentage": 10,
       "pages": 592,
@@ -7997,7 +8028,9 @@
       "rating": 4.0,
       "description": "This book offers a collection of true stories about some of India's most notorious criminals. Sunetra Choudhury delves into the lives of individuals who made headlines for their criminal activities, providing a gripping account of their experiences behind bars.",
       "publishDate": "2015-03-20",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/91Nn1vEHxLL._AC_UF1000,1000_QL80_.jpg"
+      ],
       "price": 2900,
       "discountPercentage": 10,
       "pages": 288,
@@ -8019,7 +8052,10 @@
       "rating": 4.4,
       "description": "This book provides a detailed account of the events surrounding the Indian Rebellion of 1857. William Dalrymple paints a vivid picture of the historical and cultural context, narrating the decline of the Mughal Empire and the emergence of British dominance.",
       "publishDate": "2006-10-10",
-      "images": [],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/5/51/The_Last_Mughal%2C_The_Fall_of_a_Dynasty%2C_Delhi_1857.jpg",
+        "https://m.media-amazon.com/images/I/71MBk5+2IkL._AC_UF894,1000_QL80_.jpg"
+      ],
       "price": 3200,
       "discountPercentage": 10,
       "pages": 608,
@@ -8041,7 +8077,10 @@
       "rating": 4.0,
       "description": "This book provides an account of the life of Sonia Gandhi, an influential political figure in India. Javier Moro's narrative skillfully blends fact and fiction, offering readers a compelling portrayal of one of India's prominent political leaders.",
       "publishDate": "2008-01-08",
-      "images": [],
+      "images": [
+        "https://m.media-amazon.com/images/I/71yMGW07WKL._AC_UF1000,1000_QL80_.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/f/f1/The_Red_Sari.jpg"
+      ],
       "price": 3000,
       "discountPercentage": 10,
       "pages": 432,
@@ -8154,8 +8193,84 @@
       "publisherId": 193,
       "genreId": 2,
       "subgenreId": 16
+    },
+    {
+      "id":233,
+      "title":"Assessing Specific Learning D-V1 P",
+      "rating":4.3,
+      "description":"Volume i in the series is a complete reference guide to diagnosing specific learning problems, including a list of behaviors that signal possible learning disabilities. volume ii, ready to use tools & materials for remediating specific learning disabilities (0-87628-280-x), provides 230 reproducible activities to remediate problems in reading, language arts, and math in grades k-12.",
+      "publishDate":"2022-03-01",
+      "images":[
+        "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Ffront_cover%2Fx%2Fsku%2F0787972320.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf",
+        "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Fback_cover%2Fx%2Fsku%2F0787972320.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf"
+      ],
+      "price": 2632,
+      "discountPercentage": 23,
+      "pages": 320,
+      "bookFormat": "Hardcover",
+      "language": "English",
+      "country": "United States",
+      "tags": ["Learning", "Behavioural", "Disabilities", "Language"],
+      "reviews": [21, 39, 29, 35, 26],
+      "authorName": "Joan. M. Harwell",
+      "authorId": 0,
+      "publisherName": "John Wiley & Sons",
+      "publisherId": 0,
+      "genreId": 3,
+      "subgenreId": 17
+    },
+    {
+      "id":234,
+      "title":"The Ultimate Preschool Activity Guide: Over 200 Fun Preschool Learning Activities for Kids Ages 3-5: 4 (Early Learning)",
+      "rating":4,
+      "description":"Want to be your childs favorite teacher?Help your child have fun love learning and increase knowledge...all while doing low-prep activities together!You no longer have to waste time searching for age-appropriate activities. Now you can enjoy the ultimate collection of kid-tested fun that can be ready in minutes!Autumn McKay author of The Ultimate Toddler Activity Guide is a mother of 3 and understands the pressure to expand a childs learning amidst a hectic schedule.",
+      "publishDate":"2021-01-15",
+      "images":[
+       "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Ffront_cover%2Fx%2Fsku%2F1952016371.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf",
+       "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Fback_cover%2Fx%2Fsku%2F1952016371.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf"
+      ],
+      "price": 2400,
+      "discountPercentage": 12,
+      "pages": 390,
+      "bookFormat": "Hardback",
+      "language": "English",
+      "country": "United States",
+      "tags": ["Early Learning", "Fun", "Kid Learning", "Language"],
+      "reviews": [21, 39, 29, 35, 26],
+      "authorName": "Autumn McKay",
+      "authorId": 0,
+      "publisherName": "Creative Ideas Publishing",
+      "publisherId": 0,
+      "genreId": 19,
+      "subgenreId": 136
+    },
+    {
+      "id":235,
+      "title":"WINGS Lesson Plan Guide for Toddlers: 12 Months of Thematic Learning Experiences for Early Educators of Children Ages 1 and 2",
+      "rating":4.2,
+      "description":"From the founders of the WINGS learning system the new WINGS Lesson Plan Guide for Toddlers includes 1 months of detailed and innovative thematic learning experiences for early educators to implement with children ages 1 and 2.Each guide is packed with standards-based learning activities for: Individualized/developmental playSmall GroupsLarge GroupsLearning CentersOutdoor PlayStory TimeMusic and MovementOnline/Computer Games...and so much more!",
+      "publishDate":"2021-01-12",
+      "images":[
+       "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Ffront_cover%2Fx%2Fsku%2F1953307396.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf",
+       "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Fback_cover%2Fx%2Fsku%2F1953307396.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf"
+      ],
+      "price": 5600,
+      "discountPercentage": 14,
+      "pages": 168,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United Kingdom",
+      "tags": ["Early Learning", "Fun", "Kid Learning", "Language"],
+      "reviews": [21, 39, 29, 35, 26],
+      "authorName": "Bisa Batten Lewis",
+      "authorId": 0,
+      "publisherName": "Ideal Early Learning LLC",
+      "publisherId": 0,
+      "genreId": 19,
+      "subgenreId": 136
     }
   ],
+
   "review": [
     {
       "id": 1,

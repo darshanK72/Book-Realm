@@ -30,17 +30,18 @@ export class HomeComponent implements OnInit{
     this.http
       .get<Book[]>('http://localhost:3000/book')
       .subscribe((data) => {
-        this.genre1books = data.filter(book => book.subgenreId == 13).splice(7);
-        this.http.get<Subgenre>(`http://localhost:3000/subgenre/${13}`).subscribe(subg => this.genre1Title = subg.description);
-        this.genre2books = data.filter(book => book.subgenreId == 2).splice(7);
+        this.genre1books = data.filter(book => book.subgenreId == 16);
+        console.log(this.genre1books);
+        this.http.get<Subgenre>(`http://localhost:3000/subgenre/${16}`).subscribe(subg => this.genre1Title = subg.description);
+        this.genre2books = data.filter(book => book.subgenreId == 12);
         this.http.get<Subgenre>(`http://localhost:3000/subgenre/${12}`).subscribe(subg => this.genre2Title = subg.description);
-        this.genre3books = data.filter(book => book.subgenreId == 12).splice(7);
+        this.genre3books = data.filter(book => book.subgenreId == 3);
         this.http.get<Subgenre>(`http://localhost:3000/subgenre/${3}`).subscribe(subg => this.genre3Title = subg.description);
-        this.genre4books = data.filter(book => book.subgenreId == 4).splice(7);
+        this.genre4books = data.filter(book => book.subgenreId == 4);
         this.http.get<Subgenre>(`http://localhost:3000/subgenre/${4}`).subscribe(subg => this.genre4Title = subg.description);
-        this.genre5books = data.filter(book => book.subgenreId == 5).splice(7);
+        this.genre5books = data.filter(book => book.subgenreId == 5);
         this.http.get<Subgenre>(`http://localhost:3000/subgenre/${5}`).subscribe(subg => this.genre5Title = subg.description);
-        this.genre6books = data.filter(book => book.subgenreId == 6).splice(7);
+        this.genre6books = data.filter(book => book.subgenreId == 6);
         this.http.get<Subgenre>(`http://localhost:3000/subgenre/${6}`).subscribe(subg => this.genre6Title = subg.description);
         
       });

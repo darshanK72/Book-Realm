@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Book } from 'src/app/Models/book';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-filter',
@@ -14,7 +15,7 @@ export class FilterComponent implements OnInit{
 
   books!:Book[];
 
-  constructor(private renderer: Renderer2,private http:HttpClient) {}
+  constructor(private renderer: Renderer2,private http:HttpClient,private scrollService:ScrollService) {}
 
   ngOnInit(): void {
     this.http

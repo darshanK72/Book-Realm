@@ -6,6 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { DatePicker } from '@syncfusion/ej2-calendars';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,7 @@ import { DatePicker } from '@syncfusion/ej2-calendars';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2,private scrollService:ScrollService) {}
 
   @ViewChild('validations')
   validations!: ElementRef;

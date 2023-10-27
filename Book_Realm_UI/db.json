@@ -8268,6 +8268,31 @@
       "publisherId": 0,
       "genreId": 19,
       "subgenreId": 136
+    },
+    {
+      "id":236,
+      "title":"Peace of Mind Core Curriculum for Early Childhood: Effectively Integrating Mindfulness and Social Emotional Learning for a Kinder and More Positive School Climate",
+      "rating":4.2,
+      "description":"The Peace of Mind Core Curriculum for Early Childhoodteaches mindfulness empathy and foundational conflict resolution strategies while guiding the youngest students into the rhythms of school. This curriculum prepares the youngest students to learn how to focus their attention self-regulate build healthy relationships and become peacemakers. The curriculum fits easily into the school week with modest preparation and offers ample teacher guidance.",
+      "publishDate":"2017-04-18",
+      "images":[
+       "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Ffront_cover%2Fx%2Fsku%2F0997695412.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf",
+       "https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:760:1000:0/gravity:sm/plain/https%3A%2F%2Fimage-hub-cloud.lightningsource.com%2F2011-04-01%2FImages%2Fback_cover%2Fx%2Fsku%2F0997695412.jpg%3Fapi_key%3Dw1RqOmVGQSMPw1qtr4Zd9JnDOt9LXrdzXJLC93mf"
+      ],
+      "price": 5195,
+      "discountPercentage": 20,
+      "pages": 216,
+      "bookFormat": "Paperback",
+      "language": "English",
+      "country": "United States",
+      "tags": ["Early Learning", "Fun", "Kid Learning", "Language", "Childhood"],
+      "reviews": [27, 99, 39, 34, 23],
+      "authorName": "Jillian Diesner",
+      "authorId": 0,
+      "publisherName": "Peace of Mind Inc",
+      "publisherId": 0,
+      "genreId": 19,
+      "subgenreId": 136
     }
   ],
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-publisher',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./publisher.component.css']
 })
 export class PublisherComponent {
+
+  
+  constructor(private scrollService:ScrollService){}
 
 }

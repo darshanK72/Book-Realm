@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-genre',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent {
+
+  
+  constructor(private scrollService:ScrollService){}
+
 
 }

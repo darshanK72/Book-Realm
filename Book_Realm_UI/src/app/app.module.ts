@@ -38,6 +38,7 @@ import { AuthorComponent } from './Layout/author/author.component';
 import { PublisherComponent } from './Layout/publisher/publisher.component';
 import { AdminComponent } from './Layout/admin/admin.component';
 import { BannerComponent } from './Layout/banner/banner.component';
+import { ScrollService } from './Services/scroll.service';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,7 @@ import { BannerComponent } from './Layout/banner/banner.component';
     HttpClientModule
   ],
   providers: [
-
+    ScrollService
   ],
   bootstrap: [AppComponent]
 })

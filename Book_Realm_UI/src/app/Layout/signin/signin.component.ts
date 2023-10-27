@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-signin',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+
+  
+  constructor(private scrollService:ScrollService){}
+
 
 }

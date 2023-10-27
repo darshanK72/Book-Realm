@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
+
+  constructor(private scrollService:ScrollService){}
 
   scroll(el: HTMLElement) {
 

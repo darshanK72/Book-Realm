@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
 import { Book } from 'src/app/Models/book';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-detail',
@@ -9,7 +10,7 @@ import { Book } from 'src/app/Models/book';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  constructor(private renderer: Renderer2,private http: HttpClient,private route:ActivatedRoute) {}
+  constructor(private renderer: Renderer2,private http: HttpClient,private route:ActivatedRoute,private scrollService:ScrollService) {}
 
   @ViewChild('desc')
   desc!: ElementRef;
@@ -23,6 +24,7 @@ export class DetailComponent implements OnInit {
   show: boolean = false;
 
   book!:Book;
+  
 
   ngOnInit(): void {
 

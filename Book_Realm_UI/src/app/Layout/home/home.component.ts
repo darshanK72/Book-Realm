@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/Models/book';
 import { Subgenre } from 'src/app/Models/subgenre';
+import { ScrollService } from 'src/app/Services/scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit{
   genre6books!:Book[];
   genre6Title!:string;
  
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient,private scrollService:ScrollService) {}
 
   ngOnInit(): void {
     this.http

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
@@ -39,6 +39,13 @@ import { PublisherComponent } from './Layout/publisher/publisher.component';
 import { AdminComponent } from './Layout/admin/admin.component';
 import { BannerComponent } from './Layout/banner/banner.component';
 import { ScrollService } from './Services/scroll.service';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppStore } from './Store/app.store';
+import { BookEffects } from './Store/book/book.effects';
+import { GenreEffects } from './Store/genre/genre.effects';
+import { SubgenreEffects } from './Store/subgenre/subgenre.effects';
 
 @NgModule({
   declarations: [
@@ -80,7 +87,10 @@ import { ScrollService } from './Services/scroll.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgxSplideModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(AppStore),
+    EffectsModule.forRoot([BookEffects,GenreEffects,SubgenreEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [
     ScrollService

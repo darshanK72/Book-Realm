@@ -3,10 +3,10 @@
         <h3>{{genre.name}}</h3>
     </div>
     <div class="holder">
-        <div class="catg">
+        <div class="catg" *ngFor="let subook of subgBooks">
             <div class="top">
                 <div class="sub-title">
-                    <h5>{{subgen1Description}}</h5>
+                    <h5>{{subook.description}}</h5>
                 </div>
                 <div class="view">
                     <a routerLink="/filter">
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-                <splide-slide *ngFor="let book of subgen1Books;">
+                <splide-slide *ngFor="let book of subook.books;">
                     <div class="book-item">
                         <div class="image">
                             <img [src]="book.images[0]" alt="">
@@ -46,95 +46,6 @@
                 </splide-slide>
             </splide>
         </div>
-
-        <div class="catg">
-            <div class="top">
-                <div class="sub-title">
-                    <h5>{{subgen2Description}}</h5>
-                </div>
-                <div class="view">
-                    <a routerLink="/filter">
-                        <button>
-                            View All
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-                <splide-slide *ngFor="let book of subgen2Books;">
-                    <div class="book-item">
-                        <div class="image">
-                            <img [src]="book.images[0]" alt="">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <div class="rating">
-                                <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
-                            </div>
-                            <div class="title">
-                                <p>{{book.title}}</p>
-                            </div>
-                            <div class="author">
-                                <p>{{book.authorName}}</p>
-                            </div>
-                            <div class="price">
-                                <span class="amount"> &#8377; {{book.price}}</span>
-                                <span class="cross"> &#8377; {{book.price + 100}}</span>
-                                <span class="discount">(-{{book.discountPercentage}}%)</span>
-                            </div>
-                        </div>
-                    </div>
-                </splide-slide>
-            </splide>
-        </div>
-
-        <div class="catg">
-            <div class="top">
-                <div class="sub-title">
-                    <h5>{{subgen3Description}}</h5>
-                </div>
-                <div class="view">
-                    <a routerLink="/filter">
-                        <button>
-                            View All
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-                <splide-slide *ngFor="let book of subgen3Books;">
-                    <div class="book-item">
-                        <div class="image">
-                            <img [src]="book.images[0]" alt="">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <div class="rating">
-                                <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
-                            </div>
-                            <div class="title">
-                                <p>{{book.title}}</p>
-                            </div>
-                            <div class="author">
-                                <p>{{book.authorName}}</p>
-                            </div>
-                            <div class="price">
-                                <span class="amount"> &#8377; {{book.price}}</span>
-                                <span class="cross"> &#8377; {{book.price + 100}}</span>
-                                <span class="discount">(-{{book.discountPercentage}}%)</span>
-                            </div>
-                        </div>
-                    </div>
-                </splide-slide>
-            </splide>
-        </div>
-
 
         <div class="catg">
             <div class="top">

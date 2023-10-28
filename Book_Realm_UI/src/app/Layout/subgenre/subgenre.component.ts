@@ -1,9 +1,12 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Book } from 'src/app/Models/book';
 import { Subgenre } from 'src/app/Models/subgenre';
 import { ScrollService } from 'src/app/Services/scroll.service';
+import { AppState } from 'src/app/Store/app.state';
+import { selectBooksBySubgenreId } from 'src/app/Store/book/book.selectors';
+import { selectSubgenreById, selectSubgenresByGenreId } from 'src/app/Store/subgenre/subgenre.selectors';
 
 @Component({
   selector: 'app-subgenre',
@@ -13,35 +16,37 @@ import { ScrollService } from 'src/app/Services/scroll.service';
 export class SubgenreComponent implements OnInit {
   books!: Book[];
   subgenreId!: any;
-  genreId!:any;
-  subgenreName!:string;
-  subgenres:Subgenre[] = [];
+  genreId!: any;
+  subgenreName!: any;
+  subgenres: Subgenre[] = [];
 
   constructor(
-    private http: HttpClient,
     private scrollService: ScrollService,
     private route: ActivatedRoute,
-    private router: Router
+    private store: Store<AppState>
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(map => {
-      this.subgenreId = map.get("id");
+    this.route.paramMap.subscribe((map) => {
+      this.subgenreId = map.get('id');
 
-      this.http
-          .get<Book[]>(' http://localhost:3000/book')
-          .subscribe((data) => {
-            this.books = data.filter((b) => b.subgenreId == this.subgenreId);
-            this.genreId = this.books[0].genreId;
+      this.store
+        .select(selectSubgenreById(this.subgenreId))
+        .subscribe((subgenre) => {
+          this.subgenreName = subgenre?.name;
 
-            this.http
-            .get<Subgenre[]>(`http://localhost:3000/subgenre?genreId=${this.genreId}`).subscribe(data => {
-              this.subgenres = data;
+          this.store
+            .select(selectBooksBySubgenreId(this.subgenreId))
+            .subscribe((books) => {
+              this.books = books;
 
-              this.subgenreName = this.subgenres.find(s => s.id == this.subgenreId)?.name || '';
-            })
-          });
+              this.genreId = this.books[0].genreId;
 
-    })
+              this.store.select(selectSubgenresByGenreId(this.genreId)).subscribe(subgenres => {
+                this.subgenres = subgenres;
+              })
+            });
+        });
+    });
   }
 }

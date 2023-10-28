@@ -1,11 +1,16 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { forkJoin, map, switchMap, take, tap } from 'rxjs';
+import { Store } from '@ngrx/store';
 import { Book } from 'src/app/Models/book';
-import { Genre } from 'src/app/Models/genre';
 import { Subgenre } from 'src/app/Models/subgenre';
 import { ScrollService } from 'src/app/Services/scroll.service';
+import { AppState } from 'src/app/Store/app.state';
+import { getBooks } from 'src/app/Store/book/book.actions';
+import { selectBooksBySubgenreId } from 'src/app/Store/book/book.selectors';
+import { getGenres } from 'src/app/Store/genre/genre.actions';
+import { selectGenreById } from 'src/app/Store/genre/genre.selectors';
+import { getSubgenres } from 'src/app/Store/subgenre/subgenre.actions';
+import { selectSubgenresByGenreId } from 'src/app/Store/subgenre/subgenre.selectors';
 
 @Component({
   selector: 'app-genre',
@@ -15,8 +20,9 @@ import { ScrollService } from 'src/app/Services/scroll.service';
 export class GenreComponent implements OnInit {
   genreId!: any;
   genre!: any;
+  subgenres!: Subgenre[];
 
-  subgenres:Subgenre[] = [];
+  subgBooks:any[] = [];
 
   subgen1Description!: string;
   subgen1Books!: Book[];
@@ -30,60 +36,34 @@ export class GenreComponent implements OnInit {
   constructor(
     private scrollService: ScrollService,
     private route: ActivatedRoute,
-    private http: HttpClient
+    private store: Store<AppState>
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap
-      .pipe(
-        switchMap((map) => {
-          this.genreId = map.get('id');
-          return this.http.get<Genre>(
-            `http://localhost:3000/genre/${this.genreId}`
-          );
-        }),
-        switchMap((gen) => {
-          this.genre = gen;
+    
+    this.route.paramMap.subscribe((map) => {
+      this.genreId = map.get('id');
+      this.store.select(selectGenreById(this.genreId)).subscribe((data) => {
+        this.genre = data;
+        console.log(this.genre);
+        this.store
+        .select(selectSubgenresByGenreId(this.genre.id))
+        .subscribe((data) => {
+          this.subgenres = data;
+          console.log(this.subgenres);
 
-          const subgenreObservables = gen.subgenres.map((subid) =>
-            this.http
-              .get<Subgenre>(`http://localhost:3000/subgenre/${subid}`)
-              .pipe(
-                switchMap((subgen) => {
+          this.subgBooks = [];
 
-                  this.subgenres.push(subgen);
+          this.subgenres.forEach((subgenre) => {
+            this.store
+              .select(selectBooksBySubgenreId(subgenre.id))
+              .subscribe((books) => {
+                this.subgBooks.push({description:subgenre.description,books:books});
 
-                  return this.http
-                    .get<Book[]>(
-                      `http://localhost:3000/book?subgenreId=${subgen.id}`
-                    )
-                    .pipe(
-                      map((data) => ({
-                        description: subgen.description,
-                        books: data,
-                      }))
-                    );
-                })
-              )
-          );
-
-          return forkJoin(subgenreObservables);
-        })
-      )
-      .subscribe(
-        ([subgen1, subgen2, subgen3]) => {
-          this.subgen1Description = subgen1.description;
-          this.subgen1Books = subgen1.books;
-
-          this.subgen2Description = subgen2.description;
-          this.subgen2Books = subgen2.books;
-
-          this.subgen3Description = subgen3.description;
-          this.subgen3Books = subgen3.books;
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+              });
+          });
+        });
+      });
+    });
   }
 }

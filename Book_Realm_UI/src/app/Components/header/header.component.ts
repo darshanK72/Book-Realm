@@ -17,6 +17,10 @@ import { ToggleService } from 'src/app/Services/toggle.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements AfterViewInit {
+
+  @ViewChild('fullElement')
+  fullElement!:ElementRef;
+
   currentRoute!: any;
 
   constructor(
@@ -25,7 +29,6 @@ export class HeaderComponent implements AfterViewInit {
     private router: Router
   ) {
     this.renderer.listen('window', 'click', (e: Event) => {
-     
       if (
         e.target == this.showprofbtn.nativeElement &&
         this.showprof == false
@@ -43,7 +46,6 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    
     this.router.events.subscribe((data) => {
       if (data instanceof NavigationStart) {
         this.currentRoute = data.url;
@@ -53,11 +55,13 @@ export class HeaderComponent implements AfterViewInit {
           this.currentRoute == '/sub-genre' ||
           this.currentRoute == '/genre' ||
           this.currentRoute == '/filter'
-
         ) {
           this.renderer.removeClass(this.slider.nativeElement, 'hide');
-         
-        } else {
+        } 
+        else if(this.currentRoute == '/admin'){
+          this.renderer.addClass(this.fullElement.nativeElement,'hide');
+        }
+        else {
           this.renderer.addClass(this.slider.nativeElement, 'hide');
         }
       }
@@ -68,7 +72,7 @@ export class HeaderComponent implements AfterViewInit {
   slider!: ElementRef;
 
   @ViewChild('showprof')
-  showproff!:ElementRef;
+  showproff!: ElementRef;
 
   @ViewChild('topgeners')
   topgeners!: ElementRef;
@@ -113,7 +117,7 @@ export class HeaderComponent implements AfterViewInit {
     }
   }
 
-  hideProfile(){
+  hideProfile() {
     this.showprof = false;
 
     this.renderer.removeClass(this.profile.nativeElement, 'show-profile');

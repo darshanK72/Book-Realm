@@ -11,6 +11,10 @@
     height: 60px;
 }
 
+.hide {
+    display: none !important;
+}
+
 .cross{
     width: 7%;
     display: flex;

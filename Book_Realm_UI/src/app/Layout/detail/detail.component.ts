@@ -32,6 +32,7 @@ export class DetailComponent implements OnInit {
 
     this.http.get<Book>(`http://localhost:3000/book/${id}`).subscribe((data) => {
       this.book = data;
+      console.log(this.book);
     });
   }
 

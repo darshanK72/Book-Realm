@@ -1,0 +1,14 @@
+.wrapper{
+    margin-top: 80px;
+    padding: 1rem 5rem;
+    width:100%;
+}
+
+.paragraph p{
+    border: 1px solid var(--scroll-track-color);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 60%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

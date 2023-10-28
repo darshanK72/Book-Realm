@@ -6,6 +6,11 @@
     background-color: var(--background-dark);
 }
 
+
+.hide {
+    display: none !important;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;

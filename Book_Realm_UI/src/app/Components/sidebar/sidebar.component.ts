@@ -1,6 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { NavigationStart, Router } from '@angular/router';
 import { ToggleService } from 'src/app/Services/toggle.service';
 
 @Component({
@@ -30,13 +31,29 @@ import { ToggleService } from 'src/app/Services/toggle.service';
     ]),
   ],
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('fullElement')
+  fullElement!:ElementRef;
 
   ifLoggedIn = false;
 
   searchQuery:string = '';
 
-  constructor(private toggleService:ToggleService){}
+  currentRoute!:string;
+
+  constructor(private toggleService:ToggleService,private router:Router,private renderer:Renderer2){}
+
+  ngAfterViewInit(): void {
+    this.router.events.subscribe((data) => {
+      if (data instanceof NavigationStart) {
+        this.currentRoute = data.url;
+        if(this.currentRoute == '/admin'){
+          this.renderer.addClass(this.fullElement.nativeElement,'hide');
+        }
+      }
+    });
+  }
 
   @Input()
   toShow:boolean = true;

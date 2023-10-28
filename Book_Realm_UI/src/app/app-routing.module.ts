@@ -15,6 +15,8 @@ import { AddressComponent } from './Components/address/address.component';
 import { ChangePassComponent } from './Components/change-pass/change-pass.component';
 import { GenreComponent } from './Layout/genre/genre.component';
 import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
+import { AboutComponent } from './Layout/about/about.component';
+import { AdminComponent } from './Layout/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,9 @@ const routes: Routes = [
   },
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'about', component: AboutComponent
   },
   {
     path: 'signin', component: SigninComponent
@@ -65,6 +70,9 @@ const routes: Routes = [
         path: 'change-pass',component:ChangePassComponent
       }
     ]
+  },
+  {
+    path: 'admin', component: AdminComponent
   }
 ];
 

@@ -8,9 +8,6 @@ import { ScrollService } from 'src/app/Services/scroll.service';
 })
 export class CartComponent {
 
-  
   constructor(private scrollService:ScrollService){}
-
-
 
 }

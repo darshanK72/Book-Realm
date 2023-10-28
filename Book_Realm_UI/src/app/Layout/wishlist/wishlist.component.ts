@@ -7,9 +7,5 @@ import { ScrollService } from 'src/app/Services/scroll.service';
   styleUrls: ['./wishlist.component.css']
 })
 export class WishlistComponent {
-
-  
   constructor(private scrollService:ScrollService){}
-
-
 }

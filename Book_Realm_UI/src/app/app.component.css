@@ -6,7 +6,6 @@ app-sidebar{
 }
 
 app-header{
-    /* height: 130px; */
     position: fixed;
     top: 0;
     left: 0;
@@ -14,11 +13,6 @@ app-header{
     z-index: 99;
 }
 
-
 .main{
     width: 100%;
-}
-
-@media screen and (min-width:840px) {
-    
 }

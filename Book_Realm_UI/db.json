@@ -260,8 +260,8 @@
       "description": "Ayn Rand's 'The Fountainhead' is a novel that celebrates individualism and the power of creative expression. Through the story of the fiercely independent architect Howard Roark, Rand explores themes of integrity, innovation, and the struggle against societal conformity. This thought-provoking work remains a cornerstone of architectural literature.",
       "publishDate": "1943-05-07",
       "images": [
-        "https://www.crossword.in/cdn/shop/products/9780451191151.jpg?v=1680187669",
-        "https://m.media-amazon.com/images/I/51256K48YWL._AC_UF1000,1000_QL80_.jpg"
+        "https://m.media-amazon.com/images/I/51256K48YWL._AC_UF1000,1000_QL80_.jpg",
+        "https://www.crossword.in/cdn/shop/products/9780451191151.jpg?v=1680187669"
       ],
       "price": 1700,
       "discountPercentage": 10,
@@ -5493,7 +5493,7 @@
       "authorId": 151,
       "publisherName": "University of California Press",
       "publisherId": 144,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5528,7 +5528,7 @@
       "authorId": 152,
       "publisherName": "Yale University Press",
       "publisherId": 145,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5564,7 +5564,7 @@
       "authorId": 153,
       "publisherName": "Oxford University Press",
       "publisherId": 146,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5599,7 +5599,7 @@
       "authorId": 137,
       "publisherName": "Phaidon Press",
       "publisherId": 130,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5635,7 +5635,7 @@
       "authorId": 136,
       "publisherName": "Penguin Books",
       "publisherId": 129,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5670,7 +5670,7 @@
       "authorId": 137,
       "publisherName": "Phaidon Press",
       "publisherId": 130,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5706,7 +5706,7 @@
       "authorId": 138,
       "publisherName": "Thames & Hudson",
       "publisherId": 131,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5742,7 +5742,7 @@
       "authorId": 139,
       "publisherName": "W. W. Norton & Company",
       "publisherId": 132,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5778,7 +5778,7 @@
       "authorId": 140,
       "publisherName": "Image Continuum Press",
       "publisherId": 133,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5814,7 +5814,7 @@
       "authorId": 141,
       "publisherName": "Farrar, Straus and Giroux",
       "publisherId": 134,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5851,7 +5851,7 @@
       "authorId": 142,
       "publisherName": "Vintage",
       "publisherId": 135,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5888,7 +5888,7 @@
       "authorId": 143,
       "publisherName": "Palgrave Macmillan",
       "publisherId": 136,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5923,7 +5923,7 @@
       "authorId": 144,
       "publisherName": "Phaidon Press",
       "publisherId": 137,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5960,7 +5960,7 @@
       "authorId": 145,
       "publisherName": "Phaidon Press",
       "publisherId": 138,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -5996,7 +5996,7 @@
       "authorId": 146,
       "publisherName": "Basic Books",
       "publisherId": 139,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -6032,7 +6032,7 @@
       "authorId": 147,
       "publisherName": "Harcourt Brace Jovanovich",
       "publisherId": 140,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -6068,7 +6068,7 @@
       "authorId": 148,
       "publisherName": "PublicAffairs",
       "publisherId": 141,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -6104,7 +6104,7 @@
       "authorId": 149,
       "publisherName": "Phaidon Press",
       "publisherId": 142,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -6141,7 +6141,7 @@
       "authorId": 150,
       "publisherName": "Currency",
       "publisherId": 143,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 10
     },
     {
@@ -6177,7 +6177,7 @@
       "authorId": 154,
       "publisherName": "Touchstone",
       "publisherId": 147,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6211,7 +6211,7 @@
       "authorId": 155,
       "publisherName": "Grove Press",
       "publisherId": 148,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6246,7 +6246,7 @@
       "authorId": 156,
       "publisherName": "Routledge",
       "publisherId": 149,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6280,7 +6280,7 @@
       "authorId": 157,
       "publisherName": "Vintage",
       "publisherId": 150,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6314,7 +6314,7 @@
       "authorId": 158,
       "publisherName": "Dover Publications",
       "publisherId": 151,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6348,7 +6348,7 @@
       "authorId": 159,
       "publisherName": "Penguin Books",
       "publisherId": 152,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6383,7 +6383,7 @@
       "authorId": 160,
       "publisherName": "Wiley",
       "publisherId": 153,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6418,7 +6418,7 @@
       "authorId": 161,
       "publisherName": "Routledge",
       "publisherId": 154,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6452,7 +6452,7 @@
       "authorId": 162,
       "publisherName": "Theatre Communications Group",
       "publisherId": 155,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6487,7 +6487,7 @@
       "authorId": 163,
       "publisherName": "Routledge",
       "publisherId": 156,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6521,7 +6521,7 @@
       "authorId": 164,
       "publisherName": "Routledge",
       "publisherId": 157,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6556,7 +6556,7 @@
       "authorId": 154,
       "publisherName": "Nick Hern Books",
       "publisherId": 158,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6590,7 +6590,7 @@
       "authorId": 165,
       "publisherName": "Applause Theatre & Cinema Books",
       "publisherId": 159,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6624,7 +6624,7 @@
       "authorId": 166,
       "publisherName": "Nick Hern Books",
       "publisherId": 160,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -6658,7 +6658,7 @@
       "authorId": 167,
       "publisherName": "Vintage",
       "publisherId": 161,
-      "genreId": 2,
+      "genreId": 1,
       "subgenreId": 11
     },
     {
@@ -8701,7 +8701,7 @@
   "genre": [
     {
       "id": 1,
-      "name": "Art & Photography",
+      "name": "Art,Film & Photography",
       "description": "Explore the world of visual arts and photography.",
       "subgenres": [
         1,

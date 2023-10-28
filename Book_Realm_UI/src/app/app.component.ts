@@ -8,18 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
 
   title = 'Book_Realm_UI';
-
-  ngOnInit(): void {
-    // console.log(this.router.url);
-  }
-
   showSidebar: boolean = false;
 
   sidebarToggle(event: any) {
     this.showSidebar = event;
-    console.log(this.showSidebar);
   }
 }

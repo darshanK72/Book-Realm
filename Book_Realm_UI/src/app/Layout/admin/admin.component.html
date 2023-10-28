@@ -50,5 +50,31 @@
                 </div>
             </div>
         </div>
+        <div class="content">
+            <table class="books">
+                <thead>
+                    <tr>
+                        <th>Book Id</th>
+                        <th class="title">Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>Pages</th>
+                        <th>Publisher</th>
+                        <th>Publish Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books;">
+                        <td>{{book.id}}</td>
+                        <td>{{book.title}}</td>
+                        <td>{{book.authorName}}</td>
+                        <td>{{book.price}}</td>
+                        <td>{{book.pages}}</td>
+                        <td>{{book.publisherName}}</td>
+                        <td>{{book.publishDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

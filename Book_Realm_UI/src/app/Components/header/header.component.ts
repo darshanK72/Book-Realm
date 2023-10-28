@@ -21,7 +21,7 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('fullElement')
   fullElement!:ElementRef;
 
-  currentRoute!: any;
+  currentRoute!: string;
 
   constructor(
     private renderer: Renderer2,
@@ -52,8 +52,8 @@ export class HeaderComponent implements AfterViewInit {
         if (
           this.currentRoute == '/' ||
           this.currentRoute == '/home' ||
-          this.currentRoute == '/sub-genre' ||
-          this.currentRoute == '/genre' ||
+          this.currentRoute.includes("sub-genre") ||
+          this.currentRoute.includes("genre") ||
           this.currentRoute == '/filter'
         ) {
           this.renderer.removeClass(this.slider.nativeElement, 'hide');

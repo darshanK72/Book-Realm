@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="title">
-        <h3> Literature & Friction</h3>
+        <h3>{{subgenreName}}</h3>
     </div>
     <div class="holder">
         <div class="catg">
@@ -96,18 +96,20 @@
         <div class="catg">
             <div class="top">
                 <div class="sub-title">
-                    <h5>Related Sub Genres</h5>
+                    <h5>All Sub Genres</h5>
                 </div>
             </div>
             <div class="sub-gener-list">
-              <div class="sub-genre" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
-                <div class="sub-genre-image">
-                    <img src="../../../assets/img/action.jpg" alt="">
-                    <p>Science & Friction
-                        <small>877 Books</small>
-                    </p>
-                    
-                </div>
+              <div class="sub-genre item" *ngFor="let subg of subgenres;">
+                <a routerLink="/sub-genre/{{subg.id}}">
+                    <div class="image">
+                        <img src="../../../assets/img/booklogo.png" alt="">
+                    </div>
+                    <div class="name">
+                        <p>{{subg.name}}
+                        </p>
+                    </div>
+                </a>
               </div>
             </div>
         </div>

@@ -9,6 +9,15 @@
 
 }
 
+.top .sub-title{
+    width: 70%;
+}
+
+.top .view{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
 
 .top {
     display: flex;
@@ -26,7 +35,7 @@
 }
 
 .book-item {
-    width: 181px;
+    width: 222px;
     padding: 1rem;
     margin: 10px 10px 20px 10px;
     /* border: 1px solid var(--foreground-muted); */
@@ -65,12 +74,14 @@
 
 .book-item .image {
     width: 100%;
+    height: 250px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .book-item .image img {
     width: 100%;
+    object-fit: contain;
 }
 
 .book-item .rating {
@@ -106,6 +117,11 @@
 }
 
 .book-item .author {
+    display: -webkit-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
     color: var(--foreground-muted);
 }
 
@@ -149,6 +165,11 @@
 }
 
 .item .name p {
+    display: -webkit-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -159,8 +180,8 @@
 .sub-gener-list {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content:flex-start;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
@@ -173,6 +194,7 @@
 
 .sub-genre .sub-genre-image{
     width: 100%;
+    border-radius: 50%;
 }
 
 .sub-genre .sub-genre-image img {
@@ -183,10 +205,7 @@
 
 
 .sub-genre .sub-genre-image p {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: var(--white);
+    color: var(--foreground-dark);
     font-weight: 700;
     z-index: 95;
 }

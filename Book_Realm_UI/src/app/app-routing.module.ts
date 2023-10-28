@@ -17,6 +17,8 @@ import { GenreComponent } from './Layout/genre/genre.component';
 import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
 import { AboutComponent } from './Layout/about/about.component';
 import { AdminComponent } from './Layout/admin/admin.component';
+import { AuthorComponent } from './Layout/author/author.component';
+import { PublisherComponent } from './Layout/publisher/publisher.component';
 
 const routes: Routes = [
   {
@@ -47,10 +49,10 @@ const routes: Routes = [
     path: 'filter', component: FilterComponent
   },
   {
-    path: 'genre', component: GenreComponent
+    path: 'genre/:id', component: GenreComponent
   },
   {
-    path: 'sub-genre', component: SubgenreComponent
+    path: 'sub-genre/:id', component: SubgenreComponent
   },
   {
     path: 'profile', component: ProfileComponent,children:[
@@ -73,6 +75,12 @@ const routes: Routes = [
   },
   {
     path: 'admin', component: AdminComponent
+  },
+  {
+    path: 'author', component: AuthorComponent
+  },
+  {
+    path: 'publisher', component: PublisherComponent
   }
 ];
 

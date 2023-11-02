@@ -46,6 +46,7 @@ import { AppStore } from './Store/app.store';
 import { BookEffects } from './Store/book/book.effects';
 import { GenreEffects } from './Store/genre/genre.effects';
 import { SubgenreEffects } from './Store/subgenre/subgenre.effects';
+import { ContactComponent } from './Layout/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { SubgenreEffects } from './Store/subgenre/subgenre.effects';
     PublisherComponent,
     AdminComponent,
     BannerComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,7 @@ import { AboutComponent } from './Layout/about/about.component';
 import { AdminComponent } from './Layout/admin/admin.component';
 import { AuthorComponent } from './Layout/author/author.component';
 import { PublisherComponent } from './Layout/publisher/publisher.component';
+import { ContactComponent } from './Layout/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'about', component: AboutComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
   },
   {
     path: 'signin', component: SigninComponent

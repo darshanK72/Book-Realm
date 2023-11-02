@@ -1,0 +1,51 @@
+.wrapper{
+    margin-top: 80px;
+    padding: 1rem 5rem;
+    width:100%;
+}
+
+.content{
+    border: 1px solid var(--scroll-track-color);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .left{
+    width: 40%;
+    background: var(--gradient);
+    border-radius: 25px;
+    padding: 3rem 2rem;
+    color: var(--white);
+}
+
+.left h3{
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.left>p{
+    margin-bottom: 1rem;
+}
+
+.phone p{
+    margin-bottom: 10px;
+}
+
+.address p{
+    margin-bottom: 10px;
+}
+
+
+.mail p{
+    margin-bottom: 10px;
+}
+
+
+.content .right{
+    width: 58%;
+}

@@ -22,6 +22,8 @@
 
     --border-bottom-light : hsl(0, 0%, 95%);
 
+    --gradient:linear-gradient(to right, hsl(0, 69%, 57%) , hsl(359, 49%, 29%));
+
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 

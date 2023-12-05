@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 import { ActivatedRoute, Route } from '@angular/router';
 import { Book } from 'src/app/Models/book';
 import { ScrollService } from 'src/app/Services/scroll.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-detail',
@@ -24,13 +25,15 @@ export class DetailComponent implements OnInit {
   show: boolean = false;
 
   book!:Book;
+
+  baseUrl:string = environment.baseUrl;
   
 
   ngOnInit(): void {
 
     let id = parseInt(this.route.snapshot.paramMap.get('bookId') || '');
 
-    this.http.get<Book>(`http://localhost:3000/book/${id}`).subscribe((data) => {
+    this.http.get<Book>(`${this.baseUrl}/book/${id}`).subscribe((data) => {
       this.book = data;
       console.log(this.book);
     });

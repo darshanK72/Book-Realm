@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Book } from 'src/app/Models/book';
 import { ScrollService } from 'src/app/Services/scroll.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-filter',
@@ -15,11 +16,13 @@ export class FilterComponent implements OnInit{
 
   books!:Book[];
 
+  baseUrl:string = environment.baseUrl;
+
   constructor(private renderer: Renderer2,private http:HttpClient,private scrollService:ScrollService) {}
 
   ngOnInit(): void {
     this.http
-      .get<Book[]>(' http://localhost:3000/book')
+      .get<Book[]>(`${this.baseUrl}/book`)
       .subscribe((data) => {
         this.books = data;
         console.log(data);

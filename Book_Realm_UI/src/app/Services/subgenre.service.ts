@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Subgenre } from '../Models/subgenre';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Subgenre } from '../Models/subgenre';
 })
 export class SubgenreService {
 
-  baseUrl:string = 'http://localhost:3000'
+  baseUrl:string = environment.baseUrl;
 
   constructor(private http:HttpClient) { }
 

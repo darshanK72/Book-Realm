@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/Models/book';
 import { ScrollService } from 'src/app/Services/scroll.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-wishlist',
@@ -11,11 +12,12 @@ import { ScrollService } from 'src/app/Services/scroll.service';
 export class WishlistComponent implements OnInit{
 
   books!:Book[];
+  baseUrl:string = environment.baseUrl;
   
   constructor(private scrollService:ScrollService,private http:HttpClient){}
 
   ngOnInit(): void {
-    this.http.get<Book[]>('http://localhost:3000/book').subscribe(data => {
+    this.http.get<Book[]>(`${this.baseUrl}/book`).subscribe(data => {
       this.books = data;
     })
   }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Book } from 'src/app/Models/book';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-admin',
@@ -19,11 +20,13 @@ export class AdminComponent implements OnInit {
 
   books!:Book[];
 
+  baseUrl:string = environment.baseUrl;
+
   constructor(private renderer:Renderer2,private http:HttpClient) {}
 
   ngOnInit(): void {
     this.http
-      .get<Book[]>(' http://localhost:3000/book')
+      .get<Book[]>(`${this.baseUrl}/book`)
       .subscribe((data) => {
         this.books = data;
         console.log(data);

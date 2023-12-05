@@ -7,6 +7,7 @@ import { ScrollService } from 'src/app/Services/scroll.service';
 import { AppState } from 'src/app/Store/app.state';
 import { getBooks } from 'src/app/Store/book/book.actions';
 import { selectBooks } from 'src/app/Store/book/book.selectors';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -30,6 +31,8 @@ export class HomeComponent implements OnInit {
   genre6books!: Book[];
   genre6Title!: string;
 
+  baseUrl:string = environment.baseUrl;
+
   constructor(
     private http: HttpClient,
     private scrollService: ScrollService,
@@ -41,27 +44,27 @@ export class HomeComponent implements OnInit {
     this.books$.subscribe((data) => {
       this.genre1books = data.filter((book) => book.subgenreId == 16);
       this.http
-        .get<Subgenre>(`http://localhost:3000/subgenre/${16}`)
+        .get<Subgenre>(`${this.baseUrl}/subgenre/${16}`)
         .subscribe((subg) => (this.genre1Title = subg.description));
       this.genre2books = data.filter((book) => book.subgenreId == 12);
       this.http
-        .get<Subgenre>(`http://localhost:3000/subgenre/${12}`)
+        .get<Subgenre>(`${this.baseUrl}/subgenre/${12}`)
         .subscribe((subg) => (this.genre2Title = subg.description));
       this.genre3books = data.filter((book) => book.subgenreId == 3);
       this.http
-        .get<Subgenre>(`http://localhost:3000/subgenre/${3}`)
+        .get<Subgenre>(`${this.baseUrl}/subgenre/${3}`)
         .subscribe((subg) => (this.genre3Title = subg.description));
       this.genre4books = data.filter((book) => book.subgenreId == 4);
       this.http
-        .get<Subgenre>(`http://localhost:3000/subgenre/${4}`)
+        .get<Subgenre>(`${this.baseUrl}/subgenre/${4}`)
         .subscribe((subg) => (this.genre4Title = subg.description));
       this.genre5books = data.filter((book) => book.subgenreId == 5);
       this.http
-        .get<Subgenre>(`http://localhost:3000/subgenre/${5}`)
+        .get<Subgenre>(`${this.baseUrl}/subgenre/${5}`)
         .subscribe((subg) => (this.genre5Title = subg.description));
       this.genre6books = data.filter((book) => book.subgenreId == 6);
       this.http
-        .get<Subgenre>(`http://localhost:3000/subgenre/${6}`)
+        .get<Subgenre>(`${this.baseUrl}/subgenre/${6}`)
         .subscribe((subg) => (this.genre6Title = subg.description));
     });
   }

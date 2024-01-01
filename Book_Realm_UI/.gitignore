@@ -37,6 +37,10 @@ yarn-error.log
 testem.log
 /typings
 
+.deployment
+.vscode/
+scrap.txt
+
 # System files
 .DS_Store
 Thumbs.db

@@ -1,25 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SigninComponent } from './Layout/signin/signin.component';
-import { SignupComponent } from './Layout/signup/signup.component';
-import { HomeComponent } from './Layout/home/home.component';
-import { CartComponent } from './Layout/cart/cart.component';
-import { WishlistComponent } from './Layout/wishlist/wishlist.component';
-import { DetailComponent } from './Layout/detail/detail.component';
-import { FilterComponent } from './Layout/filter/filter.component';
-import { ProfileComponent } from './Layout/profile/profile.component';
-import { MyProfileComponent } from './Components/my-profile/my-profile.component';
-import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
-import { MyReviewsComponent } from './Components/my-reviews/my-reviews.component';
-import { AddressComponent } from './Components/address/address.component';
-import { ChangePassComponent } from './Components/change-pass/change-pass.component';
-import { GenreComponent } from './Layout/genre/genre.component';
-import { SubgenreComponent } from './Layout/subgenre/subgenre.component';
-import { AboutComponent } from './Layout/about/about.component';
-import { AdminComponent } from './Layout/admin/admin.component';
-import { AuthorComponent } from './Layout/author/author.component';
-import { PublisherComponent } from './Layout/publisher/publisher.component';
-import { ContactComponent } from './Layout/contact/contact.component';
+import { SigninComponent } from './Components/Auth/signin/signin.component';
+import { SignupComponent } from './Components/Auth/signup/signup.component';
+import { DetailComponent } from './Components/Book/detail/detail.component';
+import { FilterComponent } from './Components/Book/filter/filter.component';
+import { GenreComponent } from './Components/Book/genre/genre.component';
+import { SubgenreComponent } from './Components/Book/subgenre/subgenre.component';
+import { CartComponent } from './Components/Cart/cart/cart.component';
+import { AdminComponent } from './Components/Dashboard/admin/admin.component';
+import { AuthorComponent } from './Components/Dashboard/author/author.component';
+import { PublisherComponent } from './Components/Dashboard/publisher/publisher.component';
+import { HomeComponent } from './Components/Home/home/home.component';
+import { AboutComponent } from './Components/Profile/about/about.component';
+import { AddressComponent } from './Components/Profile/address/address.component';
+import { ChangePassComponent } from './Components/Profile/change-pass/change-pass.component';
+import { ContactComponent } from './Components/Profile/contact/contact.component';
+import { MyOrdersComponent } from './Components/Profile/my-orders/my-orders.component';
+import { MyProfileComponent } from './Components/Profile/my-profile/my-profile.component';
+import { MyReviewsComponent } from './Components/Profile/my-reviews/my-reviews.component';
+import { ProfileComponent } from './Components/Profile/profile/profile.component';
+import { WishlistComponent } from './Components/Wishlist/wishlist/wishlist.component';
+
 
 const routes: Routes = [
   {

@@ -1,7 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from './Store/app.state';
 import { getBooks } from './Store/book/book.actions';
@@ -11,10 +8,9 @@ import { getSubgenres } from './Store/subgenre/subgenre.actions';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-
+export class AppComponent {
   title = 'Book_Realm_UI';
   showSidebar: boolean = false;
 

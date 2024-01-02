@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, EMPTY, exhaustMap, map } from 'rxjs';
-import { SubgenreService } from 'src/app/Services/subgenre.service';
+import { SubgenreService } from 'src/app/Services/subgenre/subgenre.service';
 import {
   getSubgenres,
   getSubgenresSuccess,

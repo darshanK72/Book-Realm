@@ -46,15 +46,23 @@
     align-items: center;
     justify-content: center;
 }
+.right-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .right{
     padding: 0 4rem;
-    width: 50%;
+    width: 100%;
 }
 
 .right .form .input-box{
     border: 1px solid var(--foreground-light);
-    margin: 1rem 0;
+    margin: 8px 0;
     border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .right .form .input-box input{
@@ -62,6 +70,11 @@
     border: none;
     outline: none;
 }
+
+#password{
+    padding-right: 16px;
+}
+
 
 .right .form .button button{
     width: 100%;

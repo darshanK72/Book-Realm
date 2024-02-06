@@ -46,9 +46,15 @@
     align-items: center;
     justify-content: center;
 }
+
+.right-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .right{
     padding: 0 4rem;
-    width: 50%;
+    width: 100%;
 }
 
 .right .form .input-box{

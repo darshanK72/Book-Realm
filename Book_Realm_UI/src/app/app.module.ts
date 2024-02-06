@@ -44,6 +44,8 @@ import { AppStore } from './Store/app.store';
 import { BookEffects } from './Store/book/book.effects';
 import { GenreEffects } from './Store/genre/genre.effects';
 import { SubgenreEffects } from './Store/subgenre/subgenre.effects';
+import { CardComponent } from './Components/Home/card/card.component';
+import { FullBannerComponent } from './Components/Home/full-banner/full-banner.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,9 @@ import { SubgenreEffects } from './Store/subgenre/subgenre.effects';
     GenreComponent,
     SubgenreComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    CardComponent,
+    FullBannerComponent
   ],
   imports: [
     BrowserModule,

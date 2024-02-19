@@ -2,6 +2,7 @@ using Book_Realm_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API;
 using Book_Realm_API.Repositories;
+using Book_Realm_API.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<BookRealmDbContext>(options =>
 builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<IPublisherRepository, PublisherRepository>();
+
+builder.Services.AddScoped<IMapper,Mapper>();
 
 
 builder.Services.AddEndpointsApiExplorer();

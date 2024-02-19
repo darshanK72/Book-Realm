@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Book_Realm_API.Views
 {
-    public class UserView
+    public class UserDTO
     {
         public int Id { get; set; }
         public string? Name { get; set; }

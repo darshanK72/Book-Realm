@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API.Models;
 using Book_Realm_API.Repositories;
-using AutoMapper;
 using Book_Realm_API.Views;
+using Book_Realm_API.Utils;
 
 namespace Book_Realm_API.Controllers
 {
@@ -26,22 +26,22 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserView>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
             var users = await _userRepository.GetAllUsersAsync();
-            var usersView = users.Select((user) => _mapper.Map<UserView>(user)).ToList();
+            var usersView = users.Select((user) => _mapper.MapToUserView(user)).ToList();
             return Ok(usersView);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserView>> GetUser(int id)
+        public async Task<ActionResult<UserDTO>> GetUser(int id)
         {
             var user = await _userRepository.GetUserByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
-            var userView = _mapper.Map<UserView>(user);
+            var userView = _mapper.MapToUserView(user);
             return Ok(userView);
         }
 

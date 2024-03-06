@@ -119,3 +119,42 @@
         </div>
     </div>
 </div>
+<div class="wrapper2">
+    <div class="top">
+        <div class="title">
+            <h4>You May Also Like</h4>
+        </div>
+        <div class="view">
+            <a routerLink="/filter">
+                <button>
+                    View All
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="bottom">
+        <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
+            <splide-slide *ngFor="let book of relatedBooks">
+                <div class="book-card" (click)="getBookDetail(book.id)">
+                    <div class="book-img">
+                        <img [src]="book.images[0] " alt="">
+                    </div>
+                    <div class="details">
+                        <div class="book-title">
+                            <p>{{book.title}}</p>
+                        </div>
+                        <div class="author">
+                            <p>{{book.authorName}}</p>
+                        </div>
+                        <div class="price">
+                            <span class="amount"> &#8377; {{book.price}}</span>
+                            <span class="cross"> &#8377; {{book.price + 100}}</span>
+                            <span class="discount">(-{{book.discountPercentage}}%)</span>
+                        </div>
+                    </div>
+                </div>
+            </splide-slide>
+        </splide>
+    </div>
+</div>

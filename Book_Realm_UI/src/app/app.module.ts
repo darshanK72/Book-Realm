@@ -46,6 +46,8 @@ import { GenreEffects } from './Store/genre/genre.effects';
 import { SubgenreEffects } from './Store/subgenre/subgenre.effects';
 import { CardComponent } from './Components/Home/card/card.component';
 import { FullBannerComponent } from './Components/Home/full-banner/full-banner.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -88,6 +90,8 @@ import { FullBannerComponent } from './Components/Home/full-banner/full-banner.c
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxSplideModule,
     HttpClientModule,
     StoreModule.forRoot(AppStore),

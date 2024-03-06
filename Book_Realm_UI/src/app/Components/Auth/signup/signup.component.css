@@ -142,7 +142,7 @@ input[type=date]{
     width: 100%;
 }
 
-#password{
+.password{
     padding-right: 16px;
 }
 
@@ -158,6 +158,9 @@ input[type=date]{
 
 .validations .validation{
     line-height: 1.2;
+}
+
+.invalid{
     color: var(--primary-variant);
 }
 
@@ -169,6 +172,13 @@ input[type=date]{
     color: var(--foreground-green) !important;
 }
 
+.disabled-button{
+    background-color: var(--primary-variant-dim) !important;
+}
+.error-message {
+    color: red;
+    font-size: 12px; /* Adjust the font size as needed */
+  }
 
 @media screen and (max-width:540px) {
     

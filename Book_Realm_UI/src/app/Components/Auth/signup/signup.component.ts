@@ -1,13 +1,13 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ScrollService } from 'src/app/Services/scroll/scroll.service';
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent  implements OnInit {
-  constructor(private renderer: Renderer2,private scrollService:ScrollService) {}
+  constructor(private renderer: Renderer2,private scrollService:ScrollService,private fb: FormBuilder) {}
 
   @ViewChild('validations')
   validations!: ElementRef;
@@ -27,8 +27,41 @@ export class SignupComponent  implements OnInit {
   @ViewChild("eight")
   eight!:ElementRef
 
+  @ViewChild("passmatch")
+  passmatch!:ElementRef
+
   eleOpen: boolean = false;
-  ngOnInit(): void {}
+
+  signupForm!: FormGroup;
+
+  ngOnInit(): void {
+    this.signupForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^\d+$/)]],
+      password: ['', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$/)]],
+      confirmPassword: ['', Validators.required]
+    });
+  }
+
+  onSignupSubmit() {
+    if (this.signupForm.valid) {
+      console.log('Form submitted successfully');
+    } else {
+      this.validateAllFormFields(this.signupForm);
+    }
+  }
+
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control instanceof FormGroup) {
+        this.validateAllFormFields(control);
+      } else {
+        control?.markAsTouched({ onlySelf: true });
+      }
+    });
+  }
 
   toggleEye(ele: HTMLInputElement) {
     this.eleOpen = !this.eleOpen;
@@ -39,16 +72,26 @@ export class SignupComponent  implements OnInit {
     }
   }
 
-  showValidations(ele: HTMLInputElement) {
-    if (ele.value !== '') {
+  buttonDisabled(signupForm:FormGroup){
+    if(signupForm.valid){
+      if(signupForm.value?.password == signupForm.value?.confirmPassword){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  showValidations(signupForm:FormGroup) {
+    let password = signupForm.value?.password;
+    if (signupForm.value?.password) {
 
       this.renderer.addClass(this.validations.nativeElement, 'show');
 
-      let hasNumber = /\d/.test(ele.value);
-      let hasUpper = /[A-Z]/.test(ele.value);
-      let hasLower = /[a-z]/.test(ele.value);
-      let hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(ele.value);
-      let hasMinLength = ele.value.length >= 8;
+      let hasNumber = /\d/.test(password);
+      let hasUpper = /[A-Z]/.test(password);
+      let hasLower = /[a-z]/.test(password);
+      let hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+      let hasMinLength = password.length >= 8;
 
       if(hasNumber){
         this.renderer.addClass(this.number.nativeElement,"valid");
@@ -85,6 +128,18 @@ export class SignupComponent  implements OnInit {
 
     } else {
       this.renderer.removeClass(this.validations.nativeElement, 'show');
+    }
+  }
+
+  verifyPassword(signupForm:FormGroup){
+    if(signupForm.touched){
+   
+      if(signupForm.value?.password == signupForm.value?.confirmPassword){
+        this.renderer.addClass(this.passmatch.nativeElement,"valid");
+      }
+      else{
+        this.renderer.removeClass(this.passmatch.nativeElement,"valid");
+      }
     }
   }
 }

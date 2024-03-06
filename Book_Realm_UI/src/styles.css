@@ -3,6 +3,7 @@
 
     /* Colors */
     --primary-variant: rgb(242, 74, 74);
+    --primary-variant-dim: rgb(209, 130, 130);
     --secondary-variant: hsl(16, 100%, 73%);
     --gold-variant: hsl(48, 100%, 50%);
 

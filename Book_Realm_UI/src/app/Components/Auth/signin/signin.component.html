@@ -29,23 +29,38 @@
         <div class="right">
             <div class="top">
                 <h5>Hello, welcome back!
-                   </h5>
-                   <p> Great to have you back, please sign In to continue</p>
+                </h5>
+                <p> Great to have you back, please sign In to continue</p>
             </div>
             <div class="form">
-                <form>
+                <form [formGroup]="signinForm" (ngSubmit)="onSigninSubmit()">
                     <div class="input-box">
-                        <input type="email" name="email" placeholder="Email Address">
+                        <input type="email" formControlName="email" placeholder="Email Address">
+                    </div>
+                    <div
+                        *ngIf="signinForm.get('email')?.invalid && (signinForm.get('email')?.dirty || signinForm.get('email')?.touched)">
+                        <div *ngIf="signinForm.get('email')?.hasError('required')">
+                            <p class="error-message">Email is required</p>
+                        </div>
+                        <div *ngIf="signinForm.get('email')?.hasError('email')">
+                            <p class="error-message">Incorrect Email Format</p>
+                        </div>
                     </div>
                     <div class="input-box" id="password">
-                        <input type="password" #password name="passowrd" id="" placeholder="Password">
+                        <input type="password" #password formControlName="password" id="" placeholder="Password">
                         <div class="eye" (click)="toggleEye(password)">
                             <i class="fa-regular fa-eye" id="open" *ngIf="eleOpen"></i>
                             <i class="fa-regular fa-eye-slash" id="close" *ngIf="!eleOpen"></i>
                         </div>
                     </div>
+                    <div
+                        *ngIf="signinForm.get('password')?.invalid && (signinForm.get('password')?.dirty || signinForm.get('password')?.touched)">
+                        <div *ngIf="signinForm.get('password')?.hasError('required')">
+                            <p class="error-message">Password is required</p>
+                        </div>
+                    </div>
                     <div class="button">
-                        <button class="btn btn-primary">Sign In</button>
+                        <button class="btn btn-primary" [class.disabled-button]="signinForm.invalid" [disabled]="signinForm.invalid">Sign In</button>
                     </div>
                 </form>
             </div>
@@ -56,12 +71,14 @@
             </div>
             <div class="other-methods">
                 <div class="google-login">
-                    <img src="../../../assets/img/google.svg" alt=""> <p>Sign in with google</p>
+                    <img src="../../../assets/img/google.svg" alt="">
+                    <p>Sign in with google</p>
                 </div>
             </div>
             <div class="message">
                 <p>Do not have an account?
-                    <span class="text-primary"> <a routerLink="/signup">Sign Up</a></span></p>
+                    <span class="text-primary"> <a routerLink="/signup">Sign Up</a></span>
+                </p>
             </div>
         </div>
     </div>

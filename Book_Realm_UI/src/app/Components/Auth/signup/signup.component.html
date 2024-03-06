@@ -25,62 +25,106 @@
     <div class="vr">
 
     </div>
-   <div class="right-flex">
-    <div class="right">
-        <div class="top">
-            <h5>Hello, welcome back!
-               </h5>
-               <p> Great to have you back, please sign In to continue</p>
-        </div>
-        <div class="form">
-            <form>
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name">
-                </div>
-                <div class="input-box">
-                    <input type="email" name="email" placeholder="Email Address">
-                </div>
-                <div class="input-box">
-                    <input type="text" name="phone" placeholder="Phone No">
-                </div>
-                <div class="input-box" id="date-box">
-                    <input type="date" id="element" name="dateOfBirth" placeholder="Date Of Birth" id="date" onfocus="(this.type='date')"
-                    onblur="(this.type='text')">
-                </div>
-                <div class="input-box" id="password">
-                    <input type="password" name="passowrd" #password placeholder="Password" (input)="showValidations(password)">
-                    <div class="eye" (click)="toggleEye(password)">
-                        <i class="fa-regular fa-eye" id="open" *ngIf="eleOpen"></i>
-                        <i class="fa-regular fa-eye-slash" id="close" *ngIf="!eleOpen"></i>
+    <div class="right-flex">
+        <div class="right">
+            <div class="top">
+                <h5>Hello, welcome back!
+                </h5>
+                <p> Great to have you back, please sign In to continue</p>
+            </div>
+            <div class="form">
+                <form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
+                    <div class="input-box">
+                        <input type="text" formControlName="name" id="name" placeholder="Full Name">
                     </div>
+                    <div
+                        *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)">
+                        <div *ngIf="signupForm.get('name')?.hasError('required')">
+                            <p class="error-message">Full Name is required</p>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" formControlName="email" placeholder="Email Address">
+                    </div>
+                    <div
+                        *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                        <div *ngIf="signupForm.get('email')?.hasError('required')">
+                            <p class="error-message">Email is required</p>
+                        </div>
+                        <div *ngIf="signupForm.get('email')?.hasError('email')">
+                            <p class="error-message">Incorrect Email Format</p>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" formControlName="phone" placeholder="Mobile No">
+                    </div>
+                    <div
+                        *ngIf="signupForm.get('phone')?.invalid && (signupForm.get('phone')?.dirty || signupForm.get('phone')?.touched)">
+                        <div *ngIf="signupForm.get('phone')?.hasError('required')">
+                            <p class="error-message">Phone Number is Required</p>
+                        </div>
+                        <div *ngIf="signupForm.get('phone')?.hasError('pattern')">
+                            <p class="error-message">Phone Number should contain digits only</p>
+                        </div>
+                        <div *ngIf="signupForm.get('phone')?.hasError('minlength')">
+                            <p class="error-message">Phone Number should be 10 digits long</p>
+                        </div>
+                        <div *ngIf="signupForm.get('phone')?.hasError('maxlength')">
+                            <p class="error-message">Phone Number should be 10 digits long</p>
+                        </div>
+                    </div>
+                    <div class="input-box password" id="password1">
+                        <input type="password" id="password" formControlName="password" #password1
+                            placeholder="Password" (input)="showValidations(signupForm)">
+                        <div class="eye" (click)="toggleEye(password1)">
+                            <i class="fa-regular fa-eye" id="open" *ngIf="eleOpen"></i>
+                            <i class="fa-regular fa-eye-slash" id="close" *ngIf="!eleOpen"></i>
+                        </div>
+                    </div>
+                    <div
+                        *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+                        <div *ngIf="signupForm.get('password')?.hasError('required')">
+                            <p class="error-message">Password is required</p>
+                        </div>
+                        <div *ngIf="signupForm.get('password')?.hasError('invalidPassword')">
+                            <p class="error-message">Password should contain at least 1 uppercase letter, 1 lowercase
+                                letter, 1 number, 1 special character, and be at least 8 characters long</p>
+                        </div>
+                    </div>
+                    <div class="input-box" id="password2">
+                        <input type="password" id="confirmPassword" formControlName="confirmPassword" #password2
+                            placeholder="Verify Password" (input)="verifyPassword(signupForm)">
+                    </div>
+                    <div class="validations" #validations>
+                        <p class="name">Password Should be</p>
+                        <p class="validation invalid" #upper>At least 1 uppercase letter.</p>
+                        <p class="validation invalid" #lower>At least 1 lowercase letter.</p>
+                        <p class="validation invalid" #number>At least 1 number.</p>
+                        <p class="validation invalid" #special>At least 1 special character.</p>
+                        <p class="validation invalid" #eight>Minium 8 character.</p>
+                        <p class="validation invalid" #passmatch>Password Should Match.</p>
+                    </div>
+                    <div class="button">
+                        <button class="btn btn-primary" [class.disabled-button]="buttonDisabled(signupForm)" [disabled]="buttonDisabled(signupForm)">Sign In</button>
+                    </div>
+                </form>
+            </div>
+            <div class="rule">
+                <div class="hr"></div>
+                <p>OR</p>
+                <div class="hr"></div>
+            </div>
+            <div class="other-methods">
+                <div class="google-login">
+                    <img src="../../../assets/img/google.svg" alt="">
+                    <p>Sign in with google</p>
                 </div>
-                <div class="validations" #validations>
-                    <p class="name">Password Should be</p>
-                    <p class="validation" #upper>At least 1 uppercase letter.</p>
-                    <p class="validation" #lower>At least 1 lowercase letter.</p>
-                    <p class="validation" #number>At least 1 number.</p>
-                    <p class="validation" #special>At least 1 special character.</p>
-                    <p class="validation" #eight>Minium 8 character.</p>
-                </div>
-                <div class="button">
-                    <button class="btn btn-primary">Sign In</button>
-                </div>
-            </form>
-        </div>
-        <div class="rule">
-            <div class="hr"></div>
-            <p>OR</p>
-            <div class="hr"></div>
-        </div>
-        <div class="other-methods">
-            <div class="google-login">
-                <img src="../../../assets/img/google.svg" alt=""> <p>Sign in with google</p>
+            </div>
+            <div class="message">
+                <p>Already have an account?
+                    <span class="text-primary"><a routerLink="/signin">Sign In</a></span>
+                </p>
             </div>
         </div>
-        <div class="message">
-            <p>Already have an account?
-                <span class="text-primary"><a routerLink="/signin">Sign In</a></span></p>
-        </div>
     </div>
-   </div>
 </div>

@@ -1,22 +1,23 @@
-.wrapper{
+.wrapper {
     margin-top: 80px;
     padding: 1rem 5rem;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    width:100%;
+    width: 100%;
     overflow: scroll;
 }
 
-.left{
+.left {
     width: 50%;
     padding: 0 4rem;
 }
 
-.vr{
+.vr {
     border-left: 1px dashed var(--foreground-light);
 }
-.left .image-box{
+
+.left .image-box {
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -24,15 +25,15 @@
     align-items: center;
 }
 
-.image-box image{
+.image-box image {
     height: 100%;
 }
 
-.title{
+.title {
     text-align: center;
 }
 
-.features{
+.features {
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -40,23 +41,25 @@
     align-items: center;
 }
 
-.features .box{
+.features .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.right-flex{
+
+.right-flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.right{
+
+.right {
     padding: 0 4rem;
     width: 100%;
 }
 
-.right .form .input-box{
+.right .form .input-box {
     border: 1px solid var(--foreground-light);
     margin: 8px 0;
     border-radius: 8px;
@@ -65,31 +68,45 @@
     align-items: center;
 }
 
-.right .form .input-box input{
+.right .form .input-box input {
     padding: 10px 16px;
     border: none;
     outline: none;
 }
 
-#password{
+#password {
     padding-right: 16px;
 }
 
+.disabled-button {
+    background-color: var(--primary-variant-dim) !important;
+}
 
-.right .form .button button{
+.error-message {
+    color: red;
+    font-size: 12px;
+    /* Adjust the font size as needed */
+}
+
+.invalid {
+    color: var(--primary-variant);
+}
+
+
+.right .form .button button {
     width: 100%;
     text-align: center;
 }
 
-.form{
+.form {
     margin-bottom: 1rem;
 }
 
-.other-methods{
+.other-methods {
     width: 100%;
 }
 
-.other-methods .google-login{
+.other-methods .google-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,26 +121,26 @@
     padding: 4px 8px;
 }
 
-.google-login img{
+.google-login img {
     width: 34px;
     height: 34px;
 }
 
-.message{
+.message {
     width: 100%;
     font-size: 0.9rem;
     text-align: center;
 }
 
-.message span{
+.message span {
     display: inline-block;
 }
 
-.text-primary{
+.text-primary {
     color: var(--primary-variant);
 }
 
-.rule{
+.rule {
     width: 100%;
     margin-bottom: 1rem;
     display: flex;
@@ -131,52 +148,52 @@
     align-items: center;
 }
 
-.rule p{
+.rule p {
     margin: 0 1rem;
     font-weight: 700;
 }
 
-.hr{
+.hr {
     width: 20%;
     border-bottom: 2px solid var(--foreground-light);
 }
 
 @media screen and (max-width:540px) {
-    
-    .wrapper{
+
+    .wrapper {
         flex-direction: column;
         padding: 1rem;
         gap: 0;
 
     }
 
-    .left{
+    .left {
         width: 100%;
         padding: 0;
     }
 
-    .right{
+    .right {
         width: 100%;
         padding: 0;
         text-align: center;
     }
 }
 
-@media screen and (min-width:540px) and (max-width:1024px){
-    
-    .wrapper{
+@media screen and (min-width:540px) and (max-width:1024px) {
+
+    .wrapper {
         /* flex-direction: column; */
         padding: 1rem;
         gap: 0;
 
     }
 
-    .left{
+    .left {
         /* width: 100%; */
         padding: 1rem;
     }
 
-    .right{
+    .right {
         /* width: 100%; */
         padding: 1rem;
         text-align: center;

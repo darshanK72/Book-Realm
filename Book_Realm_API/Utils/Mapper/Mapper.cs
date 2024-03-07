@@ -1,11 +1,11 @@
 ﻿using Book_Realm_API.Models;
 using Book_Realm_API.Views;
 
-namespace Book_Realm_API.Utils
+namespace Book_Realm_API.Utils.Mapper
 {
     public class Mapper : IMapper
     {
-        private  readonly BookRealmDbContext _context;
+        private readonly BookRealmDbContext _context;
 
         public Mapper(BookRealmDbContext context)
         {

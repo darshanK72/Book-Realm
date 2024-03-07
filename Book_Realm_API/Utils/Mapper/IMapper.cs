@@ -1,7 +1,7 @@
 ﻿using Book_Realm_API.Models;
 using Book_Realm_API.Views;
 
-namespace Book_Realm_API.Utils
+namespace Book_Realm_API.Utils.Mapper.Mapper
 {
     public interface IMapper
     {

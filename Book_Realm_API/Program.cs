@@ -2,7 +2,7 @@ using Book_Realm_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API;
 using Book_Realm_API.Repositories;
-using Book_Realm_API.Utils;
+using Book_Realm_API.Utils.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Book_Realm_API.Models;
 using Book_Realm_API.Repositories;
 using Book_Realm_API.Views;
-using Book_Realm_API.Utils;
 
 namespace Book_Realm_API.Controllers
 {

@@ -6,7 +6,7 @@ namespace Book_Realm_API.Models
     public class Admin : User
     {
 
-        [Required]
-       public string? AdminDescription { get; set; }
+       [Required]
+       public string AdminDescription { get; set; }
     }
 }

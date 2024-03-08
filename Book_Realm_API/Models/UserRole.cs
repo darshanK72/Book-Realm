@@ -4,28 +4,21 @@ using Newtonsoft.Json;
 
 namespace Book_Realm_API.Models
 {
-    public class Address
+    public class UserRole
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-        public string Street1 { get; set; }
 
-        public string Street2 { get; set; }
-
-        public string City { get; set; }
-
-        public string State { get; set; }
-
-        public string Country { get; set; }
-
-        public int Pincode { get; set; }
-
-        [ForeignKey("User")]
+        [ForeignKey("user")]
         public Guid UserId { get; set; }
 
         [JsonIgnore]
         public User User { get; set; }
+
+        [ForeignKey("role")]
+        public Guid RoleId { get; set; }
+        public Role Role { get; set; }
     }
 }
-

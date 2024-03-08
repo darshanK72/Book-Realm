@@ -24,11 +24,9 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Address", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
@@ -48,49 +46,63 @@ namespace Book_Realm_API.Migrations
                     b.Property<string>("Street2")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Bill", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("CartId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("Discount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("Discount")
+                        .HasColumnType("real");
 
-                    b.Property<decimal>("Shipping")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("SubTotal")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("Shipping")
+                        .HasColumnType("real");
 
-                    b.Property<decimal>("Tax")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("SubTotal")
+                        .HasColumnType("real");
 
-                    b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("Tax")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Total")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CartId")
+                        .IsUnique();
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
 
                     b.ToTable("Bills");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Book", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("AuthorId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AuthorName")
                         .IsRequired()
@@ -107,8 +119,8 @@ namespace Book_Realm_API.Migrations
                     b.Property<int>("DiscountPercentage")
                         .HasColumnType("int");
 
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("GenreId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Language")
                         .HasColumnType("nvarchar(max)");
@@ -122,8 +134,8 @@ namespace Book_Realm_API.Migrations
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("PublisherId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("PublisherId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("PublisherName")
                         .IsRequired()
@@ -133,8 +145,8 @@ namespace Book_Realm_API.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubgenreId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("SubgenreId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -156,35 +168,32 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Cart", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BillId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BillId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.CartItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CartId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("CartId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -200,11 +209,9 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Genre", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -222,11 +229,9 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Image", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -247,38 +252,34 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BillId")
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("BillId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.OrderItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -294,14 +295,12 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Review", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Comment")
                         .IsRequired()
@@ -314,8 +313,8 @@ namespace Book_Realm_API.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -326,20 +325,39 @@ namespace Book_Realm_API.Migrations
                     b.ToTable("Reviews");
                 });
 
+            modelBuilder.Entity("Book_Realm_API.Models.Role", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("Book_Realm_API.Models.Subgenre", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GenreId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -355,20 +373,9 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CartId")
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
@@ -378,6 +385,11 @@ namespace Book_Realm_API.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -389,21 +401,7 @@ namespace Book_Realm_API.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("WishlistId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("AddressId");
-
-                    b.HasIndex("CartId");
-
-                    b.HasIndex("WishlistId");
 
                     b.ToTable("Users");
 
@@ -412,32 +410,55 @@ namespace Book_Realm_API.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("Book_Realm_API.Models.Wishlist", b =>
+            modelBuilder.Entity("Book_Realm_API.Models.UserRole", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Wishlist", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Wishlists");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.WishlistItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("WishlistId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("WishlistId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -493,6 +514,36 @@ namespace Book_Realm_API.Migrations
                     b.HasDiscriminator().HasValue("Publisher");
                 });
 
+            modelBuilder.Entity("Book_Realm_API.Models.Address", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.User", "User")
+                        .WithOne("Address")
+                        .HasForeignKey("Book_Realm_API.Models.Address", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Bill", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.Cart", "Cart")
+                        .WithOne("Bill")
+                        .HasForeignKey("Book_Realm_API.Models.Bill", "CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Book_Realm_API.Models.Order", "Order")
+                        .WithOne("Bill")
+                        .HasForeignKey("Book_Realm_API.Models.Bill", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("Book_Realm_API.Models.Book", b =>
                 {
                     b.HasOne("Book_Realm_API.Models.Author", "Author")
@@ -503,9 +554,7 @@ namespace Book_Realm_API.Migrations
 
                     b.HasOne("Book_Realm_API.Models.Genre", "Genre")
                         .WithMany()
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GenreId");
 
                     b.HasOne("Book_Realm_API.Models.Publisher", "Publisher")
                         .WithMany()
@@ -515,9 +564,7 @@ namespace Book_Realm_API.Migrations
 
                     b.HasOne("Book_Realm_API.Models.Subgenre", "Subgenre")
                         .WithMany()
-                        .HasForeignKey("SubgenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubgenreId");
 
                     b.Navigation("Author");
 
@@ -530,13 +577,13 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Cart", b =>
                 {
-                    b.HasOne("Book_Realm_API.Models.Bill", "Bill")
-                        .WithMany()
-                        .HasForeignKey("BillId")
+                    b.HasOne("Book_Realm_API.Models.User", "User")
+                        .WithOne("Cart")
+                        .HasForeignKey("Book_Realm_API.Models.Cart", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Bill");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.CartItem", b =>
@@ -560,13 +607,13 @@ namespace Book_Realm_API.Migrations
 
             modelBuilder.Entity("Book_Realm_API.Models.Order", b =>
                 {
-                    b.HasOne("Book_Realm_API.Models.Bill", "Bill")
+                    b.HasOne("Book_Realm_API.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("BillId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Bill");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.OrderItem", b =>
@@ -618,31 +665,34 @@ namespace Book_Realm_API.Migrations
                     b.Navigation("Genre");
                 });
 
-            modelBuilder.Entity("Book_Realm_API.Models.User", b =>
+            modelBuilder.Entity("Book_Realm_API.Models.UserRole", b =>
                 {
-                    b.HasOne("Book_Realm_API.Models.Address", "Address")
+                    b.HasOne("Book_Realm_API.Models.Role", "Role")
                         .WithMany()
-                        .HasForeignKey("AddressId")
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Book_Realm_API.Models.Cart", "Cart")
-                        .WithMany()
-                        .HasForeignKey("CartId")
+                    b.HasOne("Book_Realm_API.Models.User", "User")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Book_Realm_API.Models.Wishlist", "Wishlist")
-                        .WithMany()
-                        .HasForeignKey("WishlistId")
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Wishlist", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.User", "User")
+                        .WithOne("Wishlist")
+                        .HasForeignKey("Book_Realm_API.Models.Wishlist", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
-
-                    b.Navigation("Cart");
-
-                    b.Navigation("Wishlist");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.WishlistItem", b =>
@@ -660,6 +710,27 @@ namespace Book_Realm_API.Migrations
                         .IsRequired();
 
                     b.Navigation("Book");
+
+                    b.Navigation("Wishlist");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Cart", b =>
+                {
+                    b.Navigation("Bill");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Order", b =>
+                {
+                    b.Navigation("Bill");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.User", b =>
+                {
+                    b.Navigation("Address");
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("UserRoles");
 
                     b.Navigation("Wishlist");
                 });

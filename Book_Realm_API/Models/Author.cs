@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using Newtonsoft.Json;
 
 namespace Book_Realm_API.Models
 {
@@ -8,9 +9,11 @@ namespace Book_Realm_API.Models
     {
 
         [MaxLength(500)]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [NotMapped]
-        public List<Book>? PublishedBooks { get; set; }
+        [JsonIgnore]
+        public List<Book> PublishedBooks { get; set; }
+
     }
 }

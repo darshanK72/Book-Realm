@@ -2,17 +2,23 @@
 
 namespace Book_Realm_API.Utils.PasswordHelper
 {
-    public class PasswordHelper
+    public class PasswordHelper : IPasswordHelper
     {
-        private static RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-        private static readonly int SaltSize = 16;
-        private static readonly int HashSize = 20;
-        private static readonly int Iterations = 10000;
+        RandomNumberGenerator _randomNumberGenerator;
 
-        public static string Encode(string password)
+        public PasswordHelper()
+        {
+            this._randomNumberGenerator = RandomNumberGenerator.Create();
+        }
+
+        private readonly int SaltSize = 16;
+        private readonly int HashSize = 20;
+        private readonly int Iterations = 10000;
+
+        public string Encode(string password)
         {
             byte[] salt;
-            rng.GetBytes(salt = new byte[SaltSize]);
+            this._randomNumberGenerator.GetBytes(salt = new byte[SaltSize]);
             var key = new Rfc2898DeriveBytes(password, salt, Iterations);
             var hash = key.GetBytes(HashSize);
 
@@ -26,7 +32,7 @@ namespace Book_Realm_API.Utils.PasswordHelper
             return base64Hash;
         }
 
-        public static bool Decode(string password, string base64Hash)
+        public bool Decode(string password, string base64Hash)
         {
             var hashByte = Convert.FromBase64String(base64Hash);
 
@@ -44,9 +50,7 @@ namespace Book_Realm_API.Utils.PasswordHelper
                     return false;
                 }
             }
-
             return true;
-
         }
     }
 }

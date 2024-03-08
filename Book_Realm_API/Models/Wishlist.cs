@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace Book_Realm_API.Models
 {
@@ -7,9 +8,17 @@ namespace Book_Realm_API.Models
     {
 
         [Key]
-        public int Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
 
         [NotMapped]
-        public List<WishlistItem>? WishlistBookList { get; set; }
+        [JsonIgnore]
+        public List<WishlistItem> WishlistItems { get; set; }
+
+        [ForeignKey("User")]
+        public Guid UserId { get; set; }
+
+        [JsonIgnore]
+        public User User { get; set; }
     }
 }

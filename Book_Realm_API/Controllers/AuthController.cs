@@ -1,6 +1,52 @@
-﻿namespace Book_Realm_API.Controllers
+﻿using Book_Realm_API.Exceptions;
+using Book_Realm_API.Models;
+using Book_Realm_API.Payloads;
+using Book_Realm_API.Repositories.Auth;
+using Book_Realm_API.Utils.JwtHelper;
+using Book_Realm_API.Utils.MappingHelper;
+using Book_Realm_API.Utils.PasswordHelper;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Book_Realm_API.Controllers
 {
-    public class AuthController
+    [Route("api/autn")]
+    [ApiController]
+    public class AuthController : ControllerBase
     {
+        private readonly IAuthRepository _authRepository;
+
+        public AuthController(IAuthRepository authRepository)
+        {
+            _authRepository = authRepository;
+        }
+
+        [HttpPost("signin")]
+        public async Task<ActionResult<SignInResponse>> SignIn([FromBody] SignInRequest signInRequest)
+        {
+            try
+            {
+                var signInResponse = await _authRepository.SignIn(signInRequest);
+                return Ok(signInResponse);
+            }
+            catch (AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, $"{ex.Message}");
+            }
+        }
+
+        [HttpPost("signup")]
+        public async Task<ActionResult<SignUpResponse>> SignUp([FromBody] SignUpRequest signUpRequest)
+        {
+            try
+            {
+                var signUpResponse = await _authRepository.SignUp(signUpRequest);
+                return Ok(signUpResponse);
+                
+            }
+            catch(AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, ex.Message);
+            }
+        }
     }
 }

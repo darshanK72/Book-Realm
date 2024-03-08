@@ -3,18 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Book_Realm_API.Models
 {
-    public class Image
+    public class Role
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
-        [Required]
-        public string Src { get; set; }
 
         [Required]
-        public string Type { get; set; }
+        [MaxLength(50)]
+        public string Description { get; set; }
     }
 }

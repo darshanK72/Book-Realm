@@ -5,7 +5,7 @@ namespace Book_Realm_API.Repositories.Auth
 {
     public interface IAuthRepository
     {
-        Task<SignInResponse> SignIn(User user);
-        Task SignUp(User user);
+        Task<SignInResponse> SignIn(SignInRequest signInRequest);
+        Task<SignUpResponse> SignUp(SignUpRequest signUpRequest);
     }
 }

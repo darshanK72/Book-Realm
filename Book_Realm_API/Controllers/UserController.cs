@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Book_Realm_API.Models;
 using Book_Realm_API.Repositories;
 using Book_Realm_API.Views;
+using Book_Realm_API.Utils.MappingHelper;
 
 namespace Book_Realm_API.Controllers
 {
@@ -16,9 +17,9 @@ namespace Book_Realm_API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-        private readonly IMapper _mapper;
+        private readonly IMappingHelper _mapper;
 
-        public UserController(IUserRepository userRepository,IMapper mapper)
+        public UserController(IUserRepository userRepository,IMappingHelper mapper)
         {
             _userRepository = userRepository;
             _mapper = mapper;
@@ -28,19 +29,19 @@ namespace Book_Realm_API.Controllers
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
             var users = await _userRepository.GetAllUsersAsync();
-            var usersView = users.Select((user) => _mapper.MapToUserView(user)).ToList();
+            var usersView = users.Select((user) => _mapper.MapToUserDTO(user)).ToList();
             return Ok(usersView);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDTO>> GetUser(int id)
+        public async Task<ActionResult<UserDTO>> GetUser(Guid id)
         {
             var user = await _userRepository.GetUserByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
-            var userView = _mapper.MapToUserView(user);
+            var userView = _mapper.MapToUserDTO(user);
             return Ok(userView);
         }
 
@@ -52,7 +53,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, User user)
+        public async Task<IActionResult> UpdateUser(Guid id, User user)
         {
             if (id != user.Id)
             {
@@ -64,7 +65,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
             await _userRepository.DeleteUserAsync(id);
             return NoContent();

@@ -1,23 +1,27 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace Book_Realm_API.Models
 {
     public class OrderItem
     {
         [Key]
-        public int Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
 
         [ForeignKey("Book")]
-        public int BookId { get; set; }
+        public Guid BookId { get; set; }
 
-        public Book? Book { get; set; }
+        [JsonIgnore]
+        public Book Book { get; set; }
 
         public int Quantity { get; set; }
 
         [ForeignKey("Order")]
-        public int OrderId { get; set; }
+        public Guid OrderId { get; set; }
 
-        public Order? Order { get; set; }
+        [JsonIgnore]
+        public Order Order { get; set; }
     }
 }

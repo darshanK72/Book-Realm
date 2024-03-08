@@ -14,10 +14,10 @@ namespace Book_Realm_API.Repositories
 
         public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
-            return await _dbContext.Users.ToListAsync();
+            return await _dbContext.Users.Include(u => u.UserRoles).ThenInclude(uu => uu.Role).ToListAsync();
         }
 
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByIdAsync(Guid id)
         {
             return await _dbContext.Users.FindAsync(id);
         }
@@ -33,7 +33,7 @@ namespace Book_Realm_API.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task UpdateUserAsync(int id, User user)
+        public async Task UpdateUserAsync(Guid id, User user)
         {
             if (id != user.Id)
             {
@@ -59,7 +59,7 @@ namespace Book_Realm_API.Repositories
             }
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(Guid id)
         {
             var user = await _dbContext.Users.FindAsync(id);
             if (user == null)
@@ -71,9 +71,10 @@ namespace Book_Realm_API.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        private bool UserExists(int id)
+        private bool UserExists(Guid id)
         {
             return _dbContext.Users.Any(e => e.Id == id);
         }
+
     }
 }

@@ -1,21 +1,26 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace Book_Realm_API.Models
 {
     public class WishlistItem
     {
         [Key]
-        public int Id { get; set; }
-
-        [ForeignKey("Book")]
-        public int BookId { get; set; }
-
-        public Book? Book { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
 
         [ForeignKey("Wishlist")]
-        public int WishlistId { get; set; }
+        public Guid WishlistId { get; set; }
 
-        public Wishlist? Wishlist { get; set; }
+        [JsonIgnore]
+        public Wishlist Wishlist { get; set; }
+
+        [ForeignKey("Book")]
+        public Guid BookId { get; set; }
+
+        [JsonIgnore]
+        public Book Book { get; set; }
+
     }
 }

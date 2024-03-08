@@ -1,21 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace Book_Realm_API.Models
 {
     public class Genre
     {
         [Key]
-        public int Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         [MaxLength(500)]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [NotMapped]
-        public List<Subgenre>? Subgenres { get; set; }
+        [JsonIgnore]
+        public List<Subgenre> Subgenres { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Book_Realm_API.Controllers
 {
@@ -22,6 +23,7 @@ namespace Book_Realm_API.Controllers
 
         // GET: api/Roles
         [HttpGet]
+        [Authorize(Roles = "User")]
         public async Task<ActionResult<IEnumerable<Role>>> GetRoles()
         {
             return await _context.Roles.ToListAsync();

@@ -7,20 +7,18 @@ using System.Text;
 
 namespace Book_Realm_API.Utils.JwtHelper
 {
-    public class JwtHelper : IJwtHelper
+    public class TokenHelper : ITokenHelper
     {
         private readonly IConfiguration _configuration;
-        public JwtHelper(IConfiguration configuration)
+        public TokenHelper(IConfiguration configuration)
         {
             _configuration = configuration;
         }
-        public string CreateJWT(User user)
+        public string CreateAccessToken(User user)
         {
             var jwtTokenHandler = new JwtSecurityTokenHandler();
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            var roleClaims = new List<Claim>();
 
             var identityClaims = new ClaimsIdentity();
             identityClaims.AddClaim(new Claim("Id", user.Id.ToString()));
@@ -30,8 +28,6 @@ namespace Book_Realm_API.Utils.JwtHelper
             {
                 identityClaims.AddClaim(new Claim(ClaimTypes.Role, role.Role.Name));
             }
-
-
 
             var tokenDiscriptor = new SecurityTokenDescriptor()
             {
@@ -46,6 +42,11 @@ namespace Book_Realm_API.Utils.JwtHelper
             var token = jwtTokenHandler.CreateToken(tokenDiscriptor);
 
             return jwtTokenHandler.WriteToken(token);
+        }
+
+        public string CreateRefreshToken(User user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Book_Realm_API.Utils.MappingHelper
         }
         public UserDTO MapToUserDTO(User user)
         {
+            Console.Write(user.ToString());
             return new UserDTO
             {
                 Id = user.Id,
@@ -21,8 +22,8 @@ namespace Book_Realm_API.Utils.MappingHelper
                 Email = user.Email,
                 Password = user.Password,
                 UserRoles = user.UserRoles.Select(ur => ur.Role.Name).ToList(),
-                Reviews = user.Reviews.Select(r => r.Id).ToList(),
-                Orders = user.Orders.Select((o) => o.Id).ToList()
+                Reviews = user.Reviews?.Select(r => r.Id).ToList() ?? new List<Guid>(),
+                Orders = user.Orders?.Select(o => o.Id).ToList() ?? new List<Guid>()
             };
         }
 

@@ -13,10 +13,10 @@ namespace Book_Realm_API.Repositories.Auth
     {
         private readonly BookRealmDbContext _dbContext;
         private readonly IPasswordHelper _passwordHelper;
-        private readonly IJwtHelper _jwtHelper;
+        private readonly ITokenHelper _jwtHelper;
         private readonly IMappingHelper _mapper;
         
-        public AuthRepository(BookRealmDbContext dbContext,IPasswordHelper passwordHelper,IJwtHelper jwtHelper,IMappingHelper mapper)
+        public AuthRepository(BookRealmDbContext dbContext,IPasswordHelper passwordHelper,ITokenHelper jwtHelper,IMappingHelper mapper)
         {
             this._dbContext = dbContext;
             this._passwordHelper = passwordHelper;
@@ -35,7 +35,7 @@ namespace Book_Realm_API.Repositories.Auth
                     {
                         var siginInResponse = new SignInResponse()
                         {
-                            AccessToken = _jwtHelper.CreateJWT(user),
+                            AccessToken = _jwtHelper.CreateAccessToken(user),
                             RefreshToken = "",
                             Message = "Sign In Successful."
                         };

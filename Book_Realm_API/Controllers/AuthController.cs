@@ -1,10 +1,6 @@
 ﻿using Book_Realm_API.Exceptions;
-using Book_Realm_API.Models;
 using Book_Realm_API.Payloads;
 using Book_Realm_API.Repositories.Auth;
-using Book_Realm_API.Utils.JwtHelper;
-using Book_Realm_API.Utils.MappingHelper;
-using Book_Realm_API.Utils.PasswordHelper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Book_Realm_API.Controllers

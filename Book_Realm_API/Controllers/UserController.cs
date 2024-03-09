@@ -9,6 +9,7 @@ using Book_Realm_API.Models;
 using Book_Realm_API.Repositories;
 using Book_Realm_API.Views;
 using Book_Realm_API.Utils.MappingHelper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Book_Realm_API.Controllers
 {
@@ -26,6 +27,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
             var users = await _userRepository.GetAllUsersAsync();

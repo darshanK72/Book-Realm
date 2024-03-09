@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Book_Realm_API.Views
+namespace Book_Realm_API.DTO
 {
     public class UserDTO
     {
@@ -11,9 +11,9 @@ namespace Book_Realm_API.Views
         public string Email { get; set; }
         public string Password { get; set; }
         public List<string> UserRoles { get; set; }
-        public int AddressId { get; set; }
-        public int CartId { get; set; }
-        public int WishlistId { get; set; }
+        public Guid AddressId { get; set; }
+        public Guid CartId { get; set; }
+        public Guid WishlistId { get; set; }
         public List<Guid> Reviews { get; set; }
         public List<Guid> Orders { get; set; }
     }

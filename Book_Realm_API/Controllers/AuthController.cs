@@ -1,11 +1,11 @@
 ﻿using Book_Realm_API.Exceptions;
 using Book_Realm_API.Payloads;
-using Book_Realm_API.Repositories.Auth;
+using Book_Realm_API.Repositories.AuthRepository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Book_Realm_API.Controllers
 {
-    [Route("api/autn")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {

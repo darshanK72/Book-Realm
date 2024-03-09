@@ -1,7 +1,7 @@
 ﻿using Book_Realm_API.Models;
 using Book_Realm_API.Payloads;
 
-namespace Book_Realm_API.Repositories.Auth
+namespace Book_Realm_API.Repositories.AuthRepository
 {
     public interface IAuthRepository
     {

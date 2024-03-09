@@ -1,12 +1,23 @@
 ﻿using Book_Realm_API.Models;
-using Book_Realm_API.Views;
+using Book_Realm_API.DTO;
 
 namespace Book_Realm_API.Utils.MappingHelper
 {
     public interface IMappingHelper
     {
-        public UserDTO MapToUserDTO(User user);
-        public User MapToUser(UserDTO userView);
+        UserDTO MapToUserDTO(User user);
+        User MapToUser(UserDTO userView);
+        CartDTO MapToCartDTO(Cart cart);
+        Cart MapToCart(CartDTO cartDto);
+
+        OrderDTO MapToOrderDTO(Order order);
+        Order MapToOrder(OrderDTO orderDto);
+
+        BillDTO MapToBillDTO(Bill bill);
+        Bill MapToBill(BillDTO billDto);
+
+        BookDTO MapToBookDTO(Book book);
+        Book MapToBook(BookDTO bookDto);
     }
 
 }

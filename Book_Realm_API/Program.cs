@@ -1,18 +1,17 @@
 using Book_Realm_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API;
-using Book_Realm_API.Repositories;
 using Book_Realm_API.Utils.MappingHelper;
 using Book_Realm_API.Utils.JwtHelper;
 using Book_Realm_API.Utils.PasswordHelper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Book_Realm_API.Repositories.Auth;
+using Book_Realm_API.Repositories.UserRepository;
+using Book_Realm_API.Repositories.AuthRepository;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authorization;
-using Book_Realm_API.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,20 +53,6 @@ builder.Services.AddAuthorization(options =>
             .RequireAuthenticatedUser()
             .Build();
 });
-
-// Add authorization policies
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("AuthenticatedUserPolicy", policy =>
-//    {
-//        policy.RequireAuthenticatedUser();
-//    });
-
-//    options.AddPolicy("UserRolePolicy", policy =>
-//    {
-//        policy.RequireRole("User");
-//    });
-//});
 
 builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();

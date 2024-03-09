@@ -7,103 +7,91 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API.Models;
 using Microsoft.AspNetCore.Authorization;
+using Book_Realm_API.Repositories.RoleRepository;
 
 namespace Book_Realm_API.Controllers
 {
-    [Route("api/[controller]")]
+
+    [Authorize(Roles = "Admin")]
+    [Route("api/roles")]
     [ApiController]
     public class RolesController : ControllerBase
     {
-        private readonly BookRealmDbContext _context;
+        private readonly IRoleRepository _roleRepository;
 
-        public RolesController(BookRealmDbContext context)
+        public RolesController(IRoleRepository roleRepository)
         {
-            _context = context;
+            _roleRepository = roleRepository;
         }
-
-        // GET: api/Roles
+        
         [HttpGet]
-        [Authorize(Roles = "User")]
-        public async Task<ActionResult<IEnumerable<Role>>> GetRoles()
+        public async Task<ActionResult<List<Role>>> GetRoles()
         {
-            return await _context.Roles.ToListAsync();
+            try
+            {
+                var roles = await _roleRepository.GetAllRoles();
+                return Ok(roles);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }   
         }
 
-        // GET: api/Roles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Role>> GetRole(Guid id)
         {
-            var role = await _context.Roles.FindAsync(id);
-
-            if (role == null)
+            try
             {
-                return NotFound();
+                var role = await _roleRepository.GetRoleById(id);
+                return Ok(role);
             }
-
-            return role;
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
-        // PUT: api/Roles/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRole(Guid id, Role role)
         {
-            if (id != role.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(role).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                var updatedRole = await _roleRepository.UpdateRole(id,role);
+                return Ok(updatedRole);
             }
-            catch (DbUpdateConcurrencyException)
+            catch(Exception ex)
             {
-                if (!RoleExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound(ex.Message);
             }
-
-            return NoContent();
         }
 
-        // POST: api/Roles
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Role>> PostRole(Role role)
         {
-            _context.Roles.Add(role);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetRole", new { id = role.Id }, role);
-        }
-
-        // DELETE: api/Roles/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteRole(Guid id)
-        {
-            var role = await _context.Roles.FindAsync(id);
-            if (role == null)
+            try
             {
-                return NotFound();
+                var newRole = await _roleRepository.CreateRole(role);
+                return CreatedAtAction("GetRole", new { id = role.Id }, newRole);
             }
-
-            _context.Roles.Remove(role);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        private bool RoleExists(Guid id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Role>> DeleteRole(Guid id)
         {
-            return _context.Roles.Any(e => e.Id == id);
+            try
+            {
+                var role = await _roleRepository.DeleteRole(id);
+                return Ok(role);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

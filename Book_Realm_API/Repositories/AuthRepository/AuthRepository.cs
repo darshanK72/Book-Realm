@@ -7,7 +7,7 @@ using Book_Realm_API.Utils.PasswordHelper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 
-namespace Book_Realm_API.Repositories.Auth
+namespace Book_Realm_API.Repositories.AuthRepository
 {
     public class AuthRepository : IAuthRepository
     {

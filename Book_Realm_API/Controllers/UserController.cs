@@ -7,12 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Book_Realm_API.Models;
 using Book_Realm_API.Repositories;
-using Book_Realm_API.Views;
+using Book_Realm_API.DTO;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.AspNetCore.Authorization;
+using Book_Realm_API.Repositories.UserRepository;
 
 namespace Book_Realm_API.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/user")]
     [ApiController]
     public class UserController : ControllerBase
@@ -27,50 +29,65 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
+        public async Task<ActionResult<List<UserDTO>>> GetUsers()
         {
-            var users = await _userRepository.GetAllUsersAsync();
-            var usersView = users.Select((user) => _mapper.MapToUserDTO(user)).ToList();
-            return Ok(usersView);
+            try
+            {
+                var users = await _userRepository.GetAllUsers();
+                var usersView = users.Select((user) => _mapper.MapToUserDTO(user)).ToList();
+                return Ok(usersView);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<UserDTO>> GetUser(Guid id)
         {
-            var user = await _userRepository.GetUserByIdAsync(id);
-            if (user == null)
+            try
             {
-                return NotFound();
+                var user = await _userRepository.GetUserById(id);
+                var userDto = _mapper.MapToUserDTO(user);
+                return Ok(userDto);
             }
-            var userView = _mapper.MapToUserDTO(user);
-            return Ok(userView);
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<User>> CreateUser(User user)
-        {
-            await _userRepository.CreateUserAsync(user);
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(Guid id, User user)
+        public async Task<ActionResult<UserDTO>> UpdateUser(Guid id, UserDTO userDto)
         {
-            if (id != user.Id)
+            try
             {
-                return BadRequest();
-            }
+                var user = _mapper.MapToUser(userDto);
+                var updatedUser = await _userRepository.UpdateUser(id, user);
+                userDto = _mapper.MapToUserDTO(user);
+                return Ok(userDto);
 
-            await _userRepository.UpdateUserAsync(id, user);
-            return NoContent();
+            }
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(Guid id)
+        public async Task<ActionResult<UserDTO>> DeleteUser(Guid id)
         {
-            await _userRepository.DeleteUserAsync(id);
-            return NoContent();
+            try
+            {
+                var user = await _userRepository.DeleteUser(id);
+                var userDto = _mapper.MapToUserDTO(user);
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 

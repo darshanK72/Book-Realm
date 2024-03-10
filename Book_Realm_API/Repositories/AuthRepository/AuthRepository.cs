@@ -179,7 +179,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
                     return new MessageResponse()
                     {
 
-                        Message = $"{body} Password reset link is sent to your email. The link will be available for 10 minutes"
+                        Message = $"Password reset link is sent to your email. The link will be available for 10 minutes"
                     };
 
                 }

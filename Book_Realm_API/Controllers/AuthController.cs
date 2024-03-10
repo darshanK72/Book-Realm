@@ -31,7 +31,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPost("signup")]
-        public async Task<ActionResult<SignUpResponse>> SignUp([FromBody] SignUpRequest signUpRequest)
+        public async Task<ActionResult<MessageResponse>> SignUp([FromBody] SignUpRequest signUpRequest)
         {
             try
             {
@@ -40,6 +40,49 @@ namespace Book_Realm_API.Controllers
                 
             }
             catch(AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, ex.Message);
+            }
+        }
+
+        [HttpPost("refresh")]
+        public async Task<ActionResult<RefreshResponse>> Refresh(RefreshRequest refreshRequest)
+        {
+            try
+            {
+                var refreshResponse = await _authRepository.Refresh(refreshRequest);
+                return Ok(refreshResponse);
+
+            }
+            catch (AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, ex.Message);
+            }
+        }
+
+        [HttpPost("password-reset-mail")]
+        public async Task<ActionResult<MessageResponse>> PasswordResetEmail(EmailRequest emailRequest)
+        {
+            try
+            {
+                var response = await _authRepository.ResetPasswordEmail(emailRequest);
+                return Ok(response);
+            }
+            catch(AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, ex.Message);
+            }
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<ActionResult<MessageResponse>> ResetPassword([FromBody] PasswordResetRequest passwordResetRequest,[FromQuery] string email, [FromQuery] string token)
+        {
+            try
+            {
+                var response = await _authRepository.ResetPassword(passwordResetRequest,email,token,DateTime.Now);
+                return Ok(response);
+            }
+            catch (AuthenticationException ex)
             {
                 return StatusCode(ex.StatusCode, ex.Message);
             }

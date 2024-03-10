@@ -12,6 +12,10 @@ using Book_Realm_API.Repositories.AuthRepository;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authorization;
+using Book_Realm_API.Repositories.RoleRepository;
+using Book_Realm_API.Repositories.AddressRepository;
+using Book_Realm_API.Repositories.BookRepository;
+using Book_Realm_API.Utils.EmailHelper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,12 +58,16 @@ builder.Services.AddAuthorization(options =>
             .Build();
 });
 
-builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IUserRepository,UserRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 builder.Services.AddScoped<IMappingHelper,MappingHelper>();
 builder.Services.AddScoped<ITokenHelper, TokenHelper>();
 builder.Services.AddScoped<IPasswordHelper, PasswordHelper>();
+builder.Services.AddScoped<IEmailHelper,EmailHelper>();
 
 
 builder.Services.AddEndpointsApiExplorer();

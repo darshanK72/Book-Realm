@@ -1,27 +1,25 @@
 ﻿using Book_Realm_API.Exceptions;
 using Book_Realm_API.Models;
 using Book_Realm_API.Payloads;
+using Book_Realm_API.Utils.EmailHelper;
 using Book_Realm_API.Utils.JwtHelper;
-using Book_Realm_API.Utils.MappingHelper;
 using Book_Realm_API.Utils.PasswordHelper;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-
 namespace Book_Realm_API.Repositories.AuthRepository
 {
     public class AuthRepository : IAuthRepository
     {
         private readonly BookRealmDbContext _dbContext;
         private readonly IPasswordHelper _passwordHelper;
-        private readonly ITokenHelper _jwtHelper;
-        private readonly IMappingHelper _mapper;
+        private readonly ITokenHelper _tokenHelper;
+        private readonly IEmailHelper _emailHelper;
         
-        public AuthRepository(BookRealmDbContext dbContext,IPasswordHelper passwordHelper,ITokenHelper jwtHelper,IMappingHelper mapper)
+        public AuthRepository(BookRealmDbContext dbContext,IPasswordHelper passwordHelper,ITokenHelper tokenHelper,IEmailHelper emailHelper)
         {
-            this._dbContext = dbContext;
-            this._passwordHelper = passwordHelper;
-            this._jwtHelper = jwtHelper;
-            this._mapper = mapper;
+            _dbContext = dbContext;
+            _passwordHelper = passwordHelper;
+            _tokenHelper = tokenHelper;
+            _emailHelper = emailHelper;
         }
 
         public async Task<SignInResponse> SignIn(SignInRequest signInRequest)
@@ -33,10 +31,19 @@ namespace Book_Realm_API.Repositories.AuthRepository
                 {
                     if (_passwordHelper.Decode(signInRequest.Password, user?.Password))
                     {
+                        var accessToken = _tokenHelper.CreateAccessToken(user);
+                        var refreshToken = _tokenHelper.CreateRefreshToken();
+
+                        user.AccessToken = accessToken;
+                        user.RefreshToken = refreshToken;
+                        user.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                        _dbContext.Entry(user).State = EntityState.Modified;
+                        await _dbContext.SaveChangesAsync();
+
                         var siginInResponse = new SignInResponse()
                         {
-                            AccessToken = _jwtHelper.CreateAccessToken(user),
-                            RefreshToken = "",
+                            AccessToken = accessToken,
+                            RefreshToken = refreshToken,
                             Message = "Sign In Successful."
                         };
                         return siginInResponse;
@@ -57,7 +64,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
             }
         }
 
-        public async Task<SignUpResponse> SignUp(SignUpRequest signUpRequest)
+        public async Task<MessageResponse> SignUp(SignUpRequest signUpRequest)
         {
            if(signUpRequest != null)
            {
@@ -86,7 +93,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
                     await _dbContext.AddAsync(newUser);
                     await _dbContext.SaveChangesAsync();
 
-                    var signUpResponse = new SignUpResponse()
+                    var signUpResponse = new MessageResponse()
                     {
                         Message = "User Registered Successfully"
                     };
@@ -104,5 +111,124 @@ namespace Book_Realm_API.Repositories.AuthRepository
                 throw new AuthenticationException(400, "Invalid Credentials!");
            }  
         }
+
+        public async Task<RefreshResponse> Refresh(RefreshRequest refreshRequest)
+        {
+            if(refreshRequest != null)
+            {
+                var principal = _tokenHelper.GetPrincipalFromExpiredToken(refreshRequest.AccessToken);
+                var user = await _dbContext.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).FirstOrDefaultAsync(u => u.Email == principal.Identity.Name);
+                if(user == null)
+                {
+                   throw new AuthenticationException(404, "User Not Found!");
+                }
+                else if(user.RefreshToken != refreshRequest.RefreshToken || user.RefreshTokenExpiry <=  DateTime.Now)
+                {
+                    throw new AuthenticationException(401, "Refresh Token is Invalid, SignIn Again!");
+                }
+                else
+                {
+                    var accessToken = _tokenHelper.CreateAccessToken(user);
+                    var refreshToken = _tokenHelper.CreateRefreshToken();
+
+                    user.AccessToken = accessToken;
+                    user.RefreshToken = refreshToken;
+                    user.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    _dbContext.Entry(user).State = EntityState.Modified;
+                    await _dbContext.SaveChangesAsync();
+
+                    var refreshResponse = new RefreshResponse()
+                    {
+                        AccessToken = _tokenHelper.CreateAccessToken(user),
+                        RefreshToken = _tokenHelper.CreateRefreshToken(),
+                        Message = "Token Refresh is Successful."
+                    };
+                    return refreshResponse;
+                }
+            }
+            else
+            {
+               throw new AuthenticationException(400, "Invalid Credentials!");
+            }
+
+        }
+
+        public async Task<MessageResponse> ResetPasswordEmail(EmailRequest passwordResetRequest)
+        {
+            if(passwordResetRequest != null && passwordResetRequest.Email != null)
+            {
+                var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == passwordResetRequest.Email);
+                if(user != null)
+                {
+                    var token = _tokenHelper.CreatePasswordResetToken();
+                    user.PasswordResetToken = token;
+                    user.PasswordResetTokenExpiry = DateTime.Now.AddMinutes(10);
+
+                    _dbContext.Entry(user).State = EntityState.Modified;
+                    await _dbContext.SaveChangesAsync();
+
+                    var email = new Email()
+                    {
+                        To = user.Email,
+                        Subject = "Password Reset Link!",
+                        Body = _emailHelper.CreateMailBody(user.Email, token)
+                };
+
+                    await _emailHelper.SendEmail(email);
+
+                    return new MessageResponse()
+                    {
+
+                        Message = $"{body} Password reset link is sent to your email. The link will be available for 10 minutes"
+                    };
+
+                }
+                else
+                {
+                    throw new AuthenticationException(404, "User Not Found!");
+                }
+            }
+            else
+            {
+                throw new AuthenticationException(400, "Invalid Credentials!");
+            }
+        }
+
+        public async Task<MessageResponse> ResetPassword(PasswordResetRequest passwordResetReqest,string email,string token,DateTime time)
+        {
+            if(email != null && token != null)
+            {
+                var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+                if(user != null)
+                {
+                    if(user.PasswordResetToken == token && user.PasswordResetTokenExpiry >= time)
+                    {
+                      
+                        user.Password = _passwordHelper.Encode(passwordResetReqest.Password);
+                        _dbContext.Entry(user).State = EntityState.Modified;
+                        await _dbContext.SaveChangesAsync();
+
+                        return new MessageResponse()
+                        {
+                            Message = "Password reset is successfull, try to sign in with new password."
+                        };
+                    }
+                    else
+                    {
+                        throw new AuthenticationException(401, "Password reset token is Invalid, Try Again!");
+                    }
+                }
+                else
+                {
+                    throw new AuthenticationException(404, "User Not Found!");
+                }
+            }
+            else
+            {
+                throw new AuthenticationException(400, "Invalid Credentials!");
+            }
+
+        }
+
     }
 }

@@ -82,7 +82,7 @@ namespace Book_Realm_API.Controllers
             {
                 var user = await _userRepository.DeleteUser(id);
                 var userDto = _mapper.MapToUserDTO(user);
-                return Ok(user);
+                return Ok(userDto);
             }
             catch (Exception ex)
             {

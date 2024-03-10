@@ -20,12 +20,13 @@ namespace Book_Realm_API.Utils.MappingHelper
                 Name = user.Name,
                 Email = user.Email,
                 Password = user.Password,
-                CartId = user.Cart.Id,
-                AddressId = user.Address.Id,
-                WishlistId = user.Wishlist.Id,
-                UserRoles = user.UserRoles.Select(ur => ur.Role.Name).ToList(),
-                Reviews = user.Reviews.Select(r => r.Id).ToList() ?? new List<Guid>(),
-                Orders = user.Orders.Select(o => o.Id).ToList() ?? new List<Guid>(),
+                CartId = user.Cart?.Id ?? Guid.Empty,
+                AddressId = user.Address?.Id ?? Guid.Empty,
+                WishlistId = user.Wishlist?.Id ?? Guid.Empty,
+                UserRoles = user.UserRoles != null ? user.UserRoles.Where(ur => ur.Role != null).Select(ur => ur.Role.Name).ToList() : new List<string>(),
+                Reviews = user.Reviews != null ? user.Reviews.Select(r => r.Id).ToList() : new List<Guid>(),
+                Orders = user.Orders != null ? user.Orders.Select(o => o.Id).ToList() : new List<Guid>(),
+
             };
         }
 

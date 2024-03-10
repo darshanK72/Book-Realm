@@ -12,6 +12,7 @@ using Book_Realm_API.Repositories.BookRepository;
 
 namespace Book_Realm_API.Controllers
 {
+    [Authorize]
     [Route("api/book")]
     [ApiController]
     public class BookController : ControllerBase

@@ -107,6 +107,9 @@
 
 .other-methods {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .other-methods .google-login {

@@ -4,7 +4,10 @@ using Book_Realm_API.Payloads;
 using Book_Realm_API.Utils.EmailHelper;
 using Book_Realm_API.Utils.JwtHelper;
 using Book_Realm_API.Utils.PasswordHelper;
+using Google.Apis.Auth;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.SqlServer.Server;
+
 namespace Book_Realm_API.Repositories.AuthRepository
 {
     public class AuthRepository : IAuthRepository
@@ -64,6 +67,41 @@ namespace Book_Realm_API.Repositories.AuthRepository
             }
         }
 
+        public async Task<SignInResponse> SignInWithGoogle(GoogleUser googleUser)
+        {
+            if(googleUser != null)
+            {
+                var payload = await GoogleJsonWebSignature.ValidateAsync(googleUser.IdToken);
+
+                var user = await _dbContext.Users.Include(ur => ur.UserRoles).ThenInclude(u => u.Role).FirstOrDefaultAsync(u => u.Email == payload.Email);
+                if (user == null)
+                {
+                    throw new AuthenticationException(404, "User Not Found!,Try to Sign Up First");
+                }
+
+                var accessToken = _tokenHelper.CreateAccessToken(user);
+                var refreshToken = _tokenHelper.CreateRefreshToken();
+
+                user.AccessToken = accessToken;
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+
+                _dbContext.Entry(user).State = EntityState.Modified;
+                await _dbContext.SaveChangesAsync();
+
+                return new SignInResponse()
+                {
+                    AccessToken = accessToken,
+                    RefreshToken = refreshToken,
+                    Message = "Sign In Successful."
+                };
+            }
+            else { 
+           
+                throw new AuthenticationException(400, "Invalid ID token");
+            }
+        }
+
         public async Task<MessageResponse> SignUp(SignUpRequest signUpRequest)
         {
            if(signUpRequest != null)
@@ -87,7 +125,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
                         new UserRole()
                         {
                            Role = userRole,
-                           RoleId = userRole.Id
+                           RoleId = userRole.Id,
                         }
                     };
                     await _dbContext.AddAsync(newUser);
@@ -110,6 +148,54 @@ namespace Book_Realm_API.Repositories.AuthRepository
            {
                 throw new AuthenticationException(400, "Invalid Credentials!");
            }  
+        }
+
+        public async Task<MessageResponse> SignUpWithGoogle(GoogleUser googleUser)
+        {
+            if(googleUser != null)
+            {
+                var payload = await GoogleJsonWebSignature.ValidateAsync(googleUser.IdToken);
+
+                var existingUser = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == payload.Email);
+                if (existingUser == null)
+                {
+                    var userRole = _dbContext.Roles.First(r => r.Name == "User");
+                    var newUser = new User()
+                    {
+                        Name = payload.Name,
+                        Email = payload.Email,
+                        Mobile = "",
+                        Password = "",
+                        Reviews = new List<Review>(),
+                        Orders = new List<Order>(),
+
+                    };
+
+                    newUser.UserRoles = new List<UserRole>()
+                    {
+                        new UserRole()
+                        {
+                           Role = userRole,
+                           RoleId = userRole.Id,
+                        }
+                    };
+
+                    await _dbContext.Users.AddAsync(newUser);
+                    await _dbContext.SaveChangesAsync();
+
+                    return new MessageResponse()
+                    {
+                        Message = "User Registered Successfully"
+                    };
+                }
+                else
+                {
+                    throw new AuthenticationException(400, "User with this email already exists!");
+                }
+            }
+            else { 
+                throw new AuthenticationException(400, "Invalid ID token");
+            }
         }
 
         public async Task<RefreshResponse> Refresh(RefreshRequest refreshRequest)
@@ -231,4 +317,10 @@ namespace Book_Realm_API.Repositories.AuthRepository
         }
 
     }
+
+    public class GoogleUser
+    { 
+        public string IdToken { get; set; }
+    }
+
 }

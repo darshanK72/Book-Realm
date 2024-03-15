@@ -1,5 +1,7 @@
+import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/Services/auth/auth.service';
 import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 @Component({
   selector: 'app-signup',
@@ -7,7 +9,12 @@ import { ScrollService } from 'src/app/Services/scroll/scroll.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent  implements OnInit {
-  constructor(private renderer: Renderer2,private scrollService:ScrollService,private fb: FormBuilder) {}
+  constructor(private socialAuthService: SocialAuthService,private authService:AuthService,private renderer: Renderer2,private scrollService:ScrollService,private fb: FormBuilder) {
+    this.socialAuthService.authState.subscribe((user) => {
+      this.authService.signUpWithGoogle(user);
+      console.log(user);
+  })
+  }
 
   @ViewChild('validations')
   validations!: ElementRef;
@@ -33,6 +40,7 @@ export class SignupComponent  implements OnInit {
   eleOpen: boolean = false;
 
   signupForm!: FormGroup;
+  widthbtn:number = 400;
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({
@@ -43,6 +51,7 @@ export class SignupComponent  implements OnInit {
       confirmPassword: ['', Validators.required]
     });
   }
+
 
   onSignupSubmit() {
     if (this.signupForm.valid) {

@@ -1,6 +1,6 @@
 import { isDevMode, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,6 +48,8 @@ import { CardComponent } from './Components/Home/card/card.component';
 import { FullBannerComponent } from './Components/Home/full-banner/full-banner.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GoogleLoginProvider, GoogleSigninButtonDirective, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SigninComponent,
     SignupComponent,
     CardComponent,
-    FullBannerComponent
+    FullBannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,11 +96,29 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     NgxSplideModule,
     HttpClientModule,
+    SocialLoginModule,
+    GoogleSigninButtonModule,
     StoreModule.forRoot(AppStore),
-    EffectsModule.forRoot([BookEffects,GenreEffects,SubgenreEffects]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    EffectsModule.forRoot([BookEffects, GenreEffects, SubgenreEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(environment.googleClientId),
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        },
+      } as SocialAuthServiceConfig,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

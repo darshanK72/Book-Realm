@@ -45,6 +45,36 @@ namespace Book_Realm_API.Controllers
             }
         }
 
+        [HttpPost("google-signin")]
+        public async Task<ActionResult<SignInResponse>> GoogleSignIn([FromBody] GoogleUser googleUser)
+        {
+            try
+            {
+                var signInResponse = await _authRepository.SignInWithGoogle(googleUser);
+                return Ok(signInResponse);
+            }
+            catch (AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, $"{ex.Message}");
+            }
+        }
+
+        [HttpPost("google-signup")]
+        public async Task<ActionResult<MessageResponse>> GoogleSignUp( GoogleUser googleUser)
+        {
+            try
+            {
+                var signUpResponse = await _authRepository.SignUpWithGoogle(googleUser);
+                return Ok(signUpResponse);
+
+            }
+            catch (AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, ex.Message);
+            }
+        }
+
+
         [HttpPost("refresh")]
         public async Task<ActionResult<RefreshResponse>> Refresh(RefreshRequest refreshRequest)
         {

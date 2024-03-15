@@ -17,13 +17,25 @@ using Book_Realm_API.Repositories.AddressRepository;
 using Book_Realm_API.Repositories.BookRepository;
 using Book_Realm_API.Utils.EmailHelper;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-}); 
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+       .AllowAnyHeader();
+    });
+});
 
 builder.Services.AddDbContext<BookRealmDbContext>(options =>
 {
@@ -48,7 +60,12 @@ builder.Services.AddAuthentication(options =>
             ValidateAudience = true,
             ValidAudience = builder.Configuration["Jwt:Audience"]
         };
-    });
+    })
+   .AddGoogle(options =>
+   {
+       options.ClientId = builder.Configuration["Google:ClientId"];
+       options.ClientSecret = builder.Configuration["Google:ClientSecret"];
+   });
 
 builder.Services.AddAuthorization(options =>
 {
@@ -83,6 +100,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("MyPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();

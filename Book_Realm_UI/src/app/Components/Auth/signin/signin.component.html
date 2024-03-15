@@ -60,7 +60,8 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn btn-primary" [class.disabled-button]="signinForm.invalid" [disabled]="signinForm.invalid">Sign In</button>
+                        <button class="btn btn-primary" [class.disabled-button]="signinForm.invalid"
+                            [disabled]="signinForm.invalid">Sign In</button>
                     </div>
                 </form>
             </div>
@@ -70,10 +71,8 @@
                 <div class="hr"></div>
             </div>
             <div class="other-methods">
-                <button class="google-login">
-                    <img src="../../../assets/img/google.svg" alt="">
-                    <p>Sign in with google</p>
-                </button>
+                <asl-google-signin-button logo_alignment="center" [width]='400' text="signin_with" type='standard'
+                    size='large'></asl-google-signin-button>
             </div>
             <div class="message">
                 <p>Do not have an account?

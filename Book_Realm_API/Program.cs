@@ -16,8 +16,10 @@ using Book_Realm_API.Repositories.RoleRepository;
 using Book_Realm_API.Repositories.AddressRepository;
 using Book_Realm_API.Repositories.BookRepository;
 using Book_Realm_API.Utils.EmailHelper;
-
-
+using Book_Realm_API.Repositories.GenreRepository;
+using Book_Realm_API.Repositories.SubgenreRepository;
+using Book_Realm_API.Utils.ImageHelper;
+using Book_Realm_API.Repositories.ImageRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -80,11 +82,15 @@ builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IGenreRepository,GenreRepository>();
+builder.Services.AddScoped<ISubgenreRepository,SubgenreRepository>();
+builder.Services.AddScoped<IImageRepository, ImageRepository>();
 
 builder.Services.AddScoped<IMappingHelper,MappingHelper>();
 builder.Services.AddScoped<ITokenHelper, TokenHelper>();
 builder.Services.AddScoped<IPasswordHelper, PasswordHelper>();
 builder.Services.AddScoped<IEmailHelper,EmailHelper>();
+builder.Services.AddScoped<IImageHelper, ImageHelper>();
 
 
 builder.Services.AddEndpointsApiExplorer();

@@ -112,12 +112,15 @@ namespace Book_Realm_API.Migrations
                     b.Property<string>("BookFormat")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Country")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<int>("DiscountPercentage")
-                        .HasColumnType("int");
+                    b.Property<float>("DiscountPercentage")
+                        .HasColumnType("real");
 
                     b.Property<Guid?>("GenreId")
                         .HasColumnType("uniqueidentifier");
@@ -142,8 +145,8 @@ namespace Book_Realm_API.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
+                    b.Property<float>("Rating")
+                        .HasColumnType("real");
 
                     b.Property<Guid?>("SubgenreId")
                         .HasColumnType("uniqueidentifier");
@@ -310,8 +313,8 @@ namespace Book_Realm_API.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
+                    b.Property<float>("Rating")
+                        .HasColumnType("real");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -369,6 +372,20 @@ namespace Book_Realm_API.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Subgenres");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Tag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.User", b =>

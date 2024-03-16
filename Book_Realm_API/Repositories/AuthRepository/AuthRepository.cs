@@ -107,27 +107,103 @@ namespace Book_Realm_API.Repositories.AuthRepository
            if(signUpRequest != null)
            {
                 var existingUser = await this._dbContext.Users.SingleOrDefaultAsync(u => u.Email == signUpRequest.Email);
-                if(existingUser == null)
+                User newUser = null;
+                if (existingUser == null)
                 {
-                    var userRole = _dbContext.Roles.First(r => r.Name == "User");
-                    var newUser = new User()
+                    var userRole = _dbContext.Roles.FirstOrDefault(r => r.Name == signUpRequest.Role);
+                    if(userRole != null)
                     {
-                        Name = signUpRequest.Name,
-                        Email = signUpRequest.Email,
-                        Mobile = signUpRequest.Mobile,
-                        Password = _passwordHelper.Encode(signUpRequest.Password),
-                        Reviews = new List<Review>(),
-                        Orders = new List<Order>()
-                    };
-
-                    newUser.UserRoles = new List<UserRole>()
-                    {
-                        new UserRole()
+                        if (userRole.Name == "User")
                         {
-                           Role = userRole,
-                           RoleId = userRole.Id,
+                            newUser = new User()
+                            {
+                                Name = signUpRequest.Name,
+                                Email = signUpRequest.Email,
+                                Mobile = signUpRequest.Mobile,
+                                Password = _passwordHelper.Encode(signUpRequest.Password),
+                                Reviews = new List<Review>(),
+                                Orders = new List<Order>()
+                            };
+
+                            newUser.UserRoles = new List<UserRole>()
+                            {
+                                new UserRole()
+                                {
+                                   Role = userRole,
+                                   RoleId = userRole.Id,
+                                }
+                            };
                         }
-                    };
+                        else if (userRole.Name == "Author")
+                        {
+                            newUser = new Author()
+                            {
+                                Name = signUpRequest.Name,
+                                Email = signUpRequest.Email,
+                                Mobile = signUpRequest.Mobile,
+                                Password = _passwordHelper.Encode(signUpRequest.Password),
+                                Description = signUpRequest.Description,
+                                Reviews = new List<Review>(),
+                                Orders = new List<Order>(),
+                                PublishedBooks = new List<Book>(),
+                            };
+
+                            var otherRole = _dbContext.Roles.First(r => r.Name == "User");
+
+                            newUser.UserRoles = new List<UserRole>()
+                            {
+                                new UserRole()
+                                {
+                                   Role = userRole,
+                                   RoleId = userRole.Id,
+                                },
+                                new UserRole()
+                                {
+                                    Role = otherRole,
+                                    RoleId = otherRole.Id,
+                                }
+                            };
+
+                        }
+                        else if (userRole.Name == "Publisher")
+                        {
+                            newUser = new Publisher()
+                            {
+                                Name = signUpRequest.Name,
+                                Email = signUpRequest.Email,
+                                Mobile = signUpRequest.Mobile,
+                                Password = _passwordHelper.Encode(signUpRequest.Password),
+                                Description = signUpRequest.Description,
+                                FoundationDate = signUpRequest.FoundationDate,
+                                WebsiteUrl = signUpRequest.WebsiteUrl,
+                                Reviews = new List<Review>(),
+                                Orders = new List<Order>(),
+                                PublishedBooks = new List<Book>(),
+                            };
+
+                            var otherRole = _dbContext.Roles.First(r => r.Name == "User");
+
+                            newUser.UserRoles = new List<UserRole>()
+                            {
+                                new UserRole()
+                                {
+                                   Role = userRole,
+                                   RoleId = userRole.Id,
+                                },
+                                new UserRole()
+                                {
+                                    Role = otherRole,
+                                    RoleId = otherRole.Id,
+                                }
+                            };
+                        }
+                    }
+                    else
+                    {
+                        throw new AuthenticationException(404, "User role not found");
+                    }
+
+                   
                     await _dbContext.AddAsync(newUser);
                     await _dbContext.SaveChangesAsync();
 

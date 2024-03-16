@@ -353,6 +353,45 @@ table{
         display: none;
     }
 
+    .author-publisher{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .author{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .author i{
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+
+    .publisher{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .publisher i{
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+
+    .publish-date{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .publish-date i{
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+
 }
 
 @media screen and (max-width:767px) {

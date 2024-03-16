@@ -15,7 +15,7 @@ namespace Book_Realm_API.Models
         public string Comment { get; set; }
 
         [Range(0, 5)]
-        public int Rating { get; set; }
+        public float Rating { get; set; }
 
         [Required]
         public DateTime Date { get; set; }

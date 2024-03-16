@@ -27,6 +27,7 @@ namespace Book_Realm_API.Models
         public DbSet<Wishlist> Wishlists { get; set; }
         public DbSet<WishlistItem> WishlistItems { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
     }
 }

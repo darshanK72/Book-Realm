@@ -9,8 +9,8 @@ namespace Book_Realm_API.Repositories.AddressRepository
     {
         Task<List<Address>> GetAllAddresses();
         Task<Address> GetAddressById(Guid id);
-        Task<Address> UpdateAddress(Guid id, Address address);
         Task<Address> CreateAddress(Address address);
+        Task<Address> UpdateAddress(Guid id, Address address);
         Task<Address> DeleteAddress(Guid id);
     }
 }

@@ -5,10 +5,10 @@ namespace Book_Realm_API.DTO
 {
     public class OrderDTO
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Status { get; set; }
-        public List<Guid> OrderItems { get; set; }
-        public Guid BillId { get; set; }
-        public Guid UserId { get; set; }
+        public List<string> OrderItems { get; set; }
+        public string BillId { get; set; }
+        public string UserId { get; set; }
     }
 }

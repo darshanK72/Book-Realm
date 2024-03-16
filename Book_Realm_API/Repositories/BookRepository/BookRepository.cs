@@ -34,6 +34,13 @@ namespace Book_Realm_API.Repositories.BookRepository
             return book;
         }
 
+        public async Task<List<Book>> CreateMultipleBooks(List<Book> books)
+        {
+            _dbContext.Books.AddRange(books);
+            await _dbContext.SaveChangesAsync();
+            return books;
+        }
+
         public async Task<Book> UpdateBook(Guid id, Book book)
         {
             if (!BookExists(id))

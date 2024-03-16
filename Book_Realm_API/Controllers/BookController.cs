@@ -12,7 +12,6 @@ using Book_Realm_API.Repositories.BookRepository;
 
 namespace Book_Realm_API.Controllers
 {
-    [Authorize]
     [Route("api/book")]
     [ApiController]
     public class BookController : ControllerBase
@@ -32,8 +31,8 @@ namespace Book_Realm_API.Controllers
             try
             {
                 var books = await _bookRepository.GetAllBooks();
-                var bookDto = books.Select(b => _mapper.MapToBookDTO(b)).ToList();
-                return Ok(bookDto);
+                var bookDtos = books.Select(b => _mapper.MapToBookDTO(b)).ToList();
+                return Ok(bookDtos);
             }
             catch (Exception ex)
             {

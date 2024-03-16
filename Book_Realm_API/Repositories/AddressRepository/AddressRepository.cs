@@ -32,6 +32,12 @@ namespace Book_Realm_API.Repositories.AddressRepository
 
             return address;
         }
+        public async Task<Address> CreateAddress(Address address)
+        {
+            _dbContext.Addresses.Add(address);
+            await _dbContext.SaveChangesAsync();
+            return address;
+        }
 
         public async Task<Address> UpdateAddress(Guid id, Address address)
         {
@@ -40,13 +46,6 @@ namespace Book_Realm_API.Repositories.AddressRepository
                 throw new InvalidOperationException("Address not found");
             }
             _dbContext.Entry(address).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
-            return address;
-        }
-
-        public async Task<Address> CreateAddress(Address address)
-        {
-            _dbContext.Addresses.Add(address);
             await _dbContext.SaveChangesAsync();
             return address;
         }

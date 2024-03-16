@@ -60,7 +60,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPost("google-signup")]
-        public async Task<ActionResult<MessageResponse>> GoogleSignUp( GoogleUser googleUser)
+        public async Task<ActionResult<MessageResponse>> GoogleSignUp(GoogleUser googleUser)
         {
             try
             {

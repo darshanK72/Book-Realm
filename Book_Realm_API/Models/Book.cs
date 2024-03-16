@@ -16,7 +16,7 @@ namespace Book_Realm_API.Models
         public string Title { get; set; }
 
         [Range(0, 5)]
-        public int Rating { get; set; }
+        public float Rating { get; set; }
 
         [MaxLength(500)]
         public string Description { get; set; }
@@ -24,15 +24,12 @@ namespace Book_Realm_API.Models
         [Required]
         public DateTime PublishDate { get; set; }
 
-        [NotMapped]
-        public List<Image> Images { get; set; }
-
         [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
         [Range(0, 100)]
-        public int DiscountPercentage { get; set; }
+        public float DiscountPercentage { get; set; }
 
         public int Pages { get; set; }
 
@@ -40,12 +37,7 @@ namespace Book_Realm_API.Models
 
         public string Language { get; set; }
 
-        [NotMapped]
-        public List<string> Tags { get; set; }
-
-        [NotMapped]
-        [JsonIgnore]
-        public List<Review> Reviews { get; set; }
+        public string Country { get; set; }
 
         [Required]
         [MaxLength(100)]
@@ -73,5 +65,18 @@ namespace Book_Realm_API.Models
 
         [JsonIgnore]
         public Subgenre Subgenre { get; set; }
+
+        [NotMapped]
+        [JsonIgnore]
+        public List<Tag> Tags { get; set; }
+
+        [NotMapped]
+        [JsonIgnore]
+        public List<Review> Reviews { get; set; }
+
+
+        [NotMapped]
+        [JsonIgnore]
+        public List<Image> Images { get; set; }
     }
 }

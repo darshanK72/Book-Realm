@@ -7,9 +7,9 @@ namespace Book_Realm_API.DTO
 {
     public class CartDTO
     {
-        public Guid Id { get; set; }
-        public List<Guid> CartItems { get; set; }
-        public Guid BillId { get; set; }
-        public Guid UserId { get; set; }
+        public string Id { get; set; }
+        public List<string> CartItems { get; set; }
+        public string BillId { get; set; }
+        public string UserId { get; set; }
     }
 }

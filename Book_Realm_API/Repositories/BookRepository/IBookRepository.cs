@@ -10,6 +10,7 @@ namespace Book_Realm_API.Repositories.BookRepository
         Task<List<Book>> GetAllBooks();
         Task<Book> GetBookById(Guid id);
         Task<Book> CreateBook(Book book);
+        Task<List<Book>> CreateMultipleBooks(List<Book> books);
         Task<Book> UpdateBook(Guid id, Book book);
         Task<Book> DeleteBook(Guid id);
     }

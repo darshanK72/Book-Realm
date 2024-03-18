@@ -157,7 +157,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new Book
             {
-                Id = Guid.Parse(bookDto.Id),
                 Title = bookDto.Title,
                 Rating = bookDto.Rating,
                 Description = bookDto.Description,

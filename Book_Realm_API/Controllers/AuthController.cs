@@ -74,7 +74,6 @@ namespace Book_Realm_API.Controllers
             }
         }
 
-
         [HttpPost("refresh")]
         public async Task<ActionResult<RefreshResponse>> Refresh(RefreshRequest refreshRequest)
         {

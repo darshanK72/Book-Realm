@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Book_Realm_API.Models
@@ -9,5 +10,12 @@ namespace Book_Realm_API.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string Name { get; set; }
+
+        [ForeignKey("Book")]
+        public Guid BookId { get; set; }
+
+        [JsonIgnore]
+        public Book Book { get; set; }
+
     }
 }

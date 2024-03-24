@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book_Realm_API.Migrations
 {
     [DbContext(typeof(BookRealmDbContext))]
-    [Migration("20240316172138_init6")]
-    partial class init6
+    [Migration("20240324164215_init3")]
+    partial class init3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,26 @@ namespace Book_Realm_API.Migrations
                         .IsUnique();
 
                     b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Banner", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("BannerType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ClickUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PlaceHolder")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Banner");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Bill", b =>
@@ -172,6 +192,27 @@ namespace Book_Realm_API.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("Book_Realm_API.Models.BookTag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TagId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("BookTags");
+                });
+
             modelBuilder.Entity("Book_Realm_API.Models.Cart", b =>
                 {
                     b.Property<Guid>("Id")
@@ -239,6 +280,11 @@ namespace Book_Realm_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -254,6 +300,10 @@ namespace Book_Realm_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Images");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Image");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Order", b =>
@@ -504,6 +554,46 @@ namespace Book_Realm_API.Migrations
                     b.ToTable("WishlistItems");
                 });
 
+            modelBuilder.Entity("Book_Realm_API.Models.BannerImage", b =>
+                {
+                    b.HasBaseType("Book_Realm_API.Models.Image");
+
+                    b.Property<Guid>("BannerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("BannerId")
+                        .IsUnique()
+                        .HasFilter("[BannerId] IS NOT NULL");
+
+                    b.HasDiscriminator().HasValue("BannerImage");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.BookImage", b =>
+                {
+                    b.HasBaseType("Book_Realm_API.Models.Image");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("BookId");
+
+                    b.HasDiscriminator().HasValue("BookImage");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.ProfileImage", b =>
+                {
+                    b.HasBaseType("Book_Realm_API.Models.Image");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
+
+                    b.HasDiscriminator().HasValue("ProfileImage");
+                });
+
             modelBuilder.Entity("Book_Realm_API.Models.Admin", b =>
                 {
                     b.HasBaseType("Book_Realm_API.Models.User");
@@ -519,15 +609,9 @@ namespace Book_Realm_API.Migrations
                 {
                     b.HasBaseType("Book_Realm_API.Models.User");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("AuthorDescription")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
-
-                    b.ToTable("Users", t =>
-                        {
-                            t.Property("Description")
-                                .HasColumnName("Author_Description");
-                        });
 
                     b.HasDiscriminator().HasValue("Author");
                 });
@@ -608,6 +692,25 @@ namespace Book_Realm_API.Migrations
                     b.Navigation("Publisher");
 
                     b.Navigation("Subgenre");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.BookTag", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Book_Realm_API.Models.Tag", "Tag")
+                        .WithMany()
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Tag");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Cart", b =>
@@ -749,6 +852,44 @@ namespace Book_Realm_API.Migrations
                     b.Navigation("Wishlist");
                 });
 
+            modelBuilder.Entity("Book_Realm_API.Models.BannerImage", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.Banner", "Banner")
+                        .WithOne("BannerImage")
+                        .HasForeignKey("Book_Realm_API.Models.BannerImage", "BannerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Banner");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.BookImage", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.ProfileImage", b =>
+                {
+                    b.HasOne("Book_Realm_API.Models.User", "User")
+                        .WithOne("ProfileImage")
+                        .HasForeignKey("Book_Realm_API.Models.ProfileImage", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Book_Realm_API.Models.Banner", b =>
+                {
+                    b.Navigation("BannerImage");
+                });
+
             modelBuilder.Entity("Book_Realm_API.Models.Cart", b =>
                 {
                     b.Navigation("Bill");
@@ -764,6 +905,8 @@ namespace Book_Realm_API.Migrations
                     b.Navigation("Address");
 
                     b.Navigation("Cart");
+
+                    b.Navigation("ProfileImage");
 
                     b.Navigation("UserRoles");
 

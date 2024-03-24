@@ -9,6 +9,9 @@ using Book_Realm_API.Repositories;
 using Book_Realm_API.DTO;
 using Book_Realm_API.Utils.MappingHelper;
 using Book_Realm_API.Repositories.BookRepository;
+using Microsoft.EntityFrameworkCore;
+using Book_Realm_API.Repositories.TagRepository;
+using Book_Realm_API.Repositories.ImageRepository;
 
 namespace Book_Realm_API.Controllers
 {
@@ -17,11 +20,15 @@ namespace Book_Realm_API.Controllers
     public class BookController : ControllerBase
     {
         private readonly IBookRepository _bookRepository;
+        private readonly ITagRepository _tagRepository;
+        private readonly IImageRepository _imageRepository;
         private readonly IMappingHelper _mapper;
 
-        public BookController(IBookRepository bookRepository, IMappingHelper mapper)
+        public BookController(IBookRepository bookRepository,ITagRepository tagRepository,IImageRepository imageRepository, IMappingHelper mapper)
         {
             _bookRepository = bookRepository;
+            _tagRepository = tagRepository;
+            _imageRepository = imageRepository;
             _mapper = mapper;
         }
 
@@ -62,6 +69,7 @@ namespace Book_Realm_API.Controllers
             {
                 var book = _mapper.MapToBook(bookDto);
                 var addedBook = await _bookRepository.CreateBook(book);
+                addedBook.Tags = await _tagRepository.SaveAndGetBookTags(addedBook.Id,bookDto.Tags);
                 bookDto = _mapper.MapToBookDTO(book);
                 return CreatedAtAction(nameof(GetBook), new { id = bookDto.Id }, bookDto);
             }

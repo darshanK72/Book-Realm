@@ -2,7 +2,7 @@
 
 namespace Book_Realm_API.DTO
 {
-    public class SubenreDTO
+    public class GenreDTO
     {
         public string Id { get; set; }
         public string Name { get; set; }

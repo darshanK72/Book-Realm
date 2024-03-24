@@ -9,7 +9,7 @@ namespace Book_Realm_API.Models
     {
 
         [MaxLength(500)]
-        public string Description { get; set; }
+        public string AuthorDescription { get; set; }
 
         [NotMapped]
         [JsonIgnore]

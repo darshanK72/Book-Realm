@@ -142,7 +142,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
                                 Email = signUpRequest.Email,
                                 Mobile = signUpRequest.Mobile,
                                 Password = _passwordHelper.Encode(signUpRequest.Password),
-                                Description = signUpRequest.Description,
+                                AuthorDescription = signUpRequest.Description,
                                 Reviews = new List<Review>(),
                                 Orders = new List<Order>(),
                                 PublishedBooks = new List<Book>(),
@@ -173,12 +173,41 @@ namespace Book_Realm_API.Repositories.AuthRepository
                                 Email = signUpRequest.Email,
                                 Mobile = signUpRequest.Mobile,
                                 Password = _passwordHelper.Encode(signUpRequest.Password),
-                                Description = signUpRequest.Description,
+                                PublisherDescription = signUpRequest.Description,
                                 FoundationDate = signUpRequest.FoundationDate,
                                 WebsiteUrl = signUpRequest.WebsiteUrl,
                                 Reviews = new List<Review>(),
                                 Orders = new List<Order>(),
                                 PublishedBooks = new List<Book>(),
+                            };
+
+                            var otherRole = _dbContext.Roles.First(r => r.Name == "User");
+
+                            newUser.UserRoles = new List<UserRole>()
+                            {
+                                new UserRole()
+                                {
+                                   Role = userRole,
+                                   RoleId = userRole.Id,
+                                },
+                                new UserRole()
+                                {
+                                    Role = otherRole,
+                                    RoleId = otherRole.Id,
+                                }
+                            };
+                        }
+                        else if (userRole.Name == "Admin")
+                        {
+                            newUser = new Admin()
+                            {
+                                Name = signUpRequest.Name,
+                                Email = signUpRequest.Email,
+                                Mobile = signUpRequest.Mobile,
+                                Password = _passwordHelper.Encode(signUpRequest.Password),
+                                AdminDescription = signUpRequest.Description,
+                                Reviews = new List<Review>(),
+                                Orders = new List<Order>(),
                             };
 
                             var otherRole = _dbContext.Roles.First(r => r.Name == "User");

@@ -1,5 +1,6 @@
 ﻿using Book_Realm_API.Models;
 using Book_Realm_API.Payloads;
+using Book_Realm_API.Repositories.BookRepository;
 using Book_Realm_API.Repositories.ImageRepository;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Http;
@@ -12,28 +13,33 @@ namespace Book_Realm_API.Controllers
     public class ImageController : ControllerBase
     {
         private readonly IImageRepository _imageRepository;
+        private readonly IBookRepository _bookRepository;
         private readonly IConfiguration _configuration;
 
-        public ImageController(IImageRepository imageRepository,IConfiguration configuration)
+        public ImageController(IImageRepository imageRepository,IBookRepository bookRepository,IConfiguration configuration)
         {
             _imageRepository = imageRepository;
+            _bookRepository = bookRepository;
             _configuration = configuration;
         }
 
         [HttpPost("book/upload")]
-        public async Task<ActionResult<Image>> UploadBookImage(IFormFile file,string fileName)
+        public async Task<ActionResult<Image>> UploadBookImage(IFormFile file,string fileName,Guid bookId)
         {
             try
             {
                 var imageUploadResult = await _imageRepository.UploadImage(file,"Book",fileName);
 
                 var Id = imageUploadResult.PublicId.Split('/').Last();
-                var image = new Image()
+                var image = new BookImage()
                 {
                     Id = Guid.Parse(Id),
                     Name = fileName,
                     Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
-                    Type = "Book"
+                    Type = "Book",
+                    BookId = bookId,
+                    Book = await _bookRepository.GetBookById(bookId)
+
                 };
                 var imageResult = await _imageRepository.CreateImage(image);
                 return Ok(imageResult);

@@ -18,10 +18,5 @@ namespace Book_Realm_API.Models
         [Required]
         public string Type { get; set; }
 
-        [ForeignKey("Book")]
-        public Guid BookId { get; set; }
-
-        [JsonIgnore]
-        public Book Book { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<SubenreDTO>>> GetGenres()
+        public async Task<ActionResult<List<GenreDTO>>> GetGenres()
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<SubenreDTO>> GetGenre(Guid id)
+        public async Task<ActionResult<GenreDTO>> GetGenre(Guid id)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<SubenreDTO>> CreateGenre(SubenreDTO genreDto)
+        public async Task<ActionResult<GenreDTO>> CreateGenre(GenreDTO genreDto)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPost("multiple")]
-        public async Task<ActionResult<SubenreDTO>> CreateMultipleGenre(List<SubenreDTO> genreDtos)
+        public async Task<ActionResult<GenreDTO>> CreateMultipleGenre(List<GenreDTO> genreDtos)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace Book_Realm_API.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<SubenreDTO>> UpdateGenre(Guid id, SubenreDTO genreDto)
+        public async Task<ActionResult<GenreDTO>> UpdateGenre(Guid id, GenreDTO genreDto)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<SubenreDTO>> DeleteGenre(Guid id)
+        public async Task<ActionResult<GenreDTO>> DeleteGenre(Guid id)
         {
             try
             {

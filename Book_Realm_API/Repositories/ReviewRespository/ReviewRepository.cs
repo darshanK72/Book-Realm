@@ -29,6 +29,18 @@ namespace Book_Realm_API.Repositories.ReviewRespository
             return review;
         }
 
+        public async Task<List<Review>> GetReviewsByBookId(Guid id)
+        {
+            var reviews = await _dbContext.Reviews.Where(r => r.BookId == id).ToListAsync();
+
+            if (reviews == null)
+            {
+                throw new InvalidOperationException("Review for book not found");
+            }
+
+            return reviews;
+        }
+
         public async Task<Review> UpdateReview(Guid id, Review review)
         {
             if (!ReviewIdExists(id))

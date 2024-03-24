@@ -12,6 +12,8 @@ namespace Book_Realm_API.DTO
         public string Password { get; set; }
         public List<string> UserRoles { get; set; }
         public string AddressId { get; set; }
+
+        public string ProfileImage { get; set; }
         public string CartId { get; set; }
         public string WishlistId { get; set; }
         public List<string> Reviews { get; set; }

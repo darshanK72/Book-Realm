@@ -37,6 +37,9 @@ namespace Book_Realm_API.Models
         public Address Address { get; set; }
 
         [JsonIgnore]
+        public ProfileImage ProfileImage { get; set; }
+
+        [JsonIgnore]
         public Cart Cart { get; set; }
 
         [JsonIgnore]

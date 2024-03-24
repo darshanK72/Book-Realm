@@ -68,15 +68,14 @@ namespace Book_Realm_API.Models
 
         [NotMapped]
         [JsonIgnore]
-        public List<Tag> Tags { get; set; }
+        public List<BookTag> Tags { get; set; }
 
         [NotMapped]
         [JsonIgnore]
         public List<Review> Reviews { get; set; }
 
-
         [NotMapped]
         [JsonIgnore]
-        public List<Image> Images { get; set; }
+        public List<BookImage> Images { get; set; }
     }
 }

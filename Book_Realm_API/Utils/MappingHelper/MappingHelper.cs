@@ -173,15 +173,18 @@ namespace Book_Realm_API.Utils.MappingHelper
                 PublisherId = Guid.Parse(bookDto.PublisherId),
                 Genre = _dbContext.Genres.FirstOrDefault(g => g.Id == Guid.Parse(bookDto.GenreId)),
                 Subgenre = _dbContext.Subgenres.FirstOrDefault(s => s.Id == Guid.Parse(bookDto.SubgenreId)),
-                Tags = bookDto.Tags.Count() > 0  || bookDto.Tags != null ? bookDto.Tags.Select(tagId => _dbContext.Tags.FirstOrDefault(tag => tag.Id == Guid.Parse(tagId))).ToList() : new List<Tag>(),
-                Reviews = bookDto.Reviews.Count() > 0 || bookDto.Reviews != null ? bookDto.Reviews.Select(reviewId => _dbContext.Reviews.FirstOrDefault(review => review.Id == Guid.Parse(reviewId))).ToList() : new List<Review>(),
-                Images = bookDto.Images.Count() > 0 || bookDto.Images != null ? bookDto.Images.Select(imageId => _dbContext.Images.FirstOrDefault(image => image.Id == Guid.Parse(imageId))).ToList() : new List<Image>()
+                Tags = new List<BookTag>(),
+                Reviews = new List<Review>(),
+                Images = new List<BookImage>()
+                //Tags = bookDto.Tags.Count() > 0  || bookDto.Tags != null ? bookDto.Tags.Select(tagId => _dbContext.BookTags.FirstOrDefault(tag => tag.Id == Guid.Parse(tagId))).ToList() : new List<BookTag>(),
+                //Reviews = bookDto.Reviews.Count() > 0 || bookDto.Reviews != null ? bookDto.Reviews.Select(reviewId => _dbContext.Reviews.FirstOrDefault(review => review.Id == Guid.Parse(reviewId))).ToList() : new List<Review>(),
+                //Images = bookDto.Images.Count() > 0 || bookDto.Images != null ? bookDto.Images.Select(imageId => _dbContext.BookImages.FirstOrDefault(image => image.Id == Guid.Parse(imageId))).ToList() : new List<BookImage>()
             };
         }
 
-        public SubenreDTO MapToGenreDTO(Genre genre)
+        public GenreDTO MapToGenreDTO(Genre genre)
         {
-            return new SubenreDTO()
+            return new GenreDTO()
             {
                 Id = genre.Id.ToString(),
                 Name = genre.Name,
@@ -190,11 +193,10 @@ namespace Book_Realm_API.Utils.MappingHelper
             };
         }
 
-        public Genre MapToGenre(SubenreDTO genreDto)
+        public Genre MapToGenre(GenreDTO genreDto)
         {
             return new Genre()
             {
-                Id = Guid.Parse(genreDto.Id),
                 Name = genreDto.Name,
                 Description = genreDto.Description,
                 Subgenres = genreDto.Subgenres.Count() > 0 || genreDto.Subgenres != null ? genreDto.Subgenres.Select(subgenreId => _dbContext.Subgenres.FirstOrDefault(subgenre => subgenre.Id == Guid.Parse(subgenreId))).ToList() : new List<Subgenre>()
@@ -216,7 +218,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new Subgenre()
             {
-                Id = Guid.Parse(subgenreDto.Id),
                 Name = subgenreDto.Name,
                 Description = subgenreDto.Description,
                 GenreId = Guid.Parse(subgenreDto.GenreId)

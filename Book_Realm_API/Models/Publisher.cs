@@ -8,7 +8,7 @@ namespace Book_Realm_API.Models
     {
       
         [MaxLength(500)]
-        public string Description { get; set; }
+        public string PublisherDescription { get; set; }
 
         [Required]
         public DateTime FoundationDate { get; set; }

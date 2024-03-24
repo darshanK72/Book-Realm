@@ -49,6 +49,20 @@ namespace Book_Realm_API.Controllers
             }
         }
 
+        [HttpGet("book/{id}")]
+        public async Task<ActionResult<Review>> GetRevieswByBookId(Guid id)
+        {
+            try
+            {
+                var review = await _reviewRepository.GetReviewsByBookId(id);
+                return Ok(review);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutReview(Guid id, Review review)
         {

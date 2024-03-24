@@ -12,7 +12,7 @@ using Book_Realm_API.Repositories.RoleRepository;
 namespace Book_Realm_API.Controllers
 {
 
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [Route("api/roles")]
     [ApiController]
     public class RolesController : ControllerBase
@@ -34,7 +34,7 @@ namespace Book_Realm_API.Controllers
             }
             catch(Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex);
             }   
         }
 
@@ -48,7 +48,7 @@ namespace Book_Realm_API.Controllers
             }
             catch(Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex);
             }
         }
 
@@ -62,7 +62,7 @@ namespace Book_Realm_API.Controllers
             }
             catch(Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex);
             }
         }
 
@@ -76,7 +76,7 @@ namespace Book_Realm_API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex);
             }
         }
 
@@ -90,7 +90,7 @@ namespace Book_Realm_API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex);
             }
         }
     }

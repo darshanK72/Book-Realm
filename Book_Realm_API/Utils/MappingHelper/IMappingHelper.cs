@@ -15,8 +15,8 @@ namespace Book_Realm_API.Utils.MappingHelper
         Bill MapToBill(BillDTO billDto);
         BookDTO MapToBookDTO(Book book);
         Book MapToBook(BookDTO bookDto);
-        SubenreDTO MapToGenreDTO(Genre genre);
-        Genre MapToGenre(SubenreDTO genreDto);
+        GenreDTO MapToGenreDTO(Genre genre);
+        Genre MapToGenre(GenreDTO genreDto);
         SubgenreDTO MapToSubgenreDTO(Subgenre subgenre);
         Subgenre MapToSubgenre(SubgenreDTO subgenreDto);
         AddressDTO MapToAddressDTO(Address address);

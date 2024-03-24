@@ -11,13 +11,13 @@ namespace Book_Realm_API.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
-        [ForeignKey("user")]
+        [ForeignKey("User")]
         public Guid UserId { get; set; }
 
         [JsonIgnore]
         public User User { get; set; }
 
-        [ForeignKey("role")]
+        [ForeignKey("Role")]
         public Guid RoleId { get; set; }
         public Role Role { get; set; }
     }

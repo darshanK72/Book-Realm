@@ -19,13 +19,18 @@ namespace Book_Realm_API.Repositories.BookRepository
 
         public async Task<List<Book>> GetAllBooks()
         {
+            var b = await _dbContext.Books.ToListAsync();
+            var ba = await _dbContext.Books.Include(b => b.Author).ToListAsync();
+            var bp = await _dbContext.Books.Include(b => b.Publisher).ToListAsync();
+            var bg = await _dbContext.Books.Include(b => b.Genre).ToListAsync();
+            var bs = await _dbContext.Books.Include(b => b.Subgenre).ToListAsync();
             var books = await _dbContext.Books.Include(b => b.Author).Include(b => b.Publisher).Include(b => b.Genre).Include(b => b.Subgenre).ToListAsync();
 
             var booksWithDetails = await Task.WhenAll(books.Select(async book =>
             {
                 book.Reviews = await _dbContext.Reviews.Where(r => r.BookId == book.Id).ToListAsync();
-                book.Tags = await _dbContext.Tags.Where(t => t.BookId == book.Id).ToListAsync();
-                book.Images = await _dbContext.Images.Where(i => i.BookId == book.Id).ToListAsync();
+                book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
+                book.Images = await _dbContext.BookImages.Where(i => i.BookId == book.Id).ToListAsync();
                 return book;
             }));
 
@@ -37,8 +42,8 @@ namespace Book_Realm_API.Repositories.BookRepository
             var book = await _dbContext.Books.Include(b => b.Author).Include(b => b.Publisher).Include(b => b.Genre).Include(b => b.Subgenre).FirstOrDefaultAsync();
 
             book.Reviews = await _dbContext.Reviews.Where(b => b.BookId == book.Id).ToListAsync();
-            book.Tags = await _dbContext.Tags.Where(t => t.BookId == book.Id).ToListAsync();
-            book.Images = await _dbContext.Images.Where(id => id.BookId == book.Id).ToListAsync();
+            book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
+            book.Images = await _dbContext.BookImages.Where(id => id.BookId == book.Id).ToListAsync();
 
             return book;
 

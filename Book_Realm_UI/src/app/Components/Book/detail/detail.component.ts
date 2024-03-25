@@ -53,16 +53,16 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.route.paramMap.subscribe((params) => {
-      this.bookId = parseInt(params.get('bookId') || '');
+    // this.route.paramMap.subscribe((params) => {
+    //   this.bookId = parseInt(params.get('bookId') || '');
 
-      this.http.get<Book>(`${this.baseUrl}/book/${this.bookId}`).subscribe((data) => {
-        this.book = data;
-        console.log(this.book);
-       });
+    //   this.http.get<Book>(`${this.baseUrl}/book/${this.bookId}`).subscribe((data) => {
+    //     this.book = data;
+    //     console.log(this.book);
+    //    });
   
-       this.books$.subscribe((data) => this.relatedBooks = data.filter((book) => book.subgenreId == 16));
-    })
+    //    this.books$.subscribe((data) => this.relatedBooks = data.filter((book) => book.subgenreId == 16));
+    // })
   
   }
 
@@ -83,7 +83,7 @@ export class DetailComponent implements OnInit {
     im?.setAttribute('src', link);
   }
 
-  getBookDetail(i:number){
+  getBookDetail(i:string){
     console.log(i);
     this.router.navigate(["/detail",i])
   }

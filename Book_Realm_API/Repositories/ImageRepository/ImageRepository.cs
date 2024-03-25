@@ -28,16 +28,22 @@ namespace Book_Realm_API.Repositories.ImageRepository
             return imageUploadResult;
         }
 
-        public async Task<ImageUploadResult> UploadImageFromUrl(ImageUploadRequest imageUploadRequest)
+        public async Task<ImageUploadResult> UploadImageFromUrl(string imageUrl,string folder,string fileName)
         {
-            var uploadFolder = GetUploadFolder(imageUploadRequest.Folder);
-            var imageUploadResult = await _imageHelper.UploadImageFromUrl(imageUploadRequest.ImageUrl,uploadFolder,imageUploadRequest.FileName);
+            var uploadFolder = GetUploadFolder(folder);
+            var imageUploadResult = await _imageHelper.UploadImageFromUrl(imageUrl,uploadFolder,fileName);
             return imageUploadResult;
         }
         public async Task DeleteImageByPublicId(Guid Id,string folder)
         {
             var uploadFolder = GetUploadFolder(folder);
             await _imageHelper.DeleteImage(uploadFolder + "/" + Id.ToString());
+        }
+
+        public async Task DeleteAllImages()
+        {
+            var uploadFolder = GetUploadFolder("Book");
+            await _imageHelper.DeleteAllImages(uploadFolder);
         }
 
         public async Task<Image> GetImageById(Guid id)
@@ -51,6 +57,19 @@ namespace Book_Realm_API.Repositories.ImageRepository
 
             return image;
         }
+
+        public async Task<Image> CreateBookImage(BookImage image)
+        {
+
+            var book = await _dbContext.Books.FindAsync(image.BookId);
+            image.Book = book;
+            image.BookId = book.Id;
+            _dbContext.BookImages.Add(image);
+
+            await _dbContext.SaveChangesAsync();
+            return image;
+        }
+
 
         public async Task<Image> CreateImage(Image image)
         {

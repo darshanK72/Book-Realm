@@ -14,8 +14,12 @@ export class SubgenreService {
 
   constructor(private http:HttpClient) { }
 
-  getAllSubgenres():Observable<Subgenre[]>{
-    return this.http.get<Subgenre[]>(`${this.baseUrl}/subgenre`);
+  get6SubgenresRandom():Observable<Subgenre[]>{
+    return this.http.get<Subgenre[]>(`${this.baseUrl}/subgenres/random`);
+  }
+
+  getSubgenresByGenre(genreId : string):Observable<Subgenre[]>{
+    return this.http.get<Subgenre[]>(`${this.baseUrl}/subgenres/genre/${genreId}`);
   }
 
   getSubgenreById(id:number):Observable<Subgenre>{

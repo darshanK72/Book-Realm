@@ -33,11 +33,26 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<BookDTO>>> GetBooks()
+        public async Task<ActionResult<List<BookDTO>>> GetBooks([FromQuery] int pageNumber, [FromQuery] int pageSize)
         {
             try
             {
-                var books = await _bookRepository.GetAllBooks();
+                var books = await _bookRepository.GetAllBooks(pageNumber,pageSize);
+                var bookDtos = books.Select(b => _mapper.MapToBookDTO(b)).ToList();
+                return Ok(bookDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("subgenre/{subgenreId}")]
+        public async Task<ActionResult<List<BookDTO>>> GetBooksBySubgenre(string subgenreId)
+        {
+            try
+            {
+                var books = await _bookRepository.GetBooksBySubgenre(subgenreId);
                 var bookDtos = books.Select(b => _mapper.MapToBookDTO(b)).ToList();
                 return Ok(bookDtos);
             }
@@ -72,6 +87,21 @@ namespace Book_Realm_API.Controllers
                 addedBook.Tags = await _tagRepository.SaveAndGetBookTags(addedBook.Id,bookDto.Tags);
                 bookDto = _mapper.MapToBookDTO(book);
                 return CreatedAtAction(nameof(GetBook), new { id = bookDto.Id }, bookDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("multiple")]
+        public async Task<ActionResult<string>> CreateBookS(List<BookDTO> bookDtos)
+        {
+            try
+            {
+                var result = await _bookRepository.CreateMultipleBooks(bookDtos);
+                return Ok(result);
+                
             }
             catch (Exception ex)
             {

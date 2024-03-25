@@ -42,6 +42,27 @@ namespace Book_Realm_API.Utils.ImageHelper
             await _cloudinary.DeleteResourcesAsync(new[] {publicId});
         }
 
+        public async Task DeleteAllImages(string folderName)
+        {
+            string prefix = folderName + "/";
+
+            var listParams = new ListResourcesParams
+            {
+                ResourceType = ResourceType.Image,
+                MaxResults = 500
+            };
+
+            var result = await _cloudinary.ListResourcesAsync(listParams);
+
+            List<string> publicIds = new List<string>();
+            foreach (var resource in result.Resources)
+            {
+            await _cloudinary.DeleteResourcesAsync(new[] {resource.PublicId} );
+            }
+
+
+        }
+
         public async Task<ImageUploadResult> UploadImageFromUrl(string imageUrl,string folder, string fileName)
         {
             if (!string.IsNullOrEmpty(imageUrl))

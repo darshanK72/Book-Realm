@@ -1,5 +1,6 @@
 ﻿using Book_Realm_API.DTO;
 using Book_Realm_API.Models;
+using Book_Realm_API.Payloads;
 using Book_Realm_API.Repositories.SubgenreRepository;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,36 @@ namespace Book_Realm_API.Controllers
             try
             {
                 var subgenre = await _subgenreRepository.GetSubgenreById(id);
+                var subgenreDto = _mapper.MapToSubgenreDTO(subgenre);
+                return Ok(subgenreDto);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpGet("random")]
+        public async Task<ActionResult<SubgenreDTO>> GetRandom6Subgenres()
+        {
+            try
+            {
+                var subgenres = await _subgenreRepository.GetRandom6Subgenres();
+                var subgenreDtos = subgenres.Select(s => _mapper.MapToSubgenreDTO(s));
+                return Ok(subgenreDtos);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpPost("name")]
+        public async Task<ActionResult<SubgenreDTO>> GetSubgenreByName(GetSubgenreRequest getSubgenreRequest)
+        {
+            try
+            {
+                var subgenre = await _subgenreRepository.GetSubgenreByName(getSubgenreRequest);
                 var subgenreDto = _mapper.MapToSubgenreDTO(subgenre);
                 return Ok(subgenreDto);
             }

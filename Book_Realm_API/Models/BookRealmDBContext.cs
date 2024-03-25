@@ -26,6 +26,7 @@ namespace Book_Realm_API.Models
         public DbSet<Role> Roles { get; set; }
         public DbSet<Wishlist> Wishlists { get; set; }
         public DbSet<WishlistItem> WishlistItems { get; set; }
+        public DbSet<Banner> Banners { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<ProfileImage> ProfileImages { get; set; }

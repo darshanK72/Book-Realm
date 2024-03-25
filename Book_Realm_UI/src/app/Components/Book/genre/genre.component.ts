@@ -38,29 +38,29 @@ export class GenreComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.route.paramMap.subscribe((map) => {
-      this.genreId = map.get('id');
-      this.store.select(selectGenreById(this.genreId)).subscribe((data) => {
-        this.genre = data;
-        console.log(this.genre);
-        this.store
-        .select(selectSubgenresByGenreId(this.genre.id))
-        .subscribe((data) => {
-          this.subgenres = data;
-          console.log(this.subgenres);
+    // this.route.paramMap.subscribe((map) => {
+    //   this.genreId = map.get('id');
+    //   this.store.select(selectGenreById(this.genreId)).subscribe((data) => {
+    //     this.genre = data;
+    //     console.log(this.genre);
+    //     this.store
+    //     .select(selectSubgenresByGenreId(this.genre.id))
+    //     .subscribe((data) => {
+    //       this.subgenres = data;
+    //       console.log(this.subgenres);
 
-          this.subgBooks = [];
+    //       this.subgBooks = [];
 
-          this.subgenres.forEach((subgenre) => {
-            this.store
-              .select(selectBooksBySubgenreId(subgenre.id))
-              .subscribe((books) => {
-                this.subgBooks.push({description:subgenre.description,books:books});
+    //       this.subgenres.forEach((subgenre) => {
+    //         this.store
+    //           .select(selectBooksBySubgenreId(subgenre.id))
+    //           .subscribe((books) => {
+    //             this.subgBooks.push({description:subgenre.description,books:books});
 
-              });
-          });
-        });
-      });
-    });
+    //           });
+    //       });
+    //     });
+    //   });
+    // });
   }
 }

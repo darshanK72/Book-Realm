@@ -149,7 +149,7 @@ namespace Book_Realm_API.Utils.MappingHelper
                 SubgenreId = book.Subgenre.Id.ToString(),
                 Tags = book.Tags.Select(tag => tag.Id.ToString()).ToList(),
                 Reviews = book.Reviews.Select(review => review.Id.ToString()).ToList(),
-                Images = book.Images.Select(image => image.Id.ToString()).ToList()
+                Images = book.Images.Select(image => image.Src.ToString()).ToList()
             };
         }
 
@@ -176,10 +176,7 @@ namespace Book_Realm_API.Utils.MappingHelper
                 Tags = new List<BookTag>(),
                 Reviews = new List<Review>(),
                 Images = new List<BookImage>()
-                //Tags = bookDto.Tags.Count() > 0  || bookDto.Tags != null ? bookDto.Tags.Select(tagId => _dbContext.BookTags.FirstOrDefault(tag => tag.Id == Guid.Parse(tagId))).ToList() : new List<BookTag>(),
-                //Reviews = bookDto.Reviews.Count() > 0 || bookDto.Reviews != null ? bookDto.Reviews.Select(reviewId => _dbContext.Reviews.FirstOrDefault(review => review.Id == Guid.Parse(reviewId))).ToList() : new List<Review>(),
-                //Images = bookDto.Images.Count() > 0 || bookDto.Images != null ? bookDto.Images.Select(imageId => _dbContext.BookImages.FirstOrDefault(image => image.Id == Guid.Parse(imageId))).ToList() : new List<BookImage>()
-            };
+             };
         }
 
         public GenreDTO MapToGenreDTO(Genre genre)
@@ -199,7 +196,8 @@ namespace Book_Realm_API.Utils.MappingHelper
             {
                 Name = genreDto.Name,
                 Description = genreDto.Description,
-                Subgenres = genreDto.Subgenres.Count() > 0 || genreDto.Subgenres != null ? genreDto.Subgenres.Select(subgenreId => _dbContext.Subgenres.FirstOrDefault(subgenre => subgenre.Id == Guid.Parse(subgenreId))).ToList() : new List<Subgenre>()
+                Subgenres = new List<Subgenre>()
+                //Subgenres = genreDto.Subgenres.Count() > 0 || genreDto.Subgenres != null ? genreDto.Subgenres.Select(subgenreId => _dbContext.Subgenres.FirstOrDefault(subgenre => subgenre.Id == Guid.Parse(subgenreId))).ToList() : new List<Subgenre>()
             };
         }
 
@@ -243,7 +241,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new Address
             {
-                Id = Guid.Parse(addressDto.Id),
                 Street1 = addressDto.Street1,
                 Street2 = addressDto.Street2,
                 City = addressDto.City,
@@ -270,7 +267,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new CartItem
             {
-                Id = Guid.Parse(cartItemDto.Id),
                 BookId = Guid.Parse(cartItemDto.BookId),
                 Quantity = cartItemDto.Quantity,
                 CartId = Guid.Parse(cartItemDto.CartId),
@@ -294,7 +290,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new Image
             {
-                Id = Guid.Parse(imageDto.Id),
                 Name = imageDto.Name,
                 Src = imageDto.Src,
                 Type = imageDto.Type
@@ -316,7 +311,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new OrderItem
             {
-                Id = Guid.Parse(orderItemDto.Id),
                 BookId = Guid.Parse(orderItemDto.BookId),
                 Quantity = orderItemDto.Quantity,
                 OrderId = Guid.Parse(orderItemDto.OrderId),
@@ -342,7 +336,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new Review
             {
-                Id = Guid.Parse(reviewDto.Id),
                 Comment = reviewDto.Comment,
                 Rating = reviewDto.Rating,
                 Date = DateTime.Parse(reviewDto.Date),
@@ -366,7 +359,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new Wishlist
             {
-                Id = Guid.Parse(wishlistDto.Id),
                 UserId = Guid.Parse(wishlistDto.UserId),
                 User = _dbContext.Users.FirstOrDefault(user => user.Id == Guid.Parse(wishlistDto.UserId))
             };
@@ -387,7 +379,6 @@ namespace Book_Realm_API.Utils.MappingHelper
         {
             return new WishlistItem
             {
-                Id = Guid.Parse(wishlistItemDto.Id),
                 WishlistId = Guid.Parse(wishlistItemDto.WishlistId),
                 BookId = Guid.Parse(wishlistItemDto.BookId),
                 Book = _dbContext.Books.FirstOrDefault(book => book.Id == Guid.Parse(wishlistItemDto.BookId)),

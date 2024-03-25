@@ -1,15 +1,15 @@
 <div class="container">
     <app-hero></app-hero>
-    <app-list [books]="genre1books" [genreTitle]="genre1Title"></app-list>
-    <app-list [books]="genre2books" [genreTitle]="genre2Title"></app-list>
-    <app-list [books]="genre3books" [genreTitle]="genre3Title"></app-list>
+    <ng-container *ngFor="let list of genereBooks.slice(0,3);let i = index">
+        <app-list [books]="list" [genreTitle]="genereTitles[i]"></app-list>
+    </ng-container>
     <app-card></app-card>
     <app-small-banners></app-small-banners>
     <app-large-banners></app-large-banners>
     <app-card></app-card>
-    <app-list [books]="genre4books" [genreTitle]="genre4Title"></app-list>
-    <app-list [books]="genre5books" [genreTitle]="genre5Title"></app-list>
-    <app-list [books]="genre6books" [genreTitle]="genre6Title"></app-list>
+    <ng-container *ngFor="let list of genereBooks.slice(-3);let i = index">
+        <app-list [books]="list" [genreTitle]="genereTitles[i]"></app-list>
+    </ng-container>
     <app-card></app-card>
     <app-small-banners></app-small-banners>
     <app-large-banners></app-large-banners>

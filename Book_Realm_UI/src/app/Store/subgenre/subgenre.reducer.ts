@@ -1,10 +1,13 @@
 import { createReducer, on } from "@ngrx/store";
-import {getSubgenresSuccess } from "./subgenre.actions";
+import {load6SubgenresRandomSuccess, loadSubgenresByGenreSuccess } from "./subgenre.actions";
 import { state } from "./subgenre.state";
 
 export const subgenreReducer = createReducer(
     state,
-    on(getSubgenresSuccess,(state,action) => {
+    on(loadSubgenresByGenreSuccess,(state,action) => {
+        return [...action.payload];
+    }),
+    on(load6SubgenresRandomSuccess,(state,action) => {
         return [...action.payload];
     })
 )

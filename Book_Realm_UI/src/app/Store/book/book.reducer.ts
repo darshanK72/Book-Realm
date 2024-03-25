@@ -1,10 +1,15 @@
 import { createReducer, on } from "@ngrx/store";
-import { getBooksSuccess } from "./book.actions";
+import { loadBooksByGenreSuccess, loadBooksBySubgenreSuccess } from "./book.actions";
 import { state } from "./book.state";
 
 export const bookReducer = createReducer(
     state,
-    on(getBooksSuccess,(state,action) => {
-        return [...action.payload];
+    on(loadBooksByGenreSuccess,(state,action) => {
+        const newBooks = action.payload.filter((book:any) => !state.some(existingBook => existingBook.id === book.id));
+        return [...state, ...newBooks];
+    }),
+    on(loadBooksBySubgenreSuccess,(state,action) => {
+        const newBooks = action.payload.filter((book:any) => !state.some(existingBook => existingBook.id === book.id));
+        return [...state, ...newBooks];
     })
 )

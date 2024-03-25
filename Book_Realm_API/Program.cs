@@ -21,6 +21,8 @@ using Book_Realm_API.Repositories.SubgenreRepository;
 using Book_Realm_API.Utils.ImageHelper;
 using Book_Realm_API.Repositories.ImageRepository;
 using Book_Realm_API.Repositories.TagRepository;
+using Book_Realm_API.Repositories.BannerRepository;
+using Book_Realm_API.Repositories.ReviewRespository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -85,8 +87,10 @@ builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IGenreRepository,GenreRepository>();
 builder.Services.AddScoped<ISubgenreRepository,SubgenreRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 builder.Services.AddScoped<IImageRepository, ImageRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<IBannerRepository, BannerRepository>();
 
 builder.Services.AddScoped<IMappingHelper,MappingHelper>();
 builder.Services.AddScoped<ITokenHelper, TokenHelper>();

@@ -1,5 +1,5 @@
 export interface Subgenre{
-    id:number;
+    id:string;
     name:string;
     description:string;
     genreId:number;

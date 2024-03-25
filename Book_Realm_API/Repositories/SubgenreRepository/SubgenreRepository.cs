@@ -1,4 +1,5 @@
 ﻿using Book_Realm_API.Models;
+using Book_Realm_API.Payloads;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,23 @@ namespace Book_Realm_API.Repositories.SubgenreRepository
         public async Task<Subgenre> GetSubgenreById(Guid id)
         {
             var subgenre = await _dbContext.Subgenres.FindAsync(id);
+
+            if (subgenre == null)
+            {
+                throw new InvalidOperationException("Subgenre not found");
+            }
+
+            return subgenre;
+        }
+
+        public async Task<List<Subgenre>> GetRandom6Subgenres()
+        {
+            return await _dbContext.Subgenres.Skip(3).Take(6).ToListAsync();
+        }
+
+        public async Task<Subgenre> GetSubgenreByName(GetSubgenreRequest getSubgenre)
+        {
+            var subgenre = await _dbContext.Subgenres.Include(s => s.Genre).FirstOrDefaultAsync(s => s.Name == getSubgenre.name);
 
             if (subgenre == null)
             {

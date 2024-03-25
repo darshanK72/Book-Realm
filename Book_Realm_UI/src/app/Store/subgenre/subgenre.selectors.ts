@@ -7,7 +7,11 @@ export const selectSubgenres = createSelector(selectorState,(subgenres) => {
     return subgenres;
 })
 
-export const selectSubgenreById = (subgenreId:number) =>  createSelector(selectSubgenres,(subgenres) => {
+export const select6SubgenresRandom = createSelector(selectSubgenres,(subgenres) => {
+    return subgenres;
+})
+
+export const selectSubgenreById = (subgenreId:string) =>  createSelector(selectSubgenres,(subgenres) => {
     return subgenres.find(s => s.id == subgenreId)
 })
 

@@ -16,9 +16,7 @@ export class ListComponent {
   genreTitle!:string;
   constructor(private router:Router){}
 
-  getBookDetail(i:number){
-
+  getBookDetail(i:string){
     this.router.navigate(["/detail",i])
-
   }
 }

@@ -7,7 +7,7 @@ export const selectBooks = createSelector(selectorState,(books) => {
     return books;
 });
 
-export const selectBooksById = (bookId:number) => createSelector(selectBooks,(books) => {
+export const selectBooksById = (bookId:string) => createSelector(selectBooks,(books) => {
     return books.filter(b => b.id == bookId);
 });
 
@@ -15,6 +15,6 @@ export const selectBooksByGenreId = (genreId:number) => createSelector(selectBoo
     return books.filter(b => b.genreId == genreId);
 });
 
-export const selectBooksBySubgenreId = (subgenreId:number) => createSelector(selectBooks,(books) => {
+export const selectBooksBySubgenreId = (subgenreId:string) => createSelector(selectBooks,(books) => {
     return books.filter(b => b.subgenreId == subgenreId);
 });

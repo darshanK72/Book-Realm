@@ -1,4 +1,5 @@
 ﻿using Book_Realm_API.Models;
+using Book_Realm_API.Payloads;
 using Microsoft.EntityFrameworkCore;
 
 namespace Book_Realm_API.Repositories.GenreRepository
@@ -20,6 +21,19 @@ namespace Book_Realm_API.Repositories.GenreRepository
         public async Task<Genre> GetGenreById(Guid id)
         {
             var genre = await _dbContext.Genres.FindAsync(id);
+
+            if (genre == null)
+            {
+                throw new InvalidOperationException("Genre not found");
+            }
+
+            return genre;
+        }
+
+        public async Task<Genre> GetGenreByName(GetGenreRequest getGenreRequest)
+        {
+            var genre = await _dbContext.Genres.FirstOrDefaultAsync(g => g.Name == getGenreRequest.name);
+            genre.Subgenres = _dbContext.Subgenres.Where(s => s.GenreId == genre.Id).ToList();
 
             if (genre == null)
             {

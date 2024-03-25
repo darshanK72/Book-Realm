@@ -16,4 +16,9 @@ export class BookService {
   getAllBooks():Observable<Book[]>{
     return this.http.get<Book[]>(`${this.baseUrl}/book`);
   }
+
+  getBooksBySubgenre(subgenreId:string){
+    console.log(subgenreId);
+    return this.http.get<Book[]>(`${this.baseUrl}/books/subgenre/${subgenreId}`);
+  }
 }

@@ -1,4 +1,10 @@
-﻿using Book_Realm_API.Models;
+﻿using Book_Realm_API.DTO;
+using Book_Realm_API.Models;
+using Book_Realm_API.Payloads;
+using Book_Realm_API.Repositories.ImageRepository;
+using Book_Realm_API.Repositories.TagRepository;
+using Book_Realm_API.Utils.MappingHelper;
+using CloudinaryDotNet.Actions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,30 +17,71 @@ namespace Book_Realm_API.Repositories.BookRepository
     public class BookRepository : IBookRepository
     {
         private readonly BookRealmDbContext _dbContext;
+        private readonly IMappingHelper _mappingHelper;
+        private readonly ITagRepository _tagRepository;
+        private readonly IImageRepository _imageRepository;
 
-        public BookRepository(BookRealmDbContext dbContext)
+        public BookRepository(BookRealmDbContext dbContext,IMappingHelper mappingHelper,ITagRepository tagRepository,IImageRepository imageRepository)
         {
             _dbContext = dbContext;
+            _mappingHelper = mappingHelper;
+            _tagRepository = tagRepository;
+            _imageRepository = imageRepository;
         }
 
-        public async Task<List<Book>> GetAllBooks()
+        public async Task<List<Book>> GetAllBooks(int pageNumber, int pageSize)
         {
-            var b = await _dbContext.Books.ToListAsync();
-            var ba = await _dbContext.Books.Include(b => b.Author).ToListAsync();
-            var bp = await _dbContext.Books.Include(b => b.Publisher).ToListAsync();
-            var bg = await _dbContext.Books.Include(b => b.Genre).ToListAsync();
-            var bs = await _dbContext.Books.Include(b => b.Subgenre).ToListAsync();
-            var books = await _dbContext.Books.Include(b => b.Author).Include(b => b.Publisher).Include(b => b.Genre).Include(b => b.Subgenre).ToListAsync();
+           
+            int itemsToSkip = (pageNumber - 1) * pageSize;
 
-            var booksWithDetails = await Task.WhenAll(books.Select(async book =>
+            var booksQuery = _dbContext.Books
+                .Include(b => b.Author)
+                .Include(b => b.Publisher)
+                .Include(b => b.Genre)
+                .Include(b => b.Subgenre);
+
+            
+            var pagedBooks = await booksQuery
+                .OrderBy(b => b.Id) 
+                .Skip(itemsToSkip)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var booksWithDetails = new List<Book>();
+
+            foreach (var book in pagedBooks)
             {
                 book.Reviews = await _dbContext.Reviews.Where(r => r.BookId == book.Id).ToListAsync();
                 book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
                 book.Images = await _dbContext.BookImages.Where(i => i.BookId == book.Id).ToListAsync();
-                return book;
-            }));
 
-            return booksWithDetails.ToList();
+                booksWithDetails.Add(book);
+            }
+
+            return booksWithDetails;
+        }
+
+        public async Task<List<Book>> GetBooksBySubgenre(string subgenreId)
+        {
+
+            var booksQuery = await _dbContext.Books
+                .Include(b => b.Author)
+                .Include(b => b.Publisher)
+                .Include(b => b.Genre)
+                .Include(b => b.Subgenre).Where(b => b.Subgenre.Id == Guid.Parse(subgenreId)).ToListAsync();
+
+            var booksWithDetails = new List<Book>();
+
+            foreach (var book in booksQuery)
+            {
+                book.Reviews = await _dbContext.Reviews.Where(r => r.BookId == book.Id).ToListAsync();
+                book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
+                book.Images = await _dbContext.BookImages.Where(i => i.BookId == book.Id).ToListAsync();
+
+                booksWithDetails.Add(book);
+            }
+
+            return booksWithDetails;
         }
 
         public async Task<Book> GetBookById(Guid id)
@@ -56,11 +103,40 @@ namespace Book_Realm_API.Repositories.BookRepository
             return book;
         }
 
-        public async Task<List<Book>> CreateMultipleBooks(List<Book> books)
+        public async Task<string> CreateMultipleBooks(List<BookDTO> booksDtos)
         {
-            _dbContext.Books.AddRange(books);
-            await _dbContext.SaveChangesAsync();
-            return books;
+            foreach (var bookDto in booksDtos)
+            {
+                var book = _mappingHelper.MapToBook(bookDto);
+                _dbContext.Books.Add(book);
+                await _dbContext.SaveChangesAsync();
+                book.Tags = await _tagRepository.SaveAndGetBookTags(book.Id, bookDto.Tags);
+
+                foreach (var item in bookDto.Images)
+                {
+                    try
+                    {
+                        var imageUploadResult = await _imageRepository.UploadImageFromUrl(item, "Book", book.Title);
+                        var Id = imageUploadResult.PublicId.Split('/').Last();
+                        var image = new BookImage()
+                        {
+                            Id = Guid.Parse(Id),
+                            Name = book.Title,
+                            Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
+                            Type = "Book",
+                            BookId = book.Id,
+                            Book = await GetBookById(book.Id)
+                        };
+                        var imageResult = await _imageRepository.CreateBookImage(image);
+                    }
+                    catch(Exception ex)
+                    {
+                        continue;
+                    }
+                }
+            }
+
+            return "uploaded";
         }
 
         public async Task<Book> UpdateBook(Guid id, Book book)

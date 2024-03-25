@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from './Store/app.state';
-import { getBooks } from './Store/book/book.actions';
-import { getGenres } from './Store/genre/genre.actions';
-import { getSubgenres } from './Store/subgenre/subgenre.actions';
+import { loadGenres } from './Store/genre/genre.actions';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +15,7 @@ export class AppComponent {
   constructor(private store:Store<AppState>){}
 
   ngOnInit(){
-    this.store.dispatch(getBooks());
-    this.store.dispatch(getGenres());
-    this.store.dispatch(getSubgenres());
-
+    this.store.dispatch(loadGenres());
   }
 
   sidebarToggle(event: any) {

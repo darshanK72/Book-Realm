@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, EMPTY, exhaustMap, map } from 'rxjs';
+import { catchError, exhaustMap, map } from 'rxjs';
 import { SubgenreService } from 'src/app/Services/subgenre/subgenre.service';
-import {
-  getSubgenres,
-  getSubgenresSuccess,
-} from './subgenre.actions';
+import { load6SubgenresRandom, load6SubgenresRandomFailure, load6SubgenresRandomSuccess, loadSubgenresByGenre, loadSubgenresByGenreFailure, loadSubgenresByGenreSuccess } from './subgenre.actions';
 
 @Injectable()
 export class SubgenreEffects {
@@ -14,13 +11,25 @@ export class SubgenreEffects {
     private subgenreService: SubgenreService
   ) {}
 
-  getSubgenres$ = createEffect(() => {
+  getSubgenresByGenre$ = createEffect(() => {
     return this.actions$.pipe(
-      ofType(getSubgenres),
+      ofType(loadSubgenresByGenre),
+      exhaustMap((actions) =>
+        this.subgenreService.getSubgenresByGenre(actions.payload.genreId).pipe(
+          map((subgenres) => loadSubgenresByGenreSuccess({ payload: subgenres })),
+          catchError(async (error) => loadSubgenresByGenreFailure({payload:error}))
+        )
+      )
+    );
+  });
+
+  get6SubgenresRandom$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(load6SubgenresRandom),
       exhaustMap(() =>
-        this.subgenreService.getAllSubgenres().pipe(
-          map((subgenre) => getSubgenresSuccess({ payload: subgenre })),
-          catchError(() => EMPTY)
+        this.subgenreService.get6SubgenresRandom().pipe(
+          map((subgenres) => load6SubgenresRandomSuccess({ payload: subgenres })),
+          catchError(async (error) => load6SubgenresRandomFailure({payload:error}))
         )
       )
     );

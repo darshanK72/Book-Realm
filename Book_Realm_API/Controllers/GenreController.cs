@@ -1,5 +1,6 @@
 ﻿using Book_Realm_API.DTO;
 using Book_Realm_API.Models;
+using Book_Realm_API.Payloads;
 using Book_Realm_API.Repositories.GenreRepository;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.AspNetCore.Http;
@@ -41,6 +42,21 @@ namespace Book_Realm_API.Controllers
             try
             {
                 var genre = await _genreRepository.GetGenreById(id);
+                var genreDto = _mapper.MapToGenreDTO(genre);
+                return Ok(genreDto);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpPost("name")]
+        public async Task<ActionResult<GenreDTO>> GetGenreByName([FromBody] GetGenreRequest getGenreRequest)
+        {
+            try
+            {
+                var genre = await _genreRepository.GetGenreByName(getGenreRequest);
                 var genreDto = _mapper.MapToGenreDTO(genre);
                 return Ok(genreDto);
             }

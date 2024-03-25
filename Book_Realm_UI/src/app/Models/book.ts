@@ -1,5 +1,5 @@
 export interface Book{
-    id:number;
+    id:string;
     title:string;
     rating:number;
     description:string;
@@ -17,5 +17,5 @@ export interface Book{
     publisherName:string;
     publisherId:number;
     genreId:number;
-    subgenreId:number;
+    subgenreId:string;
 }

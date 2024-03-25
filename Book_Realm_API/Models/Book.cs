@@ -12,13 +12,10 @@ namespace Book_Realm_API.Models
         public Guid Id { get; set; }
 
         [Required]
-        [MaxLength(100)]
         public string Title { get; set; }
 
         [Range(0, 5)]
         public float Rating { get; set; }
-
-        [MaxLength(500)]
         public string Description { get; set; }
 
         [Required]
@@ -40,7 +37,6 @@ namespace Book_Realm_API.Models
         public string Country { get; set; }
 
         [Required]
-        [MaxLength(100)]
         public string AuthorName { get; set; }
 
 
@@ -51,7 +47,6 @@ namespace Book_Realm_API.Models
         public Author Author { get; set; }
 
         [Required]
-        [MaxLength(100)]
         public string PublisherName { get; set; }
 
         [ForeignKey("publisher")]

@@ -30,7 +30,6 @@ namespace Book_Realm_API.Utils.JwtHelper
             identityClaims.AddClaim(new Claim("Id", user.Id.ToString()));
             identityClaims.AddClaim(new Claim(ClaimTypes.Email, user.Email));
             identityClaims.AddClaim(new Claim(ClaimTypes.Name, user.Email));
-            identityClaims.AddClaim(new Claim(JsonClaimValueTypes.Json, JsonConvert.SerializeObject(_mappingHelper.MapToUserDTO(user))));
             foreach (var role in user.UserRoles)
             {
                 identityClaims.AddClaim(new Claim(ClaimTypes.Role, role.Role.Name));

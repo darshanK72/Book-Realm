@@ -48,8 +48,18 @@ import { CardComponent } from './Components/Home/card/card.component';
 import { FullBannerComponent } from './Components/Home/full-banner/full-banner.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GoogleLoginProvider, GoogleSigninButtonDirective, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider,
+  GoogleSigninButtonDirective,
+  GoogleSigninButtonModule,
+  SocialAuthServiceConfig,
+  SocialLoginModule,
+} from '@abacritt/angularx-social-login';
 import { environment } from 'src/environments/environment';
+import { AuthEffects } from './Store/auth/auth.effects';
+import { SpinnerComponent } from './Components/Layout/spinner/spinner.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { SharedEffects } from './Store/shared/shared.effects';
 
 @NgModule({
   declarations: [
@@ -87,6 +97,7 @@ import { environment } from 'src/environments/environment';
     SignupComponent,
     CardComponent,
     FullBannerComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,11 +106,12 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     ReactiveFormsModule,
     NgxSplideModule,
+    NgxSpinnerModule,
     HttpClientModule,
     SocialLoginModule,
     GoogleSigninButtonModule,
     StoreModule.forRoot(AppStore),
-    EffectsModule.forRoot([BookEffects, GenreEffects, SubgenreEffects]),
+    EffectsModule.forRoot([AuthEffects,SharedEffects, BookEffects, GenreEffects, SubgenreEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [

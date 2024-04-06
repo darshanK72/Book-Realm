@@ -16,6 +16,20 @@ namespace Book_Realm_API.Controllers
             _authRepository = authRepository;
         }
 
+        [HttpPost("checkUserExists")]
+        public async Task<ActionResult<UserExistsResponse>> CheckIfUserExists([FromBody] GoogleUser user)
+        {
+            try
+            {
+                var response = await _authRepository.CheckIfUserExists(user);
+                return Ok(response);
+            }
+            catch (AuthenticationException ex)
+            {
+                return StatusCode(ex.StatusCode, $"{ex.Message}");
+            }
+        }
+
         [HttpPost("signin")]
         public async Task<ActionResult<SignInResponse>> SignIn([FromBody] SignInRequest signInRequest)
         {

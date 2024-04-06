@@ -56,21 +56,21 @@
                         </div>
                     </div>
                     <div class="input-box">
-                        <input type="text" formControlName="phone" placeholder="Mobile No">
+                        <input type="text" formControlName="mobile" placeholder="Mobile No">
                     </div>
                     <div
-                        *ngIf="signupForm.get('phone')?.invalid && (signupForm.get('phone')?.dirty || signupForm.get('phone')?.touched)">
-                        <div *ngIf="signupForm.get('phone')?.hasError('required')">
-                            <p class="error-message">Phone Number is Required</p>
+                        *ngIf="signupForm.get('mobile')?.invalid && (signupForm.get('mobile')?.dirty || signupForm.get('mobile')?.touched)">
+                        <div *ngIf="signupForm.get('mobile')?.hasError('required')">
+                            <p class="error-message">mobile Number is Required</p>
                         </div>
-                        <div *ngIf="signupForm.get('phone')?.hasError('pattern')">
-                            <p class="error-message">Phone Number should contain digits only</p>
+                        <div *ngIf="signupForm.get('mobile')?.hasError('pattern')">
+                            <p class="error-message">mobile Number should contain digits only</p>
                         </div>
-                        <div *ngIf="signupForm.get('phone')?.hasError('minlength')">
-                            <p class="error-message">Phone Number should be 10 digits long</p>
+                        <div *ngIf="signupForm.get('mobile')?.hasError('minlength')">
+                            <p class="error-message">mobile Number should be 10 digits long</p>
                         </div>
-                        <div *ngIf="signupForm.get('phone')?.hasError('maxlength')">
-                            <p class="error-message">Phone Number should be 10 digits long</p>
+                        <div *ngIf="signupForm.get('mobile')?.hasError('maxlength')">
+                            <p class="error-message">mobile Number should be 10 digits long</p>
                         </div>
                     </div>
                     <div class="input-box password" id="password1">
@@ -106,7 +106,7 @@
                     </div>
                     <div class="button">
                         <button class="btn btn-primary" [class.disabled-button]="buttonDisabled(signupForm)"
-                            [disabled]="buttonDisabled(signupForm)">Sign In</button>
+                            [disabled]="buttonDisabled(signupForm)">Sign Up</button>
                     </div>
                 </form>
             </div>
@@ -116,7 +116,7 @@
                 <div class="hr"></div>
             </div>
             <div class="other-methods">
-                <asl-google-signin-button logo_alignment="center" width='400' text="signin_with" type='standard' size='large'></asl-google-signin-button>
+                <asl-google-signin-button logo_alignment="center" width='400' text="signup_with" type='standard' size='large'></asl-google-signin-button>
             </div>
             <div class="message">
                 <p>Already have an account?

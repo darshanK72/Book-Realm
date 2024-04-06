@@ -1,8 +1,10 @@
-﻿using Book_Realm_API.Exceptions;
+﻿using Azure.Core;
+using Book_Realm_API.Exceptions;
 using Book_Realm_API.Models;
 using Book_Realm_API.Payloads;
 using Book_Realm_API.Utils.EmailHelper;
 using Book_Realm_API.Utils.JwtHelper;
+using Book_Realm_API.Utils.MappingHelper;
 using Book_Realm_API.Utils.PasswordHelper;
 using Google.Apis.Auth;
 using Microsoft.EntityFrameworkCore;
@@ -14,22 +16,52 @@ namespace Book_Realm_API.Repositories.AuthRepository
     {
         private readonly BookRealmDbContext _dbContext;
         private readonly IPasswordHelper _passwordHelper;
+        private readonly IMappingHelper _mappingHelper;
         private readonly ITokenHelper _tokenHelper;
         private readonly IEmailHelper _emailHelper;
         
-        public AuthRepository(BookRealmDbContext dbContext,IPasswordHelper passwordHelper,ITokenHelper tokenHelper,IEmailHelper emailHelper)
+        public AuthRepository(BookRealmDbContext dbContext,IPasswordHelper passwordHelper,ITokenHelper tokenHelper,IEmailHelper emailHelper,IMappingHelper mappingHelper)
         {
             _dbContext = dbContext;
             _passwordHelper = passwordHelper;
             _tokenHelper = tokenHelper;
             _emailHelper = emailHelper;
+            _mappingHelper = mappingHelper;
+        }
+
+        public async Task<UserExistsResponse> CheckIfUserExists(GoogleUser user)
+        {
+            if(user != null)
+            {
+                var existingUser = await _dbContext.Users.Where(u => u.Email == user.Email).FirstOrDefaultAsync(); 
+                if(existingUser != null)
+                {
+                    return new UserExistsResponse()
+                    {
+                        Exists = true,
+                        Message = "User exists with this email Id"
+                    };
+                }
+                else
+                {
+                    return new UserExistsResponse()
+                    {
+                        Exists = false,
+                        Message = "User do not exists with this email Id"
+                    };
+                }
+            }
+            else
+            {
+                throw new AuthenticationException(400, "Invalid Credentials!");
+            }
         }
 
         public async Task<SignInResponse> SignIn(SignInRequest signInRequest)
         {
             if (signInRequest.Email != null && signInRequest.Password != null)
             {
-                var user = await _dbContext.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).SingleOrDefaultAsync(u => u.Email == signInRequest.Email);
+                var user = await _dbContext.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).Include(u => u.Cart).Include(u => u.Address).Include(u => u.Wishlist).SingleOrDefaultAsync(u => u.Email == signInRequest.Email);
                 if (user != null)
                 {
                     if (_passwordHelper.Decode(signInRequest.Password, user?.Password))
@@ -45,6 +77,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
 
                         var siginInResponse = new SignInResponse()
                         {
+                            User = _mappingHelper.MapToUserDTO(user),
                             AccessToken = accessToken,
                             RefreshToken = refreshToken,
                             Message = "Sign In Successful."
@@ -73,7 +106,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
             {
                 var payload = await GoogleJsonWebSignature.ValidateAsync(googleUser.IdToken);
 
-                var user = await _dbContext.Users.Include(ur => ur.UserRoles).ThenInclude(u => u.Role).FirstOrDefaultAsync(u => u.Email == payload.Email);
+                var user = await _dbContext.Users.Include(ur => ur.UserRoles).ThenInclude(u => u.Role).Include(u => u.Cart).Include(u => u.Address).Include(u => u.Wishlist).FirstOrDefaultAsync(u => u.Email == payload.Email);
                 if (user == null)
                 {
                     throw new AuthenticationException(404, "User Not Found!,Try to Sign Up First");
@@ -91,6 +124,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
 
                 return new SignInResponse()
                 {
+                    User = _mappingHelper.MapToUserDTO(user),
                     AccessToken = accessToken,
                     RefreshToken = refreshToken,
                     Message = "Sign In Successful."
@@ -121,6 +155,9 @@ namespace Book_Realm_API.Repositories.AuthRepository
                                 Email = signUpRequest.Email,
                                 Mobile = signUpRequest.Mobile,
                                 Password = _passwordHelper.Encode(signUpRequest.Password),
+                                Cart = new Cart(),
+                                Address = new Address(),
+                                Wishlist = new Wishlist(),
                                 Reviews = new List<Review>(),
                                 Orders = new List<Order>()
                             };
@@ -143,6 +180,9 @@ namespace Book_Realm_API.Repositories.AuthRepository
                                 Mobile = signUpRequest.Mobile,
                                 Password = _passwordHelper.Encode(signUpRequest.Password),
                                 AuthorDescription = signUpRequest.Description,
+                                Cart = new Cart(),
+                                Address = new Address(),
+                                Wishlist = new Wishlist(),
                                 Reviews = new List<Review>(),
                                 Orders = new List<Order>(),
                                 PublishedBooks = new List<Book>(),
@@ -176,6 +216,9 @@ namespace Book_Realm_API.Repositories.AuthRepository
                                 PublisherDescription = signUpRequest.Description,
                                 FoundationDate = signUpRequest.FoundationDate,
                                 WebsiteUrl = signUpRequest.WebsiteUrl,
+                                Cart = new Cart(),
+                                Address = new Address(),
+                                Wishlist = new Wishlist(),
                                 Reviews = new List<Review>(),
                                 Orders = new List<Order>(),
                                 PublishedBooks = new List<Book>(),
@@ -206,6 +249,9 @@ namespace Book_Realm_API.Repositories.AuthRepository
                                 Mobile = signUpRequest.Mobile,
                                 Password = _passwordHelper.Encode(signUpRequest.Password),
                                 AdminDescription = signUpRequest.Description,
+                                Cart = new Cart(),
+                                Address = new Address(),
+                                Wishlist = new Wishlist(),
                                 Reviews = new List<Review>(),
                                 Orders = new List<Order>(),
                             };
@@ -255,7 +301,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
            }  
         }
 
-        public async Task<MessageResponse> SignUpWithGoogle(GoogleUser googleUser)
+        public async Task<SignInResponse> SignUpWithGoogle(GoogleUser googleUser)
         {
             if(googleUser != null)
             {
@@ -271,6 +317,9 @@ namespace Book_Realm_API.Repositories.AuthRepository
                         Email = payload.Email,
                         Mobile = "",
                         Password = "",
+                        Cart = new Cart(),
+                        Address = new Address(),
+                        Wishlist = new Wishlist(),
                         Reviews = new List<Review>(),
                         Orders = new List<Order>(),
 
@@ -288,10 +337,24 @@ namespace Book_Realm_API.Repositories.AuthRepository
                     await _dbContext.Users.AddAsync(newUser);
                     await _dbContext.SaveChangesAsync();
 
-                    return new MessageResponse()
+                    var accessToken = _tokenHelper.CreateAccessToken(newUser);
+                    var refreshToken = _tokenHelper.CreateRefreshToken();
+
+                    newUser.AccessToken = accessToken;
+                    newUser.RefreshToken = refreshToken;
+                    newUser.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+
+                    _dbContext.Entry(newUser).State = EntityState.Modified;
+                    await _dbContext.SaveChangesAsync();
+
+                    return new SignInResponse()
                     {
-                        Message = "User Registered Successfully"
+                        User = _mappingHelper.MapToUserDTO(newUser),
+                        AccessToken = accessToken,
+                        RefreshToken = refreshToken,
+                        Message = "User Registered Successfully."
                     };
+
                 }
                 else
                 {
@@ -425,6 +488,7 @@ namespace Book_Realm_API.Repositories.AuthRepository
 
     public class GoogleUser
     { 
+        public string Email { get; set; }
         public string IdToken { get; set; }
     }
 

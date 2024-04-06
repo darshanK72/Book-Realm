@@ -3,6 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/Services/auth/auth.service';
 import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
+import { AppState } from 'src/app/Store/app.state';
+import { Store } from '@ngrx/store';
+import { signIn } from 'src/app/Store/auth/auth.actions';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -17,12 +20,10 @@ export class SigninComponent implements OnInit {
     private socialAuthService: SocialAuthService,
     private authService: AuthService,
     private scrollService: ScrollService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private store: Store<AppState>
   ) {
-    this.socialAuthService.authState.subscribe((user) => {
-      this.authService.signInWithGoogle(user);
-      console.log(user);
-    });
+    
   }
 
   ngOnInit(): void {
@@ -44,7 +45,10 @@ export class SigninComponent implements OnInit {
 
   onSigninSubmit() {
     if (this.signinForm.valid) {
-      console.log('Form submitted successfully');
+      console.log(this.signinForm.value);
+      this.store.dispatch(
+        signIn({ payload: { signinRequest: this.signinForm.value } })
+      );
     } else {
       this.validateAllFormFields(this.signinForm);
     }

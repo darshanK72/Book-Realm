@@ -22,6 +22,9 @@
             </div>
         </div>
     </div>
+    <button class="btn btn-outline-primary" (click)="showToast()">
+        hello
+    </button>
     <div class="vr">
 
     </div>
@@ -60,7 +63,7 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn btn-primary" type="submit"  [class.disabled-button]="signinForm.invalid"
+                        <button class="btn btn-primary" type="submit" [class.disabled-button]="signinForm.invalid"
                             [disabled]="signinForm.invalid">Sign In</button>
                     </div>
                 </form>

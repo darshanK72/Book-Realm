@@ -6,6 +6,7 @@ import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { AppState } from 'src/app/Store/app.state';
 import { Store } from '@ngrx/store';
 import { signIn } from 'src/app/Store/auth/auth.actions';
+import { NgToastService } from 'ng-angular-popup';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -21,9 +22,15 @@ export class SigninComponent implements OnInit {
     private authService: AuthService,
     private scrollService: ScrollService,
     private fb: FormBuilder,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private toast:NgToastService
   ) {
     
+  }
+
+  showToast(){
+    console.log("hello");
+    this.toast.success({detail:"SUCCESS",summary:'Your Success Message',duration:5000});
   }
 
   ngOnInit(): void {

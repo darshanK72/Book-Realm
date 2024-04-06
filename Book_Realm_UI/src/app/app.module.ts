@@ -60,6 +60,7 @@ import { AuthEffects } from './Store/auth/auth.effects';
 import { SpinnerComponent } from './Components/Layout/spinner/spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedEffects } from './Store/shared/shared.effects';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -107,6 +108,7 @@ import { SharedEffects } from './Store/shared/shared.effects';
     ReactiveFormsModule,
     NgxSplideModule,
     NgxSpinnerModule,
+    NgToastModule,
     HttpClientModule,
     SocialLoginModule,
     GoogleSigninButtonModule,

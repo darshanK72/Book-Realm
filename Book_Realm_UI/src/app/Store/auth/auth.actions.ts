@@ -13,6 +13,7 @@ export const continueWithGoogle = createAction('[Auth] Continue With Google', pr
 export const signUpWithGoogleSuccess = createAction('[Auth] Sign Up With Google Success', props<{ payload: any}>());
 export const signUpWithGoogleFailure = createAction('[Auth] Sign Up With Google Failure', props<{ payload: any }>());
 
-
 export const signInWithGoogleSuccess = createAction('[Auth] Sign In With Google Success', props<{ payload: any}>());
 export const signInWithGoogleFailure = createAction('[Auth] Sign In With Google Failure', props<{ payload: any }>());
+
+export const signOut = createAction('[Auth] Sign Out');

@@ -1,7 +1,7 @@
 <app-header (sidebarEmmiter)="sidebarToggle($event)"></app-header>
 <app-sidebar [toShow]="showSidebar"></app-sidebar>
 <app-spinner></app-spinner>
-<ng-toast></ng-toast> 
+<ng-toast [style]="toast"></ng-toast> 
 <div class="main">
     <router-outlet></router-outlet>
 </div>

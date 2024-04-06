@@ -29,6 +29,7 @@
     "ng-angular-popup": "^0.5.2",
     "ngx-spinner": "^16.0.2",
     "ngx-splide": "^2.0.2",
+    "react-toastify": "^10.0.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

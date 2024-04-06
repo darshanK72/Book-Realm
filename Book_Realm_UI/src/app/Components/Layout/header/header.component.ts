@@ -1,69 +1,20 @@
-import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
+import { Store, select } from '@ngrx/store';
 import { ToggleService } from 'src/app/Services/toggle/toggle.service';
+import { AppState } from 'src/app/Store/app.state';
+import { signOut } from 'src/app/Store/auth/auth.actions';
+import { selectIsLoggedIn, selectLoggedInUser } from 'src/app/Store/auth/auth.selectors';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit,AfterViewInit {
   
   @ViewChild('fullElement')
   fullElement!:ElementRef;
-
-  currentRoute!: string;
-
-  constructor(
-    private renderer: Renderer2,
-    private toggleService: ToggleService,
-    private router: Router
-  ) {
-    this.renderer.listen('window', 'click', (e: Event) => {
-      if (
-        e.target == this.showprofbtn.nativeElement &&
-        this.showprof == false
-      ) {
-        this.showprof = true;
-        this.showProfile();
-      } else if (this.profile.nativeElement.contains(e.target)) {
-        this.showprof = true;
-        this.showProfile();
-      } else {
-        this.showprof = false;
-        this.showProfile();
-      }
-    });
-  }
-
-  ngAfterViewInit(): void {
-    this.router.events.subscribe((data) => {
-      if (data instanceof NavigationStart) {
-        this.currentRoute = data.url;
-        if (
-          this.currentRoute == '/' ||
-          this.currentRoute == '/home' ||
-          this.currentRoute.includes("sub-genre") ||
-          this.currentRoute.includes("genre") ||
-          this.currentRoute == '/filter'
-        ) {
-          this.renderer.removeClass(this.slider.nativeElement, 'hide');
-        } 
-        else if(this.currentRoute == '/admin'){
-          this.renderer.addClass(this.fullElement.nativeElement,'hide');
-        }
-        else if(this.currentRoute == '/author'){
-          this.renderer.addClass(this.fullElement.nativeElement,'hide');
-        }
-        else if(this.currentRoute == '/publisher'){
-          this.renderer.addClass(this.fullElement.nativeElement,'hide');
-        }
-        else {
-          this.renderer.addClass(this.slider.nativeElement, 'hide');
-        }
-      }
-    });
-  }
 
   @ViewChild('slider')
   slider!: ElementRef;
@@ -101,10 +52,78 @@ export class HeaderComponent {
   @ViewChild('showprofbtn')
   showprofbtn!: ElementRef;
 
-  ifLoggedIn = true;
+  ifLoggedIn = false;
+  currentUser:any;
   showprof = false;
 
   searchQuery: string = '';
+
+  currentRoute!: string;
+
+  constructor(
+    private renderer: Renderer2,
+    private toggleService: ToggleService,
+    private router: Router,
+    private store:Store<AppState>
+  ) {
+    this.renderer.listen('window', 'click', (e: Event) => {
+      if ( this.showprofbtn &&
+        e.target == this.showprofbtn?.nativeElement &&
+        this.showprof == false
+      ) {
+        this.showprof = true;
+        this.showProfile();
+      } else if (this.profile && this.profile.nativeElement.contains(e.target)) {
+        this.showprof = true;
+        this.showProfile();
+      } else if(this.showprofbtn) {
+        this.showprof = false;
+        this.showProfile();
+      }
+    });
+  }
+
+  ngOnInit(){
+    this.store.pipe(select(selectIsLoggedIn)).subscribe(data => {
+      this.ifLoggedIn = data;
+      this.store.pipe(select(selectLoggedInUser)).subscribe(user => {
+        this.currentUser = user;
+      })
+    })
+  }
+
+  ngAfterViewInit(): void {
+    this.router.events.subscribe((data) => {
+      if (data instanceof NavigationStart) {
+        this.currentRoute = data.url;
+        if (
+          this.currentRoute == '/' ||
+          this.currentRoute == '/home' ||
+          this.currentRoute.includes("sub-genre") ||
+          this.currentRoute.includes("genre") ||
+          this.currentRoute == '/filter'
+        ) {
+          this.renderer.removeClass(this.slider.nativeElement, 'hide');
+        } 
+        else if(this.currentRoute == '/admin'){
+          this.renderer.addClass(this.fullElement.nativeElement,'hide');
+        }
+        else if(this.currentRoute == '/author'){
+          this.renderer.addClass(this.fullElement.nativeElement,'hide');
+        }
+        else if(this.currentRoute == '/publisher'){
+          this.renderer.addClass(this.fullElement.nativeElement,'hide');
+        }
+        else {
+          this.renderer.addClass(this.slider.nativeElement, 'hide');
+        }
+      }
+    });
+  }
+
+  signOut(){
+    this.store.dispatch(signOut());
+  }
 
   showProfile() {
     if (this.showprof) {

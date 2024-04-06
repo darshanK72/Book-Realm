@@ -116,7 +116,14 @@
                 <div class="hr"></div>
             </div>
             <div class="other-methods">
-                <asl-google-signin-button logo_alignment="center" width='400' text="signup_with" type='standard' size='large'></asl-google-signin-button>
+                <ng-container *ngIf="!isMobile()">
+                    <asl-google-signin-button logo_alignment="center" width='400' text="continue_with" type='standard'
+                        size='large'></asl-google-signin-button>
+                </ng-container>
+                <ng-container *ngIf="isMobile()">
+                    <asl-google-signin-button logo_alignment="center" width='300' text="continue_with" type='standard'
+                        size='large'></asl-google-signin-button>
+                </ng-container>
             </div>
             <div class="message">
                 <p>Already have an account?

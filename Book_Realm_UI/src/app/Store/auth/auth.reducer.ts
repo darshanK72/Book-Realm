@@ -5,6 +5,7 @@ import {
   signInSuccess,
   signInWithGoogleFailure,
   signInWithGoogleSuccess,
+  signOut,
   signUpFailure,
   signUpSuccess,
   signUpWithGoogleFailure,
@@ -84,12 +85,14 @@ export const authReducer = createReducer(
     isLoggedIn: false,
     error: action.payload.error,
     success: null,
+  })),
+  on(signOut, (state,action) => ({
+    ...state,
+    user: null,
+    accessToken: null,
+    refreshToken: null,
+    isLoggedIn: false,
+    error: null,
+    success:null,
   }))
-
-  // on(AuthActions.logout, state => ({
-  //   ...state,
-  //   user: null,
-  //   isLoggedIn: false,
-  //   error: null
-  // }))
 );

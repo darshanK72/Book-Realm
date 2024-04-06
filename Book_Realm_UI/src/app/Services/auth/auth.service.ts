@@ -7,6 +7,9 @@ import { environment } from 'src/environments/environment';
 import { User } from 'src/app/Models/user';
 import { SigninRequest } from 'src/app/Payloads/signinRequest';
 import { SignupRequest } from 'src/app/Payloads/signupRequest';
+import { signInSuccess } from 'src/app/Store/auth/auth.actions';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/Store/app.state';
 
 @Injectable({
   providedIn: 'root',
@@ -21,11 +24,29 @@ export class AuthService {
 
   constructor(
     private authService: SocialAuthService,
-    private http: HttpClient
-  ) {
-    this.authService.authState.subscribe((user) => {
+    private http: HttpClient,
+    private store:Store<AppState>
+  ) {}
 
-    });
+  setAuthenticationState(user: any) {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+  }
+
+  clearAuthenticationState(){
+    localStorage.removeItem('currentUser');
+  }
+
+  restoreAuthenticationState() {
+    const storedUser = localStorage.getItem('currentUser');
+    if (storedUser) {
+      const data = JSON.parse(storedUser);
+      this.store.dispatch(signInSuccess({ payload: {
+        user: data.user,
+        accessToken: data.accessToken,
+        refreshToken: data.refreshToken,
+        success: data.message,
+      } }));
+    }
   }
 
   signIn = (signinRequest: SigninRequest) => {
@@ -44,8 +65,7 @@ export class AuthService {
     return this.http.post(`${this.authUrl}/auth/google-signup`, user);
   };
 
-  checkIfUserExists = (user:SocialUser) => {
-    console.log(user);
+  checkIfUserExists = (user: SocialUser) => {
     return this.http.post(`${this.authUrl}/auth/checkUserExists`, user);
-  }
+  };
 }

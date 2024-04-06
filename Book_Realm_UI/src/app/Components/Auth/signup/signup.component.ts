@@ -81,6 +81,12 @@ export class SignupComponent implements OnInit {
     });
   }
 
+  isMobile(){
+    const screenWidth = window.innerWidth;
+    const mobileWidthThreshold = 768; 
+    return screenWidth < mobileWidthThreshold;
+  }
+
   onSignupSubmit() {
     if (this.signupForm.valid) {
       console.log(this.signupForm.value);

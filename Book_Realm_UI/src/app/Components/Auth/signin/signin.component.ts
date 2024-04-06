@@ -28,11 +28,11 @@ export class SigninComponent implements OnInit {
     
   }
 
-  showToast(){
-    console.log("hello");
-    this.toast.success({detail:"SUCCESS",summary:'Your Success Message',duration:5000});
+  isMobile(){
+    const screenWidth = window.innerWidth;
+    const mobileWidthThreshold = 768; 
+    return screenWidth < mobileWidthThreshold;
   }
-
   ngOnInit(): void {
     this.widthbtn = 400;
     this.signinForm = this.fb.group({

@@ -20,6 +20,8 @@ import { MyProfileComponent } from './Components/Profile/my-profile/my-profile.c
 import { MyReviewsComponent } from './Components/Profile/my-reviews/my-reviews.component';
 import { ProfileComponent } from './Components/Profile/profile/profile.component';
 import { WishlistComponent } from './Components/Wishlist/wishlist/wishlist.component';
+import { AuthGuard } from './Services/auth/auth.guard';
+import { LogGuard } from './Services/auth/log.guard';
 
 
 const routes: Routes = [
@@ -36,16 +38,16 @@ const routes: Routes = [
     path: 'contact', component: ContactComponent
   },
   {
-    path: 'signin', component: SigninComponent
+    path: 'signin', component: SigninComponent,canActivate:[LogGuard]
   },
   {
-    path: 'signup', component: SignupComponent
+    path: 'signup', component: SignupComponent,canActivate:[LogGuard]
   },
   {
-    path: 'cart', component: CartComponent
+    path: 'cart', component: CartComponent,canActivate:[AuthGuard]
   },
   {
-    path: 'wishlist', component: WishlistComponent
+    path: 'wishlist', component: WishlistComponent,canActivate:[AuthGuard]
   },
   {
     path: 'detail/:bookId', component: DetailComponent

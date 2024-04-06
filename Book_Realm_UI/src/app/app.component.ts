@@ -15,19 +15,27 @@ export class AppComponent {
   title = 'Book_Realm_UI';
   showSidebar: boolean = false;
 
+  toast = {
+    width: '300px',
+  };
+
   constructor(
     private store: Store<AppState>,
     private socialAuthService: SocialAuthService,
     private authService: AuthService
   ) {
     this.socialAuthService.authState.subscribe((user) => {
-      console.log(user);
-      this.store.dispatch(continueWithGoogle({payload:{user}}));
+      this.store.dispatch(continueWithGoogle({ payload: { user } }));
     });
   }
 
   ngOnInit() {
+    this.authService.restoreAuthenticationState();
     this.store.dispatch(loadGenres());
+  }
+
+  removeActiveClass(element: Element): void {
+    element.classList.remove('active');
   }
 
   sidebarToggle(event: any) {

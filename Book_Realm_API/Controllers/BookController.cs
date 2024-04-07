@@ -82,11 +82,9 @@ namespace Book_Realm_API.Controllers
         {
             try
             {
-                var book = _mapper.MapToBook(bookDto);
-                var addedBook = await _bookRepository.CreateBook(book);
-                addedBook.Tags = await _tagRepository.SaveAndGetBookTags(addedBook.Id,bookDto.Tags);
-                bookDto = _mapper.MapToBookDTO(book);
-                return CreatedAtAction(nameof(GetBook), new { id = bookDto.Id }, bookDto);
+                
+                var addedBook = await _bookRepository.CreateBook(bookDto);
+                return CreatedAtAction(nameof(GetBook), bookDto);
             }
             catch (Exception ex)
             {

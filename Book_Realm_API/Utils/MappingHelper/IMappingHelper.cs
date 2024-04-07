@@ -33,6 +33,10 @@ namespace Book_Realm_API.Utils.MappingHelper
         Wishlist MapToWishlist(WishlistDTO wishlistDto);
         WishlistItemDTO MapToWishlistItemDTO(WishlistItem wishlistItem);
         WishlistItem MapToWishlistItem(WishlistItemDTO wishlistItemDto);
+        HomeSectionDTO MapToHomeSectionDTO(HomePageSection homePageSection);
+        HomePageSection MapToHomeSection(HomeSectionDTO homeSectionDto);
+        BannerDTO MapToBannerDTO(Banner banner);
+        Banner MapToBanner(BannerDTO bannerDto);
     }
 
 }

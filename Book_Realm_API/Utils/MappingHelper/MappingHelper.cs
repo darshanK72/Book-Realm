@@ -2,6 +2,7 @@
 using Book_Realm_API.DTO;
 using Microsoft.EntityFrameworkCore;
 using Humanizer.Localisation;
+using Book_Realm_API.Migrations;
 
 namespace Book_Realm_API.Utils.MappingHelper
 {
@@ -386,6 +387,52 @@ namespace Book_Realm_API.Utils.MappingHelper
             };
         }
 
+        public HomePageSection MapToHomeSection(HomeSectionDTO homeSectionDto)
+        {
+            return new HomePageSection
+            {
+                SectionName = homeSectionDto.SectionName,
+                SectionType = homeSectionDto.SectionType,
+                BookSections = new List<BookInSection>(),
+                BannerSections = new List<BannerInSection>()
+                //BookSections = homeSectionDto.Books.Select((bookId) => _dbContext.BooksInSection.FirstOrDefault((bs) => bs.BookId == Guid.Parse(bookId))).ToList(),
+                //BannerSections = homeSectionDto.Banners.Select((bannerId) => _dbContext.BannersInSection.FirstOrDefault((bs) => bs.BannerId == Guid.Parse(bannerId))).ToList()
+            };
+        }
 
+        public HomeSectionDTO MapToHomeSectionDTO(HomePageSection homePageSection)
+        {
+            return new HomeSectionDTO
+            {
+                Id = homePageSection.Id.ToString(),
+                SectionName = homePageSection.SectionName,
+                SectionType = homePageSection.SectionType,
+                Books = homePageSection.BookSections != null ? homePageSection.BookSections.Select(b => b.Book.Id.ToString()).ToList() : new List<string>(),
+                Banners = homePageSection.BannerSections != null ? homePageSection.BannerSections.Select(b => b.Banner.Id.ToString()).ToList() : new List<string>(),
+            };
+        }
+
+
+        public BannerDTO MapToBannerDTO(Banner banner)
+        {
+            return new BannerDTO
+            {
+                Id = banner.Id.ToString(),
+                BannerType = banner.BannerType.ToString(),
+                ClickUrl = banner.ClickUrl,
+                PlaceHolder = banner.PlaceHolder,
+                BannerImage = banner.BannerImage.Src,
+            };
+        }
+
+        public Banner MapToBanner(BannerDTO bannerDto)
+        {
+            return new Banner
+            {
+               ClickUrl = bannerDto.ClickUrl,
+               PlaceHolder = bannerDto.PlaceHolder,
+               BannerType = (BannerType)Enum.Parse(typeof(BannerType), bannerDto.BannerType)
+            };
+        }
     }
 }

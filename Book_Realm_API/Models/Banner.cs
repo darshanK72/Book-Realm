@@ -21,7 +21,7 @@ namespace Book_Realm_API.Models
     {
         SMALL,
         MEDIUM, 
-        LARGE
-
+        LARGE,
+        Hero
     }
 }

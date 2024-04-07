@@ -1,4 +1,5 @@
-﻿using Book_Realm_API.Models;
+﻿using Book_Realm_API.DTO;
+using Book_Realm_API.Models;
 
 namespace Book_Realm_API.Repositories.BannerRepository
 {
@@ -7,7 +8,7 @@ namespace Book_Realm_API.Repositories.BannerRepository
         Task<List<Banner>> GetAllBanners();
         Task<Banner> GetBannerById(Guid id);
         Task<Banner> UpdateBanner(Guid id, Banner banner);
-        Task<Banner> CreateBanner(Banner banner);
+        Task<string> CreateBanner(BannerDTO banner);
         Task<Banner> DeleteBanner(Guid id);
     }
 }

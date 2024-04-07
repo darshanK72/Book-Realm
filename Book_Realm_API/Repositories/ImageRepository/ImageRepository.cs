@@ -70,6 +70,18 @@ namespace Book_Realm_API.Repositories.ImageRepository
             return image;
         }
 
+        public async Task<Image> CreateBannerImage(BannerImage image)
+        {
+
+            var banner = await _dbContext.Banners.FindAsync(image.BannerId);
+            image.Banner = banner;
+            image.BannerId = banner.Id;
+            _dbContext.BannerImages.Add(image);
+
+            await _dbContext.SaveChangesAsync();
+            return image;
+        }
+
 
         public async Task<Image> CreateImage(Image image)
         {

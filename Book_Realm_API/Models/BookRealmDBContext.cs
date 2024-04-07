@@ -33,6 +33,8 @@ namespace Book_Realm_API.Models
         public DbSet<BannerImage> BannerImages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BookTag> BookTags { get; set; }
-
+        public DbSet<HomePageSection> HomePageSections { get; set; }
+        public DbSet<BookInSection> BooksInSection { get; set; }
+        public DbSet<BannerInSection> BannersInSection { get; set; }
     }
 }

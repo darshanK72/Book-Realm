@@ -96,12 +96,46 @@ namespace Book_Realm_API.Repositories.BookRepository
 
         }
 
-        public async Task<Book> CreateBook(Book book)
+        public async Task<string> CreateBook(BookDTO bookDto)
         {
-            _dbContext.Books.Add(book);
-            await _dbContext.SaveChangesAsync();
-            return book;
+            try
+            {
+                var book = _mappingHelper.MapToBook(bookDto);
+                _dbContext.Books.Add(book);
+                await _dbContext.SaveChangesAsync();
+                book.Tags = await _tagRepository.SaveAndGetBookTags(book.Id, bookDto.Tags);
+
+                foreach (var item in bookDto.Images)
+                {
+                    try
+                    {
+                        var imageUploadResult = await _imageRepository.UploadImageFromUrl(item, "Book", book.Title);
+                        var Id = imageUploadResult.PublicId.Split('/').Last();
+                        var image = new BookImage()
+                        {
+                            Id = Guid.Parse(Id),
+                            Name = book.Title,
+                            Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
+                            Type = "Book",
+                            BookId = book.Id,
+                            Book = await GetBookById(book.Id)
+                        };
+                        var imageResult = await _imageRepository.CreateBookImage(image);
+                    }
+                    catch (Exception)
+                    { 
+                        continue;
+                    }
+                }
+
+                return "Book created successfully";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
+
 
         public async Task<string> CreateMultipleBooks(List<BookDTO> booksDtos)
         {
@@ -129,7 +163,7 @@ namespace Book_Realm_API.Repositories.BookRepository
                         };
                         var imageResult = await _imageRepository.CreateBookImage(image);
                     }
-                    catch(Exception ex)
+                    catch(Exception)
                     {
                         continue;
                     }

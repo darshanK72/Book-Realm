@@ -47,7 +47,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAddress(Guid id, Address address)
+        public async Task<IActionResult> UpdateAddress(Guid id, Address address)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Address>> PostAddress(Address address)
+        public async Task<ActionResult<Address>> CreateAddress(Address address)
         {
             try
             {

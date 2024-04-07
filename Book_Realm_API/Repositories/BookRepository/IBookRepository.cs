@@ -12,7 +12,7 @@ namespace Book_Realm_API.Repositories.BookRepository
 
         Task<List<Book>> GetBooksBySubgenre(string subgenreId);
         Task<Book> GetBookById(Guid id);
-        Task<Book> CreateBook(Book book);
+        Task<string> CreateBook(BookDTO book);
         Task<string> CreateMultipleBooks(List<BookDTO> booksDtos);
         Task<Book> UpdateBook(Guid id, Book book);
         Task<Book> DeleteBook(Guid id);

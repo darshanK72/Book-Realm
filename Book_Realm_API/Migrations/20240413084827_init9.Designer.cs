@@ -4,6 +4,7 @@ using Book_Realm_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book_Realm_API.Migrations
 {
     [DbContext(typeof(BookRealmDbContext))]
-    partial class BookRealmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240413084827_init9")]
+    partial class init9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -325,29 +328,7 @@ namespace Book_Realm_API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Heros");
-                });
-
-            modelBuilder.Entity("Book_Realm_API.Models.HeroInSection", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnOrder(0);
-
-                    b.Property<Guid>("HeroId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("SectionId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HeroId");
-
-                    b.HasIndex("SectionId");
-
-                    b.ToTable("HeroInSections");
+                    b.ToTable("Heroes");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.HomePageSection", b =>
@@ -891,25 +872,6 @@ namespace Book_Realm_API.Migrations
                     b.Navigation("Cart");
                 });
 
-            modelBuilder.Entity("Book_Realm_API.Models.HeroInSection", b =>
-                {
-                    b.HasOne("Book_Realm_API.Models.Hero", "Hero")
-                        .WithMany()
-                        .HasForeignKey("HeroId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Book_Realm_API.Models.HomePageSection", "Section")
-                        .WithMany("HeroSections")
-                        .HasForeignKey("SectionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Hero");
-
-                    b.Navigation("Section");
-                });
-
             modelBuilder.Entity("Book_Realm_API.Models.Order", b =>
                 {
                     b.HasOne("Book_Realm_API.Models.User", "User")
@@ -1083,8 +1045,6 @@ namespace Book_Realm_API.Migrations
                     b.Navigation("BannerSections");
 
                     b.Navigation("BookSections");
-
-                    b.Navigation("HeroSections");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Order", b =>

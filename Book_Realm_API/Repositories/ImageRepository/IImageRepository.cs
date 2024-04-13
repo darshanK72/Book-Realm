@@ -12,6 +12,7 @@ namespace Book_Realm_API.Repositories.ImageRepository
         Task<Image> GetImageById(Guid id);
         Task<Image> CreateBookImage(BookImage image);
         Task<Image> CreateBannerImage(BannerImage image);
+        Task<Image> CreateHeroImage(HeroImage image);
         Task<Image> CreateImage(Image image);
         Task<Image> UpdateImage(Guid id, Image image);
         Task<Image> DeleteImage(Guid id);

@@ -25,6 +25,7 @@ namespace Book_Realm_API.Repositories.HomeRepository
             {
                 section.BookSections = await _dbContext.BooksInSection.Include(bs => bs.Book).Where(bs => bs.SectionId == section.Id).ToListAsync();
                 section.BannerSections = await _dbContext.BannersInSection.Include(bs => bs.Banner).Where(bs => bs.SectionId == section.Id).ToListAsync();
+                section.HeroSections = await _dbContext.HeroInSections.Include(hs => hs.Hero).Where(hs => hs.SectionId == section.Id).ToListAsync();
             }
 
             return homePageSections;
@@ -84,8 +85,28 @@ namespace Book_Realm_API.Repositories.HomeRepository
                 bannerInSections.Add(newBannerSection);
             }
 
+            List<HeroInSection> heroInSections = new List<HeroInSection>();
+
+            foreach (var heroId in sectionDto.Heros)
+            {
+
+                var newHeroSection = new HeroInSection()
+                {
+                    SectionId = section.Id,
+                    Section = section,
+                    HeroId = Guid.Parse(heroId),
+                    Hero = await _dbContext.Heros.Where(b => b.Id == Guid.Parse(heroId)).FirstOrDefaultAsync()
+                };
+
+                _dbContext.HeroInSections.Add(newHeroSection);
+                await _dbContext.SaveChangesAsync();
+
+                heroInSections.Add(newHeroSection);
+            }
+
             section.BannerSections = bannerInSections;
             section.BookSections = bookInSections;
+            section.HeroSections = heroInSections;
 
             _dbContext.Entry(section).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();

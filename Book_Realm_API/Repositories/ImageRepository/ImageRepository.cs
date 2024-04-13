@@ -81,6 +81,18 @@ namespace Book_Realm_API.Repositories.ImageRepository
             await _dbContext.SaveChangesAsync();
             return image;
         }
+        public async Task<Image> CreateHeroImage(HeroImage image)
+        {
+
+            var hero = await _dbContext.Heros.FindAsync(image.HeroId);
+            image.Hero = hero;
+            image.HeroId = hero.Id;
+            _dbContext.HeroImages.Add(image);
+
+            await _dbContext.SaveChangesAsync();
+            return image;
+        }
+
 
 
         public async Task<Image> CreateImage(Image image)

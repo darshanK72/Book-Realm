@@ -4,37 +4,33 @@ using Book_Realm_API.Repositories.ImageRepository;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.EntityFrameworkCore;
 
-namespace Book_Realm_API.Repositories.BannerRepository
+namespace Book_Realm_API.Repositories.HeroRepository
 {
-    public class BannerRepository : IBannerRepository
+    public class HeroRepository : IHeroRepository
     {
         private readonly BookRealmDbContext _dbContext;
         private readonly IMappingHelper _mappingHelper;
         private readonly IImageRepository _imageRepository;
-        public BannerRepository(BookRealmDbContext context,IMappingHelper mappingHelper,IImageRepository imageRepository)
+        public HeroRepository(BookRealmDbContext context, IMappingHelper mappingHelper, IImageRepository imageRepository)
         {
             _dbContext = context;
             _mappingHelper = mappingHelper;
             _imageRepository = imageRepository;
         }
 
-        public async Task<List<Banner>> GetAllBanners()
+        public async Task<List<Hero>> GetAllHeros()
         {
-            return await _dbContext.Banners.ToListAsync();
-        }
+            var heros = await _dbContext.Heros.ToListAsync();
 
-        public async Task<Banner> GetBannerById(Guid id)
-        {
-            var banner = await _dbContext.Banners.FindAsync(id);
-            banner.BannerImage = await _dbContext.BannerImages.Where(bi => bi.BannerId == id).FirstOrDefaultAsync();
-
-            if (banner == null)
+            List<Hero> result = new List<Hero>();
+            foreach (var hero in heros)
             {
-                throw new InvalidOperationException("Banner not found");
+                hero.HeroImages = await _dbContext.HeroImages.Where(bi => bi.HeroId == hero.Id).ToListAsync();
+                result.Add(hero);
             }
-
-            return banner;
+            return result;
         }
+
         public async Task<Hero> GetHeroById(Guid id)
         {
             var hero = await _dbContext.Heros.FindAsync(id);
@@ -48,45 +44,15 @@ namespace Book_Realm_API.Repositories.BannerRepository
             return hero;
         }
 
-        public async Task<Banner> UpdateBanner(Guid id, Banner banner)
+        public async Task<Hero> UpdateHero(Guid id, Hero Hero)
         {
-            if (!BannerIdExists(id))
+            if (!HeroIdExists(id))
             {
-                throw new InvalidOperationException("Banner not found");
+                throw new InvalidOperationException("Hero not found");
             }
-            _dbContext.Entry(banner).State = EntityState.Modified;
+            _dbContext.Entry(Hero).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
-            return banner;
-        }
-
-        public async Task<string> CreateBanner(BannerDTO bannerDto)
-        {
-            try
-            {
-                var banner = _mappingHelper.MapToBanner(bannerDto);
-                _dbContext.Banners.Add(banner);
-                await _dbContext.SaveChangesAsync();
-
-                var imageUploadResult = await _imageRepository.UploadImageFromUrl(bannerDto.BannerImage, "Banner", bannerDto.PlaceHolder);
-                var Id = imageUploadResult.PublicId.Split('/').Last();
-                var image = new BannerImage()
-                {
-                    Id = Guid.Parse(Id),
-                    Name = banner.PlaceHolder,
-                    Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
-                    Type = "Banner",
-                    BannerId = banner.Id,
-                    Banner = await GetBannerById(banner.Id)
-                };
-                var imageResult = await _imageRepository.CreateBannerImage(image);
-
-
-                return "Banner created successfully";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+            return Hero;
         }
 
         public async Task<string> CreateHero(HeroDTO heroDto)
@@ -128,21 +94,21 @@ namespace Book_Realm_API.Repositories.BannerRepository
             }
         }
 
-        public async Task<Banner> DeleteBanner(Guid id)
+        public async Task<Hero> DeleteHero(Guid id)
         {
-            var banner = await _dbContext.Banners.FindAsync(id);
-            if (banner == null)
+            var Hero = await _dbContext.Heros.FindAsync(id);
+            if (Hero == null)
             {
-                throw new InvalidOperationException("Banner not found");
+                throw new InvalidOperationException("Hero not found");
             }
-            _dbContext.Banners.Remove(banner);
+            _dbContext.Heros.Remove(Hero);
             await _dbContext.SaveChangesAsync();
-            return banner;
+            return Hero;
         }
 
-        private bool BannerIdExists(Guid id)
+        private bool HeroIdExists(Guid id)
         {
-            return _dbContext.Banners.Any(e => e.Id == id);
+            return _dbContext.Heros.Any(e => e.Id == id);
         }
     }
 

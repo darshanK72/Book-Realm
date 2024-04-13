@@ -37,6 +37,8 @@ namespace Book_Realm_API.Utils.MappingHelper
         HomePageSection MapToHomeSection(HomeSectionDTO homeSectionDto);
         BannerDTO MapToBannerDTO(Banner banner);
         Banner MapToBanner(BannerDTO bannerDto);
+        HeroDTO MapToHeroDTO(Hero hero);
+        Hero MapToHero(HeroDTO hero);
     }
 
 }

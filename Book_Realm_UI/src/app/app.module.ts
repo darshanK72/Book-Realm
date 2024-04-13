@@ -61,6 +61,7 @@ import { SpinnerComponent } from './Components/Layout/spinner/spinner.component'
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedEffects } from './Store/shared/shared.effects';
 import { NgToastModule } from 'ng-angular-popup';
+import { HomeEffects } from './Store/home/home.effects';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,7 @@ import { NgToastModule } from 'ng-angular-popup';
     SocialLoginModule,
     GoogleSigninButtonModule,
     StoreModule.forRoot(AppStore),
-    EffectsModule.forRoot([AuthEffects,SharedEffects, BookEffects, GenreEffects, SubgenreEffects]),
+    EffectsModule.forRoot([AuthEffects,HomeEffects,SharedEffects, BookEffects, GenreEffects, SubgenreEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [

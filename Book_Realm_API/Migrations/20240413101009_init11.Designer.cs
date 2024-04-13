@@ -4,6 +4,7 @@ using Book_Realm_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book_Realm_API.Migrations
 {
     [DbContext(typeof(BookRealmDbContext))]
-    partial class BookRealmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240413101009_init11")]
+    partial class init11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -900,7 +903,7 @@ namespace Book_Realm_API.Migrations
                         .IsRequired();
 
                     b.HasOne("Book_Realm_API.Models.HomePageSection", "Section")
-                        .WithMany("HeroSections")
+                        .WithMany("HeroSection")
                         .HasForeignKey("SectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1084,7 +1087,7 @@ namespace Book_Realm_API.Migrations
 
                     b.Navigation("BookSections");
 
-                    b.Navigation("HeroSections");
+                    b.Navigation("HeroSection");
                 });
 
             modelBuilder.Entity("Book_Realm_API.Models.Order", b =>

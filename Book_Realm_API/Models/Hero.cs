@@ -4,24 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Book_Realm_API.Models
 {
-    public class Banner
+    public class Hero
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string PlaceHolder { get; set; }
         public string ClickUrl { get; set; }
-        public BannerType BannerType { get; set; }
 
         [JsonIgnore]
-        public BannerImage BannerImage { get; set; }
-    }
-
-    public enum BannerType
-    {
-        SMALL,
-        MEDIUM, 
-        LARGE,
-        HERO
+        public List<HeroImage> HeroImages { get; set; }
     }
 }

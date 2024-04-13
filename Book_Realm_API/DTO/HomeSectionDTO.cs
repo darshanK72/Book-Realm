@@ -10,5 +10,6 @@ namespace Book_Realm_API.DTO
         public string SectionType { get; set; }
         public List<string> Books { get; set; }
         public List<string> Banners { get; set; }
+        public List<string> Heros { get; set; }
     }
 }

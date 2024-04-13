@@ -394,7 +394,8 @@ namespace Book_Realm_API.Utils.MappingHelper
                 SectionName = homeSectionDto.SectionName,
                 SectionType = homeSectionDto.SectionType,
                 BookSections = new List<BookInSection>(),
-                BannerSections = new List<BannerInSection>()
+                BannerSections = new List<BannerInSection>(),
+                HeroSections = new List<HeroInSection>()
                 //BookSections = homeSectionDto.Books.Select((bookId) => _dbContext.BooksInSection.FirstOrDefault((bs) => bs.BookId == Guid.Parse(bookId))).ToList(),
                 //BannerSections = homeSectionDto.Banners.Select((bannerId) => _dbContext.BannersInSection.FirstOrDefault((bs) => bs.BannerId == Guid.Parse(bannerId))).ToList()
             };
@@ -409,6 +410,7 @@ namespace Book_Realm_API.Utils.MappingHelper
                 SectionType = homePageSection.SectionType,
                 Books = homePageSection.BookSections != null ? homePageSection.BookSections.Select(b => b.Book.Id.ToString()).ToList() : new List<string>(),
                 Banners = homePageSection.BannerSections != null ? homePageSection.BannerSections.Select(b => b.Banner.Id.ToString()).ToList() : new List<string>(),
+                Heros = homePageSection.HeroSections != null ? homePageSection.HeroSections.Select(b => b.Hero.Id.ToString()).ToList() : new List<string>()
             };
         }
 
@@ -432,6 +434,26 @@ namespace Book_Realm_API.Utils.MappingHelper
                ClickUrl = bannerDto.ClickUrl,
                PlaceHolder = bannerDto.PlaceHolder,
                BannerType = (BannerType)Enum.Parse(typeof(BannerType), bannerDto.BannerType)
+            };
+        }
+
+        public HeroDTO MapToHeroDTO(Hero hero)
+        {
+            return new HeroDTO
+            {
+                Id = hero.Id.ToString(),
+                ClickUrl = hero.ClickUrl,
+                PlaceHolder = hero.PlaceHolder,
+                HeroImages = hero.HeroImages.Select(image => image.Src.ToString()).ToList()
+            };
+        }
+
+        public Hero MapToHero(HeroDTO heroDto)
+        {
+            return new Hero
+            {
+                ClickUrl = heroDto.ClickUrl,
+                PlaceHolder = heroDto.PlaceHolder
             };
         }
     }

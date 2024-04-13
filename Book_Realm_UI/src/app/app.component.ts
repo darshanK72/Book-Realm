@@ -5,6 +5,7 @@ import { loadGenres } from './Store/genre/genre.actions';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { AuthService } from './Services/auth/auth.service';
 import { continueWithGoogle } from './Store/auth/auth.actions';
+import { getHomeSections } from './Store/home/home.actions';
 
 @Component({
   selector: 'app-root',
@@ -28,9 +29,10 @@ export class AppComponent {
       this.store.dispatch(continueWithGoogle({ payload: { user } }));
     });
   }
-
+  
   ngOnInit() {
     this.authService.restoreAuthenticationState();
+    this.store.dispatch(getHomeSections());
     this.store.dispatch(loadGenres());
   }
 

@@ -7,7 +7,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace Book_Realm_API.Controllers
 {
-    [Route("api/home/sections")]
+    [Route("api/home")]
     [ApiController]
     public class HomeController : ControllerBase
     {
@@ -50,14 +50,79 @@ namespace Book_Realm_API.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("book-section")]
         public async Task<ActionResult<HomeSectionDTO>> CreateHomePageSection(HomeSectionDTO sectionDto)
         {
             try
             {
+                sectionDto.SectionName = "Book";
                 var newSection = await _homeRepository.CreateHomePageSection(sectionDto);
-                var newSectionDto = _mapper.MapToHomeSectionDTO(newSection); ;
-                return CreatedAtAction(nameof(GetHomePageSection), new { id = sectionDto.Id }, newSectionDto);
+                var newSectionDto = _mapper.MapToHomeSectionDTO(newSection);
+                return CreatedAtAction(nameof(GetHomePageSection), new { id = Guid.Parse(newSectionDto.Id) }, newSectionDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("hero-section")]
+        public async Task<ActionResult<HomeSectionDTO>> CreateHeroSection(HomeSectionDTO sectionDto)
+        {
+            try
+            {
+                sectionDto.SectionName = "Hero";
+                var newSection = await _homeRepository.CreateHomePageSection(sectionDto);
+                var newSectionDto = _mapper.MapToHomeSectionDTO(newSection);
+                return CreatedAtAction(nameof(GetHomePageSection), new { id = Guid.Parse(newSectionDto.Id) }, newSectionDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("small-banner-section")]
+        public async Task<ActionResult<HomeSectionDTO>> CreateSmallBannerSection(HomeSectionDTO sectionDto)
+        {
+            try
+            {
+                sectionDto.SectionName = "SmallBanner";
+                var newSection = await _homeRepository.CreateHomePageSection(sectionDto);
+                var newSectionDto = _mapper.MapToHomeSectionDTO(newSection);
+                return CreatedAtAction(nameof(GetHomePageSection), new { id = Guid.Parse(newSectionDto.Id) }, newSectionDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("medium-banner-section")]
+        public async Task<ActionResult<HomeSectionDTO>> CreateMediumBannerSection(HomeSectionDTO sectionDto)
+        {
+            try
+            {
+                sectionDto.SectionName = "MediumBanner";
+                var newSection = await _homeRepository.CreateHomePageSection(sectionDto);
+                var newSectionDto = _mapper.MapToHomeSectionDTO(newSection);
+                return CreatedAtAction(nameof(GetHomePageSection), new { id = Guid.Parse(newSectionDto.Id) }, newSectionDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("large-banner-section")]
+        public async Task<ActionResult<HomeSectionDTO>> CreateLargeBannerSection(HomeSectionDTO sectionDto)
+        {
+            try
+            {
+                sectionDto.SectionName = "LargeBanner";
+                var newSection = await _homeRepository.CreateHomePageSection(sectionDto);
+                var newSectionDto = _mapper.MapToHomeSectionDTO(newSection);
+                return CreatedAtAction(nameof(GetHomePageSection), new { id = Guid.Parse(newSectionDto.Id) }, newSectionDto);
             }
             catch (Exception ex)
             {

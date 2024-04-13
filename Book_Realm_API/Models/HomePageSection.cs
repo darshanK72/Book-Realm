@@ -21,5 +21,8 @@ namespace Book_Realm_API.Models
 
         [JsonIgnore]
         public List<BannerInSection> BannerSections { get; set; }
+
+        [JsonIgnore]
+        public List<HeroInSection> HeroSections { get; set; }
     }
 }

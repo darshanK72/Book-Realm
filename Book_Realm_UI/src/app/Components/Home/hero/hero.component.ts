@@ -1,5 +1,9 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
 import Splide from '@splidejs/splide';
+import { HomeSection } from 'src/app/Payloads/homeSection';
+import { AppState } from 'src/app/Store/app.state';
+import { selectHeroSection } from 'src/app/Store/home/home.selectors';
 
 
 @Component({
@@ -7,17 +11,19 @@ import Splide from '@splidejs/splide';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
-export class HeroComponent implements AfterViewInit {
+export class HeroComponent implements OnInit,AfterViewInit {
+
+  @Input()
+  heroData!: any;
+
+  constructor(private store:Store<AppState>){}
+
+  ngOnInit(): void {
+    
+  }
 
   ngAfterViewInit(): void {
-    // new Splide('.splide', {
-    //   type: 'loop',
-    //   perPage: 1,
-    //   keyboard: false,
-    //   autoplay: true,
-    //   interval: 1000,
-    //   arrows: false,
-    // });
+    
   }
 
   imagesLarge: string[] = [

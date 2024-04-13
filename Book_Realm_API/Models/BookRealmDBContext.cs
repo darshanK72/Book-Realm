@@ -27,14 +27,17 @@ namespace Book_Realm_API.Models
         public DbSet<Wishlist> Wishlists { get; set; }
         public DbSet<WishlistItem> WishlistItems { get; set; }
         public DbSet<Banner> Banners { get; set; }
+        public DbSet<Hero> Heros { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<ProfileImage> ProfileImages { get; set; }
         public DbSet<BannerImage> BannerImages { get; set; }
+        public DbSet<HeroImage> HeroImages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BookTag> BookTags { get; set; }
         public DbSet<HomePageSection> HomePageSections { get; set; }
         public DbSet<BookInSection> BooksInSection { get; set; }
         public DbSet<BannerInSection> BannersInSection { get; set; }
+        public DbSet<HeroInSection> HeroInSections { get; set;}
     }
 }

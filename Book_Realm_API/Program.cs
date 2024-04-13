@@ -24,6 +24,7 @@ using Book_Realm_API.Repositories.TagRepository;
 using Book_Realm_API.Repositories.BannerRepository;
 using Book_Realm_API.Repositories.ReviewRespository;
 using Book_Realm_API.Repositories.HomeRepository;
+using Book_Realm_API.Repositories.HeroRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -93,6 +94,7 @@ builder.Services.AddScoped<IImageRepository, ImageRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IBannerRepository, BannerRepository>();
 builder.Services.AddScoped<IHomeRepository, HomeRepository>();
+builder.Services.AddScoped<IHeroRepository, HeroRepository>();
 
 builder.Services.AddScoped<IMappingHelper,MappingHelper>();
 builder.Services.AddScoped<ITokenHelper, TokenHelper>();

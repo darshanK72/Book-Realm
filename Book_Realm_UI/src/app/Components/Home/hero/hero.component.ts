@@ -1,9 +1,8 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import {Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import Splide from '@splidejs/splide';
-import { HomeSection } from 'src/app/Payloads/homeSection';
 import { AppState } from 'src/app/Store/app.state';
-import { selectHeroSection } from 'src/app/Store/home/home.selectors';
+import {selectHeros } from 'src/app/Store/home/home.selectors';
 
 
 @Component({
@@ -11,29 +10,15 @@ import { selectHeroSection } from 'src/app/Store/home/home.selectors';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
-export class HeroComponent implements OnInit,AfterViewInit {
+export class HeroComponent implements OnInit {
 
-  @Input()
   heroData!: any;
 
   constructor(private store:Store<AppState>){}
 
   ngOnInit(): void {
-    
+    this.store.select(selectHeros).subscribe(data => {
+      this.heroData = data;
+    })
   }
-
-  ngAfterViewInit(): void {
-    
-  }
-
-  imagesLarge: string[] = [
-    '../../../assets/img/banner0.webp',
-    '../../../assets/img/banner1.webp',
-    '../../../assets/img/banner2.webp',
-  ];
-  imagesSmall: string[] = [
-    '../../../assets/img/banners0.webp',
-    '../../../assets/img/banners1.webp',
-    '../../../assets/img/banners2.webp',
-  ];
 }

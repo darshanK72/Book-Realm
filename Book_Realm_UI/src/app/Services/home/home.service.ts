@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Hero } from 'src/app/Models/hero';
@@ -18,8 +18,15 @@ export class HomeService {
     return this.http.get<HomeSection[]>(`${this.baseUrl}/home`);
   }
 
-  getHeroById():Observable<Hero[]>{
-    return this.http.get<Hero[]>(`${this.baseUrl}/heros`);
+  getHeroById(ids:string[]):Observable<Hero[]>{
+    console.log(ids);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    const requestData = JSON.stringify(ids);
+    return this.http.post<Hero[]>(`${this.baseUrl}/heros/hero-ids`,requestData,httpOptions);
   }
 
 }

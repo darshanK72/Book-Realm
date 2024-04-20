@@ -8,6 +8,11 @@ export const selectAllSections = createSelector(
   (state) => state.sections
 );
 
+export const selectHeros = createSelector(
+  selectorState,
+  (state) => state.heros
+)
+
 export const selectHeroSection = createSelector(selectAllSections, (sections) =>
   sections.find((section) => section.sectionName == 'Hero')
 );

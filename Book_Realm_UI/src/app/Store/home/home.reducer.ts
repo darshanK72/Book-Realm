@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { getHomeSectionsFailure, getHomeSectionsSuccess } from "./home.actions";
+import { getHeroSectionsFailure, getHeroSectionsSuccess, getHomeSectionsFailure, getHomeSectionsSuccess } from "./home.actions";
 import { state } from "./home.state";
 
 export const homeReducer = createReducer(
@@ -13,6 +13,18 @@ export const homeReducer = createReducer(
     on(getHomeSectionsFailure,(state,action) =>({
         ...state,
         sections:[],
+        error:action.payload.error,
+        success:null
+    })),
+    on(getHeroSectionsSuccess,(state,action) => ({
+        ...state,
+        heros:action.payload.heros,
+        error:null,
+        success : action.payload.success
+    })),
+    on(getHeroSectionsFailure,(state,action) =>({
+        ...state,
+        heros:[],
         error:action.payload.error,
         success:null
     }))

@@ -1,5 +1,8 @@
 <div class="container">
-    <app-hero [heroData]="heroSection"></app-hero>
+    <app-hero></app-hero>
+    <ng-container *ngFor="let section of sections">
+        <p>{{section | json}}</p>
+    </ng-container>
     <!-- <ng-container *ngFor="let list of genereBooks.slice(0,3);let i = index">
         <app-list [books]="list" [genreTitle]="genereTitles[i]"></app-list>
     </ng-container>

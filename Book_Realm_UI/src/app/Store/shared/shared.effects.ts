@@ -18,6 +18,7 @@ import {
 } from '../auth/auth.actions';
 import { NgToastService } from 'ng-angular-popup';
 import { Router } from '@angular/router';
+import { getHeroSectionsFailure, getHeroSectionsSuccess } from '../home/home.actions';
 
 @Injectable()
 export class SharedEffects {
@@ -43,7 +44,9 @@ export class SharedEffects {
         signUpWithGoogleSuccess,
         signUpWithGoogleFailure,
         signInWithGoogleSuccess,
-        signInWithGoogleFailure
+        signInWithGoogleFailure,
+        getHeroSectionsSuccess,
+        getHeroSectionsFailure
       ),
       map(() => stopLoading())
     )

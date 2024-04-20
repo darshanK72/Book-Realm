@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { Action } from '@ngrx/store';
-import { catchError, EMPTY, exhaustMap, map, mergeMap, tap } from 'rxjs';
-import { BookService } from 'src/app/Services/book/book.service';
+import { catchError, exhaustMap, map, mergeMap, tap } from 'rxjs';
 import {
+  getHeroSections,
+  getHeroSectionsFailure,
+  getHeroSectionsSuccess,
   getHomeSections,
   getHomeSectionsFailure,
   getHomeSectionsSuccess,
@@ -18,7 +19,6 @@ export class HomeEffects {
       ofType(getHomeSections),
       exhaustMap(() =>
         this.homeService.getAllHomeSections().pipe(
-          tap((data) => console.log(data)),
           map((sections) => getHomeSectionsSuccess({ payload: {
             sections,
             success:'success'
@@ -30,4 +30,27 @@ export class HomeEffects {
       )
     );
   });
+
+  getHeroSection$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(getHeroSections),
+      mergeMap((action) => {
+        return this.homeService.getHeroById(action.payload).pipe(
+          map((data: any) => {
+            return getHeroSectionsSuccess({
+              payload: {
+                heros:data,
+                success: 'success'
+              },
+            });
+          }),
+          catchError(async (error:any) =>{
+            return getHeroSectionsFailure({ payload: { error:error.error } })
+          }
+          )
+        );
+      })
+    );
+  });
+
 }

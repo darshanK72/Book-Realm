@@ -34,6 +34,21 @@ namespace Book_Realm_API.Controllers
             }
         }
 
+        [HttpPost("hero-ids")]
+        public async Task<ActionResult<List<HeroDTO>>> GetHerosByListOfIds(List<string> heroIds)
+        {
+            try
+            {
+                var heros = await _heroRepository.GetAllHerosByIds(heroIds);
+                var heroDtos = heros.Select(hero => _mappingHelper.MapToHeroDTO(hero));
+                return Ok(heroDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<HeroDTO>> GetHero(Guid id)
         {

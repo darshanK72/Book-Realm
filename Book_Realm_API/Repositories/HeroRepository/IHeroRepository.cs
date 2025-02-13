@@ -7,6 +7,7 @@ namespace Book_Realm_API.Repositories.HeroRepository
     {
         Task<List<Hero>> GetAllHeros();
         Task<Hero> GetHeroById(Guid id);
+        Task<List<Hero>> GetAllHerosByIds(List<string> heroIds);
         Task<Hero> UpdateHero(Guid id, Hero Hero);
         Task<string> CreateHero(HeroDTO Hero);
         Task<Hero> DeleteHero(Guid id);

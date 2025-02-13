@@ -31,6 +31,21 @@ namespace Book_Realm_API.Repositories.HeroRepository
             return result;
         }
 
+        public async Task<List<Hero>> GetAllHerosByIds(List<string> heroIds)
+        {
+            var heros = await _dbContext.Heros.Where(h => heroIds.Contains(h.Id.ToString())).ToListAsync();
+
+            List<Hero> result = new List<Hero>();
+            foreach (var hero in heros)
+            {
+                hero.HeroImages = await _dbContext.HeroImages.Where(bi => bi.HeroId == hero.Id).ToListAsync();
+                result.Add(hero);
+            }
+            return result;
+        }
+
+        
+
         public async Task<Hero> GetHeroById(Guid id)
         {
             var hero = await _dbContext.Heros.FindAsync(id);

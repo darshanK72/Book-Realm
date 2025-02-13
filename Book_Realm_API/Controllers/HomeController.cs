@@ -3,7 +3,6 @@ using Book_Realm_API.Models;
 using Book_Realm_API.Repositories.HomeRepository;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.AspNetCore.Mvc;
-using static System.Collections.Specialized.BitVector32;
 
 namespace Book_Realm_API.Controllers
 {

@@ -24,6 +24,7 @@
     "@ngrx/store-devtools": "^16.3.0",
     "@splidejs/splide": "^4.1.4",
     "@syncfusion/ej2-grids": "^23.1.40",
+    "book-realm": "file:",
     "bootstrap": "^5.3.2",
     "json-server": "^0.17.4",
     "ng-angular-popup": "^0.5.2",

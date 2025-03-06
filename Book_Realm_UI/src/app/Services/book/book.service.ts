@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from 'src/app/Models/book';
@@ -17,6 +17,17 @@ export class BookService {
     return this.http.get<Book[]>(`${this.baseUrl}/book`);
   }
 
+  getBooksByIds(ids:string[]):Observable<Book[]>{
+      console.log(ids);
+      const httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      };
+      const requestData = JSON.stringify(ids);
+      return this.http.post<Book[]>(`${this.baseUrl}/home/books`,requestData,httpOptions);
+  }
+  
   getBooksBySubgenre(subgenreId:string){
     console.log(subgenreId);
     return this.http.get<Book[]>(`${this.baseUrl}/books/subgenre/${subgenreId}`);

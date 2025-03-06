@@ -61,6 +61,19 @@ namespace Book_Realm_API.Repositories.BookRepository
             return booksWithDetails;
         }
 
+        public async Task<List<Book>> GetAllBooksByIds(List<string> bookIds)
+        {
+            var books = await _dbContext.Books.Where(b => bookIds.Contains(b.Id.ToString())).ToListAsync();
+
+            List<Book> result = new List<Book>();
+            foreach (var book in books)
+            {
+                book.Images = await _dbContext.BookImages.Where(bi => bi.Id == book.Id).ToListAsync();
+                result.Add(book);
+            }
+            return result;
+        }
+
         public async Task<List<Book>> GetBooksBySubgenre(string subgenreId)
         {
 

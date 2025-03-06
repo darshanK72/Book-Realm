@@ -2,7 +2,7 @@ import {Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import Splide from '@splidejs/splide';
 import { AppState } from 'src/app/Store/app.state';
-import {selectHeros } from 'src/app/Store/home/home.selectors';
+import { selectHeroSection } from 'src/app/Store/home/home.selectors';
 
 
 @Component({
@@ -17,8 +17,8 @@ export class HeroComponent implements OnInit {
   constructor(private store:Store<AppState>){}
 
   ngOnInit(): void {
-    this.store.select(selectHeros).subscribe(data => {
-      this.heroData = data;
+    this.store.select(selectHeroSection).subscribe(data => {
+      this.heroData = [];
     })
   }
 }

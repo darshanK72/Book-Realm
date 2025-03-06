@@ -1,5 +1,7 @@
 ﻿using Book_Realm_API.DTO;
 using Book_Realm_API.Models;
+using Book_Realm_API.Repositories.BookRepository;
+using Book_Realm_API.Repositories.HeroRepository;
 using Book_Realm_API.Repositories.HomeRepository;
 using Book_Realm_API.Utils.MappingHelper;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +13,15 @@ namespace Book_Realm_API.Controllers
     public class HomeController : ControllerBase
     {
         private readonly IHomeRepository _homeRepository;
+        private readonly IHeroRepository _heroRepository;
+        private readonly IBookRepository _bookRepository;
         private readonly IMappingHelper _mapper;
 
-        public HomeController(IHomeRepository homeRepository,IMappingHelper mapper)
+        public HomeController(IHomeRepository homeRepository,IMappingHelper mapper,IHeroRepository heroRepository,IBookRepository bookRepository)
         {
             _homeRepository = homeRepository;
+            _heroRepository = heroRepository;
+            _bookRepository = bookRepository;
             _mapper = mapper;
         }
 
@@ -27,6 +33,43 @@ namespace Book_Realm_API.Controllers
                 var sections = await _homeRepository.GetAllHomePageSections();
                 var sectionsDto = sections.Select(s => _mapper.MapToHomeSectionDTO(s)).ToList();
                 return Ok(sectionsDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpPost("heros")]
+        public async Task<ActionResult<List<HeroDTO>>> GetHerosByListOfIds(List<string> heroIds)
+        {
+            try
+            {
+                var heros = await _heroRepository.GetAllHerosByIds(heroIds);
+                var heroDtos = heros.Select(hero => _mapper.MapToHeroDTO(hero));
+                return Ok(heroDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("books")]
+        public async Task<ActionResult<List<BookDTO>>> GetBooksByListOfIds(List<string> bookIds)
+        {
+            try
+            {
+                var books = new List<Book>();
+                foreach (var id in bookIds)
+                {
+                    var book = await _bookRepository.GetBookById(Guid.Parse(id));
+                    books.Add(book);
+                }
+
+                var bookDtos = books.Select(book => _mapper.MapToBookDTO(book));
+                return Ok(bookDtos);
             }
             catch (Exception ex)
             {

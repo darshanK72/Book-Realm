@@ -11,6 +11,8 @@ namespace Book_Realm_API.Repositories.BookRepository
         Task<List<Book>> GetAllBooks(int pageNumber, int pageSize);
 
         Task<List<Book>> GetBooksBySubgenre(string subgenreId);
+
+        Task<List<Book>> GetAllBooksByIds(List<string> bookIds);
         Task<Book> GetBookById(Guid id);
         Task<string> CreateBook(BookDTO book);
         Task<string> CreateMultipleBooks(List<BookDTO> booksDtos);

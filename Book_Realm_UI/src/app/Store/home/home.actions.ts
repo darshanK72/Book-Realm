@@ -7,3 +7,7 @@ export const getHomeSectionsFailure = createAction('[Home] Get Home Page Section
 export const getHeroSections = createAction('[Hero] Get Hero Sections',props<{ payload: any}>());
 export const getHeroSectionsSuccess = createAction('[Hero] Get Hero Sections Success', props<{ payload: any}>());
 export const getHeroSectionsFailure = createAction('[Hero] Get Hero Sections Failure', props<{ payload: any }>());
+
+export const getBookSections = createAction('[Book] Get Book Sections',props<{ payload: any}>());
+export const getBookSectionsSuccess = createAction('[Book] Get Book Sections Success', props<{ payload: any}>());
+export const getBookSectionsFailure = createAction('[Book] Get Book Sections Failure', props<{ payload: any }>());

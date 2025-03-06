@@ -18,7 +18,7 @@ export class HomeService {
     return this.http.get<HomeSection[]>(`${this.baseUrl}/home`);
   }
 
-  getHeroById(ids:string[]):Observable<Hero[]>{
+  getHeroByIds(ids:string[]):Observable<Hero[]>{
     console.log(ids);
     const httpOptions = {
       headers: new HttpHeaders({
@@ -26,7 +26,7 @@ export class HomeService {
       })
     };
     const requestData = JSON.stringify(ids);
-    return this.http.post<Hero[]>(`${this.baseUrl}/heros/hero-ids`,requestData,httpOptions);
+    return this.http.post<Hero[]>(`${this.baseUrl}/home/heros`,requestData,httpOptions);
   }
 
 }

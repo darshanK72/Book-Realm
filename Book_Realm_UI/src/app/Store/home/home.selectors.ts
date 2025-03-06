@@ -8,10 +8,15 @@ export const selectAllSections = createSelector(
   (state) => state.sections
 );
 
-export const selectHeros = createSelector(
-  selectorState,
-  (state) => state.heros
-)
+// export const selectHeros = createSelector(
+//   selectorState,
+//   (state) => state.sections;
+// )
+
+// export const selectBooks = createSelector(
+//   selectorState,
+//   (state) => state.bookSections
+// )
 
 export const selectHeroSection = createSelector(selectAllSections, (sections) =>
   sections.find((section) => section.sectionName == 'Hero')

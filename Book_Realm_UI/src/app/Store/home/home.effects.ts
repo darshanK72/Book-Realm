@@ -14,9 +14,10 @@ import {
 } from './home.actions';
 import { HomeService } from 'src/app/Services/home/home.service';
 import { BookService } from 'src/app/Services/book/book.service';
+import { HeroService } from 'src/app/Services/hero.service';
 @Injectable()
 export class HomeEffects {
-  constructor(private actions$: Actions, private homeService: HomeService,private bookService:BookService) {}
+  constructor(private actions$: Actions, private homeService: HomeService,private bookService:BookService,private heroService:HeroService) {}
 
   getHomeSections$ = createEffect(() => {
     return this.actions$.pipe(
@@ -39,19 +40,19 @@ export class HomeEffects {
     return this.actions$.pipe(
       ofType(getHeroSections),
       mergeMap((action) => {
-        return this.homeService.getHeroByIds(action.payload).pipe(
+        return this.heroService.getHeroByIds(action.payload.heroIds).pipe(
           map((data: any) => {
             return getHeroSectionsSuccess({
               payload: {
-                heros:data,
+                sectionId: action.payload.sectionId,
+                heros: data,
                 success: 'success'
               },
             });
           }),
-          catchError(async (error:any) =>{
-            return getHeroSectionsFailure({ payload: { error:error.error } })
-          }
-          )
+          catchError(async (error: any) => {
+            return getHeroSectionsFailure({ payload: { error: error.error } })
+          })
         );
       })
     );
@@ -61,19 +62,20 @@ export class HomeEffects {
     return this.actions$.pipe(
       ofType(getBookSections),
       mergeMap((action) => {
-        return this.bookService.getBooksByIds(action.payload).pipe(
+        return this.bookService.getBooksByIds(action.payload.bookIds).pipe(
           map((data: any) => {
             return getBookSectionsSuccess({
               payload: {
-                books:data,
+                sectionId: action.payload.sectionId,
+                sectionName: action.payload.sectionName,
+                books: data,
                 success: 'success'
               },
             });
           }),
-          catchError(async (error:any) =>{
-            return getBookSectionsFailure({ payload: { error:error.error } })
-          }
-          )
+          catchError(async (error: any) => {
+            return getBookSectionsFailure({ payload: { error: error.error } })
+          })
         );
       })
     );

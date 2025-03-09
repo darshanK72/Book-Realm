@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="top">
         <div class="title">
-            <h5>{{genreTitle | titlecase}}</h5>
+            <h5>{{sectionName | titlecase}}</h5>
         </div>
         <div class="view">
             <a routerLink="/filter">
@@ -14,7 +14,7 @@
     </div>
     <div class="bottom">
         <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-            <splide-slide *ngFor="let book of books">
+            <splide-slide *ngFor="let book of bookData">
                 <div class="book-card" (click)="getBookDetail(book.id)">
                     <div class="book-img">
                         <img [src]="book.images[0] " alt="">

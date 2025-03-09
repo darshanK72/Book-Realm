@@ -63,12 +63,18 @@ namespace Book_Realm_API.Repositories.BookRepository
 
         public async Task<List<Book>> GetAllBooksByIds(List<string> bookIds)
         {
-            var books = await _dbContext.Books.Where(b => bookIds.Contains(b.Id.ToString())).ToListAsync();
+            var books = await _dbContext.Books.Include(b => b.Author)
+                .Include(b => b.Publisher)
+                .Include(b => b.Genre)
+                .Include(b => b.Subgenre).Where(b => bookIds.Contains(b.Id.ToString())).ToListAsync();
 
             List<Book> result = new List<Book>();
+
             foreach (var book in books)
             {
-                book.Images = await _dbContext.BookImages.Where(bi => bi.Id == book.Id).ToListAsync();
+                book.Reviews = await _dbContext.Reviews.Where(r => r.BookId == book.Id).ToListAsync();
+                book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
+                book.Images = await _dbContext.BookImages.Where(bi => bi.BookId == book.Id).ToListAsync();
                 result.Add(book);
             }
             return result;

@@ -16,28 +16,33 @@ export const homeReducer = createReducer(
         error:action.payload.error,
         success:null
     })),
-    on(getHeroSectionsSuccess,(state,action) => ({
+    on(getHeroSectionsSuccess, (state, action) => ({
         ...state,
-        sectionHeros:action.payload.heros,
-        error:null,
-        success : action.payload.success
+        heroSections: [...state.heroSections, {
+            sectionId: action.payload.sectionId,
+            heros: action.payload.heros
+        }],
+        error: null,
+        success: action.payload.success
     })),
-    on(getHeroSectionsFailure,(state,action) =>({
+    on(getHeroSectionsFailure, (state, action) => ({
         ...state,
-        sectionHeros:[],
-        error:action.payload.error,
-        success:null
+        error: action.payload.error,
+        success: null
     })),
-    on(getBookSectionsSuccess,(state,action) => ({
+    on(getBookSectionsSuccess, (state, action) => ({
         ...state,
-        sectionBooks:action.payload.books,
-        error:null,
-        success : action.payload.success
+        bookSections: [...state.bookSections, {
+            sectionId: action.payload.sectionId,
+            sectionName: action.payload.sectionName,
+            books: action.payload.books
+        }],
+        error: null,
+        success: action.payload.success
     })),
-    on(getBookSectionsFailure,(state,action) =>({
+    on(getBookSectionsFailure, (state, action) => ({
         ...state,
-        sectionBooks:[],
-        error:action.payload.error,
-        success:null
+        error: action.payload.error,
+        success: null
     }))
 )

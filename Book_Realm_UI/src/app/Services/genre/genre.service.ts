@@ -14,10 +14,10 @@ export class GenreService {
   constructor(private http:HttpClient) { }
 
   getAllGenres():Observable<Genre[]>{
-    return this.http.get<Genre[]>(`${this.baseUrl}/genre`);
+    return this.http.get<Genre[]>(`${this.baseUrl}/genres`);
   }
 
   getGenreById(id:number):Observable<Genre>{
-    return this.http.get<Genre>(`${this.baseUrl}/genre/${id}`);
+    return this.http.get<Genre>(`${this.baseUrl}/genres/${id}`);
   }
 }

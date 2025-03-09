@@ -47,6 +47,22 @@ namespace Book_Realm_API.Controllers
             }
         }
 
+        [HttpPost("byIds")]
+        public async Task<ActionResult<List<BookDTO>>> GetBooksByListOfIds(List<string> bookIds)
+        {
+            try
+            {
+                var books = await _bookRepository.GetAllBooksByIds(bookIds);
+                var bookDtos = books.Select(book => _mapper.MapToBookDTO(book));
+                return Ok(bookDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
         [HttpGet("subgenre/{subgenreId}")]
         public async Task<ActionResult<List<BookDTO>>> GetBooksBySubgenre(string subgenreId)
         {

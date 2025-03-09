@@ -40,43 +40,6 @@ namespace Book_Realm_API.Controllers
             }
         }
 
-
-        [HttpPost("heros")]
-        public async Task<ActionResult<List<HeroDTO>>> GetHerosByListOfIds(List<string> heroIds)
-        {
-            try
-            {
-                var heros = await _heroRepository.GetAllHerosByIds(heroIds);
-                var heroDtos = heros.Select(hero => _mapper.MapToHeroDTO(hero));
-                return Ok(heroDtos);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPost("books")]
-        public async Task<ActionResult<List<BookDTO>>> GetBooksByListOfIds(List<string> bookIds)
-        {
-            try
-            {
-                var books = new List<Book>();
-                foreach (var id in bookIds)
-                {
-                    var book = await _bookRepository.GetBookById(Guid.Parse(id));
-                    books.Add(book);
-                }
-
-                var bookDtos = books.Select(book => _mapper.MapToBookDTO(book));
-                return Ok(bookDtos);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
         [HttpGet("{id}")]
         public async Task<ActionResult<HomeSectionDTO>> GetHomePageSection(Guid id)
         {
@@ -186,7 +149,6 @@ namespace Book_Realm_API.Controllers
                 return NotFound(ex.Message);
             }
         }
-
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<HomeSectionDTO>> DeleteHomePageSection(Guid id)

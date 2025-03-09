@@ -14,7 +14,7 @@ export class BookService {
   constructor(private http:HttpClient) { }
 
   getAllBooks():Observable<Book[]>{
-    return this.http.get<Book[]>(`${this.baseUrl}/book`);
+    return this.http.get<Book[]>(`${this.baseUrl}/books`);
   }
 
   getBooksByIds(ids:string[]):Observable<Book[]>{
@@ -25,7 +25,7 @@ export class BookService {
         })
       };
       const requestData = JSON.stringify(ids);
-      return this.http.post<Book[]>(`${this.baseUrl}/home/books`,requestData,httpOptions);
+      return this.http.post<Book[]>(`${this.baseUrl}/books/byIds`,requestData,httpOptions);
   }
   
   getBooksBySubgenre(subgenreId:string){

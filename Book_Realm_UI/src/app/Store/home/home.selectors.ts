@@ -37,3 +37,25 @@ export const selectMediumBannerSections = createSelector(selectAllSections, (sec
 export const selectSmallBannerSections = createSelector(selectAllSections, (sections) =>
   sections.filter((section) => section.sectionName == 'SmallBanner')
 );
+
+// New selectors for getting sections by ID
+export const selectHeroSectionById = (sectionId: string) => createSelector(
+  selectorState,
+  (state) => state.heroSections.find(section => section.sectionId === sectionId)
+);
+
+export const selectBookSectionById = (sectionId: string) => createSelector(
+  selectorState,
+  (state) => state.bookSections.find(section => section.sectionId === sectionId)
+);
+
+// Selectors to get all hero and book sections
+export const selectAllHeroSections = createSelector(
+  selectorState,
+  (state) => state.heroSections
+);
+
+export const selectAllBookSections = createSelector(
+  selectorState,
+  (state) => state.bookSections
+);

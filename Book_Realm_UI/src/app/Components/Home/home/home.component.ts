@@ -18,21 +18,13 @@ export class HomeComponent implements OnInit {
     private scrollService: ScrollService,
     private store: Store<AppState>
   ) {
-    this.store.select(selectAllSections).subscribe((data:any) => {
-      this.sections = data;
-      console.log(this.sections);
-      for (let section of this.sections) {
-        console.log(section);
-        if(section.sectionName === 'Hero'){
-          this.store.dispatch(getHeroSections({payload:section.heros}));
-        }else if(section.sectionName === 'Book'){
-          this.store.dispatch(getBookSections({payload:section.books}));
-        }
-      }
-    });
+    
   }
 
   ngOnInit(): void {
-    
+    this.store.select(selectAllSections).subscribe((data:any) => {
+      this.sections = data;
+      console.log(this.sections);
+    });
   }
 }

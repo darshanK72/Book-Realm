@@ -1,19 +1,9 @@
 <div class="container">
-    <app-hero></app-hero>
     <ng-container *ngFor="let section of sections">
-        <p>{{section | json}}</p>
+        <app-hero *ngIf="section.sectionType == 'Hero'" [sectionId]="section.id"
+            [heroIds]="section.heros"></app-hero>
+        <app-list *ngIf="section.sectionType == 'Book'" [sectionId]="section.id"
+            [sectionName]="section.sectionName" [bookIds]="section.books"></app-list>
     </ng-container>
-    <!-- <ng-container *ngFor="let list of genereBooks.slice(0,3);let i = index">
-        <app-list [books]="list" [genreTitle]="genereTitles[i]"></app-list>
-    </ng-container>
-    <app-card></app-card>
-    <app-small-banners></app-small-banners>
-    <app-large-banners></app-large-banners>
-    <app-card></app-card>
-    <ng-container *ngFor="let list of genereBooks.slice(-3);let i = index">
-        <app-list [books]="list" [genreTitle]="genereTitles[i]"></app-list>
-    </ng-container>
-    <app-card></app-card>
-    <app-small-banners></app-small-banners>
-    <app-large-banners></app-large-banners> -->
+    <h1> Hello world</h1>
 </div>

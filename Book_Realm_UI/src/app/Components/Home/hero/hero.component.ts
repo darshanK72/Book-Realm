@@ -1,9 +1,10 @@
-import {Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import Splide from '@splidejs/splide';
+import { Hero } from 'src/app/Models/hero';
 import { AppState } from 'src/app/Store/app.state';
-import { selectHeroSection } from 'src/app/Store/home/home.selectors';
-
+import { getHeroSections } from 'src/app/Store/home/home.actions';
+import { selectHeroSectionById } from 'src/app/Store/home/home.selectors';
 
 @Component({
   selector: 'app-hero',
@@ -11,14 +12,27 @@ import { selectHeroSection } from 'src/app/Store/home/home.selectors';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
+  @Input() sectionId!: string;
+  @Input() heroIds!: string[];
 
-  heroData!: any;
+  heroData: Hero[] = [];
 
-  constructor(private store:Store<AppState>){}
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.store.select(selectHeroSection).subscribe(data => {
-      this.heroData = [];
-    })
+    this.store.dispatch(getHeroSections({
+      payload: {
+        sectionId: this.sectionId,
+        heroIds: this.heroIds
+      }
+    }));
+
+    this.store.select(selectHeroSectionById(this.sectionId)).subscribe(
+      heroSection => {
+        if (heroSection) {
+          this.heroData = heroSection.heros;
+        }
+      }
+    );
   }
 }

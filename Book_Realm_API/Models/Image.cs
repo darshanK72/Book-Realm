@@ -18,5 +18,8 @@ namespace Book_Realm_API.Models
         [Required]
         public string Type { get; set; }
 
+        [Required]
+        public int Order { get; set; }
+
     }
 }

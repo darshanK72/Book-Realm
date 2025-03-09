@@ -50,13 +50,28 @@ namespace Book_Realm_API.Controllers
             }
         }
 
+        [HttpPost("byIds")]
+        public async Task<ActionResult<List<HeroDTO>>> GetHerosByListOfIds(List<string> heroIds)
+        {
+            try
+            {
+                var heros = await _heroRepository.GetAllHerosByIds(heroIds);
+                var heroDtos = heros.Select(hero => _mappingHelper.MapToHeroDTO(hero));
+                return Ok(heroDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<HeroDTO>> CreateHero(HeroDTO heroDto)
         {
             try
             {
                 var newHero = await _heroRepository.CreateHero(heroDto);
-                return CreatedAtAction(nameof(GetHero), heroDto);
+                return CreatedAtAction(nameof(GetHeros), newHero);
             }
             catch (Exception ex)
             {

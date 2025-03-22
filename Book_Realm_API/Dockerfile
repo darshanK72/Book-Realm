@@ -1,4 +1,4 @@
-# Use official .NET 6 SDK image for building the project
+# Use .NET 6 SDK for building the project
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
@@ -6,18 +6,18 @@ WORKDIR /app
 COPY . ./
 RUN dotnet restore
 
-# Build the application
+# Build and publish the application
 RUN dotnet publish -c Release -o /out
 
-# Use a smaller runtime image for .NET 6
+# Use .NET 6 runtime for final image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 WORKDIR /app
 
 # Copy built files from the build stage
 COPY --from=build /out ./
 
-# Expose the port (Render uses port 10000 by default)
+# Expose the port (Render defaults to 10000)
 EXPOSE 10000
 
-# Start the application
-CMD ["dotnet", "BookRealm.dll"]
+# Run the executable instead of a DLL
+CMD ["./Book_Realm_API.exe"]

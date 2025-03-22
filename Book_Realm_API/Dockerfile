@@ -16,8 +16,7 @@ WORKDIR /app
 # Copy built files from the build stage
 COPY --from=build /out ./
 
-# Expose the port (Render uses port 10000 by default)
-EXPOSE 10000
+EXPOSE 80
 
 # Start the application
 CMD ["dotnet", "Book_Realm_API.dll"]

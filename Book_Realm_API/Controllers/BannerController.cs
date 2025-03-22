@@ -48,6 +48,22 @@ namespace Book_Realm_API.Controllers
             }
         }
 
+        [HttpPost("byIds")]
+        public async Task<ActionResult<List<BannerDTO>>> GetBannerByListOfIds(List<string> bannerIds)
+        {
+            try
+            {
+                var banners = await _bannerRepository.GetAllBannersByIds(bannerIds);
+                var bannerDtos = banners.Select(banner => _mappingHelper.MapToBannerDTO(banner));
+                return Ok(bannerDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
 
         [HttpPost("small-banner")]
         public async Task<ActionResult<BannerDTO>> CreateSmallBanner(BannerDTO bannerDto)

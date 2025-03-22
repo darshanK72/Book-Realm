@@ -1,3 +1,4 @@
+import { Banner } from "src/app/Models/banner";
 import { Book } from "src/app/Models/book";
 import { Hero } from "src/app/Models/hero";
 import { HomeSection } from "src/app/Payloads/homeSection";
@@ -20,19 +21,17 @@ export interface BookSections {
 
 export interface SmallBannerSection {
     sectionId: string;
-    sectionName: string;
-    smallBanners: Book[];
+    smallBanners: Banner[];
 }
 
 export interface MediumBannerSection {
     sectionId: string;
-    sectionName: string;
-    mediumBanners: [];
+    mediumBanners: Banner[];
 }
 
 export interface LargeBannerSection {
     sectionId: string;
-    largeBanners: [];
+    largeBanners: Banner[];
 }
 
 export interface HomeState {

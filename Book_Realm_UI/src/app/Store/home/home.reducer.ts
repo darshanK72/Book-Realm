@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { getBookSectionsFailure, getBookSectionsSuccess, getHeroSectionsFailure, getHeroSectionsSuccess, getHomeSectionsFailure, getHomeSectionsSuccess } from "./home.actions";
+import { getBookSectionsFailure, getBookSectionsSuccess, getHeroSectionsFailure, getHeroSectionsSuccess, getHomeSectionsFailure, getHomeSectionsSuccess, getMediumBannerSectionsFailure, getMediumBannerSectionsSuccess, getSmallBannerSectionsSuccess, getSmallBannerSectionsFailure } from "./home.actions";
 import { state } from "./home.state";
 
 export const homeReducer = createReducer(
@@ -41,6 +41,34 @@ export const homeReducer = createReducer(
         success: action.payload.success
     })),
     on(getBookSectionsFailure, (state, action) => ({
+        ...state,
+        error: action.payload.error,
+        success: null
+    })),
+    on(getMediumBannerSectionsSuccess, (state, action) => ({
+        ...state,
+        medimuBannerSections: [...state.medimuBannerSections, {
+            sectionId: action.payload.sectionId,
+            mediumBanners: action.payload.mediumBanners
+        }],
+        error: null,
+        success: action.payload.success
+    })),
+    on(getMediumBannerSectionsFailure, (state, action) => ({
+        ...state,
+        error: action.payload.error,
+        success: null
+    })),
+    on(getSmallBannerSectionsSuccess, (state, action) => ({
+        ...state,
+        smallBannerSections: [...state.smallBannerSections, {
+            sectionId: action.payload.sectionId,
+            smallBanners: action.payload.smallBanners
+        }],
+        error: null,
+        success: action.payload.success
+    })),
+    on(getSmallBannerSectionsFailure, (state, action) => ({
         ...state,
         error: action.payload.error,
         success: null

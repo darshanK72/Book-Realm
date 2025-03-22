@@ -35,6 +35,20 @@ namespace Book_Realm_API.Repositories.BannerRepository
 
             return banner;
         }
+
+        public async Task<List<Banner>> GetAllBannersByIds(List<string> bannerIds)
+        {
+            var banners = await _dbContext.Banners.Where(b => bannerIds.Contains(b.Id.ToString())).ToListAsync();
+
+            List<Banner> result = new List<Banner>();
+
+            foreach (var banner in banners)
+            {
+                banner.BannerImage = await _dbContext.BannerImages.Where(bi => bi.BannerId == banner.Id).FirstOrDefaultAsync();
+                result.Add(banner);
+            }
+            return result;
+        }
         public async Task<Hero> GetHeroById(Guid id)
         {
             var hero = await _dbContext.Heros.FindAsync(id);
@@ -76,7 +90,8 @@ namespace Book_Realm_API.Repositories.BannerRepository
                     Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
                     Type = "Banner",
                     BannerId = banner.Id,
-                    Banner = await GetBannerById(banner.Id)
+                    Banner = await GetBannerById(banner.Id),
+                    Order = bannerDto.Order
                 };
                 var imageResult = await _imageRepository.CreateBannerImage(image);
 

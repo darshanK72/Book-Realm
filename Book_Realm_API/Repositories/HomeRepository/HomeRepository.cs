@@ -70,13 +70,13 @@ namespace Book_Realm_API.Repositories.HomeRepository
 
             foreach (var bannerId in sectionDto.Banners)
             {
-
+                var bnr = await _dbContext.Banners.Where(b => b.Id == Guid.Parse(bannerId)).FirstOrDefaultAsync();
                 var newBannerSection = new BannerInSection()
                 {
                     SectionId = section.Id,
                     Section = section,
                     BannerId = Guid.Parse(bannerId),
-                    Banner = await _dbContext.Banners.Where(b => b.Id == Guid.Parse(bannerId)).FirstOrDefaultAsync()
+                    Banner = bnr
                 };
 
                 _dbContext.BannersInSection.Add(newBannerSection);

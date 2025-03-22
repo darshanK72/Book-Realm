@@ -23,3 +23,29 @@ export const getBookSectionsSuccess = createAction(
     props<{ payload: { sectionId: string, sectionName: string, books: any[], success: string } }>()
 );
 export const getBookSectionsFailure = createAction('[Book] Get Book Sections Failure', props<{ payload: any }>());
+
+export const getMediumBannerSections = createAction(
+    '[Medium Banner] Get Medium Banner Sections',
+    props<{ payload: { sectionId: string, sectionName: string, bannerIds: string[] } }>()
+);
+export const getMediumBannerSectionsSuccess = createAction(
+    '[Medium Banner] Get Medium Banner Sections Success',
+    props<{ payload: { sectionId: string, mediumBanners: any[], success: string } }>()
+);
+export const getMediumBannerSectionsFailure = createAction('[Medium Banner] Get Medium Banner Sections Failure', props<{ payload: any }>());
+
+export const getSmallBannerSections = createAction(
+    '[Small Banner] Get Small Banner Sections',
+    props<{ payload: { sectionId: string, sectionName: string, bannerIds: string[] } }>()
+);
+
+export const getSmallBannerSectionsSuccess = createAction(
+    '[Small Banner] Get Small Banner Sections Success',
+    props<{ payload: { sectionId: string, smallBanners: any[], success: string } }>()
+);
+
+export const getSmallBannerSectionsFailure = createAction(
+    '[Small Banner] Get Small Banner Sections Failure', 
+    props<{ payload: any }>()
+);
+

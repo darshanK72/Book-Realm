@@ -53,7 +53,7 @@ namespace Book_Realm_API.Repositories.BookRepository
             {
                 book.Reviews = await _dbContext.Reviews.Where(r => r.BookId == book.Id).ToListAsync();
                 book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
-                book.Images = await _dbContext.BookImages.Where(i => i.BookId == book.Id).ToListAsync();
+                book.Images = await _dbContext.BookImages.Where(i => i.BookId == book.Id).OrderBy(i => i.Order).ToListAsync();
 
                 booksWithDetails.Add(book);
             }
@@ -74,7 +74,7 @@ namespace Book_Realm_API.Repositories.BookRepository
             {
                 book.Reviews = await _dbContext.Reviews.Where(r => r.BookId == book.Id).ToListAsync();
                 book.Tags = await _dbContext.BookTags.Where(t => t.BookId == book.Id).ToListAsync();
-                book.Images = await _dbContext.BookImages.Where(bi => bi.BookId == book.Id).ToListAsync();
+                book.Images = await _dbContext.BookImages.Where(bi => bi.BookId == book.Id).OrderBy(bi => bi.Order).ToListAsync();
                 result.Add(book);
             }
             return result;
@@ -123,7 +123,7 @@ namespace Book_Realm_API.Repositories.BookRepository
                 _dbContext.Books.Add(book);
                 await _dbContext.SaveChangesAsync();
                 book.Tags = await _tagRepository.SaveAndGetBookTags(book.Id, bookDto.Tags);
-
+                int order = 1;
                 foreach (var item in bookDto.Images)
                 {
                     try
@@ -137,7 +137,8 @@ namespace Book_Realm_API.Repositories.BookRepository
                             Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
                             Type = "Book",
                             BookId = book.Id,
-                            Book = await GetBookById(book.Id)
+                            Book = await GetBookById(book.Id),
+                            Order = order++
                         };
                         var imageResult = await _imageRepository.CreateBookImage(image);
                     }

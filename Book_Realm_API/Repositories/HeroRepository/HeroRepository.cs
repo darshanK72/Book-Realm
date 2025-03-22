@@ -38,7 +38,7 @@ namespace Book_Realm_API.Repositories.HeroRepository
             List<Hero> result = new List<Hero>();
             foreach (var hero in heros)
             {
-                hero.HeroImages = await _dbContext.HeroImages.Where(bi => bi.HeroId == hero.Id).ToListAsync();
+                hero.HeroImages = await _dbContext.HeroImages.Where(bi => bi.HeroId == hero.Id).OrderBy(bi => bi.Order).ToListAsync();
                 result.Add(hero);
             }
             return result;
@@ -77,6 +77,7 @@ namespace Book_Realm_API.Repositories.HeroRepository
                 var hero = _mappingHelper.MapToHero(heroDto);
                 _dbContext.Heros.Add(hero);
                 await _dbContext.SaveChangesAsync();
+                int order = 1;
                 foreach (var item in heroDto.HeroImages)
                 {
                     try
@@ -90,7 +91,8 @@ namespace Book_Realm_API.Repositories.HeroRepository
                             Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
                             Type = "Hero",
                             HeroId = hero.Id,
-                            Hero = await GetHeroById(hero.Id)
+                            Hero = await GetHeroById(hero.Id),
+                            Order = order++
                         };
                         var imageResult = await _imageRepository.CreateHeroImage(heroImage);
                     }

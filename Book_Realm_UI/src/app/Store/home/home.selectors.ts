@@ -59,3 +59,39 @@ export const selectAllBookSections = createSelector(
   selectorState,
   (state) => state.bookSections
 );
+
+// Selector for getting medium banner section by ID
+export const selectMediumBannerSectionById = (sectionId: string) => createSelector(
+  selectorState,
+  (state) => state.medimuBannerSections.find(section => section.sectionId === sectionId)
+);
+
+// Selector for getting all medium banner sections
+export const selectAllMediumBannerSections = createSelector(
+  selectorState,
+  (state) => state.medimuBannerSections
+);
+
+// Optional: Selector for getting medium banners from a specific section
+export const selectMediumBannersFromSection = (sectionId: string) => createSelector(
+  selectMediumBannerSectionById(sectionId),
+  (section) => section ? section.mediumBanners : []
+);
+
+// Selector for getting small banner section by ID
+export const selectSmallBannerSectionById = (sectionId: string) => createSelector(
+  selectorState,
+  (state) => state.smallBannerSections.find(section => section.sectionId === sectionId)
+);
+
+// Selector for getting all small banner sections
+export const selectAllSmallBannerSections = createSelector(
+  selectorState,
+  (state) => state.smallBannerSections
+);
+
+// Optional: Selector for getting small banners from a specific section
+export const selectSmallBannersFromSection = (sectionId: string) => createSelector(
+  selectSmallBannerSectionById(sectionId),
+  (section) => section ? section.smallBanners : []
+);

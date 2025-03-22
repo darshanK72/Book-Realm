@@ -4,6 +4,9 @@
             [heroIds]="section.heros"></app-hero>
         <app-list *ngIf="section.sectionType == 'Book'" [sectionId]="section.id"
             [sectionName]="section.sectionName" [bookIds]="section.books"></app-list>
+        <app-medium-banners *ngIf="section.sectionType == 'MediumBanner'" [sectionId]="section.id"
+            [bannerIds]="section.banners"></app-medium-banners>
+        <app-small-banners *ngIf="section.sectionType == 'SmallBanner'" [sectionId]="section.id"
+            [bannerIds]="section.banners"></app-small-banners>
     </ng-container>
-    <h1> Hello world</h1>
 </div>

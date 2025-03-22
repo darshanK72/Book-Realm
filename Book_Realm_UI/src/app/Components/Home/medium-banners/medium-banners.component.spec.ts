@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LargeBannersComponent } from './large-banners.component';
+import { LargeBannersComponent } from './medium-banners.component';
 
 describe('LargeBannersComponent', () => {
   let component: LargeBannersComponent;

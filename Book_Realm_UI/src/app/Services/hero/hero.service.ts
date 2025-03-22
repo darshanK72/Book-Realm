@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Hero } from '../Models/hero';
+import { Hero } from '../../Models/hero';
 import {environment} from 'src/environments/environment'; 
 
 

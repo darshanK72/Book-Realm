@@ -11,13 +11,20 @@ import {
   getHomeSections,
   getHomeSectionsFailure,
   getHomeSectionsSuccess,
+  getMediumBannerSections,
+  getMediumBannerSectionsFailure,
+  getMediumBannerSectionsSuccess,
+  getSmallBannerSections,
+  getSmallBannerSectionsFailure,
+  getSmallBannerSectionsSuccess,
 } from './home.actions';
 import { HomeService } from 'src/app/Services/home/home.service';
 import { BookService } from 'src/app/Services/book/book.service';
-import { HeroService } from 'src/app/Services/hero.service';
+import { HeroService } from 'src/app/Services/hero/hero.service';
+import { BannerService } from 'src/app/Services/banner/banner.service';
 @Injectable()
 export class HomeEffects {
-  constructor(private actions$: Actions, private homeService: HomeService,private bookService:BookService,private heroService:HeroService) {}
+  constructor(private actions$: Actions, private homeService: HomeService,private bookService:BookService,private heroService:HeroService,private bannerService:BannerService) {}
 
   getHomeSections$ = createEffect(() => {
     return this.actions$.pipe(
@@ -81,4 +88,47 @@ export class HomeEffects {
     );
   });
 
+  getMediumBannerSection$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(getMediumBannerSections),
+      mergeMap((action) => {
+        return this.bannerService.getBannersByIds(action.payload.bannerIds).pipe(
+          map((data: any) => {
+            return getMediumBannerSectionsSuccess({
+              payload: {
+                sectionId: action.payload.sectionId,
+                mediumBanners: data,
+                success: 'success'
+              },
+            });
+          }),
+          catchError(async (error: any) => {
+            return getMediumBannerSectionsFailure({ payload: { error: error.error } })
+          })
+        );
+      })
+    );
+  });
+
+  getSmallBannerSection$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(getSmallBannerSections),
+      mergeMap((action) => {
+        return this.bannerService.getBannersByIds(action.payload.bannerIds).pipe(
+          map((data: any) => {
+            return getSmallBannerSectionsSuccess({
+              payload: {
+                sectionId: action.payload.sectionId,
+                smallBanners: data,
+                success: 'success'
+              },
+            });
+          }),
+          catchError(async (error: any) => {
+            return getSmallBannerSectionsFailure({ payload: { error: error.error } })
+          })
+        );
+      })
+    );
+  });
 }

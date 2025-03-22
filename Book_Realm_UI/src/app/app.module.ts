@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/Home/home/home.component';
 import { ListComponent } from './Components/Home/list/list.component';
 import { SmallBannersComponent } from './Components/Home/small-banners/small-banners.component';
-import { LargeBannersComponent } from './Components/Home/large-banners/large-banners.component';
+import { MediumBannersComponent } from './Components/Home/medium-banners/medium-banners.component';
 import { HeaderComponent } from './Components/Layout/header/header.component';
 import { FooterComponent } from './Components/Layout/footer/footer.component';
 import { SidebarComponent } from './Components/Profile/sidebar/sidebar.component';
@@ -69,7 +69,7 @@ import { HomeEffects } from './Store/home/home.effects';
     HomeComponent,
     ListComponent,
     SmallBannersComponent,
-    LargeBannersComponent,
+    MediumBannersComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,

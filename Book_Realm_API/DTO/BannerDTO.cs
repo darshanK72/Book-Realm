@@ -10,6 +10,7 @@ namespace Book_Realm_API.DTO
         public string ClickUrl { get;set; }
         public string BannerType { get;set; }
         public string BannerImage { get;set; }
+        public int Order { get; set; }
 
     }
 }

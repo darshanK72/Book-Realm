@@ -46,7 +46,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<BookRealmDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSQLConnectionString"));
 });
 
 builder.Services.AddAuthentication(options =>

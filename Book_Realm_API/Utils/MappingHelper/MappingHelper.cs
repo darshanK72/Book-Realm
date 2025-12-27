@@ -417,14 +417,16 @@ namespace Book_Realm_API.Utils.MappingHelper
 
         public BannerDTO MapToBannerDTO(Banner banner)
         {
+            if (banner == null) return null;
+
             return new BannerDTO
             {
                 Id = banner.Id.ToString(),
                 BannerType = banner.BannerType.ToString(),
                 ClickUrl = banner.ClickUrl,
                 PlaceHolder = banner.PlaceHolder,
-                BannerImage = banner.BannerImage.Src,
-                Order = banner.BannerImage.Order
+                BannerImage = banner.BannerImage?.Src ?? string.Empty,
+                Order = banner.BannerImage?.Order ?? 0
             };
         }
 

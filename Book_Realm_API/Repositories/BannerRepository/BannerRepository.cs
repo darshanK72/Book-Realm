@@ -20,18 +20,19 @@ namespace Book_Realm_API.Repositories.BannerRepository
 
         public async Task<List<Banner>> GetAllBanners()
         {
-            return await _dbContext.Banners.ToListAsync();
+            return await _dbContext.Banners.Include(b => b.BannerImage).ToListAsync();
         }
 
         public async Task<Banner> GetBannerById(Guid id)
         {
-            var banner = await _dbContext.Banners.FindAsync(id);
-            banner.BannerImage = await _dbContext.BannerImages.Where(bi => bi.BannerId == id).FirstOrDefaultAsync();
-
+            var banner = await _dbContext.Banners.FirstOrDefaultAsync(b => b.Id == id);
+            
             if (banner == null)
             {
                 throw new InvalidOperationException("Banner not found");
             }
+
+            banner.BannerImage = await _dbContext.BannerImages.Where(bi => bi.BannerId == id).FirstOrDefaultAsync();
 
             return banner;
         }
@@ -62,25 +63,57 @@ namespace Book_Realm_API.Repositories.BannerRepository
             return hero;
         }
 
-        public async Task<Banner> UpdateBanner(Guid id, Banner banner)
+        public async Task<BannerDTO> UpdateBanner(Guid id, BannerDTO bannerDto)
         {
-            if (!BannerIdExists(id))
+            var banner = await _dbContext.Banners.Include(b => b.BannerImage).FirstOrDefaultAsync(b => b.Id == id);
+            
+            if (banner == null)
             {
                 throw new InvalidOperationException("Banner not found");
             }
-            _dbContext.Entry(banner).State = EntityState.Modified;
+
+            banner.PlaceHolder = bannerDto.PlaceHolder;
+            banner.ClickUrl = bannerDto.ClickUrl;
+            banner.BannerType = (BannerType)Enum.Parse(typeof(BannerType), bannerDto.BannerType);
+
+            if (banner.BannerImage != null)
+            {
+                if (banner.BannerImage.Src != bannerDto.BannerImage && !string.IsNullOrEmpty(bannerDto.BannerImage))
+                {
+                    // Re-upload to media server if the URL has changed
+                    var imageUploadResult = await _imageRepository.UploadImageFromUrl(bannerDto.BannerImage, "Banner", bannerDto.PlaceHolder);
+                    banner.BannerImage.Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString();
+                }
+                banner.BannerImage.Order = bannerDto.Order;
+                banner.BannerImage.Name = bannerDto.PlaceHolder;
+            }
+            else if (!string.IsNullOrEmpty(bannerDto.BannerImage))
+            {
+                var imageUploadResult = await _imageRepository.UploadImageFromUrl(bannerDto.BannerImage, "Banner", bannerDto.PlaceHolder);
+                var imgId = imageUploadResult.PublicId.Split('/').Last();
+                var newImage = new BannerImage()
+                {
+                    Id = Guid.Parse(imgId),
+                    Name = banner.PlaceHolder,
+                    Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
+                    Type = "Banner",
+                    Banner = banner,
+                    Order = bannerDto.Order
+                };
+                _dbContext.BannerImages.Add(newImage);
+                banner.BannerImage = newImage;
+            }
+
             await _dbContext.SaveChangesAsync();
-            return banner;
+            return _mappingHelper.MapToBannerDTO(banner);
         }
 
-        public async Task<string> CreateBanner(BannerDTO bannerDto)
+        public async Task<BannerDTO> CreateBanner(BannerDTO bannerDto)
         {
-            try
-            {
-                var banner = _mappingHelper.MapToBanner(bannerDto);
-                _dbContext.Banners.Add(banner);
-                await _dbContext.SaveChangesAsync();
+            var banner = _mappingHelper.MapToBanner(bannerDto);
 
+            if (!string.IsNullOrEmpty(bannerDto.BannerImage))
+            {
                 var imageUploadResult = await _imageRepository.UploadImageFromUrl(bannerDto.BannerImage, "Banner", bannerDto.PlaceHolder);
                 var Id = imageUploadResult.PublicId.Split('/').Last();
                 var image = new BannerImage()
@@ -89,19 +122,17 @@ namespace Book_Realm_API.Repositories.BannerRepository
                     Name = banner.PlaceHolder,
                     Src = imageUploadResult.SecureUrl.AbsoluteUri.ToString(),
                     Type = "Banner",
-                    BannerId = banner.Id,
-                    Banner = await GetBannerById(banner.Id),
+                    Banner = banner,
                     Order = bannerDto.Order
                 };
-                var imageResult = await _imageRepository.CreateBannerImage(image);
-
-
-                return "Banner created successfully";
+                _dbContext.BannerImages.Add(image);
+                banner.BannerImage = image;
             }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+
+            _dbContext.Banners.Add(banner);
+            await _dbContext.SaveChangesAsync();
+
+            return _mappingHelper.MapToBannerDTO(banner);
         }
 
         public async Task<string> CreateHero(HeroDTO heroDto)

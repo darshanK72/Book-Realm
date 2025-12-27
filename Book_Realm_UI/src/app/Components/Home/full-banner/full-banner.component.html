@@ -1,14 +1,31 @@
 <div class="full-banner-wrapper">
+  @if (bannerData.length > 1) {
+  <splide
+    [options]="{
+      type: 'loop',
+      perPage: 1,
+      autoplay: true,
+      interval: 4000,
+      arrows: true,
+      pagination: true
+    }"
+  >
     @for (banner of bannerData; track banner.id) {
-    <a [href]="banner.clickUrl" class="full-banner-link">
-        <div class="full-banner">
-            <img [src]="banner.bannerImage" [alt]="banner.placeHolder" loading="lazy">
-            <div class="banner-overlay">
-                <div class="banner-content">
-                    <h2 class="banner-title">{{banner.placeHolder}}</h2>
-                </div>
-            </div>
-        </div>
-    </a>
+    <splide-slide>
+      <a [href]="banner.clickUrl" class="full-banner">
+        <img
+          [src]="banner.bannerImage"
+          [alt]="banner.placeHolder"
+          loading="lazy"
+        />
+      </a>
+    </splide-slide>
     }
+  </splide>
+  } @else if (bannerData.length === 1) { @for (banner of bannerData; track
+  banner.id) {
+  <a [href]="banner.clickUrl" class="full-banner">
+    <img [src]="banner.bannerImage" [alt]="banner.placeHolder" loading="lazy" />
+  </a>
+  } }
 </div>

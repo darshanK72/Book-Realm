@@ -63,38 +63,33 @@ namespace Book_Realm_API.Utils.ImageHelper
 
         }
 
-        public async Task<ImageUploadResult> UploadImageFromUrl(string imageUrl,string folder, string fileName)
+        public async Task<ImageUploadResult> UploadImageFromUrl(string imageUrl, string folder, string fileName)
         {
-            if (!string.IsNullOrEmpty(imageUrl))
-            {
-                try
-                {
-                    using (var httpClient = new HttpClient())
-                    {
-                        httpClient.Timeout = TimeSpan.FromSeconds(30);
-
-                        var response = await httpClient.GetAsync(imageUrl);
-
-                        if (!response.IsSuccessStatusCode)
-                        {
-                            throw new Exception($"Failed to fetch image from URL: {imageUrl}");
-                        }
-
-                        var stream = await response.Content.ReadAsStreamAsync();
-                        var file = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(imageUrl));
-
-                        var uploadedImageUrl = await UploadImage(file,folder, fileName);
-                        return uploadedImageUrl;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception($"Error uploading image: {ex.Message}");
-                }
-            }
-            else
-            {
+            if (string.IsNullOrEmpty(imageUrl))
                 throw new ArgumentNullException(nameof(imageUrl), "Image URL cannot be null or empty");
+
+            try
+            {
+                var uploadParams = new ImageUploadParams
+                {
+                    File = new FileDescription(imageUrl),
+                    PublicId = Guid.NewGuid().ToString(),
+                    Folder = folder,
+                    UseFilename = true
+                };
+
+                var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+
+                if (uploadResult.Error != null)
+                {
+                    throw new Exception(uploadResult.Error.Message);
+                }
+
+                return uploadResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error uploading image from URL: {ex.Message}");
             }
         }
     }

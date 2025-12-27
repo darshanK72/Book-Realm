@@ -1,41 +1,39 @@
 <div class="wrapper">
   <div class="big-screen">
-    <splide [options]="{ type: 'loop', perPage: 1, keyboard: false, autoplay: true, interval:4000}">
+    <splide
+      [options]="{
+        type: 'loop',
+        perPage: 1,
+        keyboard: false,
+        autoplay: true,
+        interval: 4000
+      }"
+    >
       @for (hero of heroData; track hero) {
       <splide-slide>
-        <div class="hero-slide">
+        <a [routerLink]="hero.clickUrl" class="hero-slide">
           <img [src]="hero.heroImages[0]" alt="Book Banner" />
-          <div class="hero-overlay">
-            <div class="hero-content">
-              <h1 class="hero-title fade-in">Discover Your Next Great Read</h1>
-              <p class="hero-description fade-in">Explore thousands of books across all genres</p>
-              <div class="hero-actions fade-in">
-                <button class="btn btn-primary" routerLink="/filter">Shop Now</button>
-                <button class="btn btn-outline" routerLink="/genre">Browse Genres</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        </a>
       </splide-slide>
       }
     </splide>
   </div>
   <div class="small-screen">
-    <splide [options]="{ type: 'loop', perPage: 1, keyboard: false, autoplay: true, interval:4000, arrows:false }">
+    <splide
+      [options]="{
+        type: 'loop',
+        perPage: 1,
+        keyboard: false,
+        autoplay: true,
+        interval: 4000,
+        arrows: false
+      }"
+    >
       @for (hero of heroData; track hero) {
       <splide-slide>
-        <div class="hero-slide">
+        <a [routerLink]="hero.clickUrl" class="hero-slide">
           <img [src]="hero.heroImages[1]" alt="Book Banner" />
-          <div class="hero-overlay">
-            <div class="hero-content">
-              <h1 class="hero-title fade-in">Discover Your Next Great Read</h1>
-              <p class="hero-description fade-in">Explore thousands of books</p>
-              <div class="hero-actions fade-in">
-                <button class="btn btn-primary" routerLink="/filter">Shop Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        </a>
       </splide-slide>
       }
     </splide>

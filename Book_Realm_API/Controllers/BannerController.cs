@@ -20,12 +20,13 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Banner>>> GetBanners()
+        public async Task<ActionResult<List<BannerDTO>>> GetBanners()
         {
             try
             {
                 var banners = await _bannerRepository.GetAllBanners();
-                return Ok(banners);
+                var bannerDtos = banners.Select(banner => _mappingHelper.MapToBannerDTO(banner)).ToList();
+                return Ok(bannerDtos);
             }
             catch (Exception ex)
             {
@@ -71,8 +72,8 @@ namespace Book_Realm_API.Controllers
             try
             {
                 bannerDto.BannerType = "SMALL";
-                var newBanner = await _bannerRepository.CreateBanner(bannerDto);
-                return Ok(bannerDto);
+                var newBannerDto = await _bannerRepository.CreateBanner(bannerDto);
+                return Ok(newBannerDto);
             }
             catch (Exception ex)
             {
@@ -87,8 +88,8 @@ namespace Book_Realm_API.Controllers
             try
             {
                 bannerDto.BannerType = "MEDIUM";
-                var newBanner = await _bannerRepository.CreateBanner(bannerDto);
-                return Ok(bannerDto);
+                var newBannerDto = await _bannerRepository.CreateBanner(bannerDto);
+                return Ok(newBannerDto);
             }
             catch (Exception ex)
             {
@@ -103,8 +104,8 @@ namespace Book_Realm_API.Controllers
             try
             {
                 bannerDto.BannerType = "LARGE";
-                var newBanner = await _bannerRepository.CreateBanner(bannerDto);
-                return Ok(bannerDto);
+                var newBannerDto = await _bannerRepository.CreateBanner(bannerDto);
+                return Ok(newBannerDto);
             }
             catch (Exception ex)
             {
@@ -113,11 +114,11 @@ namespace Book_Realm_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateBanner(Guid id, Banner banner)
+        public async Task<ActionResult<BannerDTO>> UpdateBanner(Guid id, BannerDTO bannerDto)
         {
             try
             {
-                var updatedBanner = await _bannerRepository.UpdateBanner(id, banner);
+                var updatedBanner = await _bannerRepository.UpdateBanner(id, bannerDto);
                 return Ok(updatedBanner);
             }
             catch (Exception ex)

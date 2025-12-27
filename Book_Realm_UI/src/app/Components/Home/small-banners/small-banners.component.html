@@ -1,7 +1,10 @@
 <div class="wrapper">
-  @for (banner of bannerData; track banner) {
-    <div class="banner">
-      <img [src]="banner.bannerImage" [alt]="banner.placeHolder">
+  @for (banner of bannerData; track banner.id) {
+  <a [href]="banner.clickUrl" class="banner-link">
+    <img [src]="banner.bannerImage" [alt]="banner.placeHolder" />
+    <div class="banner-overlay">
+      <h3 class="banner-title">{{ banner.placeHolder }}</h3>
     </div>
+  </a>
   }
 </div>

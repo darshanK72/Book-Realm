@@ -16,9 +16,10 @@ WORKDIR /app
 # Copy built files from the build stage
 COPY --from=build /out ./
 
-# Render provides the PORT environment variable.
-# We'll use ASPNETCORE_URLS to tell .NET to listen on that port.
-ENV ASPNETCORE_URLS=http://+:${PORT:-80}
+# Render provides the PORT environment variable. 
+# We'll default to 80 if it's not provided.
+ENV PORT=80
+ENV ASPNETCORE_URLS=http://+:${PORT}
 EXPOSE 80
 
 # Start the application

@@ -53,32 +53,37 @@ builder.Services.AddDbContext<BookRealmDbContext>(options =>
         });
 });
 
-builder.Services.AddAuthentication(options =>
+var authBuilder = builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+});
 
-}).AddJwtBearer(options =>
+var jwtSecretKey = builder.Configuration["Jwt:SecretKey"];
+if (!string.IsNullOrEmpty(jwtSecretKey))
+{
+    authBuilder.AddJwtBearer(options =>
     {
         options.RequireHttpsMetadata = false;
         options.SaveToken = true;
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"])),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
             ValidateIssuer = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidateAudience = true,
             ValidAudience = builder.Configuration["Jwt:Audience"]
         };
     });
+}
 
 var googleClientId = builder.Configuration["Google:ClientId"];
 var googleClientSecret = builder.Configuration["Google:ClientSecret"];
 
 if (!string.IsNullOrEmpty(googleClientId) && !string.IsNullOrEmpty(googleClientSecret))
 {
-    builder.Services.AddAuthentication().AddGoogle(options =>
+    authBuilder.AddGoogle(options =>
     {
         options.ClientId = googleClientId;
         options.ClientSecret = googleClientSecret;
@@ -136,5 +141,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "80";
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5100";
 app.Run($"http://0.0.0.0:{port}");

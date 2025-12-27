@@ -7,9 +7,10 @@ import { getBookSections } from 'src/app/Store/home/home.actions';
 import { selectBookSectionById } from 'src/app/Store/home/home.selectors';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+    selector: 'app-list',
+    templateUrl: './list.component.html',
+    styleUrls: ['./list.component.css'],
+    standalone: false
 })
 export class ListComponent implements OnInit {
   @Input() sectionId!: string;

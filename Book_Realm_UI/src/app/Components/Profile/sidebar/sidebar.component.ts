@@ -6,31 +6,26 @@ import { ToggleService } from 'src/app/Services/toggle/toggle.service';
 
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css'],
-  providers: [provideAnimations()],
-  animations: [
-    trigger('sliderToggle', [
-      state(
-        'open',
-        style({
-          display:'block',
-          transform:'translate(0%)'
-        })
-      ),
-      state(
-        'close',
-        style({
-          // width:'0px',
-          display:"none",
-          transform:'translate(-100%)'
-        })
-      ),
-      transition('close => open', [animate('0.2s')]),
-      transition('open => close', [animate('0.2s')]),
-    ]),
-  ],
+    selector: 'app-sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.css'],
+    providers: [provideAnimations()],
+    animations: [
+        trigger('sliderToggle', [
+            state('open', style({
+                display: 'block',
+                transform: 'translate(0%)'
+            })),
+            state('close', style({
+                // width:'0px',
+                display: "none",
+                transform: 'translate(-100%)'
+            })),
+            transition('close => open', [animate('0.2s')]),
+            transition('open => close', [animate('0.2s')]),
+        ]),
+    ],
+    standalone: false
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
 

@@ -13,9 +13,10 @@ import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 import { AppState } from 'src/app/Store/app.state';
 import { singnUp } from 'src/app/Store/auth/auth.actions';
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css'],
+    selector: 'app-signup',
+    templateUrl: './signup.component.html',
+    styleUrls: ['./signup.component.css'],
+    standalone: false
 })
 export class SignupComponent implements OnInit {
   constructor(

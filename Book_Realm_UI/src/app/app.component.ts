@@ -8,9 +8,10 @@ import { continueWithGoogle } from './Store/auth/auth.actions';
 import { getHomeSections } from './Store/home/home.actions';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: false
 })
 export class AppComponent {
   title = 'Book_Realm_UI';

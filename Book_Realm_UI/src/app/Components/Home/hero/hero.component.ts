@@ -7,9 +7,10 @@ import { getHeroSections } from 'src/app/Store/home/home.actions';
 import { selectHeroSectionById } from 'src/app/Store/home/home.selectors';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+    selector: 'app-hero',
+    templateUrl: './hero.component.html',
+    styleUrls: ['./hero.component.css'],
+    standalone: false
 })
 export class HeroComponent implements OnInit {
   @Input() sectionId!: string;

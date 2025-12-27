@@ -6,9 +6,10 @@ import { getMediumBannerSections } from 'src/app/Store/home/home.actions';
 import { selectMediumBannerSectionById } from 'src/app/Store/home/home.selectors';
 
 @Component({
-  selector: 'app-medium-banners',
-  templateUrl: './medium-banners.component.html',
-  styleUrls: ['./medium-banners.component.css']
+    selector: 'app-medium-banners',
+    templateUrl: './medium-banners.component.html',
+    styleUrls: ['./medium-banners.component.css'],
+    standalone: false
 })
 export class MediumBannersComponent implements OnInit {
 

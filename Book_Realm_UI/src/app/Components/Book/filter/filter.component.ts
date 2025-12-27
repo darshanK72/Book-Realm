@@ -8,9 +8,10 @@ import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-filter',
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+    selector: 'app-filter',
+    templateUrl: './filter.component.html',
+    styleUrls: ['./filter.component.css'],
+    standalone: false
 })
 export class FilterComponent implements OnInit{
 

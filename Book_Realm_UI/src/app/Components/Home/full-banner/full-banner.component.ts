@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-full-banner',
-  templateUrl: './full-banner.component.html',
-  styleUrls: ['./full-banner.component.css']
+    selector: 'app-full-banner',
+    templateUrl: './full-banner.component.html',
+    styleUrls: ['./full-banner.component.css'],
+    standalone: false
 })
 export class FullBannerComponent {
 

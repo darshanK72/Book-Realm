@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+    selector: 'app-profile',
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.css'],
+    standalone: false
 })
 export class ProfileComponent {
   

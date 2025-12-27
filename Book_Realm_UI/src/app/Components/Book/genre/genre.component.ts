@@ -10,9 +10,10 @@ import { selectGenreById } from 'src/app/Store/genre/genre.selectors';
 import { selectSubgenresByGenreId } from 'src/app/Store/subgenre/subgenre.selectors';
 
 @Component({
-  selector: 'app-genre',
-  templateUrl: './genre.component.html',
-  styleUrls: ['./genre.component.css']
+    selector: 'app-genre',
+    templateUrl: './genre.component.html',
+    styleUrls: ['./genre.component.css'],
+    standalone: false
 })
 export class GenreComponent implements OnInit {
   genreId!: any;

@@ -6,9 +6,10 @@ import { AppState } from 'src/app/Store/app.state';
 import { selectIsLoading } from 'src/app/Store/shared/shared.selectors';
 
 @Component({
-  selector: 'app-spinner',
-  templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.css']
+    selector: 'app-spinner',
+    templateUrl: './spinner.component.html',
+    styleUrls: ['./spinner.component.css'],
+    standalone: false
 })
 export class SpinnerComponent implements OnInit{
   isLoading$!: Observable<boolean>;

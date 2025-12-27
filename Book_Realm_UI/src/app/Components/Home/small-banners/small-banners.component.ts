@@ -6,9 +6,10 @@ import { getSmallBannerSections } from 'src/app/Store/home/home.actions';
 import { selectSmallBannerSectionById } from 'src/app/Store/home/home.selectors';
 
 @Component({
-  selector: 'app-small-banners',
-  templateUrl: './small-banners.component.html',
-  styleUrls: ['./small-banners.component.css']
+    selector: 'app-small-banners',
+    templateUrl: './small-banners.component.html',
+    styleUrls: ['./small-banners.component.css'],
+    standalone: false
 })
 export class SmallBannersComponent implements OnInit {
   @Input() bannerIds!: string[];

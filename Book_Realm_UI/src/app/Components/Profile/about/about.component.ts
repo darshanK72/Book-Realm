@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.css'],
+    standalone: false
 })
 export class AboutComponent {
   constructor(private scrollService:ScrollService) {}

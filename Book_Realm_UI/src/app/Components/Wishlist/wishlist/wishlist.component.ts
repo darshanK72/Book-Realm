@@ -5,9 +5,10 @@ import { ScrollService } from 'src/app/Services/scroll/scroll.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-wishlist',
-  templateUrl: './wishlist.component.html',
-  styleUrls: ['./wishlist.component.css']
+    selector: 'app-wishlist',
+    templateUrl: './wishlist.component.html',
+    styleUrls: ['./wishlist.component.css'],
+    standalone: false
 })
 export class WishlistComponent implements OnInit{
 

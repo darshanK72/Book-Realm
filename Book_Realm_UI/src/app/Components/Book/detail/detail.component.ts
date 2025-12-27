@@ -16,9 +16,10 @@ import { selectBooks } from 'src/app/Store/book/book.selectors';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css'],
+    selector: 'app-detail',
+    templateUrl: './detail.component.html',
+    styleUrls: ['./detail.component.css'],
+    standalone: false
 })
 export class DetailComponent implements OnInit {
 

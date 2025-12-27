@@ -9,9 +9,10 @@ import { selectBooksBySubgenreId } from 'src/app/Store/book/book.selectors';
 import { selectSubgenreById, selectSubgenresByGenreId } from 'src/app/Store/subgenre/subgenre.selectors';
 
 @Component({
-  selector: 'app-subgenre',
-  templateUrl: './subgenre.component.html',
-  styleUrls: ['./subgenre.component.css']
+    selector: 'app-subgenre',
+    templateUrl: './subgenre.component.html',
+    styleUrls: ['./subgenre.component.css'],
+    standalone: false
 })
 export class SubgenreComponent implements OnInit {
   books!: Book[];

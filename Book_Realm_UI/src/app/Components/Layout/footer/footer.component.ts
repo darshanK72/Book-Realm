@@ -2,9 +2,10 @@ import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@ang
 import { Router, NavigationStart } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.css'],
+    standalone: false
 })
 export class FooterComponent implements AfterViewInit{
 

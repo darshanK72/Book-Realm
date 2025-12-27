@@ -8,9 +8,10 @@ import { Store } from '@ngrx/store';
 import { signIn } from 'src/app/Store/auth/auth.actions';
 import { NgToastService } from 'ng-angular-popup';
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css'],
+    selector: 'app-signin',
+    templateUrl: './signin.component.html',
+    styleUrls: ['./signin.component.css'],
+    standalone: false
 })
 export class SigninComponent implements OnInit {
   eleOpen: boolean = false;

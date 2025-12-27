@@ -71,12 +71,19 @@ builder.Services.AddAuthentication(options =>
             ValidateAudience = true,
             ValidAudience = builder.Configuration["Jwt:Audience"]
         };
-    })
-   .AddGoogle(options =>
-   {
-       options.ClientId = builder.Configuration["Google:ClientId"];
-       options.ClientSecret = builder.Configuration["Google:ClientSecret"];
-   });
+    });
+
+var googleClientId = builder.Configuration["Google:ClientId"];
+var googleClientSecret = builder.Configuration["Google:ClientSecret"];
+
+if (!string.IsNullOrEmpty(googleClientId) && !string.IsNullOrEmpty(googleClientSecret))
+{
+    builder.Services.AddAuthentication().AddGoogle(options =>
+    {
+        options.ClientId = googleClientId;
+        options.ClientSecret = googleClientSecret;
+    });
+}
 
 builder.Services.AddAuthorization(options =>
 {

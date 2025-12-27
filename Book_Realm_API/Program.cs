@@ -46,7 +46,11 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<BookRealmDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSQLConnectionString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"),
+        sqlServerOptionsAction: sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure();
+        });
 });
 
 builder.Services.AddAuthentication(options =>

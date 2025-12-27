@@ -1,0 +1,25 @@
+<div class="trending-wrapper">
+    <div class="section-header">
+        <h3>Trending This Week</h3>
+        <p>Most popular books right now</p>
+    </div>
+
+    @if (isLoading) {
+    <div class="loading-state">
+        <div class="skeleton-grid">
+            @for (item of [1,2,3,4]; track $index) {
+            <div class="skeleton-card">
+                <div class="skeleton skeleton-image"></div>
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+            </div>
+            }
+        </div>
+    </div>
+    } @else {
+    <div class="trending-message">
+        <i class="fa-solid fa-fire"></i>
+        <p>Check back soon for trending books!</p>
+    </div>
+    }
+</div>

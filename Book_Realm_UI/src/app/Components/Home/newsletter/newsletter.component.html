@@ -1,0 +1,35 @@
+<div class="newsletter">
+    <div class="container">
+        <div class="newsletter-wrapper">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get 10% off your first order and stay updated with the latest books and exclusive offers!</p>
+
+                <form (submit)="onSubmit($event)">
+                    <div class="input-group">
+                        <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email address"
+                            required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+
+                    @if (isSubmitted) {
+                    <div class="success-message fade-in">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Thank you for subscribing!</span>
+                    </div>
+                    }
+
+                    @if (isError) {
+                    <div class="error-message fade-in">
+                        <i class="fa-solid fa-exclamation-circle"></i>
+                        <span>Please enter a valid email address</span>
+                    </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="featured-collections-wrapper">
+    <div class="section-header">
+        <h3>Featured Collections</h3>
+        <p>Curated selections just for you</p>
+    </div>
+
+    <div class="collections-grid">
+        @for (collection of collections; track collection.id) {
+        <a [routerLink]="['/filter']" class="collection-card hover-lift">
+            <div class="collection-image">
+                <img [src]="collection.image" [alt]="collection.name" loading="lazy">
+                <div class="collection-overlay">
+                    <div class="collection-info">
+                        <h4>{{collection.name}}</h4>
+                        <p>{{collection.description}}</p>
+                        <span class="book-count">{{collection.bookCount}} Books</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        }
+    </div>
+</div>

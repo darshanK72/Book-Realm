@@ -45,7 +45,21 @@ export const getSmallBannerSectionsSuccess = createAction(
 );
 
 export const getSmallBannerSectionsFailure = createAction(
-    '[Small Banner] Get Small Banner Sections Failure', 
+    '[Small Banner] Get Small Banner Sections Failure',
     props<{ payload: any }>()
 );
 
+export const getLargeBannerSections = createAction(
+    '[Large Banner] Get Large Banner Sections',
+    props<{ payload: { sectionId: string, sectionName: string, bannerIds: string[] } }>()
+);
+
+export const getLargeBannerSectionsSuccess = createAction(
+    '[Large Banner] Get Large Banner Sections Success',
+    props<{ payload: { sectionId: string, largeBanners: any[], success: string } }>()
+);
+
+export const getLargeBannerSectionsFailure = createAction(
+    '[Large Banner] Get Large Banner Sections Failure',
+    props<{ payload: any }>()
+);

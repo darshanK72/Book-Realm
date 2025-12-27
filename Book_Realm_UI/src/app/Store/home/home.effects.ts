@@ -17,6 +17,9 @@ import {
   getSmallBannerSections,
   getSmallBannerSectionsFailure,
   getSmallBannerSectionsSuccess,
+  getLargeBannerSections,
+  getLargeBannerSectionsFailure,
+  getLargeBannerSectionsSuccess,
 } from './home.actions';
 import { HomeService } from 'src/app/Services/home/home.service';
 import { BookService } from 'src/app/Services/book/book.service';
@@ -24,20 +27,24 @@ import { HeroService } from 'src/app/Services/hero/hero.service';
 import { BannerService } from 'src/app/Services/banner/banner.service';
 @Injectable()
 export class HomeEffects {
-  constructor(private actions$: Actions, private homeService: HomeService,private bookService:BookService,private heroService:HeroService,private bannerService:BannerService) {}
+  constructor(private actions$: Actions, private homeService: HomeService, private bookService: BookService, private heroService: HeroService, private bannerService: BannerService) { }
 
   getHomeSections$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(getHomeSections),
       exhaustMap(() =>
         this.homeService.getAllHomeSections().pipe(
-          map((sections) => getHomeSectionsSuccess({ payload: {
-            sections,
-            success:'success'
-          } })),
-          catchError(async (error) => getHomeSectionsFailure({ payload: {
-            error:error.error.message
-          } }))
+          map((sections) => getHomeSectionsSuccess({
+            payload: {
+              sections,
+              success: 'success'
+            }
+          })),
+          catchError(async (error) => getHomeSectionsFailure({
+            payload: {
+              error: error.error.message
+            }
+          }))
         )
       )
     );
@@ -126,6 +133,28 @@ export class HomeEffects {
           }),
           catchError(async (error: any) => {
             return getSmallBannerSectionsFailure({ payload: { error: error.error } })
+          })
+        );
+      })
+    );
+  });
+
+  getLargeBannerSection$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(getLargeBannerSections),
+      mergeMap((action) => {
+        return this.bannerService.getBannersByIds(action.payload.bannerIds).pipe(
+          map((data: any) => {
+            return getLargeBannerSectionsSuccess({
+              payload: {
+                sectionId: action.payload.sectionId,
+                largeBanners: data,
+                success: 'success'
+              },
+            });
+          }),
+          catchError(async (error: any) => {
+            return getLargeBannerSectionsFailure({ payload: { error: error.error } })
           })
         );
       })

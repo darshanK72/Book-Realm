@@ -8,10 +8,10 @@ import { continueWithGoogle } from './Store/auth/auth.actions';
 import { getHomeSections } from './Store/home/home.actions';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  standalone: false
 })
 export class AppComponent {
   title = 'Book_Realm_UI';
@@ -26,11 +26,16 @@ export class AppComponent {
     private socialAuthService: SocialAuthService,
     private authService: AuthService
   ) {
+    console.log('🔵 [App Init] Setting up Google auth listener...');
     this.socialAuthService.authState.subscribe((user) => {
-      this.store.dispatch(continueWithGoogle({ payload: { user } }));
+      console.log('🔵 [Google OAuth] Auth state changed:', user);
+      if (user) {
+        console.log('🔵 [Google OAuth] Dispatching continueWithGoogle action');
+        this.store.dispatch(continueWithGoogle({ payload: { user } }));
+      }
     });
   }
-  
+
   ngOnInit() {
     this.authService.restoreAuthenticationState();
     this.store.dispatch(getHomeSections());

@@ -18,26 +18,44 @@
     --background-medium: hsl(225, 7%, 35%);
     --background-dark: hsl(228, 14%, 22%);
     --background-primary: hsl(0, 80%, 98%);
+    --background-section: hsl(0, 0%, 98%);
 
     --scroll-track-color: hsl(240, 2%, 76%);
 
-    --border-bottom-light : hsl(0, 0%, 95%);
+    --border-bottom-light: hsl(0, 0%, 95%);
 
-    --gradient:linear-gradient(to right, hsl(0, 69%, 57%) , hsl(359, 49%, 29%));
+    --gradient: linear-gradient(to right, hsl(0, 69%, 57%), hsl(359, 49%, 29%));
+
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, #f24a4a 0%, #c91f1f 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff9a76 0%, #ff6b6b 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    --gradient-shine: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
 
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 
-    /* Shadows */
+    /* Enhanced Shadows */
     --normal-shadow: 0px 2px 16px rgba(0, 0, 0, .08);
     --bottom-shadow: 0px 2px 11px rgba(0, 0, 0, .05);
     --tw-drop-shadow-1: drop-shadow(-4px 2px 6px rgba(0, 0, 0, .15));
     --tw-drop-shadow-2: drop-shadow(-4px 2px 8px rgba(0, 0, 0, .25));
-    
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --shadow-hover: 0 12px 40px rgba(242, 74, 74, 0.2);
+
 
     /* Borders */
     --radius-8: 8px;
+    --radius-12: 12px;
+    --radius-16: 16px;
 
+    /* Transitions */
+    --transition-fast: 200ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
 
     /* Font Family */
     --ff-libre-baskerville: 'Libre Baskerville', serif;
@@ -70,11 +88,12 @@ a,
 img,
 span,
 iframe,
-button,select{
+button,
+select {
     display: block;
 }
 
-i{
+i {
     line-height: 0;
 }
 
@@ -88,14 +107,16 @@ img {
 }
 
 input,
-button,select {
+button,
+select {
     background: none;
     border: none;
     font: inherit;
     color: inherit;
 }
 
-input ,select{
+input,
+select {
     width: 100%;
 }
 
@@ -113,14 +134,14 @@ html {
     font-size: 16px;
 }
 
-@media screen and (max-width:1024px) and (min-width:540px){
-    html{
+@media screen and (max-width:1024px) and (min-width:540px) {
+    html {
         font-size: 14px;
     }
 }
 
-@media screen and (max-width:540px){
-    html{
+@media screen and (max-width:540px) {
+    html {
         font-size: 13px;
     }
 }
@@ -160,17 +181,19 @@ h5 {
     font-size: 1.2rem;
 }
 
-p,a{
+p,
+a {
     margin: 0.2em 0 0.1em 0;
     font-family: var(--ff-manrope);
 }
 
-button{
+button {
     font-family: var(--ff-manrope);
 }
 
-input,textarea{
-    font-size:0.8rem;
+input,
+textarea {
+    font-size: 0.8rem;
     font-family: var(--ff-manrope);
 }
 
@@ -198,7 +221,7 @@ small,
 
 /* ---------------Common CSS ----------------- */
 
-.btn{
+.btn {
     display: inline-block;
     padding: 8px 20px;
     border-radius: 8px;
@@ -207,17 +230,120 @@ small,
     font-weight: 700;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: var(--primary-variant);
     color: var(--white);
 }
 
-.btn-outline{
+.btn-outline {
     border: 1px solid var(--primary-variant);
     color: var(--primary-variant)
 }
 
-ng-toast .ng-star-inserted{
+ng-toast .ng-star-inserted {
     margin-top: 10px !important;
 }
 
+/* ------------ Animations ------------- */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ------------ Skeleton Loaders ------------- */
+.skeleton {
+    background: linear-gradient(90deg,
+            var(--background-light) 0%,
+            #e0e0e0 50%,
+            var(--background-light) 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: var(--radius-8);
+}
+
+.skeleton-text {
+    height: 16px;
+    margin-bottom: 8px;
+}
+
+.skeleton-title {
+    height: 24px;
+    width: 60%;
+    margin-bottom: 12px;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 230px;
+}
+
+.skeleton-card {
+    width: 180px;
+    padding: 10px;
+}
+
+/* ------------ Utility Classes ------------- */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.hover-lift {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

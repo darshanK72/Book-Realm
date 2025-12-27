@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Actions, act, createEffect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, mergeMap, of, switchMap, tap } from 'rxjs';
 import { AuthService } from 'src/app/Services/auth/auth.service';
 import {
@@ -19,7 +19,7 @@ import {
 
 @Injectable()
 export class AuthEffects {
-  constructor(private actions$: Actions, private authService: AuthService) {}
+  constructor(private actions$: Actions, private authService: AuthService) { }
 
   singnIn$ = createEffect(() => {
     return this.actions$.pipe(
@@ -37,9 +37,9 @@ export class AuthEffects {
               },
             });
           }),
-          catchError(async (error:any) =>{
+          catchError(async (error: any) => {
             console.error('Sign In Error:', error);
-            return signInFailure({ payload: { error:error.error } })
+            return signInFailure({ payload: { error: error.error } })
           }
           )
         );
@@ -54,7 +54,7 @@ export class AuthEffects {
         return this.authService.signUp(action.payload.signupRequest).pipe(
           map((user) => signUpSuccess({ payload: user })),
           catchError(async (error) =>
-            signUpFailure({ payload: {error:error.error  } })
+            signUpFailure({ payload: { error: error.error } })
           )
         );
       })
@@ -64,14 +64,18 @@ export class AuthEffects {
   continueWithGoogle$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(continueWithGoogle),
-      switchMap((action) =>
-        this.authService.checkIfUserExists(action.payload.user).pipe(
+      switchMap((action) => {
+        console.log('🔵 [Google OAuth] User data received from Google:', action.payload.user);
+        return this.authService.checkIfUserExists(action.payload.user).pipe(
           switchMap((resp: any) => {
+            console.log('🔵 [Google OAuth] Check user exists response:', resp);
             if (resp.exists) {
+              console.log('✅ [Google OAuth] User exists, signing in...');
               return this.authService
                 .signInWithGoogle(action.payload.user)
                 .pipe(
                   map((data: any) => {
+                    console.log('✅ [Google OAuth] Sign in successful:', data);
                     this.authService.setAuthenticationState(data);
                     return signInWithGoogleSuccess({
                       payload: {
@@ -82,19 +86,22 @@ export class AuthEffects {
                       },
                     });
                   }),
-                  catchError((error) =>
-                    of(
+                  catchError((error) => {
+                    console.error('❌ [Google OAuth] Sign in failed:', error);
+                    return of(
                       signInWithGoogleFailure({
-                        payload: { error:error.error  },
+                        payload: { error: error.error },
                       })
-                    )
-                  )
+                    );
+                  })
                 );
             } else {
+              console.log('🆕 [Google OAuth] New user, signing up...');
               return this.authService
                 .signUpWithGoogle(action.payload.user)
                 .pipe(
-                  map((data: any) =>{
+                  map((data: any) => {
+                    console.log('✅ [Google OAuth] Sign up successful:', data);
                     this.authService.setAuthenticationState(data);
                     return signUpWithGoogleSuccess({
                       payload: {
@@ -106,21 +113,23 @@ export class AuthEffects {
                     })
                   }
                   ),
-                  catchError((error) =>
-                    of(
+                  catchError((error) => {
+                    console.error('❌ [Google OAuth] Sign up failed:', error);
+                    return of(
                       signUpWithGoogleFailure({
-                        payload: {error:error.error  },
+                        payload: { error: error.error },
                       })
-                    )
-                  )
+                    );
+                  })
                 );
             }
           }),
-          catchError((error) =>
-            of(signInWithGoogleFailure({ payload: { error:error.error } }))
-          )
+          catchError((error) => {
+            console.error('❌ [Google OAuth] Check user exists failed:', error);
+            return of(signInWithGoogleFailure({ payload: { error: error.error } }));
+          })
         )
-      )
+      })
     );
   });
 

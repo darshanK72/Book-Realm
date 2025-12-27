@@ -1,0 +1,11 @@
+<div class="star-rating">
+    @for (star of stars; track $index) {
+    @if (star.filled) {
+    <i class="fa-solid fa-star"></i>
+    } @else if (star.half) {
+    <i class="fa-solid fa-star-half-stroke"></i>
+    } @else {
+    <i class="fa-regular fa-star"></i>
+    }
+    }
+</div>

@@ -1,0 +1,17 @@
+<div class="trust-indicators-wrapper">
+    <div class="container">
+        <div class="trust-grid">
+            @for (indicator of indicators; track $index) {
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fa-solid {{indicator.icon}}"></i>
+                </div>
+                <div class="trust-content">
+                    <h5>{{indicator.title}}</h5>
+                    <p>{{indicator.description}}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.star-rating i {
+    color: var(--gold-variant);
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.star-rating i.fa-regular {
+    color: var(--foreground-light);
+}

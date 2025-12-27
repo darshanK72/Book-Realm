@@ -1,1 +1,14 @@
-<p>full-banner works!</p>
+<div class="full-banner-wrapper">
+    @for (banner of bannerData; track banner.id) {
+    <a [href]="banner.clickUrl" class="full-banner-link">
+        <div class="full-banner">
+            <img [src]="banner.bannerImage" [alt]="banner.placeHolder" loading="lazy">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h2 class="banner-title">{{banner.placeHolder}}</h2>
+                </div>
+            </div>
+        </div>
+    </a>
+    }
+</div>

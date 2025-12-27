@@ -1,0 +1,17 @@
+<div class="category-grid-wrapper">
+    <div class="section-header">
+        <h3>Shop by Category</h3>
+        <p>Explore our curated collection of books</p>
+    </div>
+
+    <div class="category-grid">
+        @for (category of categories; track category.id) {
+        <a [routerLink]="category.route" class="category-card hover-lift">
+            <div class="category-icon" [style.background]="category.color">
+                <i class="fa-solid {{category.icon}}"></i>
+            </div>
+            <h5>{{category.name}}</h5>
+        </a>
+        }
+    </div>
+</div>

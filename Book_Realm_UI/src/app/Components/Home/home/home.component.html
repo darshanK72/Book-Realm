@@ -1,20 +1,51 @@
 <div class="container">
+  <!-- Hero Section -->
   @for (section of sections; track section) {
-    @if (section.sectionType == 'Hero') {
-      <app-hero [sectionId]="section.id"
-      [heroIds]="section.heros"></app-hero>
-    }
-    @if (section.sectionType == 'Book') {
-      <app-list [sectionId]="section.id"
-      [sectionName]="section.sectionName" [bookIds]="section.books"></app-list>
-    }
-    @if (section.sectionType == 'MediumBanner') {
-      <app-medium-banners [sectionId]="section.id"
-      [bannerIds]="section.banners"></app-medium-banners>
-    }
-    @if (section.sectionType == 'SmallBanner') {
-      <app-small-banners [sectionId]="section.id"
-      [bannerIds]="section.banners"></app-small-banners>
-    }
+  @if (section.sectionType == 'Hero') {
+  <app-hero [sectionId]="section.id" [heroIds]="section.heros"></app-hero>
   }
+  }
+
+  <!-- Category Quick Access -->
+  <app-category-grid></app-category-grid>
+
+  <!-- Featured Collections -->
+  <app-featured-collections></app-featured-collections>
+
+  <!-- Book Sections (Dynamic) -->
+  @for (section of sections; track section) {
+  @if (section.sectionType == 'Book') {
+  <app-list [sectionId]="section.id" [sectionName]="section.sectionName" [bookIds]="section.books"></app-list>
+  }
+  }
+
+  <!-- Large Banners -->
+  @for (section of sections; track section) {
+  @if (section.sectionType == 'LargeBanner') {
+  <app-full-banner [sectionId]="section.id" [bannerIds]="section.banners"></app-full-banner>
+  }
+  }
+
+  <!-- Medium Banners -->
+  @for (section of sections; track section) {
+  @if (section.sectionType == 'MediumBanner') {
+  <app-medium-banners [sectionId]="section.id" [bannerIds]="section.banners"></app-medium-banners>
+  }
+  }
+
+  <!-- Trending Section -->
+  <app-trending-section></app-trending-section>
+
+  <!-- Small Banners -->
+  @for (section of sections; track section) {
+  @if (section.sectionType == 'SmallBanner') {
+  <app-small-banners [sectionId]="section.id" [bannerIds]="section.banners"></app-small-banners>
+  }
+  }
+
+  <!-- Newsletter -->
+  <app-newsletter></app-newsletter>
+
+  <!-- Trust Indicators -->
+  <app-trust-indicators></app-trust-indicators>
 </div>

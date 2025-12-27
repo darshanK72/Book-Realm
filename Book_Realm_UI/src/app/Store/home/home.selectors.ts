@@ -95,3 +95,21 @@ export const selectSmallBannersFromSection = (sectionId: string) => createSelect
   selectSmallBannerSectionById(sectionId),
   (section) => section ? section.smallBanners : []
 );
+
+// Selector for getting large banner section by ID
+export const selectLargeBannerSectionById = (sectionId: string) => createSelector(
+  selectorState,
+  (state) => state.largeBannerSections.find(section => section.sectionId === sectionId)
+);
+
+// Selector for getting all large banner sections
+export const selectAllLargeBannerSections = createSelector(
+  selectorState,
+  (state) => state.largeBannerSections
+);
+
+// Optional: Selector for getting large banners from a specific section
+export const selectLargeBannersFromSection = (sectionId: string) => createSelector(
+  selectLargeBannerSectionById(sectionId),
+  (section) => section ? section.largeBanners : []
+);

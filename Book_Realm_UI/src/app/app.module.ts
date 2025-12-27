@@ -62,6 +62,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedEffects } from './Store/shared/shared.effects';
 import { NgToastModule } from 'ng-angular-popup';
 import { HomeEffects } from './Store/home/home.effects';
+import { CategoryGridComponent } from './Components/Home/category-grid/category-grid.component';
+import { FeaturedCollectionsComponent } from './Components/Home/featured-collections/featured-collections.component';
+import { TrendingSectionComponent } from './Components/Home/trending-section/trending-section.component';
+import { NewsletterComponent } from './Components/Home/newsletter/newsletter.component';
+import { TrustIndicatorsComponent } from './Components/Home/trust-indicators/trust-indicators.component';
 
 @NgModule({
   declarations: [
@@ -113,8 +118,13 @@ import { HomeEffects } from './Store/home/home.effects';
     HttpClientModule,
     SocialLoginModule,
     GoogleSigninButtonModule,
+    CategoryGridComponent,
+    FeaturedCollectionsComponent,
+    TrendingSectionComponent,
+    NewsletterComponent,
+    TrustIndicatorsComponent,
     StoreModule.forRoot(AppStore),
-    EffectsModule.forRoot([AuthEffects,HomeEffects,SharedEffects, BookEffects, GenreEffects, SubgenreEffects]),
+    EffectsModule.forRoot([AuthEffects, HomeEffects, SharedEffects, BookEffects, GenreEffects, SubgenreEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [
@@ -136,4 +146,4 @@ import { HomeEffects } from './Store/home/home.effects';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

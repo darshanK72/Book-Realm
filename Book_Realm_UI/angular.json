@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Book-Realm:build:production"
+              "buildTarget": "Book-Realm:build:production"
             },
             "development": {
-              "browserTarget": "Book-Realm:build:development"
+              "buildTarget": "Book-Realm:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Book-Realm:build"
+            "buildTarget": "Book-Realm:build"
           }
         },
         "test": {

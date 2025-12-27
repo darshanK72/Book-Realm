@@ -1,160 +1,151 @@
 <div class="wrapper">
-    <div class="title">
-        <h4>Science Friction</h4>
-    </div>
-    <div class="holder">
-        <div class="left hide"  #filterEle>
-            <div class="filter">
-                <h5>Filter</h5>
+  <div class="title">
+    <h4>Science Friction</h4>
+  </div>
+  <div class="holder">
+    <div class="left hide"  #filterEle>
+      <div class="filter">
+        <h5>Filter</h5>
 
-               <div class="buttons">
-                <button class="btn btn-primary apply" (click)="hideFilter()">Apply Filter</button>
+        <div class="buttons">
+          <button class="btn btn-primary apply" (click)="hideFilter()">Apply Filter</button>
 
-                <button class="btn btn-outline" (click)="hideFilter()">Clear All</button>
-               </div>
-            </div>
-            <div class="filters">
-                <ng-container *ngFor="let i of [1,2,3,4,5]">
-                    <div class="filter-catg">
-                        <div class="filter-title">
-                            <h5>
-                                Publisher
-                            </h5>
-                            <button class="filter-arrow" (click)="collapseFilter(collabsable,angle)" #angle>
-                                <i class="fa-solid fa-angle-down"></i>
-                            </button>
-                        </div>
-                        <div class="filter-list" #collabsable>
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-                                <p>Ethan Ellenberg Literary Agency</p>
-                            </label>
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-
-                                <p>Ethan Ellenberg Literary Agency</p>
-
-                            </label>
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-
-                                <p>Ethan Ellenberg Literary Agency</p>
-
-                            </label>
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-
-                                <p>St. Martins Press</p>
-
-                            </label>
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-                                <p>Ethan Ellenberg Literary Agency</p>
-                            </label>
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-                                <p>Ethan Ellenberg Literary Agency</p>
-                            </label>
-
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-                                <p>Ethan Ellenberg Literary Agency</p>
-                            </label>
-
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-                                <p>Ethan Ellenberg Literary Agency</p>
-                            </label>
-
-                            <label class="filter-item">
-                                <div class="check-box">
-                                    <input type="checkbox">
-                                    <div class="check-mark"></div>
-                                </div>
-                                <p>Ethan Ellenberg Literary Agency</p>
-                            </label>
-                        </div>
-                    </div>
-                </ng-container>
-            </div>
+          <button class="btn btn-outline" (click)="hideFilter()">Clear All</button>
         </div>
-        <div class="vr">
-
-        </div>
-        <div class="right">
-            <div class="results">
-                <h4>All Results For <span> : Science Friction</span></h4>
-                <div class="filt">
-                    <div class="sort">
-                        <select name="sortby">
-                            <option value="ascending">
-                                <div class="opt">
-                                    Price : High to low
-                                </div>
-                            </option>
-                            <option value="ascending">Price : Low to hign</option>
-                            <option value="ascending">Alphabetically</option>
-                        </select>
-                    </div>
-                    <div class="fil">
-                        <button (click)="showFilter()"><i class="fa-solid fa-filter"></i></button>
-                    </div>
+      </div>
+      <div class="filters">
+        @for (i of [1,2,3,4,5]; track i) {
+          <div class="filter-catg">
+            <div class="filter-title">
+              <h5>
+                Publisher
+              </h5>
+              <button class="filter-arrow" (click)="collapseFilter(collabsable,angle)" #angle>
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </div>
+            <div class="filter-list" #collabsable>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
                 </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>St. Martins Press</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
+              <label class="filter-item">
+                <div class="check-box">
+                  <input type="checkbox">
+                  <div class="check-mark"></div>
+                </div>
+                <p>Ethan Ellenberg Literary Agency</p>
+              </label>
             </div>
-            <div class="list-holder">
-
-                <ng-container *ngFor="let book of books">
-                    <div class="book-item">
-                        <div class="image">
-                            <img [src]="book.images[0]" alt="">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <div class="rating">
-                                <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
-                            </div>
-                            <div class="title">
-                                <p>{{book.title}}</p>
-                            </div>
-                            <div class="author">
-                                <p>{{book.authorName}}</p>
-                            </div>
-                            <div class="price">
-                                <span class="amount"> &#8377; {{book.price}}</span>
-                                <span class="cross"> &#8377; {{book.price + 100}}</span>
-                                <span class="discount">(-{{book.discountPercentage}}%)</span>
-                            </div>
-                        </div>
-                    </div>
-                </ng-container>
-
-            </div>
-        </div>
+          </div>
+        }
+      </div>
     </div>
+    <div class="vr">
+
+    </div>
+    <div class="right">
+      <div class="results">
+        <h4>All Results For <span> : Science Friction</span></h4>
+        <div class="filt">
+          <div class="sort">
+            <select name="sortby">
+              <option value="ascending">
+                <div class="opt">
+                  Price : High to low
+                </div>
+              </option>
+              <option value="ascending">Price : Low to hign</option>
+              <option value="ascending">Alphabetically</option>
+            </select>
+          </div>
+          <div class="fil">
+            <button (click)="showFilter()"><i class="fa-solid fa-filter"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="list-holder">
+
+        @for (book of books; track book) {
+          <div class="book-item">
+            <div class="image">
+              <img [src]="book.images[0]" alt="">
+              <div class="heart">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="details">
+              <div class="rating">
+                <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
+              </div>
+              <div class="title">
+                <p>{{book.title}}</p>
+              </div>
+              <div class="author">
+                <p>{{book.authorName}}</p>
+              </div>
+              <div class="price">
+                <span class="amount"> &#8377; {{book.price}}</span>
+                <span class="cross"> &#8377; {{book.price + 100}}</span>
+                <span class="discount">(-{{book.discountPercentage}}%)</span>
+              </div>
+            </div>
+          </div>
+        }
+
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,7 @@
 <div class="wrapper">
-    <div class="banner" *ngFor="let banner of bannerData">
-        <img [src]="banner.bannerImage" [alt]="banner.placeHolder">
+  @for (banner of bannerData; track banner) {
+    <div class="banner">
+      <img [src]="banner.bannerImage" [alt]="banner.placeHolder">
     </div>
+  }
 </div>

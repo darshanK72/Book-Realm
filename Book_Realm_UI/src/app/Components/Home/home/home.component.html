@@ -1,12 +1,20 @@
 <div class="container">
-    <ng-container *ngFor="let section of sections">
-        <app-hero *ngIf="section.sectionType == 'Hero'" [sectionId]="section.id"
-            [heroIds]="section.heros"></app-hero>
-        <app-list *ngIf="section.sectionType == 'Book'" [sectionId]="section.id"
-            [sectionName]="section.sectionName" [bookIds]="section.books"></app-list>
-        <app-medium-banners *ngIf="section.sectionType == 'MediumBanner'" [sectionId]="section.id"
-            [bannerIds]="section.banners"></app-medium-banners>
-        <app-small-banners *ngIf="section.sectionType == 'SmallBanner'" [sectionId]="section.id"
-            [bannerIds]="section.banners"></app-small-banners>
-    </ng-container>
+  @for (section of sections; track section) {
+    @if (section.sectionType == 'Hero') {
+      <app-hero [sectionId]="section.id"
+      [heroIds]="section.heros"></app-hero>
+    }
+    @if (section.sectionType == 'Book') {
+      <app-list [sectionId]="section.id"
+      [sectionName]="section.sectionName" [bookIds]="section.books"></app-list>
+    }
+    @if (section.sectionType == 'MediumBanner') {
+      <app-medium-banners [sectionId]="section.id"
+      [bannerIds]="section.banners"></app-medium-banners>
+    }
+    @if (section.sectionType == 'SmallBanner') {
+      <app-small-banners [sectionId]="section.id"
+      [bannerIds]="section.banners"></app-small-banners>
+    }
+  }
 </div>

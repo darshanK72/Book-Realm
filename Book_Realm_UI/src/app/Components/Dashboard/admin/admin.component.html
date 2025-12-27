@@ -1,80 +1,82 @@
 <div class="wrapper">
-    <div class="sidebar">
-        <div class="logo">
-            <img src="../../../assets/img/logo.png" alt="">
-        </div>
-        <div class="links">
-            <div class="link-group">
-                <p class="name">Home</p>
-                <div class="link">
-                    <a href="#">Dashboard</a>
-                </div>
-                <div class="link">
-                    <a href="#">Anaylics</a>
-                </div>
-                <div class="link">
-                    <a href="#">Anaylics</a>
-                </div>
-            </div>
-            <div class="link-group">
-                <p class="name">Home</p>
-                <div class="link">
-                    <a href="#">Dashboard</a>
-                </div>
-                <div class="link">
-                    <a href="#">Anaylics</a>
-                </div>
-                <div class="link">
-                    <a href="#">Anaylics</a>
-                </div>
-            </div>
-            <div class="link-group">
-                <p class="name">Home</p>
-                <div class="link">
-                    <a href="#">Dashboard</a>
-                </div>
-            </div>
-        </div>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="../../../assets/img/logo.png" alt="">
     </div>
-    <div class="main">
-        <div class="top">
-            <div class="user-role">
-                <!-- <p>Admin Dashboard</p> -->
-            </div>
-            <div class="profile-photo">
-                <p class="prof-name">
-                    Darshan Khairnar
-                </p>
-                <div class="photo">
-                    <img src="../../../assets/img/profile.png" alt="">
-                </div>
-            </div>
+    <div class="links">
+      <div class="link-group">
+        <p class="name">Home</p>
+        <div class="link">
+          <a href="#">Dashboard</a>
         </div>
-        <div class="content">
-            <table class="books">
-                <thead>
-                    <tr>
-                        <th>Book Id</th>
-                        <th class="title">Title</th>
-                        <th>Author</th>
-                        <th>Price</th>
-                        <th>Pages</th>
-                        <th>Publisher</th>
-                        <th>Publish Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let book of books;">
-                        <td>{{book.id}}</td>
-                        <td>{{book.title}}</td>
-                        <td>{{book.authorName}}</td>
-                        <td>{{book.price}}</td>
-                        <td>{{book.pages}}</td>
-                        <td>{{book.publisherName}}</td>
-                        <td>{{book.publishDate}}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="link">
+          <a href="#">Anaylics</a>
         </div>
+        <div class="link">
+          <a href="#">Anaylics</a>
+        </div>
+      </div>
+      <div class="link-group">
+        <p class="name">Home</p>
+        <div class="link">
+          <a href="#">Dashboard</a>
+        </div>
+        <div class="link">
+          <a href="#">Anaylics</a>
+        </div>
+        <div class="link">
+          <a href="#">Anaylics</a>
+        </div>
+      </div>
+      <div class="link-group">
+        <p class="name">Home</p>
+        <div class="link">
+          <a href="#">Dashboard</a>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="main">
+    <div class="top">
+      <div class="user-role">
+        <!-- <p>Admin Dashboard</p> -->
+      </div>
+      <div class="profile-photo">
+        <p class="prof-name">
+          Darshan Khairnar
+        </p>
+        <div class="photo">
+          <img src="../../../assets/img/profile.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <table class="books">
+        <thead>
+          <tr>
+            <th>Book Id</th>
+            <th class="title">Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Pages</th>
+            <th>Publisher</th>
+            <th>Publish Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (book of books; track book) {
+            <tr>
+              <td>{{book.id}}</td>
+              <td>{{book.title}}</td>
+              <td>{{book.authorName}}</td>
+              <td>{{book.price}}</td>
+              <td>{{book.pages}}</td>
+              <td>{{book.publisherName}}</td>
+              <td>{{book.publishDate}}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

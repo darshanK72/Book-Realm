@@ -1,90 +1,104 @@
 <div class="wrapper">
-    <div class="left">
-        <div class="image-box">
-            <img src="../../../assets/img/loginmockup.png" alt="">
-        </div>
-        <div class="title">
-            <h4>Continue your love for books
-                on our platform & get curated collection</h4>
-        </div>
-        <div class="features">
-            <div class="box">
-                <img src="../../../assets/img/genuion.svg" alt="">
-                <p>Genuine books</p>
-            </div>
-            <div class="box">
-                <img src="../../../assets/img/greateprice.svg" alt="">
-                <p>Great pricing</p>
-            </div>
-            <div class="box">
-                <img src="../../../assets/img/fastdelivery.svg" alt="">
-                <p>Faster delivery</p>
-            </div>
-        </div>
+  <div class="left">
+    <div class="image-box">
+      <img src="../../../assets/img/loginmockup.png" alt="">
     </div>
-    <div class="vr">
+    <div class="title">
+      <h4>Continue your love for books
+      on our platform & get curated collection</h4>
+    </div>
+    <div class="features">
+      <div class="box">
+        <img src="../../../assets/img/genuion.svg" alt="">
+        <p>Genuine books</p>
+      </div>
+      <div class="box">
+        <img src="../../../assets/img/greateprice.svg" alt="">
+        <p>Great pricing</p>
+      </div>
+      <div class="box">
+        <img src="../../../assets/img/fastdelivery.svg" alt="">
+        <p>Faster delivery</p>
+      </div>
+    </div>
+  </div>
+  <div class="vr">
 
+  </div>
+  <div class="right-flex">
+    <div class="right">
+      <div class="top">
+        <h5>Hello, welcome back!
+        </h5>
+        <p> Great to have you back, please sign In to continue</p>
+      </div>
+      <div class="form">
+        <form [formGroup]="signinForm" (ngSubmit)="onSigninSubmit()">
+          <div class="input-box">
+            <input type="email" formControlName="email" placeholder="Email Address">
+          </div>
+          @if (signinForm.get('email')?.invalid && (signinForm.get('email')?.dirty || signinForm.get('email')?.touched)) {
+            <div
+              >
+              @if (signinForm.get('email')?.hasError('required')) {
+                <div>
+                  <p class="error-message">Email is required</p>
+                </div>
+              }
+              @if (signinForm.get('email')?.hasError('email')) {
+                <div>
+                  <p class="error-message">Incorrect Email Format</p>
+                </div>
+              }
+            </div>
+          }
+          <div class="input-box" id="password">
+            <input type="password" #password formControlName="password" id="" placeholder="Password">
+            <div class="eye" (click)="toggleEye(password)">
+              @if (eleOpen) {
+                <i class="fa-regular fa-eye" id="open"></i>
+              }
+              @if (!eleOpen) {
+                <i class="fa-regular fa-eye-slash" id="close"></i>
+              }
+            </div>
+          </div>
+          @if (signinForm.get('password')?.invalid && (signinForm.get('password')?.dirty || signinForm.get('password')?.touched)) {
+            <div
+              >
+              @if (signinForm.get('password')?.hasError('required')) {
+                <div>
+                  <p class="error-message">Password is required</p>
+                </div>
+              }
+            </div>
+          }
+          <div class="button">
+            <button class="btn btn-primary" type="submit" [class.disabled-button]="signinForm.invalid"
+            [disabled]="signinForm.invalid">Sign In</button>
+          </div>
+        </form>
+      </div>
+      <div class="rule">
+        <div class="hr"></div>
+        <p>OR</p>
+        <div class="hr"></div>
+      </div>
+      <div class="other-methods">
+        @if (!isMobile()) {
+          <asl-google-signin-button logo_alignment="center" width='400' text="continue_with" type='standard'
+          size='large'></asl-google-signin-button>
+        }
+        @if (isMobile()) {
+          <asl-google-signin-button logo_alignment="center" width='300' text="continue_with" type='standard'
+          size='large'></asl-google-signin-button>
+        }
+      </div>
+      <div class="message">
+        <p>Do not have an account?
+          <span class="text-primary"> <a routerLink="/signup">Sign Up</a></span>
+        </p>
+      </div>
     </div>
-    <div class="right-flex">
-        <div class="right">
-            <div class="top">
-                <h5>Hello, welcome back!
-                </h5>
-                <p> Great to have you back, please sign In to continue</p>
-            </div>
-            <div class="form">
-                <form [formGroup]="signinForm" (ngSubmit)="onSigninSubmit()">
-                    <div class="input-box">
-                        <input type="email" formControlName="email" placeholder="Email Address">
-                    </div>
-                    <div
-                        *ngIf="signinForm.get('email')?.invalid && (signinForm.get('email')?.dirty || signinForm.get('email')?.touched)">
-                        <div *ngIf="signinForm.get('email')?.hasError('required')">
-                            <p class="error-message">Email is required</p>
-                        </div>
-                        <div *ngIf="signinForm.get('email')?.hasError('email')">
-                            <p class="error-message">Incorrect Email Format</p>
-                        </div>
-                    </div>
-                    <div class="input-box" id="password">
-                        <input type="password" #password formControlName="password" id="" placeholder="Password">
-                        <div class="eye" (click)="toggleEye(password)">
-                            <i class="fa-regular fa-eye" id="open" *ngIf="eleOpen"></i>
-                            <i class="fa-regular fa-eye-slash" id="close" *ngIf="!eleOpen"></i>
-                        </div>
-                    </div>
-                    <div
-                        *ngIf="signinForm.get('password')?.invalid && (signinForm.get('password')?.dirty || signinForm.get('password')?.touched)">
-                        <div *ngIf="signinForm.get('password')?.hasError('required')">
-                            <p class="error-message">Password is required</p>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <button class="btn btn-primary" type="submit" [class.disabled-button]="signinForm.invalid"
-                            [disabled]="signinForm.invalid">Sign In</button>
-                    </div>
-                </form>
-            </div>
-            <div class="rule">
-                <div class="hr"></div>
-                <p>OR</p>
-                <div class="hr"></div>
-            </div>
-            <div class="other-methods">
-                <ng-container *ngIf="!isMobile()">
-                    <asl-google-signin-button logo_alignment="center" width='400' text="continue_with" type='standard'
-                        size='large'></asl-google-signin-button>
-                </ng-container>
-                <ng-container *ngIf="isMobile()">
-                    <asl-google-signin-button logo_alignment="center" width='300' text="continue_with" type='standard'
-                        size='large'></asl-google-signin-button>
-                </ng-container>
-            </div>
-            <div class="message">
-                <p>Do not have an account?
-                    <span class="text-primary"> <a routerLink="/signup">Sign Up</a></span>
-                </p>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

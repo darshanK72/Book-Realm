@@ -1,28 +1,36 @@
 <div class="wrapper">
-    <div class="title">
-        <h5>Saved Address</h5>
-        <div class="edit">
-            <button class="btn btn-primary" (click)="editAddress()" *ngIf="!isEditing">
-                Edit
-            </button>
-            <button class="btn btn-primary" (click)="updateAddress()" *ngIf="isEditing">
-                Update
-            </button>
-        </div>
+  <div class="title">
+    <h5>Saved Address</h5>
+    <div class="edit">
+      @if (!isEditing) {
+        <button class="btn btn-primary" (click)="editAddress()">
+          Edit
+        </button>
+      }
+      @if (isEditing) {
+        <button class="btn btn-primary" (click)="updateAddress()">
+          Update
+        </button>
+      }
     </div>
-    <div class="details" *ngIf="!isEditing">
-        <p class="addr">
-            Anand Nagar Malegaon Anand Nagar <br>
-            Malegaon Maharashtra
-            <br> 423203
+  </div>
+  @if (!isEditing) {
+    <div class="details">
+      <p class="addr">
+        Anand Nagar Malegaon Anand Nagar <br>
+        Malegaon Maharashtra
+        <br> 423203
         </p>
-    </div>
-    <div class="profile-edit" *ngIf="isEditing">
+      </div>
+    }
+    @if (isEditing) {
+      <div class="profile-edit">
         <div class="form">
-            <div class="form-item">
-                <label for="address">Address</label>
-                <textarea name="address"></textarea>
-            </div>
+          <div class="form-item">
+            <label for="address">Address</label>
+            <textarea name="address"></textarea>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    }
+  </div>

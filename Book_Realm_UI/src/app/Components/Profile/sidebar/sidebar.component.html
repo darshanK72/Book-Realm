@@ -1,155 +1,159 @@
 <aside #fullElement>
-    <div class="main" [@sliderToggle]="toShow ? 'open' : 'close'">
-        <div class="search">
-            <div class="cross">
-                <button class="search-icon">
-                    <i class="fi fi-rr-search"></i>
-                </button>
-            </div>
-            <div class="search-box">
-                <form>
-                    <input type="text" name="query" placeholder="Search books, authors, publishers" (input)="getSearchQuery($event)">
-                </form>
-               <div class="cross">
-                <button (click)="close()"><i class="fa-solid fa-xmark"></i></button>
-               </div>
-            </div>
-            <div class="search-result">
-                <app-search [query]="searchQuery"></app-search>
-            </div>
+  <div class="main" [@sliderToggle]="toShow ? 'open' : 'close'">
+    <div class="search">
+      <div class="cross">
+        <button class="search-icon">
+          <i class="fi fi-rr-search"></i>
+        </button>
+      </div>
+      <div class="search-box">
+        <form>
+          <input type="text" name="query" placeholder="Search books, authors, publishers" (input)="getSearchQuery($event)">
+        </form>
+        <div class="cross">
+          <button (click)="close()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="scrollable">
-            <div class="profile" *ngIf="ifLoggedIn">
-                <div class="profile-photo">
-                    <img src="../../../assets/img/profile.png" alt="">
-                </div>
-                <div class="details">
-                    <div>
-                        <p class="title">Darshan Khairnar</p>
-                    <p>Profile <span class="bold">100%</span> Complete</p>
-                    </div>
-                </div>
-            </div>
-            <div class="login" *ngIf="!ifLoggedIn">
-                <button class="profile-icon">
-                    <i class="fa-regular fa-user"></i>
-                </button>
-                <div class="sign-in">
-                    <button class="btn btn-primary"><a routerLink="signin" (click)="close()">Sign Up / Sign In</a></button>
-                </div>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li class="nav-link">
-                        <a href="#" class="nav-item">Top Geners</a>
-                        <div class="hover-model" >
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/sub-genre" (click)="close()" class="text-bold">Literature & Friction</a></li>
-                                            <li><a href="#" class="text-bold">Education</a></li>
-                                            <li><a href="#" class="text-bold">Health, Family & Personal Development</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#" class="nav-item">Discover</a>
-                        <div class="hover-model">
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a href="#" class="text-bold">Art, Film & Photography</a></li>
-                                            <li><a href="#" class="text-bold">Reference</a></li>
-                                            <li><a href="#" class="text-bold">Activities & Interests
-                                                Poetry</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-link" >
-                        <a href="#" class="nav-item">Friction</a>
-                        <div class="hover-model" >
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a href="#" class="text-bold">Science</a></li>
-                                            <li><a href="#" class="text-bold">Friction Novels</a></li>
-                                            <li><a href="#" class="text-bold">Fantasy</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-link" >
-                        <a href="#" class="nav-item">Exam Prep</a>
-                        <div class="hover-model">
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a href="#" class="text-bold">Government & Bank Exams</a></li>
-                                            <li><a href="#" class="text-bold">Grade Wise</a></li>
-                                            <li><a href="#" class="text-bold">Indian Defence Forces</a></li>
-                                            <li><a href="#" class="text-bold">Entrance Exam</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="account">
-                <div class="section">
-                    <p class="nav-item">
-                        Account Details
-                    </p>
-                    <ul>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-box-open"></i> My Orders</p>
-                        </li>
-                        <li class="account-item">
-                           <p> <i class="fa-solid fa-user"></i> My Profile</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-location-dot"></i>Saved Address</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-star"></i> My Reviews</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-gear"></i> Settings</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-comment-dots"></i> FAQs</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-circle-exclamation"></i> Help & Support</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-unlock"></i> Privacy Policy</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-circle-question"></i>  About</p>
-                        </li>
-                        <li class="account-item">
-                            <p> <i class="fa-solid fa-right-from-bracket"></i> Logout</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="search-result">
+        <app-search [query]="searchQuery"></app-search>
+      </div>
     </div>
+    <div class="scrollable">
+      @if (ifLoggedIn) {
+        <div class="profile">
+          <div class="profile-photo">
+            <img src="../../../assets/img/profile.png" alt="">
+          </div>
+          <div class="details">
+            <div>
+              <p class="title">Darshan Khairnar</p>
+              <p>Profile <span class="bold">100%</span> Complete</p>
+            </div>
+          </div>
+        </div>
+      }
+      @if (!ifLoggedIn) {
+        <div class="login">
+          <button class="profile-icon">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <div class="sign-in">
+            <button class="btn btn-primary"><a routerLink="signin" (click)="close()">Sign Up / Sign In</a></button>
+          </div>
+        </div>
+      }
+      <div class="nav">
+        <ul>
+          <li class="nav-link">
+            <a href="#" class="nav-item">Top Geners</a>
+            <div class="hover-model" >
+              <div class="content">
+                <div class="links">
+                  <div class="catg-1">
+                    <ul>
+                      <li><a routerLink="/sub-genre" (click)="close()" class="text-bold">Literature & Friction</a></li>
+                      <li><a href="#" class="text-bold">Education</a></li>
+                      <li><a href="#" class="text-bold">Health, Family & Personal Development</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-link">
+          <a href="#" class="nav-item">Discover</a>
+          <div class="hover-model">
+            <div class="content">
+              <div class="links">
+                <div class="catg-1">
+                  <ul>
+                    <li><a href="#" class="text-bold">Art, Film & Photography</a></li>
+                    <li><a href="#" class="text-bold">Reference</a></li>
+                    <li><a href="#" class="text-bold">Activities & Interests
+                    Poetry</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-link" >
+          <a href="#" class="nav-item">Friction</a>
+          <div class="hover-model" >
+            <div class="content">
+              <div class="links">
+                <div class="catg-1">
+                  <ul>
+                    <li><a href="#" class="text-bold">Science</a></li>
+                    <li><a href="#" class="text-bold">Friction Novels</a></li>
+                    <li><a href="#" class="text-bold">Fantasy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-link" >
+          <a href="#" class="nav-item">Exam Prep</a>
+          <div class="hover-model">
+            <div class="content">
+              <div class="links">
+                <div class="catg-1">
+                  <ul>
+                    <li><a href="#" class="text-bold">Government & Bank Exams</a></li>
+                    <li><a href="#" class="text-bold">Grade Wise</a></li>
+                    <li><a href="#" class="text-bold">Indian Defence Forces</a></li>
+                    <li><a href="#" class="text-bold">Entrance Exam</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="account">
+      <div class="section">
+        <p class="nav-item">
+          Account Details
+        </p>
+        <ul>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-box-open"></i> My Orders</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-user"></i> My Profile</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-location-dot"></i>Saved Address</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-star"></i> My Reviews</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-gear"></i> Settings</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-comment-dots"></i> FAQs</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-circle-exclamation"></i> Help & Support</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-unlock"></i> Privacy Policy</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-circle-question"></i>  About</p>
+          </li>
+          <li class="account-item">
+            <p> <i class="fa-solid fa-right-from-bracket"></i> Logout</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 </aside>

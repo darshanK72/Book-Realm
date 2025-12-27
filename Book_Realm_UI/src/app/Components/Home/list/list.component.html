@@ -1,39 +1,41 @@
 <div class="wrapper">
-    <div class="top">
-        <div class="title">
-            <h5>{{sectionName | titlecase}}</h5>
-        </div>
-        <div class="view">
-            <a routerLink="/filter">
-                <button>
-                    View All
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>
-            </a>
-        </div>
+  <div class="top">
+    <div class="title">
+      <h5>{{sectionName | titlecase}}</h5>
     </div>
-    <div class="bottom">
-        <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-            <splide-slide *ngFor="let book of bookData">
-                <div class="book-card" (click)="getBookDetail(book.id)">
-                    <div class="book-img">
-                        <img [src]="book.images[0] " alt="">
-                    </div>
-                    <div class="details">
-                        <div class="book-title">
-                            <p>{{book.title}}</p>
-                        </div>
-                        <div class="author">
-                            <p>{{book.authorName}}</p>
-                        </div>
-                        <div class="price">
-                            <span class="amount"> &#8377; {{book.price}}</span>
-                            <span class="cross"> &#8377; {{book.price + 100}}</span>
-                            <span class="discount">(-{{book.discountPercentage}}%)</span>
-                        </div>
-                    </div>
-                </div>
-            </splide-slide>
-        </splide>
+    <div class="view">
+      <a routerLink="/filter">
+        <button>
+          View All
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </a>
     </div>
+  </div>
+  <div class="bottom">
+    <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
+      @for (book of bookData; track book) {
+        <splide-slide>
+          <div class="book-card" (click)="getBookDetail(book.id)">
+            <div class="book-img">
+              <img [src]="book.images[0] " alt="">
+            </div>
+            <div class="details">
+              <div class="book-title">
+                <p>{{book.title}}</p>
+              </div>
+              <div class="author">
+                <p>{{book.authorName}}</p>
+              </div>
+              <div class="price">
+                <span class="amount"> &#8377; {{book.price}}</span>
+                <span class="cross"> &#8377; {{book.price + 100}}</span>
+                <span class="discount">(-{{book.discountPercentage}}%)</span>
+              </div>
+            </div>
+          </div>
+        </splide-slide>
+      }
+    </splide>
+  </div>
 </div>

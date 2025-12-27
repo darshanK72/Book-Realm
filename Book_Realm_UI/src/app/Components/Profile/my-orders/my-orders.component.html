@@ -1,180 +1,168 @@
 <div class="wrapper">
-    <div class="title">
-        <h5>My Orders</h5>
-    </div>
-    <div class="details">
-        <ng-container *ngFor="let i of [1,2]">
-            <div class="order-item">
-                <div class="top">
-                    <div class="payment-status">
-                        <div class="status">
-
-                        </div>
-                        <div class="title">
-                            <p>Payment Failed</p>
-                        </div>
-                    </div>
-                    <div class="order-id">
-                        <p>Order ID : Loremipsumdolorsitamet</p>
-                    </div>
-                </div>
-                <div class="hr"></div>
-                <div class="middle">
-                    <div class="book-list">
-
-                        <div class="cart-item">
-                            <div class="img">
-                                <img src="../../../assets/img/book.webp" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="top">
-                                    <div class="book-details">
-                                        <div class="title">
-                                            <p>Anxious People: A Novel</p>
-                                        </div>
-                                        <div class="author">
-                                            <p>Fredrik Backman</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="bottom">
-
-                                    <div class="price">
-                                        <span class="amount"> &#8377; 181</span>
-                                        <span class="cross"> &#8377; 185</span>
-                                        <span class="discount">(-7%)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cart-item">
-                            <div class="img">
-                                <img src="../../../assets/img/book.webp" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="top">
-                                    <div class="book-details">
-                                        <div class="title">
-                                            <p>Anxious People: A Novel</p>
-                                        </div>
-                                        <div class="author">
-                                            <p>Fredrik Backman</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="bottom">
-
-                                    <div class="price">
-                                        <span class="amount"> &#8377; 181</span>
-                                        <span class="cross"> &#8377; 185</span>
-                                        <span class="discount">(-7%)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cart-item">
-                            <div class="img">
-                                <img src="../../../assets/img/book.webp" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="top">
-                                    <div class="book-details">
-                                        <div class="title">
-                                            <p>Anxious People: A Novel</p>
-                                        </div>
-                                        <div class="author">
-                                            <p>Fredrik Backman</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="bottom">
-
-                                    <div class="price">
-                                        <span class="amount"> &#8377; 181</span>
-                                        <span class="cross"> &#8377; 185</span>
-                                        <span class="discount">(-7%)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="hr"></div>
-                <div class="address">
-                    <div class="title">
-                        <p> Deliverd To</p>
-                    </div>
-                    <div class="details">
-                        <div class="name">
-                            Darshan Khairnar
-                        </div>
-                        <div class="addr">
-                            Anand Nagar MalegaonAnand Nagar <br>
-                            Malegaon Maharashtra
-                            <br> 423203
-                        </div>
-                        <div class="contact">
-                            9834444657 | darshankhairnar72&#64;gmail.com
-                        </div>
-                    </div>
-                </div>
-                <div class="hr"></div>
-                <div class="bill">
-                    <div class="title">
-                        <p>Bill</p>
-                    </div>
-                    <div class="details">
-                        <div class="sub-total">
-                            <div class="name">
-                                Sub Total
-                            </div>
-                            <div class="amount">
-                                &#8377; 873
-                            </div>
-                        </div>
-                        <div class="shipping">
-                            <div class="name">
-                                Shipping
-                            </div>
-                            <div class="amount">
-                                <div class="list">
-                                    <ul>
-                                        <li>
-                                            <p>Shipping Amount </p> <span> : &#8377; 873</span>
-                                        </li>
-                                        <li>
-                                            <p>GST </p> <span> : &#8377; 873</span>
-                                        </li>
-                                        <li>
-                                            <p>Delivery Cost </p> <span> : &#8377; 873</span>
-                                        </li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                                <div class="shipping-total">
-                                    <p>Total Shipping Cost </p>
-                                    <p> : &#8377; 873</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="total">
-                            <div class="name">
-                                Total
-                            </div>
-                            <div class="amount">
-                                &#8377; 873
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="title">
+    <h5>My Orders</h5>
+  </div>
+  <div class="details">
+    @for (i of [1,2]; track i) {
+      <div class="order-item">
+        <div class="top">
+          <div class="payment-status">
+            <div class="status">
             </div>
-        </ng-container>
+            <div class="title">
+              <p>Payment Failed</p>
+            </div>
+          </div>
+          <div class="order-id">
+            <p>Order ID : Loremipsumdolorsitamet</p>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="middle">
+          <div class="book-list">
+            <div class="cart-item">
+              <div class="img">
+                <img src="../../../assets/img/book.webp" alt="">
+              </div>
+              <div class="details">
+                <div class="top">
+                  <div class="book-details">
+                    <div class="title">
+                      <p>Anxious People: A Novel</p>
+                    </div>
+                    <div class="author">
+                      <p>Fredrik Backman</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="price">
+                    <span class="amount"> &#8377; 181</span>
+                    <span class="cross"> &#8377; 185</span>
+                    <span class="discount">(-7%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="img">
+                <img src="../../../assets/img/book.webp" alt="">
+              </div>
+              <div class="details">
+                <div class="top">
+                  <div class="book-details">
+                    <div class="title">
+                      <p>Anxious People: A Novel</p>
+                    </div>
+                    <div class="author">
+                      <p>Fredrik Backman</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="price">
+                    <span class="amount"> &#8377; 181</span>
+                    <span class="cross"> &#8377; 185</span>
+                    <span class="discount">(-7%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="img">
+                <img src="../../../assets/img/book.webp" alt="">
+              </div>
+              <div class="details">
+                <div class="top">
+                  <div class="book-details">
+                    <div class="title">
+                      <p>Anxious People: A Novel</p>
+                    </div>
+                    <div class="author">
+                      <p>Fredrik Backman</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="price">
+                    <span class="amount"> &#8377; 181</span>
+                    <span class="cross"> &#8377; 185</span>
+                    <span class="discount">(-7%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="address">
+          <div class="title">
+            <p> Deliverd To</p>
+          </div>
+          <div class="details">
+            <div class="name">
+              Darshan Khairnar
+            </div>
+            <div class="addr">
+              Anand Nagar MalegaonAnand Nagar <br>
+              Malegaon Maharashtra
+              <br> 423203
+              </div>
+              <div class="contact">
+                9834444657 | darshankhairnar72&#64;gmail.com
+              </div>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="bill">
+            <div class="title">
+              <p>Bill</p>
+            </div>
+            <div class="details">
+              <div class="sub-total">
+                <div class="name">
+                  Sub Total
+                </div>
+                <div class="amount">
+                  &#8377; 873
+                </div>
+              </div>
+              <div class="shipping">
+                <div class="name">
+                  Shipping
+                </div>
+                <div class="amount">
+                  <div class="list">
+                    <ul>
+                      <li>
+                        <p>Shipping Amount </p> <span> : &#8377; 873</span>
+                      </li>
+                      <li>
+                        <p>GST </p> <span> : &#8377; 873</span>
+                      </li>
+                      <li>
+                        <p>Delivery Cost </p> <span> : &#8377; 873</span>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="shipping-total">
+                    <p>Total Shipping Cost </p>
+                    <p> : &#8377; 873</p>
+                  </div>
+                </div>
+              </div>
+              <div class="total">
+                <div class="name">
+                  Total
+                </div>
+                <div class="amount">
+                  &#8377; 873
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     </div>
-</div>
+  </div>

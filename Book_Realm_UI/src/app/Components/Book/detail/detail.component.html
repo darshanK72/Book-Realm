@@ -1,160 +1,157 @@
-<div class="wrapper" *ngIf="!!book">
+@if (!!book) {
+  <div class="wrapper">
     <div class="left" >
-        <div class="image-slider">
-            <div class="image" *ngFor="let src of book.images" (click)="changeImage(src,mainImage)">
-                <img [src]="src" alt="">
-            </div>
-        </div>
-        <div class="main-image"  #mainImage>
-            <img [src]="book.images[0]" alt="">
-        </div>
+      <div class="image-slider">
+        @for (src of book.images; track src) {
+          <div class="image" (click)="changeImage(src,mainImage)">
+            <img [src]="src" alt="">
+          </div>
+        }
+      </div>
+      <div class="main-image"  #mainImage>
+        <img [src]="book.images[0]" alt="">
+      </div>
     </div>
     <div class="right">
-        <h3>{{book.title}}</h3>
-        <div class="rating">
-            <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
+      <h3>{{book.title}}</h3>
+      <div class="rating">
+        <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
+      </div>
+      <div class="author-publisher">
+        <div class="author">
+          <i class="fa-solid fa-pen-nib"></i>
+          <p>{{book.authorName}}</p>
         </div>
-        <div class="author-publisher">
-            <div class="author">
-                <i class="fa-solid fa-pen-nib"></i>
-                <p>{{book.authorName}}</p>
-            </div>
-            <div class="vr">
-
-            </div>
-            <div class="publisher">
-                <i class="fa-solid fa-book"></i>
-                <p>{{book.publisherName}}</p>
-            </div>
-            <div class="vr">
-
-            </div>
-            <div class="publish-date">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p>{{book.publishDate}}</p>
-            </div>
+        <div class="vr">
         </div>
-        <div class="desc">
-            <h5 class="title">Description</h5>
-            <div class="description" #desc>
-                <p>
-                    {{book.description}}
-                </p>
-            </div>
-
-            <button class="text-primary" (click)="readMore()" #btn>Read More</button>
+        <div class="publisher">
+          <i class="fa-solid fa-book"></i>
+          <p>{{book.publisherName}}</p>
         </div>
-        <div class="quantity">
-            <div class="btn-minus">
-                <button class="btn btn-outline">-</button>
-            </div>
-            <div class="qty">
-                <p>1</p>
-            </div>
-            <div class="btn-plus">
-                <button class="btn btn-primary">+</button>
-            </div>
+        <div class="vr">
         </div>
-
-        <div class="price">
-            <span class="amount"> &#8377; {{book.price}}</span>
-            <span class="cross"> &#8377; {{book.price + 100}}</span>
-            <span class="discount">(-{{book.discountPercentage}}%)</span>
+        <div class="publish-date">
+          <i class="fa-solid fa-calendar-days"></i>
+          <p>{{book.publishDate}}</p>
         </div>
-
-        <div class="btns">
-            <button class="btn btn-primary">
-                Add To Cart
-            </button>
-            <button class="btn btn-outline">
-                Buy Now
-            </button>
+      </div>
+      <div class="desc">
+        <h5 class="title">Description</h5>
+        <div class="description" #desc>
+          <p>
+            {{book.description}}
+          </p>
         </div>
-        <div class="details">
-            <h5 class="title">Product Details</h5>
-            <div class="list">
-                <table>
-                    <tr>
-                        <td class="th">Title</td>
-                        <td class="td">{{book.title}}</td>
-                    </tr>
-                    <tr>
-                        <td class="th">Author</td>
-                        <td class="td">{{book.authorName}}</td>
-                    </tr>
-                    <tr>
-                        <td class="th">Publisher</td>
-                        <td class="td">{{book.publisherName}}</td>
-                    </tr>
-                    <tr>
-                        <td class="th">Pages</td>
-                        <td class="td">{{book.pages}}</td>
-                    </tr>
-                    <tr>
-                        <td class="th">Book Format</td>
-                        <td class="td">{{book.bookFormat}}</td>
-                    </tr>
-
-                    <tr>
-                        <td class="th">Language</td>
-                        <td class="td">{{book.language}}</td>
-                    </tr>
-
-                    <tr>
-                        <td class="th">Publish Date</td>
-                        <td class="td">{{book.publishDate}}</td>
-                    </tr>
-
-                    <tr>
-                        <td class="th">Tags</td>
-                        <td class="td tags">
-                            <span class="tag btn btn-primary" *ngFor="let tag of book.tags">{{tag}}</span>
-
-                        </td>
-                    </tr>
-
-
-                </table>
-            </div>
+        <button class="text-primary" (click)="readMore()" #btn>Read More</button>
+      </div>
+      <div class="quantity">
+        <div class="btn-minus">
+          <button class="btn btn-outline">-</button>
         </div>
+        <div class="qty">
+          <p>1</p>
+        </div>
+        <div class="btn-plus">
+          <button class="btn btn-primary">+</button>
+        </div>
+      </div>
+      <div class="price">
+        <span class="amount"> &#8377; {{book.price}}</span>
+        <span class="cross"> &#8377; {{book.price + 100}}</span>
+        <span class="discount">(-{{book.discountPercentage}}%)</span>
+      </div>
+      <div class="btns">
+        <button class="btn btn-primary">
+          Add To Cart
+        </button>
+        <button class="btn btn-outline">
+          Buy Now
+        </button>
+      </div>
+      <div class="details">
+        <h5 class="title">Product Details</h5>
+        <div class="list">
+          <table>
+            <tr>
+              <td class="th">Title</td>
+              <td class="td">{{book.title}}</td>
+            </tr>
+            <tr>
+              <td class="th">Author</td>
+              <td class="td">{{book.authorName}}</td>
+            </tr>
+            <tr>
+              <td class="th">Publisher</td>
+              <td class="td">{{book.publisherName}}</td>
+            </tr>
+            <tr>
+              <td class="th">Pages</td>
+              <td class="td">{{book.pages}}</td>
+            </tr>
+            <tr>
+              <td class="th">Book Format</td>
+              <td class="td">{{book.bookFormat}}</td>
+            </tr>
+            <tr>
+              <td class="th">Language</td>
+              <td class="td">{{book.language}}</td>
+            </tr>
+            <tr>
+              <td class="th">Publish Date</td>
+              <td class="td">{{book.publishDate}}</td>
+            </tr>
+            <tr>
+              <td class="th">Tags</td>
+              <td class="td tags">
+                @for (tag of book.tags; track tag) {
+                  <span class="tag btn btn-primary">{{tag}}</span>
+                }
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+}
 <div class="wrapper2">
-    <div class="top">
-        <div class="title">
-            <h4>You May Also Like</h4>
-        </div>
-        <div class="view">
-            <a routerLink="/filter">
-                <button>
-                    View All
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>
-            </a>
-        </div>
+  <div class="top">
+    <div class="title">
+      <h4>You May Also Like</h4>
     </div>
-    <div class="bottom">
-        <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-            <splide-slide *ngFor="let book of relatedBooks">
-                <div class="book-card" (click)="getBookDetail(book.id)">
-                    <div class="book-img">
-                        <img [src]="book.images[0] " alt="">
-                    </div>
-                    <div class="details">
-                        <div class="book-title">
-                            <p>{{book.title}}</p>
-                        </div>
-                        <div class="author">
-                            <p>{{book.authorName}}</p>
-                        </div>
-                        <div class="price">
-                            <span class="amount"> &#8377; {{book.price}}</span>
-                            <span class="cross"> &#8377; {{book.price + 100}}</span>
-                            <span class="discount">(-{{book.discountPercentage}}%)</span>
-                        </div>
-                    </div>
-                </div>
-            </splide-slide>
-        </splide>
+    <div class="view">
+      <a routerLink="/filter">
+        <button>
+          View All
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </a>
     </div>
+  </div>
+  <div class="bottom">
+    <splide [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
+      @for (book of relatedBooks; track book) {
+        <splide-slide>
+          <div class="book-card" (click)="getBookDetail(book.id)">
+            <div class="book-img">
+              <img [src]="book.images[0] " alt="">
+            </div>
+            <div class="details">
+              <div class="book-title">
+                <p>{{book.title}}</p>
+              </div>
+              <div class="author">
+                <p>{{book.authorName}}</p>
+              </div>
+              <div class="price">
+                <span class="amount"> &#8377; {{book.price}}</span>
+                <span class="cross"> &#8377; {{book.price + 100}}</span>
+                <span class="discount">(-{{book.discountPercentage}}%)</span>
+              </div>
+            </div>
+          </div>
+        </splide-slide>
+      }
+    </splide>
+  </div>
 </div>

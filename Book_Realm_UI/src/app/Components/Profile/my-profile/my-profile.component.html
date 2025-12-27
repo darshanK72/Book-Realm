@@ -1,67 +1,75 @@
 <div class="wrapper">
-    <div class="title">
-        <h5>My Profile</h5>
-        <div class="edit">
-            <button class="btn btn-primary" (click)="editProfile()" *ngIf="!isEditing">
-                Edit
-            </button>
-            <button class="btn btn-primary" (click)="updateProfile()" *ngIf="isEditing">
-                Update
-            </button>
+  <div class="title">
+    <h5>My Profile</h5>
+    <div class="edit">
+      @if (!isEditing) {
+        <button class="btn btn-primary" (click)="editProfile()">
+          Edit
+        </button>
+      }
+      @if (isEditing) {
+        <button class="btn btn-primary" (click)="updateProfile()">
+          Update
+        </button>
+      }
+    </div>
+  </div>
+  @if (!isEditing) {
+    <div class="details prof">
+      <table>
+        <tr>
+          <td>
+            <p> Full name:
+            </p>
+          </td>
+          <td><span>Darshan Khairnar</span></td>
+        </tr>
+        <tr>
+          <td>
+            <p> Date of birth:</p>
+          </td>
+          <td> <span>06/10/2023</span></td>
+        </tr>
+        <tr>
+          <td>
+            <p> Phone number:
+            </p>
+          </td>
+          <td>
+            <span>98XXXXXX57</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p> Email address:</p>
+          </td>
+          <td>
+            <span>darshankhairnar72&#64;gmail.com</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  }
+  @if (isEditing) {
+    <div class="profile-edit">
+      <div class="form">
+        <div class="form-item">
+          <label for="name">Name</label>
+          <input type="text" name="name">
         </div>
-    </div>
-    <div class="details prof" *ngIf="!isEditing">
-        <table>
-            <tr>
-                <td>
-                    <p> Full name:
-                    </p>
-                </td>
-                <td><span>Darshan Khairnar</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <p> Date of birth:</p>
-                </td>
-                <td> <span>06/10/2023</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <p> Phone number:
-                    </p>
-                </td>
-                <td>
-                    <span>98XXXXXX57</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p> Email address:</p>
-                </td>
-                <td>
-                    <span>darshankhairnar72&#64;gmail.com</span>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="profile-edit" *ngIf="isEditing">
-        <div class="form">
-            <div class="form-item">
-                <label for="name">Name</label>
-                <input type="text" name="name">
-            </div>
-            <div class="form-item">
-                <label for="date">Date of Birth</label>
-                <input type="date" name="date">
-            </div>
-            <div class="form-item">
-                <label for="phone">Phone</label>
-                <input type="text" name="phone">
-            </div>
-            <div class="form-item">
-                <label for="email">Email</label>
-                <input type="email" name="email">
-            </div>
+        <div class="form-item">
+          <label for="date">Date of Birth</label>
+          <input type="date" name="date">
         </div>
+        <div class="form-item">
+          <label for="phone">Phone</label>
+          <input type="text" name="phone">
+        </div>
+        <div class="form-item">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+        </div>
+      </div>
     </div>
+  }
 </div>

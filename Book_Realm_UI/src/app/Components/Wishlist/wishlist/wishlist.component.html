@@ -1,33 +1,35 @@
 <div class="wrapper">
-    <div class="title">
-        <h4>Wish List</h4>
-    </div>
-    <div class="holder">
-        <div class="cart-holder">
-            <div class="book-item" *ngFor="let book of books">
-                <div class="image">
-                    <img [src]="book.images[0]" alt="">
-                    <div class="heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                </div>
-                <div class="details">
-                    <div class="rating">
-                        <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
-                    </div>
-                    <div class="title">
-                        <p>{{book.title}}</p>
-                    </div>
-                    <div class="author">
-                        <p>{{book.authorName}}</p>
-                    </div>
-                    <div class="price">
-                        <span class="amount"> &#8377;{{book.price}}</span>
-                        <span class="cross"> &#8377; {{book.price + 100}}</span>
-                        <span class="discount">(-{{book.discountPercentage}}%)</span>
-                    </div>
-                </div>
+  <div class="title">
+    <h4>Wish List</h4>
+  </div>
+  <div class="holder">
+    <div class="cart-holder">
+      @for (book of books; track book) {
+        <div class="book-item">
+          <div class="image">
+            <img [src]="book.images[0]" alt="">
+            <div class="heart">
+              <i class="fa-solid fa-heart"></i>
             </div>
+          </div>
+          <div class="details">
+            <div class="rating">
+              <p class="btn-primary"> {{book.rating}} <i class="fa-solid fa-star"></i></p>
+            </div>
+            <div class="title">
+              <p>{{book.title}}</p>
+            </div>
+            <div class="author">
+              <p>{{book.authorName}}</p>
+            </div>
+            <div class="price">
+              <span class="amount"> &#8377;{{book.price}}</span>
+              <span class="cross"> &#8377; {{book.price + 100}}</span>
+              <span class="discount">(-{{book.discountPercentage}}%)</span>
+            </div>
+          </div>
         </div>
+      }
     </div>
+  </div>
 </div>

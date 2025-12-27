@@ -1,322 +1,323 @@
 <header #fullElement>
-    <div class="container">
-        <div class="logo-wrapper">
-            <button class="menu" (click)="toggleSidebar()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="logo">
-                <a routerLink="home"> <img src="../../../assets/img/logo.png" alt="Book Realm Logo"></a>
-            </div>
-        </div>
-        <div class="nav-wrapper">
-            <nav>
-                <ul class="nav">
-                    <li class="nav-link" #topgeners (mouseenter)="mouseOver(topgeners)"
-                        (mouseleave)="mouseOut(topgeners)" title="topgeners">
-                        <a routerLink="#" class="nav-item">Top Geners</a>
-                        <div class="hover-model" #hovertopGenerModel>
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/genre/1" class="text-bold">Art, Film & Photography</a>
-                                            </li>
-                                            <li> <a routerLink="/sub-genre/1">Architecture</a></li>
-                                            <li> <a routerLink="/sub-genre/2">Art Forms</a></li>
-                                            <li><a routerLink="/sub-genre/3">Art Treatments & Subjects</a></li>
-                                            <li> <a routerLink="/sub-genre/4">Dance & Other Performing Arts</a></li>
-                                            <li> <a routerLink="/sub-genre/5">Film, TV & Radio</a></li>
-                                            <li> <a routerLink="genre/1" class="text-primary"> +5 More</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-3">
-                                        <ul>
-                                            <li><a routerLink="/genre/8" class="text-bold">History & Humanities</a>
-                                            </li>
-                                            <li> <a routerLink="/sub-genre/51">Archaeology</a></li>
-                                            <li><a routerLink="/sub-genre/52">History</a></li>
-                                            <li> <a routerLink="/sub-genre/53">Philosophy</a></li>
-                                            <li><a routerLink="/sub-genre/54">Religion & Spirituality</a></li>
-                                         </ul>
-                                    </div>
-                                    <div class="catg-2">
-                                        <ul>
-                                            <li><a routerLink="#" class="text-bold">Health, Family & Personal
-                                                    Development</a>
-                                            </li>
-                                            <li> <a routerLink="#">Addiction & Recovery</a></li>
-                                            <li><a routerLink="#">Public Speaking</a></li>
-                                            <li> <a routerLink="#" class="text-primary"> +10 More</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  <div class="container">
+    <div class="logo-wrapper">
+      <button class="menu" (click)="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="logo">
+        <a routerLink="home"> <img src="../../../assets/img/logo.png" alt="Book Realm Logo"></a>
+      </div>
+    </div>
+    <div class="nav-wrapper">
+      <nav>
+        <ul class="nav">
+          <li class="nav-link" #topgeners (mouseenter)="mouseOver(topgeners)"
+            (mouseleave)="mouseOut(topgeners)" title="topgeners">
+            <a routerLink="#" class="nav-item">Top Geners</a>
+            <div class="hover-model" #hovertopGenerModel>
+              <div class="content">
+                <div class="links">
+                  <div class="catg-1">
+                    <ul>
+                      <li><a routerLink="/genre/1" class="text-bold">Art, Film & Photography</a>
                     </li>
-                    <li class="nav-link" #discover (mouseover)="mouseOver(discover)" (mouseout)="mouseOut(discover)"
-                        title="discover">
-                        <a routerLink="#" class="nav-item">Read</a>
-                        <div class="hover-model" #hoverDiscoverModel>
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/genre/3" class="text-bold">Language & Refference</a>
-                                            </li>
-                                            <li> <a routerLink="/sub-genre/17"> Language Teaching & Learning </a></li>
-                                            <li><a routerLink="/sub-genre/18">Language: Reference & General</a></li>
-                                            <li> <a routerLink="/sub-genre/19">Linguistics</a></li>
-                                            <li> <a routerLink="/sub-genre/20">Anthologies</a></li>
-                                            <li> <a routerLink="/sub-genre/21">Classical Texts</a></li>
-                                            <li> <a routerLink="/genre/3" class="text-primary"> +3 More</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/genre/2" class="text-bold">Biographies & Memoirs</a></li>
-                                            <li> <a routerLink="/sub-genre/12">Biography: General</a></li>
-                                            <li><a routerLink="/sub-genre/13">Collected Biographies</a></li>
-                                            <li><a routerLink="/sub-genre/14">Diaries, Letters & Journals</a></li>
-                                            <li><a routerLink="/sub-genre/15">Memoirs</a></li>
-                                            <li><a routerLink="/sub-genre/16">True Stories</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/genre/3" class="text-bold">English Language Teaching</a>
-                                            </li>
-                                            <li> <a routerLink="/sub-genre/26">Background & Reference Material </a></li>
-                                            <li><a routerLink="/sub-genre/27">English for Specific Purposes</a></li>
-                                            <li> <a routerLink="/sub-genre/28">Learning Material & Coursework</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-link" #friction (mouseover)="mouseOver(friction)" (mouseout)="mouseOut(friction)"
-                        title="friction">
-                        <a routerLink="#" class="nav-item">Friction</a>
-                        <div class="hover-model" #hoverFrictionModel>
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/sub-genre/29" class="text-bold">Adventure</a></li>
-                                            <li><a routerLink="/sub-genre/44">Science Fiction</a></li>
-                                            <li> <a routerLink="/sub-genre/30">Classic Fiction</a></li>
-                                            <li><a routerLink="/sub-genre/31">Crime & Mystery</a></li>
-                                            <li> <a routerLink="/sub-genre/32">Erotic Fiction</a></li>
-                                            <li> <a routerLink="/sub-genre/41">Religious & Spiritual Fiction</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/sub-genre/39" class="text-bold">Modern & Contemporary Fiction</a></li>
-                                            <li> <a routerLink="/sub-genre/40">Myth & Legend Told as Fiction</a></li>
-                                            <li><a routerLink="/sub-genre/36">Graphics Novels</a></li>
-                                            <li> <a routerLink="/sub-genre/37">Horror & Ghost Stories</a></li>
-                                            <li> <a routerLink="/sub-genre/31">Crime & Mystery</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="/sub-genre/33" class="text-bold">Fantasy</a></li>
-                                            <li> <a routerLink="/sub-genre/42">Romance</a></li>
-                                            <li><a routerLink="/sub-genre/45">Thriller / Suspense</a></li>
-                                            <li> <a routerLink="/sub-genre/43">Sagas</a></li>
-
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-link" #examprep (mouseover)="mouseOver(examprep)" (mouseout)="mouseOut(examprep)"
-                        title="examprep">
-                        <a routerLink="#" class="nav-item">Exam Prep</a>
-                        <div class="hover-model" #hoverExamprepModel>
-                            <div class="content">
-                                <div class="links">
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="#" class="text-bold">Government & Bank Exams</a></li>
-                                            <li> <a routerLink="#">Class 1-5</a></li>
-                                            <li><a routerLink="#">Class 6-8</a></li>
-                                            <li> <a routerLink="#">Class 9-10</a></li>
-                                            <li><a routerLink="#">Class 11- 12</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="#" class="text-bold">Grade Wise</a></li>
-                                            <li> <a routerLink="#">Civil Service</a></li>
-                                            <li><a routerLink="#">Staff Selection Commission</a></li>
-                                            <li> <a routerLink="#">Bank</a></li>
-                                            <li><a routerLink="#">State Public Service</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="#" class="text-bold">Indian Defence Forces</a></li>
-                                            <li> <a routerLink="#">Indian Army</a></li>
-                                            <li><a routerLink="#">Indian Air force</a></li>
-                                            <li> <a routerLink="#">Indian Navy</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="catg-1">
-                                        <ul>
-                                            <li><a routerLink="#" class="text-bold">Entrance Exam</a></li>
-                                            <li> <a routerLink="#">IIT- JEE</a></li>
-                                            <li><a routerLink="#">NEET</a></li>
-                                            <li> <a routerLink="#">Teacher Recruitment</a></li>
-                                            <li><a routerLink="#">CA</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <li> <a routerLink="/sub-genre/1">Architecture</a></li>
+                    <li> <a routerLink="/sub-genre/2">Art Forms</a></li>
+                    <li><a routerLink="/sub-genre/3">Art Treatments & Subjects</a></li>
+                    <li> <a routerLink="/sub-genre/4">Dance & Other Performing Arts</a></li>
+                    <li> <a routerLink="/sub-genre/5">Film, TV & Radio</a></li>
+                    <li> <a routerLink="genre/1" class="text-primary"> +5 More</a></li>
+                  </ul>
+                </div>
+                <div class="catg-3">
+                  <ul>
+                    <li><a routerLink="/genre/8" class="text-bold">History & Humanities</a>
+                  </li>
+                  <li> <a routerLink="/sub-genre/51">Archaeology</a></li>
+                  <li><a routerLink="/sub-genre/52">History</a></li>
+                  <li> <a routerLink="/sub-genre/53">Philosophy</a></li>
+                  <li><a routerLink="/sub-genre/54">Religion & Spirituality</a></li>
                 </ul>
-            </nav>
-            <div class="search">
-                <div class="search-box">
-                    <div class="search-icon-box">
-                        <i class="fi fi-rr-search"></i>
-                    </div>
-                    <form>
-                        <input type="text" name="query" placeholder="Search books, authors, publishers"
-                            (focus)="getSearchQuery($event)" (input)="getSearchQuery($event)">
-                    </form>
-                </div>
-                <div class="search-result">
-                    <app-search [query]="searchQuery"></app-search>
-                </div>
+              </div>
+              <div class="catg-2">
+                <ul>
+                  <li><a routerLink="#" class="text-bold">Health, Family & Personal
+                  Development</a>
+                </li>
+                <li> <a routerLink="#">Addiction & Recovery</a></li>
+                <li><a routerLink="#">Public Speaking</a></li>
+                <li> <a routerLink="#" class="text-primary"> +10 More</a></li>
+              </ul>
             </div>
+          </div>
         </div>
-        <div class="icon-wrapper">
-            <div class="head-icons">
-                <div class="sign-in" *ngIf="!ifLoggedIn">
-                    <button class="btn btn-primary">
-                        <a routerLink="signin">Sign In</a>
-                    </button>
-                </div>
-                <div class="icon search-icon" (click)="toggleSidebar()">
-                    <i class="fi fi-rr-search"></i>
-                </div>
-                <div class="icon">
-                    <a routerLink="wishlist"><i class="fa-regular fa-bookmark"></i></a>
-                </div>
-                <div class="icon">
-                    <a routerLink="cart"><i class="fi fi-rr-shopping-cart"></i></a>
-                </div>
-                <div class="icon" *ngIf="ifLoggedIn">
-                    <button><i class="fa-regular fa-user" #showprofbtn></i></button>
-                    <div class="profile-dropdown" #profile>
-                        <div class="profile" *ngIf="ifLoggedIn">
-                            <div class="profile-photo">
-                                <div class="photo">
-                                    <img src="../../../assets/img/profile.png" alt="">
-                                </div>
-                                <p class="prof-name">
-                                    Darshan Khairnar
-                                </p>
-                                <div class="profile-btn">
-                                    <button class="btn btn-outline" (click)="hideProfile()">
-                                        <a routerLink="profile" #showprof>View Profile</a>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="account">
-                                <div class="section">
-
-                                    <ul>
-
-                                        <li class="account-item">
-                                            <div class="account-icon">
-                                                <i class="fa-solid fa-box"></i>
-                                            </div>
-                                            <p>My Orders</p>
-                                        </li>
-
-                                        <li class="account-item">
-                                            <div class="account-icon">
-                                                <i class="fa-solid fa-location-dot"></i>
-                                            </div>
-                                            <p>Saved Address</p>
-                                        </li>
-
-                                        <li class="account-item">
-                                            <div class="account-icon">
-                                                <i class="fa-solid fa-gear"></i>
-                                            </div>
-                                            <p>Settings</p>
-                                        </li>
-
-                                        <li class="account-item">
-                                            <div class="account-icon">
-                                                <i class="fa-solid fa-right-from-bracket"></i>
-                                            </div>
-                                            <button (click)="signOut()">Logout</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="slider" #slider>
-        <div class="tags">
-            <ul>
-                <li>
-                    <a routerLink="/genre">
-                        <i class="fi fi-rr-book-bookmark"></i>
-                        <p>Academics</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="#">
-                        <i class="fi fi-rr-sword"></i>
-                        <p>Friction</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="#">
-                        <i class="fi fi-rr-head-side-thinking"></i>
-                        <p>Non Friction</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="#">
-                        <i class="fi fi-rr-child-head"></i>
-                        <p>Children</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="#">
-                        <i class="fi fi-rr-language"></i>
-                        <p>Languages</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="#">
-                        <i class="fi fi-rr-spider-web"></i>
-                        <p>Comics</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="#">
-                        <i class="fi fi-rr-trophy-star"></i>
-                        <p> Bestsellers</p>
-                    </a>
-                </li>
+      </div>
+    </li>
+    <li class="nav-link" #discover (mouseover)="mouseOver(discover)" (mouseout)="mouseOut(discover)"
+      title="discover">
+      <a routerLink="#" class="nav-item">Read</a>
+      <div class="hover-model" #hoverDiscoverModel>
+        <div class="content">
+          <div class="links">
+            <div class="catg-1">
+              <ul>
+                <li><a routerLink="/genre/3" class="text-bold">Language & Refference</a>
+              </li>
+              <li> <a routerLink="/sub-genre/17"> Language Teaching & Learning </a></li>
+              <li><a routerLink="/sub-genre/18">Language: Reference & General</a></li>
+              <li> <a routerLink="/sub-genre/19">Linguistics</a></li>
+              <li> <a routerLink="/sub-genre/20">Anthologies</a></li>
+              <li> <a routerLink="/sub-genre/21">Classical Texts</a></li>
+              <li> <a routerLink="/genre/3" class="text-primary"> +3 More</a></li>
             </ul>
+          </div>
+          <div class="catg-1">
+            <ul>
+              <li><a routerLink="/genre/2" class="text-bold">Biographies & Memoirs</a></li>
+              <li> <a routerLink="/sub-genre/12">Biography: General</a></li>
+              <li><a routerLink="/sub-genre/13">Collected Biographies</a></li>
+              <li><a routerLink="/sub-genre/14">Diaries, Letters & Journals</a></li>
+              <li><a routerLink="/sub-genre/15">Memoirs</a></li>
+              <li><a routerLink="/sub-genre/16">True Stories</a></li>
+            </ul>
+          </div>
+          <div class="catg-1">
+            <ul>
+              <li><a routerLink="/genre/3" class="text-bold">English Language Teaching</a>
+            </li>
+            <li> <a routerLink="/sub-genre/26">Background & Reference Material </a></li>
+            <li><a routerLink="/sub-genre/27">English for Specific Purposes</a></li>
+            <li> <a routerLink="/sub-genre/28">Learning Material & Coursework</a></li>
+          </ul>
         </div>
+
+      </div>
     </div>
+  </div>
+</li>
+<li class="nav-link" #friction (mouseover)="mouseOver(friction)" (mouseout)="mouseOut(friction)"
+  title="friction">
+  <a routerLink="#" class="nav-item">Friction</a>
+  <div class="hover-model" #hoverFrictionModel>
+    <div class="content">
+      <div class="links">
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="/sub-genre/29" class="text-bold">Adventure</a></li>
+            <li><a routerLink="/sub-genre/44">Science Fiction</a></li>
+            <li> <a routerLink="/sub-genre/30">Classic Fiction</a></li>
+            <li><a routerLink="/sub-genre/31">Crime & Mystery</a></li>
+            <li> <a routerLink="/sub-genre/32">Erotic Fiction</a></li>
+            <li> <a routerLink="/sub-genre/41">Religious & Spiritual Fiction</a></li>
+          </ul>
+        </div>
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="/sub-genre/39" class="text-bold">Modern & Contemporary Fiction</a></li>
+            <li> <a routerLink="/sub-genre/40">Myth & Legend Told as Fiction</a></li>
+            <li><a routerLink="/sub-genre/36">Graphics Novels</a></li>
+            <li> <a routerLink="/sub-genre/37">Horror & Ghost Stories</a></li>
+            <li> <a routerLink="/sub-genre/31">Crime & Mystery</a></li>
+          </ul>
+        </div>
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="/sub-genre/33" class="text-bold">Fantasy</a></li>
+            <li> <a routerLink="/sub-genre/42">Romance</a></li>
+            <li><a routerLink="/sub-genre/45">Thriller / Suspense</a></li>
+            <li> <a routerLink="/sub-genre/43">Sagas</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</li>
+<li class="nav-link" #examprep (mouseover)="mouseOver(examprep)" (mouseout)="mouseOut(examprep)"
+  title="examprep">
+  <a routerLink="#" class="nav-item">Exam Prep</a>
+  <div class="hover-model" #hoverExamprepModel>
+    <div class="content">
+      <div class="links">
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="#" class="text-bold">Government & Bank Exams</a></li>
+            <li> <a routerLink="#">Class 1-5</a></li>
+            <li><a routerLink="#">Class 6-8</a></li>
+            <li> <a routerLink="#">Class 9-10</a></li>
+            <li><a routerLink="#">Class 11- 12</a></li>
+          </ul>
+        </div>
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="#" class="text-bold">Grade Wise</a></li>
+            <li> <a routerLink="#">Civil Service</a></li>
+            <li><a routerLink="#">Staff Selection Commission</a></li>
+            <li> <a routerLink="#">Bank</a></li>
+            <li><a routerLink="#">State Public Service</a></li>
+          </ul>
+        </div>
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="#" class="text-bold">Indian Defence Forces</a></li>
+            <li> <a routerLink="#">Indian Army</a></li>
+            <li><a routerLink="#">Indian Air force</a></li>
+            <li> <a routerLink="#">Indian Navy</a></li>
+          </ul>
+        </div>
+        <div class="catg-1">
+          <ul>
+            <li><a routerLink="#" class="text-bold">Entrance Exam</a></li>
+            <li> <a routerLink="#">IIT- JEE</a></li>
+            <li><a routerLink="#">NEET</a></li>
+            <li> <a routerLink="#">Teacher Recruitment</a></li>
+            <li><a routerLink="#">CA</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</li>
+</ul>
+</nav>
+<div class="search">
+  <div class="search-box">
+    <div class="search-icon-box">
+      <i class="fi fi-rr-search"></i>
+    </div>
+    <form>
+      <input type="text" name="query" placeholder="Search books, authors, publishers"
+        (focus)="getSearchQuery($event)" (input)="getSearchQuery($event)">
+    </form>
+  </div>
+  <div class="search-result">
+    <app-search [query]="searchQuery"></app-search>
+  </div>
+</div>
+</div>
+<div class="icon-wrapper">
+  <div class="head-icons">
+    @if (!ifLoggedIn) {
+      <div class="sign-in">
+        <button class="btn btn-primary">
+          <a routerLink="signin">Sign In</a>
+        </button>
+      </div>
+    }
+    <div class="icon search-icon" (click)="toggleSidebar()">
+      <i class="fi fi-rr-search"></i>
+    </div>
+    <div class="icon">
+      <a routerLink="wishlist"><i class="fa-regular fa-bookmark"></i></a>
+    </div>
+    <div class="icon">
+      <a routerLink="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+    </div>
+    @if (ifLoggedIn) {
+      <div class="icon">
+        <button><i class="fa-regular fa-user" #showprofbtn></i></button>
+        <div class="profile-dropdown" #profile>
+          @if (ifLoggedIn) {
+            <div class="profile">
+              <div class="profile-photo">
+                <div class="photo">
+                  <img src="../../../assets/img/profile.png" alt="">
+                </div>
+                <p class="prof-name">
+                  Darshan Khairnar
+                </p>
+                <div class="profile-btn">
+                  <button class="btn btn-outline" (click)="hideProfile()">
+                    <a routerLink="profile" #showprof>View Profile</a>
+                  </button>
+                </div>
+              </div>
+              <div class="account">
+                <div class="section">
+                  <ul>
+                    <li class="account-item">
+                      <div class="account-icon">
+                        <i class="fa-solid fa-box"></i>
+                      </div>
+                      <p>My Orders</p>
+                    </li>
+                    <li class="account-item">
+                      <div class="account-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </div>
+                      <p>Saved Address</p>
+                    </li>
+                    <li class="account-item">
+                      <div class="account-icon">
+                        <i class="fa-solid fa-gear"></i>
+                      </div>
+                      <p>Settings</p>
+                    </li>
+                    <li class="account-item">
+                      <div class="account-icon">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                      </div>
+                      <button (click)="signOut()">Logout</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
+</div>
+<div class="slider" #slider>
+  <div class="tags">
+    <ul>
+      <li>
+        <a routerLink="/genre">
+          <i class="fi fi-rr-book-bookmark"></i>
+          <p>Academics</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="#">
+          <i class="fi fi-rr-sword"></i>
+          <p>Friction</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="#">
+          <i class="fi fi-rr-head-side-thinking"></i>
+          <p>Non Friction</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="#">
+          <i class="fi fi-rr-child-head"></i>
+          <p>Children</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="#">
+          <i class="fi fi-rr-language"></i>
+          <p>Languages</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="#">
+          <i class="fi fi-rr-spider-web"></i>
+          <p>Comics</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="#">
+          <i class="fi fi-rr-trophy-star"></i>
+          <p> Bestsellers</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 </header>

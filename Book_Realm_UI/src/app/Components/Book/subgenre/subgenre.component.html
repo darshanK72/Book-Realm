@@ -1,117 +1,125 @@
 <div class="wrapper">
-    <div class="title">
-        <h3>{{subgenreName}}</h3>
-    </div>
-    <div class="holder">
-        <div class="catg">
-            <div class="top">
-                <div class="sub-title">
-                    <h5>New Arrivals</h5>
-                </div>
-                <div class="view">
-                  <a routerLink="/filter">
-                    <button>
-                        View All
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
-                  </a>
-                </div>
-            </div>
-            <splide
-            [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
-                <splide-slide *ngFor="let book of books">
-                    <div class="book-item">
-                        <div class="image">
-                            <img [src]="book.images[0]" alt="">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <div class="rating">
-                                <p class="btn-primary">{{book.rating}} <i class="fa-solid fa-star"></i></p>
-                            </div>
-                            <div class="title">
-                                <p>{{book.title}}</p>
-                            </div>
-                            <div class="author">
-                                <p>{{book.authorName}}</p>
-                            </div>
-                            <div class="price">
-                                <span class="amount"> &#8377; {{book.price}}</span>
-                                <span class="cross"> &#8377; {{book.price + 100}} </span>
-                                <span class="discount">(-{{book.discountPercentage}}%)</span>
-                            </div>
-                        </div>
-                    </div>
-                </splide-slide>
-            </splide>
-
+  <div class="title">
+    <h3>{{subgenreName}}</h3>
+  </div>
+  <div class="holder">
+    <div class="catg">
+      <div class="top">
+        <div class="sub-title">
+          <h5>New Arrivals</h5>
         </div>
-
-        <div class="catg">
-            <div class="top">
-                <div class="sub-title">
-                    <h5>Top Authors</h5>
-                </div>
-            </div>
-            <splide
-            [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true }">
-                <splide-slide *ngFor="let i of [1,2,3,4,5,6,7]">
-                    <div class="item">
-                        <div class="image">
-                            <img src="../../../assets/img/profile.png" alt="">
-                        </div>
-                        <div class="name">
-                            <p>Wipf And Stocks</p>
-                        </div>
-                    </div>
-                </splide-slide>
-            </splide>
-
+        <div class="view">
+          <a routerLink="/filter">
+            <button>
+              View All
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </a>
         </div>
-
-        <div class="catg">
-            <div class="top">
-                <div class="sub-title">
-                    <h5>Top Publishers</h5>
+      </div>
+      <splide
+        [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true}">
+        @for (book of books; track book) {
+          <splide-slide>
+            <div class="book-item">
+              <div class="image">
+                <img [src]="book.images[0]" alt="">
+                <div class="heart">
+                  <i class="fa-solid fa-heart"></i>
                 </div>
-            </div>
-            <splide
-                [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true }">
-                <splide-slide *ngFor="let i of [1,2,3,4,5,6,7]">
-                    <div class="item">
-                        <div class="image">
-                            <img src="../../../assets/img/profile.png" alt="">
-                        </div>
-                        <div class="name">
-                            <p>Wipf And Stocks</p>
-                        </div>
-                    </div>
-                </splide-slide>
-            </splide>
-
-        </div>
-
-        <div class="catg">
-            <div class="top">
-                <div class="sub-title">
-                    <h5>All Sub Genres</h5>
+              </div>
+              <div class="details">
+                <div class="rating">
+                  <p class="btn-primary">{{book.rating}} <i class="fa-solid fa-star"></i></p>
                 </div>
-            </div>
-            <div class="sub-gener-list">
-              <div class="sub-genre item" *ngFor="let subg of subgenres;">
-                <a routerLink="/sub-genre/{{subg.id}}">
-                    <div class="image">
-                        <img src="../../../assets/img/booklogo.png" alt="">
-                    </div>
-                    <div class="name">
-                        <p>{{subg.name}}
-                        </p>
-                    </div>
-                </a>
+                <div class="title">
+                  <p>{{book.title}}</p>
+                </div>
+                <div class="author">
+                  <p>{{book.authorName}}</p>
+                </div>
+                <div class="price">
+                  <span class="amount"> &#8377; {{book.price}}</span>
+                  <span class="cross"> &#8377; {{book.price + 100}} </span>
+                  <span class="discount">(-{{book.discountPercentage}}%)</span>
+                </div>
               </div>
             </div>
-        </div>
+          </splide-slide>
+        }
+      </splide>
+
     </div>
+
+    <div class="catg">
+      <div class="top">
+        <div class="sub-title">
+          <h5>Top Authors</h5>
+        </div>
+      </div>
+      <splide
+        [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true }">
+        @for (i of [1,2,3,4,5,6,7]; track i) {
+          <splide-slide>
+            <div class="item">
+              <div class="image">
+                <img src="../../../assets/img/profile.png" alt="">
+              </div>
+              <div class="name">
+                <p>Wipf And Stocks</p>
+              </div>
+            </div>
+          </splide-slide>
+        }
+      </splide>
+
+    </div>
+
+    <div class="catg">
+      <div class="top">
+        <div class="sub-title">
+          <h5>Top Publishers</h5>
+        </div>
+      </div>
+      <splide
+        [options]="{ type: 'loop', keyboard: false,pagination:false,autoWidth:true }">
+        @for (i of [1,2,3,4,5,6,7]; track i) {
+          <splide-slide>
+            <div class="item">
+              <div class="image">
+                <img src="../../../assets/img/profile.png" alt="">
+              </div>
+              <div class="name">
+                <p>Wipf And Stocks</p>
+              </div>
+            </div>
+          </splide-slide>
+        }
+      </splide>
+
+    </div>
+
+    <div class="catg">
+      <div class="top">
+        <div class="sub-title">
+          <h5>All Sub Genres</h5>
+        </div>
+      </div>
+      <div class="sub-gener-list">
+        @for (subg of subgenres; track subg) {
+          <div class="sub-genre item">
+            <a routerLink="/sub-genre/{{subg.id}}">
+              <div class="image">
+                <img src="../../../assets/img/booklogo.png" alt="">
+              </div>
+              <div class="name">
+                <p>{{subg.name}}
+                </p>
+              </div>
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 </div>

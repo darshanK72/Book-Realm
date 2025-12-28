@@ -16,11 +16,13 @@ export interface User {
   orders: string[];
 }
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:5239/api/user';
+  private apiUrl = `${environment.baseUrl}/user`;
 
   constructor(private http: HttpClient) {}
 

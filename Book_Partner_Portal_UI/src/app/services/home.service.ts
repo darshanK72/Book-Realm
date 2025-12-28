@@ -11,11 +11,13 @@ export interface HomeSection {
   heros: string[];
 }
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-  private apiUrl = 'http://localhost:5239/api/home'; // Updated to correct port
+  private apiUrl = `${environment.baseUrl}/home`; // Updated to correct port
 
   constructor(private http: HttpClient) {}
 
@@ -57,14 +59,14 @@ export class HomeService {
 
   // Item Fetchers
   fetchAvailableBooks(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:5239/api/books');
+    return this.http.get<any[]>(`${environment.baseUrl}/books`);
   }
 
   fetchAvailableBanners(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:5239/api/banners');
+    return this.http.get<any[]>(`${environment.baseUrl}/banners`);
   }
 
   fetchAvailableHeros(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:5239/api/heros');
+    return this.http.get<any[]>(`${environment.baseUrl}/heros`);
   }
 }

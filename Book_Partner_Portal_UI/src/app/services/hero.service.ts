@@ -9,11 +9,13 @@ export interface Hero {
   heroImages: string[];
 }
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
-  private apiUrl = 'http://localhost:5239/api/heros';
+  private apiUrl = `${environment.baseUrl}/heros`;
 
   constructor(private http: HttpClient) {}
 

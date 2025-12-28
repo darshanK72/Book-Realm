@@ -9,11 +9,13 @@ export interface Subgenre {
   genreId: string;
 }
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class SubgenreService {
-  private apiUrl = 'http://localhost:5239/api/subgenres';
+  private apiUrl = `${environment.baseUrl}/subgenres`;
 
   constructor(private http: HttpClient) {}
 

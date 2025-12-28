@@ -11,11 +11,13 @@ export interface Banner {
   order: number;
 }
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class BannerService {
-  private apiUrl = 'http://localhost:5239/api/banners';
+  private apiUrl = `${environment.baseUrl}/banners`;
 
   constructor(private http: HttpClient) {}
 

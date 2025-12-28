@@ -25,11 +25,13 @@ export interface Book {
   images: string[];
 }
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-  private apiUrl = 'http://localhost:5239/api/books';
+  private apiUrl = `${environment.baseUrl}/books`;
 
   constructor(private http: HttpClient) {}
 
@@ -55,11 +57,11 @@ export class BookService {
 
   // Fetch helpers for BookModal
   getGenres(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:5239/api/genres');
+    return this.http.get<any[]>(`${environment.baseUrl}/genres`);
   }
 
   getSubgenres(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:5239/api/subgenres');
+    return this.http.get<any[]>(`${environment.baseUrl}/subgenres`);
   }
 
   // Authors and Publishers might be fetched from generic user/publisher endpoints if they existed

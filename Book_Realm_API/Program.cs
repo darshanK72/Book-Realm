@@ -125,11 +125,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Enable Swagger in all environments for easier testing/verification
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // Disable HTTPS redirection in development to prevent CORS preflight issues
 // app.UseHttpsRedirection();
@@ -141,4 +139,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try 
+{
+    app.Run();
+}
+catch (Exception ex)
+{
+    // Log startup errors to ensure they are visible in Azure Log Stream
+    Console.WriteLine($"Application startup failed: {ex.Message}");
+    Console.WriteLine(ex.StackTrace);
+    throw; // Re-throw to ensure process exits with error code
+}
